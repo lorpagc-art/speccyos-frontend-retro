@@ -503,7 +503,7 @@ fun DeviceSettingsScreen(settingsManager: SettingsManager, hardwareViewModel: Ha
 
         Row(Modifier.fillMaxWidth().padding(vertical = 16.dp), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             TelemetryMiniCard("TEMP", "${state.temperature.toInt()}°C", state.temperature > 65, primaryColor)
-            TelemetryMiniCard("CPU", "${(state.cpuLoad * 100).toInt()}%", state.cpuLoad > 0.85f, primaryColor)
+            TelemetryMiniCard("CPU", if (state.cpuLoad < 0f) "—" else "${(state.cpuLoad * 100).toInt()}%", state.cpuLoad > 0.85f, primaryColor)
             TelemetryMiniCard("BAT", "${(state.batteryLevel * 100).toInt()}%", state.batteryLevel < 0.2f, primaryColor)
         }
 
@@ -1302,7 +1302,26 @@ fun ScraperSettingsScreen(settingsManager: SettingsManager, mainViewModel: MainV
 @Composable
 fun AccountSettingsContent(settingsManager: SettingsManager, primaryColor: Color) {
     var isCloudEnabled by remember { mutableStateOf(settingsManager.isCloudSyncEnabled) }
-    
+    val context = LocalContext.current
+
+    // Carpeta de RetroArch por SAF. Sin esto, Nebula Sync y la Maquina del
+    // Tiempo no ven NADA en Android 11+: /sdcard/RetroArch es ilegible con
+    // java.io.File sin "Acceso a todos los archivos", que es un permiso
+    // sensible en Play y no se declara a proposito.
+    var carpetaRa by remember { mutableStateOf(settingsManager.retroarchFolderUri) }
+    val selectorRetroArch = rememberLauncherForActivityResult(
+        ActivityResultContracts.OpenDocumentTree()
+    ) { uri ->
+        uri?.let {
+            context.contentResolver.takePersistableUriPermission(
+                it,
+                Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+            )
+            settingsManager.retroarchFolderUri = it.toString()
+            carpetaRa = it.toString()
+        }
+    }
+
     Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {
         UltraSectionHeader("NÚCLEO DE USUARIO", primaryColor)
         
@@ -1319,7 +1338,44 @@ fun AccountSettingsContent(settingsManager: SettingsManager, primaryColor: Color
         UltraSectionHeader("NEBULA SYNC (CLOUD SAVES)", primaryColor)
         
         UltraToggleRow("Sincronización en Google Drive", isCloudEnabled, primaryColor) { isCloudEnabled = it; settingsManager.isCloudSyncEnabled = it }
-        
+
+        Spacer(Modifier.height(16.dp))
+        UltraCard(primaryColor) {
+            Column(modifier = Modifier.padding(16.dp)) {
+                Text(
+                    "CARPETA DE RETROARCH",
+                    color = primaryColor, fontSize = 12.sp,
+                    fontWeight = FontWeight.Black, letterSpacing = 2.sp
+                )
+                Spacer(Modifier.height(8.dp))
+                Text(
+                    if (carpetaRa.isEmpty())
+                        "Sin conceder. Speccy OS no puede ver tus partidas guardadas hasta que elijas la carpeta RetroArch."
+                    else "Concedida ✓",
+                    color = if (carpetaRa.isEmpty()) SpeccyPalette.warn
+                        else MaterialTheme.colorScheme.onSurfaceVariant,
+                    fontSize = 12.sp
+                )
+                Spacer(Modifier.height(12.dp))
+                Button(
+                    onClick = { selectorRetroArch.launch(null) },
+                    colors = ButtonDefaults.buttonColors(containerColor = primaryColor)
+                ) {
+                    Icon(Icons.Default.FolderOpen, null, modifier = Modifier.size(18.dp))
+                    Spacer(Modifier.width(8.dp))
+                    Text(
+                        if (carpetaRa.isEmpty()) "ELEGIR CARPETA" else "CAMBIAR CARPETA",
+                        fontWeight = FontWeight.Black
+                    )
+                }
+                Spacer(Modifier.height(8.dp))
+                Text(
+                    "Elige la carpeta llamada RetroArch del almacenamiento interno: ahí es donde el emulador guarda saves y states.",
+                    color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 11.sp
+                )
+            }
+        }
+
         Spacer(Modifier.height(16.dp))
         Text("Tus partidas guardadas (.state) se subirán automáticamente a tu Google Drive para que no pierdas el progreso.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
 

@@ -110,6 +110,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             }.getOrNull()
         }
 
+    /** Recupera un juego por su ruta (clave primaria), para el retorno de partida. */
+    suspend fun findGameByPath(path: String): Game? = withContext(Dispatchers.IO) {
+        runCatching { gameDao.getGameByPath(path) }.getOrNull()
+    }
+
     private val _isScrapingActive = MutableStateFlow(false)
     val isScrapingActive = _isScrapingActive.asStateFlow()
 

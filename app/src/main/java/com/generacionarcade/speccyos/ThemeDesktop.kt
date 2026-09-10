@@ -99,16 +99,31 @@ fun SpeccyDesktopContent(
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.background)
     ) {
+        // El fondo de este tema llevaba desde siempre apuntando a
+        // "fondomultiple.webp", que NO EXISTE en assets. AsyncImage no avisa de
+        // nada cuando no encuentra el modelo: simplemente no pinta, y el tema
+        // se quedaba en negro liso. Se apunta a un asset que si existe y que
+        // Ultra ya usa como fondo generico.
         AsyncImage(
-            model = "file:///android_asset/contentimg/fondomultiple.webp",
+            model = "file:///android_asset/contentimg/banner-neon.webp",
             contentDescription = null,
-            modifier = Modifier.fillMaxSize().alpha(0.35f),
+            modifier = Modifier.fillMaxSize().alpha(0.25f),
             contentScale = ContentScale.Crop
         )
         
         Box(modifier = Modifier.fillMaxSize().background(Brush.verticalGradient(listOf(Color.Transparent, MaterialTheme.colorScheme.scrim.copy(alpha = 0.95f)))))
 
-        Column(modifier = Modifier.fillMaxSize().padding(horizontal = 40.dp, vertical = 32.dp)) {
+        // El `bottom` grande no es decorativo: la barra de iconos del dashboard
+        // se dibuja ENCIMA de este tema, y sin reservar sitio se comia las
+        // etiquetas de la ultima fila de la rejilla ("MAME", "NAOMI", "GBA",
+        // "GC", "ATOMISWAVE" quedaban debajo de los iconos). El contentPadding
+        // del propio grid no bastaba: solo actua al llegar al final del scroll,
+        // y con dos filas no hay scroll.
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(start = 40.dp, end = 40.dp, top = 32.dp, bottom = 84.dp)
+        ) {
             Row(modifier = Modifier.fillMaxWidth().padding(start = 16.dp, end = 16.dp, top = 8.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.Top) {
                 Column {
                     Text(text = timeText, color = MaterialTheme.colorScheme.onSurface, fontSize = 48.sp * fontScale, fontWeight = FontWeight.Light, letterSpacing = 2.sp)
@@ -143,15 +158,17 @@ fun SpeccyDesktopContent(
             }
 
             LazyVerticalGrid(
-                columns = GridCells.Adaptive(110.dp),
+                columns = GridCells.Adaptive(96.dp),
                 state = gridState,
                 modifier = Modifier
                     .fillMaxWidth()
                     .weight(1f)
                     .focusRequester(focusRequester),
                 horizontalArrangement = Arrangement.spacedBy(24.dp),
-                verticalArrangement = Arrangement.spacedBy(24.dp),
-                contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 120.dp)
+                verticalArrangement = Arrangement.spacedBy(16.dp),
+                // La barra inferior ya la reserva el padding de la Column: repetir
+                // aqui 120.dp mas se comia el hueco de la segunda fila.
+                contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 8.dp)
             ) {
                 itemsIndexed(collections, key = { _, id -> "col_" + id }) { index, id ->
                     SpeccyAppIcon(id, primaryColor, index == 0, customMediaMap, fontScale) { 
@@ -172,14 +189,16 @@ fun SpeccyDesktopContent(
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(110.dp)
+                // Barra mas baja: 110 -> 84 dp. Devuelve alto util a la rejilla
+                // y deja el dock menos pesado en una pantalla de 720 px.
+                .height(84.dp)
                 .align(Alignment.BottomCenter)
                 .background(Brush.verticalGradient(listOf(Color.Transparent, MaterialTheme.colorScheme.scrim.copy(alpha = 0.8f))))
         ) {
             Surface(
                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.05f),
                 shape = RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp),
-                modifier = Modifier.fillMaxWidth().height(90.dp).align(Alignment.BottomCenter),
+                modifier = Modifier.fillMaxWidth().height(64.dp).align(Alignment.BottomCenter),
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.05f))
             ) {
                 Row(modifier = Modifier.fillMaxSize(), horizontalArrangement = Arrangement.SpaceEvenly, verticalAlignment = Alignment.CenterVertically) {
@@ -187,22 +206,33 @@ fun SpeccyDesktopContent(
                     dockSystems.forEach { id -> 
                         // Implementación en línea de AndroidDockIconItem temporal para solucionar error
                         var isFocused by remember { mutableStateOf(false) }
+                        // Un neon distinto por icono. Antes iban todos en gris
+                        // al 70 % y el dock parecia apagado.
+                        val neon = when (id) {
+                            "SYS_SETTINGS"  -> Color(0xFF00E5FF)
+                            "SYS_TRIVIAL"   -> Color(0xFFFF3DDB)
+                            "SYS_MANUAL"    -> Color(0xFFFFD400)
+                            "SYS_APPS"      -> Color(0xFF39FF6A)
+                            else            -> Color(0xFFFF8A2B)
+                        }
                         val scale by animateFloatAsState(if (isFocused) 1.2f else 1f)
                         
                         Box(
                             modifier = Modifier
-                                .size(56.dp)
+                                .size(48.dp)
                                 .scale(scale)
                                 .onFocusChanged { isFocused = it.isFocused }
                                 .focusable()
                                 .clickable { onSelect(id) }
                                 .background(
-                                    if (isFocused) primaryColor.copy(alpha = 0.2f) else Color.Transparent,
+                                    // Halo del propio color: es lo que da el
+                                    // aspecto de neon encendido.
+                                    neon.copy(alpha = if (isFocused) 0.30f else 0.12f),
                                     CircleShape
                                 ),
                             contentAlignment = Alignment.Center
                         ) {
-                            Icon(imageVector = getSystemIconM3(id), contentDescription = id, tint = if (isFocused) primaryColor else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f), modifier = Modifier.size(28.dp))
+                            Icon(imageVector = getSystemIconM3(id), contentDescription = id, tint = neon, modifier = Modifier.size(24.dp))
                         }
                     }
                 }
@@ -220,12 +250,15 @@ fun HardwareWidgetMinimal(state: HardwareUiState, primaryColor: Color, fontScale
             
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Text("CPU", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp * fontScale, fontWeight = FontWeight.Bold)
-                Text("${state.cpuLoad.toInt()}%", color = MaterialTheme.colorScheme.onSurface, fontSize = 12.sp * fontScale, fontWeight = FontWeight.Black)
+                // OJO: cpuLoad y ramUsage son fracciones 0..1. Sin el *100,
+                // 0.5f.toInt() da 0 y el widget marcaba SIEMPRE "CPU 0% RAM 0%".
+                // La temperatura va en grados, por eso esa si se veia bien.
+                Text(if (state.cpuLoad < 0f) "—" else "${(state.cpuLoad * 100).toInt()}%", color = MaterialTheme.colorScheme.onSurface, fontSize = 12.sp * fontScale, fontWeight = FontWeight.Black)
             }
             Box(modifier = Modifier.width(1.dp).height(20.dp).background(MaterialTheme.colorScheme.surfaceVariant))
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Text("RAM", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp * fontScale, fontWeight = FontWeight.Bold)
-                Text("${state.ramUsage.toInt()}%", color = MaterialTheme.colorScheme.onSurface, fontSize = 12.sp * fontScale, fontWeight = FontWeight.Black)
+                Text("${(state.ramUsage * 100).toInt()}%", color = MaterialTheme.colorScheme.onSurface, fontSize = 12.sp * fontScale, fontWeight = FontWeight.Black)
             }
             Box(modifier = Modifier.width(1.dp).height(20.dp).background(MaterialTheme.colorScheme.surfaceVariant))
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -259,7 +292,7 @@ fun SpeccyAppIcon(id: String, primaryColor: Color, isFirst: Boolean, customMedia
     ) {
         Box(
             modifier = Modifier
-                .size(85.dp)
+                .size(72.dp)
                 .shadow(if (isFocused) 15.dp else 0.dp, RoundedCornerShape(22.dp))
                 .clip(RoundedCornerShape(22.dp))
                 .background(if (isFocused) primaryColor else if (isSpecial) MaterialTheme.colorScheme.surfaceVariant else MaterialTheme.colorScheme.surface.copy(alpha = 0.95f))

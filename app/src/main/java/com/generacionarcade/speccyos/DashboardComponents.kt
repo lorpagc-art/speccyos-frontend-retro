@@ -311,7 +311,7 @@ fun StatusBarReal(state: HardwareUiState, color: Color, soundManager: SoundManag
 
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(20.dp)) {
             StatusBarItem("${state.temperature.toInt()}°C", Icons.Default.Thermostat, if(state.temperature > 60) MaterialTheme.colorScheme.error else color)
-            StatusBarItem("${(state.cpuLoad * 100).toInt()}%", Icons.Default.Memory, color)
+            StatusBarItem(if (state.cpuLoad < 0f) "—" else "${(state.cpuLoad * 100).toInt()}%", Icons.Default.Memory, color)
             
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(text = "${(state.batteryLevel * 100).toInt()}%", color = MaterialTheme.colorScheme.onSurface, fontSize = 13.sp, fontWeight = FontWeight.Bold)
@@ -463,7 +463,7 @@ fun AndroidQuickSettingsPanel(
             Spacer(Modifier.height(16.dp))
 
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                MetricCard("CARGA CPU", "${(state.cpuLoad * 100).toInt()}%", state.cpuLoad, Icons.Default.Memory, primaryColor, Modifier.weight(1f))
+                MetricCard("CARGA CPU", if (state.cpuLoad < 0f) "—" else "${(state.cpuLoad * 100).toInt()}%", state.cpuLoad.coerceAtLeast(0f), Icons.Default.Memory, primaryColor, Modifier.weight(1f))
                 MetricCard("USO DE RAM", "${(state.ramUsage * 100).toInt()}%", state.ramUsage, Icons.Default.Storage, primaryColor, Modifier.weight(1f))
                 MetricCard("CARGA GPU", "${(gpuLoad * 100).toInt()}%", gpuLoad, Icons.Default.Speed, primaryColor, Modifier.weight(1f))
                 MetricCard("TEMP. SOC", "${state.temperature.toInt()}°C", state.temperature / 100f, Icons.Default.Thermostat, if (state.temperature > 65) MaterialTheme.colorScheme.error else primaryColor, Modifier.weight(1f))

@@ -27,7 +27,18 @@ object Translator {
         "language_section" to mapOf("es" to "IDIOMA DEL SISTEMA / SYSTEM LANGUAGE", "en" to "SYSTEM LANGUAGE", "fr" to "LANGUE DU SYSTÈME", "de" to "SYSTEMSPRACHE", "it" to "LINGUA DI SISTEMA", "zh" to "系统语言"),
         
         "dashboard_apps" to mapOf("es" to "APLICACIONES", "en" to "APPLICATIONS", "fr" to "APPLICATIONS", "de" to "ANWENDUNGEN", "it" to "APPLICAZIONI", "zh" to "应用"),
-        "dashboard_back" to mapOf("es" to "VOLVER", "en" to "BACK", "fr" to "RETOUR", "de" to "ZURÜCK", "it" to "INDIETRO", "zh" to "返回")
+        "dashboard_back" to mapOf("es" to "VOLVER", "en" to "BACK", "fr" to "RETOUR", "de" to "ZURÜCK", "it" to "INDIETRO", "zh" to "返回"),
+
+        // Estas tres se usaban en el codigo y NO estaban en el diccionario.
+        // `t()` devuelve la clave cuando falta la entrada, asi que al usuario le
+        // salia literalmente "no_saves_found" en un aviso.
+        "no_saves_found" to mapOf("es" to "No hay partidas guardadas de este juego", "en" to "No saved games for this title", "fr" to "Aucune sauvegarde pour ce jeu", "de" to "Keine Spielstände für dieses Spiel", "it" to "Nessun salvataggio per questo gioco", "zh" to "该游戏没有存档"),
+        "cloud_restored" to mapOf("es" to "Partida restaurada desde la nube", "en" to "Save restored from the cloud", "fr" to "Sauvegarde restaurée depuis le cloud", "de" to "Spielstand aus der Cloud wiederhergestellt", "it" to "Salvataggio ripristinato dal cloud", "zh" to "已从云端恢复存档"),
+        "cloud_syncing" to mapOf("es" to "Sincronizando con la nube", "en" to "Syncing with the cloud", "fr" to "Synchronisation avec le cloud", "de" to "Synchronisierung mit der Cloud", "it" to "Sincronizzazione con il cloud", "zh" to "正在与云端同步"),
+
+        // Caso distinto y hasta ahora indistinguible: no es que no haya
+        // partidas, es que Android no nos deja mirar donde estan.
+        "saves_no_permission" to mapOf("es" to "Sin acceso a la carpeta de RetroArch. Concede \"Acceso a todos los archivos\" para ver y sincronizar tus partidas.", "en" to "No access to RetroArch's folder. Grant \"All files access\" to see and sync your saves.", "fr" to "Aucun accès au dossier de RetroArch. Accordez « Accès à tous les fichiers » pour voir et synchroniser vos sauvegardes.", "de" to "Kein Zugriff auf den RetroArch-Ordner. Erteile „Zugriff auf alle Dateien“, um deine Spielstände zu sehen und zu synchronisieren.", "it" to "Nessun accesso alla cartella di RetroArch. Concedi \"Accesso a tutti i file\" per vedere e sincronizzare i salvataggi.", "zh" to "无法访问 RetroArch 文件夹。请授予「所有文件访问权限」以查看并同步存档。")
     )
 
     fun t(key: String, lang: String): String {

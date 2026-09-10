@@ -712,8 +712,16 @@ fun StandardInmersiveGameList(
                                 scope.launch(Dispatchers.IO) {
                                     saveStatesList = TimeMachineManager.getAvailableSaveStates(context, g)
                                     if (saveStatesList.isNotEmpty()) showTimeMachine = true
-                                    else withContext(Dispatchers.Main) {
-                                        Toast.makeText(context, Translator.t("no_saves_found", lang), Toast.LENGTH_SHORT).show()
+                                    else {
+                                        // Distinguir "no hay partidas" de "no puedo
+                                        // verlas": sin acceso a todos los archivos,
+                                        // /sdcard/RetroArch es ilegible en Android 11+
+                                        // y decir "no hay partidas" es mentira.
+                                        val puedeLeer = CloudSaveManager(context).puedeLeerPartidas()
+                                        val aviso = if (puedeLeer) "no_saves_found" else "saves_no_permission"
+                                        withContext(Dispatchers.Main) {
+                                            Toast.makeText(context, Translator.t(aviso, lang), Toast.LENGTH_LONG).show()
+                                        }
                                     }
                                 }
                             }; true
@@ -1192,10 +1200,14 @@ fun TimeMachineDialog(
                                 border = if (isSelected) BorderStroke(1.dp, primaryColor) else null
                             ) {
                                 Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
-                                    if (state.imageFile != null && state.imageFile.exists()) {
+                                    // Con SAF la miniatura llega como uri: la
+                                    // ruta directa no se puede abrir en Android 11+.
+                                    val miniatura: Any? = state.imageUri
+                                        ?: state.imageFile?.takeIf { it.exists() }
+                                    if (miniatura != null) {
                                         AsyncImage(
                                             model = ImageRequest.Builder(LocalContext.current)
-                                                .data(state.imageFile)
+                                                .data(miniatura)
                                                 .crossfade(false)
                                                 .build(),
                                             contentDescription = null,

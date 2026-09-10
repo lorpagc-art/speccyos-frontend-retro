@@ -398,6 +398,34 @@ class SettingsManager(context: Context) {
         get() = prefs.getBoolean("cloud_sync_enabled", false)
         set(value) = prefs.edit().putBoolean("cloud_sync_enabled", value).apply()
 
+    /**
+     * Ruta del ultimo juego lanzado, para poder subir sus partidas al volver.
+     *
+     * Hace falta porque el retorno se detecta en `MainActivity.onResume`, que
+     * no sabe a que juego se jugo: solo `RetroArchSyncManager` guarda la
+     * plataforma. Sin esto no habia forma de llamar a `backupGameSaves()`, que
+     * es justo por lo que Nebula Sync solo funcionaba a medias: restauraba de
+     * Drive, pero no subia nunca nada, asi que en Drive no habia nada que
+     * restaurar.
+     */
+    var lastPlayedGamePath: String
+        get() = prefs.getString("last_played_game_path", "") ?: ""
+        set(value) = prefs.edit().putString("last_played_game_path", value).apply()
+
+    /**
+     * Arbol SAF de la carpeta de RetroArch (`/sdcard/RetroArch`), concedido por
+     * el usuario desde Ajustes.
+     *
+     * Sin esto no hay forma de ver las partidas. En Android 11+ un
+     * `java.io.File` sobre esa ruta es ilegible sin "Acceso a todos los
+     * archivos", que esta app no declara -y que en Play exige justificar como
+     * permiso sensible, con riesgo de rechazo-. La via SAF no tiene ese
+     * problema y es la misma que ya se usa para las ROMs.
+     */
+    var retroarchFolderUri: String
+        get() = prefs.getString("retroarch_folder_uri", "") ?: ""
+        set(value) = prefs.edit().putString("retroarch_folder_uri", value).apply()
+
     var lastCloudSyncTimestamp: Long
         get() = prefs.getLong("last_cloud_sync_ts", 0L)
         set(value) = prefs.edit().putLong("last_cloud_sync_ts", value).apply()

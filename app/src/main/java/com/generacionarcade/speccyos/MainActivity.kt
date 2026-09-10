@@ -94,6 +94,8 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 import com.google.android.play.core.review.ReviewManagerFactory
 import android.view.MotionEvent
 import rikka.shizuku.Shizuku
@@ -576,6 +578,25 @@ class MainActivity : ComponentActivity() {
                         "La próxima vez se probará con ${intento.coreSugerido}.",
                     Toast.LENGTH_LONG
                 ).show()
+            }
+
+            // Nebula Sync: SUBIR la partida recien jugada.
+            //
+            // Faltaba la mitad del ciclo. `restoreGameSaves()` se llamaba antes
+            // de lanzar, pero `backupGameSaves()` no lo invocaba nadie, asi que
+            // en Drive nunca habia nada y la restauracion siempre encontraba la
+            // nube vacia. La copia va aqui, al volver, que es cuando RetroArch
+            // ya ha escrito el .srm y los save states.
+            if (settingsManager.isCloudSyncEnabled) {
+                val ruta = settingsManager.lastPlayedGamePath
+                if (ruta.isNotBlank()) {
+                    lifecycleScope.launch {
+                        val juego = mainViewModel.findGameByPath(ruta)
+                        if (juego != null) {
+                            mainViewModel.cloudSaveManager.backupGameSaves(juego)
+                        }
+                    }
+                }
             }
 
             val count = settingsManager.gamesLaunchedCount

@@ -69,6 +69,8 @@ class HardwareViewModel(application: Application) : AndroidViewModel(application
                     } else null
 
                     val currentRamUsageStr = hardwareManager.getRamUsage()
+                    // /proc/stat es I/O: se lee aqui, no en el hilo principal.
+                    val cargaCpu = SpeccyCpuLoad.leer()
                     val batteryLevel = getBatteryLevel()
                     val isWifiEnabled = isWifiConnected()
                     val isBluetoothEnabled = isBluetoothOn()
@@ -83,6 +85,7 @@ class HardwareViewModel(application: Application) : AndroidViewModel(application
                     MonitoringSnapshot(
                         temp = currentTemp,
                         ramStr = currentRamUsageStr,
+                        cpu = cargaCpu,
                         battery = batteryLevel,
                         wifi = isWifiEnabled,
                         bluetooth = isBluetoothEnabled,
@@ -110,13 +113,12 @@ class HardwareViewModel(application: Application) : AndroidViewModel(application
                     used / total
                 } catch (e: Exception) { 0.35f }
 
-                val cpuLoad = when (settingsManager.manualProfile) {
-                    "ECO" -> 0.3f
-                    "BALANCED" -> 0.5f
-                    "PERFORMANCE" -> 0.8f
-                    "EXTREME" -> 0.95f
-                    else -> 0.5f
-                }
+                // Carga de CPU REAL. Antes era una constante del perfil elegido
+                // (ECO 0.3, BALANCED 0.5...), o sea un numero que se enseñaba
+                // como telemetria sin serlo: no se movia hiciera lo que hiciera
+                // la consola. Si el sistema no deja leer /proc/stat se deja en
+                // -1 y la interfaz muestra "—", en vez de inventarse un valor.
+                val cpuLoad = snapshot.cpu ?: -1f
                 
                 var fanSpeedLevel = _uiState.value.fanSpeedLevel
                 if (!isFanManualOverride) {
@@ -168,6 +170,7 @@ class HardwareViewModel(application: Application) : AndroidViewModel(application
     private data class MonitoringSnapshot(
         val temp: Float?,
         val ramStr: String,
+        val cpu: Float?,
         val battery: Float,
         val wifi: Boolean,
         val bluetooth: Boolean,

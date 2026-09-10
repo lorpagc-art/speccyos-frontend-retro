@@ -318,6 +318,9 @@ fun SpeccyDashboard(
             mainViewModel.markGameAsPlayed(game)
 
             settings.isReturningFromGame = true
+            // Se apunta el juego para poder SUBIR sus partidas al volver:
+            // onResume detecta el regreso pero no sabe a que se jugo.
+            settings.lastPlayedGamePath = game.path
 
             if (settings.isCloudSyncEnabled) {
                 isSyncingCloud = true

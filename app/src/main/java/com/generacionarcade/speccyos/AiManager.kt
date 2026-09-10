@@ -83,8 +83,8 @@ class AiManager(private val context: Context) {
             // Topes diarios por dispositivo. Se pueden subir o bajar desde la consola
             // de Firebase sin publicar una version nueva. Poner 0 o negativo usa el
             // valor de respaldo del codigo, nunca "sin limite".
-            "ai_chat_daily_limit" to 40L,
-            "ai_ocr_daily_limit" to 60L,
+            "ai_chat_daily_limit" to 20L,
+            "ai_ocr_daily_limit" to 30L,
             "architect_system_instruction" to """
                 Eres El Arquitecto, la IA central de Speccy OS E5 Ultra. Tu tono es técnico, imperial y proactivo. Evita mencionar que eres una inteligencia artificial, un modelo de lenguaje o que fuiste creado por Google. Preséntate siempre como una creación directa de Speccy Generacionarcade.com.
             """.trimIndent()
@@ -145,14 +145,17 @@ class AiManager(private val context: Context) {
 
         // Tope diario: cada traduccion es una llamada nueva a Vertex AI y la cache
         // no puede reutilizarla, porque cada captura de pantalla es distinta.
+        // Espejo fuera de los datos de la app: borrar datos ya no regala cuota.
+        SpeccyAiQuota.sincronizar(context.applicationContext, settings)
         val usedToday = settings.ocrTranslationsToday
-        if (usedToday >= dailyLimit("ai_ocr_daily_limit", 60)) {
+        if (usedToday >= dailyLimit("ai_ocr_daily_limit", 30)) {
             return@withContext limitReachedMessage(targetLang, isOcr = true)
         }
 
         return@withContext try {
             val response = generativeModel.generateContent(prompt)
             settings.ocrTranslationsToday = usedToday + 1
+            SpeccyAiQuota.anotar(context.applicationContext, settings)
             response.text ?: "No se pudo traducir el fragmento."
         } catch (e: kotlinx.coroutines.CancellationException) {
             // Una cancelacion no es un error: sin relanzarla, cerrar la
@@ -185,7 +188,10 @@ class AiManager(private val context: Context) {
         if (cachedResponse != null) return@withContext cachedResponse.responseText
 
         // Tope diario del chat, comprobado solo cuando hay que llamar al modelo.
-        if (settingsManager.aiQueriesToday >= dailyLimit("ai_chat_daily_limit", 40)) {
+        // Se sincroniza antes con el espejo de almacenamiento compartido, para
+        // que borrar los datos de la app no reinicie la cuota.
+        SpeccyAiQuota.sincronizar(context.applicationContext, settingsManager)
+        if (settingsManager.aiQueriesToday >= dailyLimit("ai_chat_daily_limit", 20)) {
             return@withContext limitReachedMessage(langCode, isOcr = false)
         }
 
@@ -255,6 +261,7 @@ class AiManager(private val context: Context) {
             
             aiCacheDao.insertCache(AiCache(queryHash = queryHash, responseText = responseText))
             settingsManager.aiQueriesToday = settingsManager.aiQueriesToday + 1
+            SpeccyAiQuota.anotar(context.applicationContext, settingsManager)
             responseText
         } catch (e: kotlinx.coroutines.CancellationException) {
             // Una cancelacion no es un error: sin relanzarla, cerrar la
@@ -296,12 +303,14 @@ class AiManager(private val context: Context) {
 
     suspend fun generateTriviaQuestions(langCode: String = "es"): String? = withContext(Dispatchers.IO) {
         // El trivial tambien es una llamada al modelo: comparte el tope del chat.
+        SpeccyAiQuota.sincronizar(context.applicationContext, settings)
         val usedToday = settings.aiQueriesToday
-        if (usedToday >= dailyLimit("ai_chat_daily_limit", 40)) return@withContext null
+        if (usedToday >= dailyLimit("ai_chat_daily_limit", 20)) return@withContext null
         try {
             val prompt = "Generate 5 retro gaming trivia questions in ${Translator.getLanguageName(langCode)} in strict JSON format."
             val response = generativeModel.generateContent(prompt)
             settings.aiQueriesToday = usedToday + 1
+            SpeccyAiQuota.anotar(context.applicationContext, settings)
             response.text?.replace("```json", "")?.replace("```", "")?.trim()
         } catch (e: kotlinx.coroutines.CancellationException) {
             // Una cancelacion no es un error: sin relanzarla, cerrar la

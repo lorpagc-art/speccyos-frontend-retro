@@ -224,12 +224,15 @@ fun UltraDashboardContent(
             )
         }
 
-        // Indicador de "AETHER ULTRA"
+        // Indicador de "AETHER ULTRA".
+        // Con 32.dp por arriba quedaba justo debajo del reloj de la barra de
+        // estado y las dos cadenas se solapaban ("23:23" encima del nombre del
+        // tema). Se baja lo justo para despejarla.
         Text(
             text = "AETHER ULTRA",
             modifier = Modifier
                 .align(Alignment.TopStart)
-                .padding(32.dp)
+                .padding(start = 32.dp, top = 64.dp, end = 32.dp, bottom = 32.dp)
                 .alpha(0.5f),
             color = MaterialTheme.colorScheme.onSurface,
             fontSize = 12.sp * fontScale,

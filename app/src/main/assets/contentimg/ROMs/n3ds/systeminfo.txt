@@ -1,0 +1,39 @@
+System name:
+n3ds
+
+Full system name:
+Nintendo 3DS
+
+Supported file extensions:
+.3ds .3DS .3dsx .3DSX .app .APP .axf .AXF .cci .CCI .cxi .CXI .elf .ELF .7z .7Z .zip .ZIP .cia .CIA
+
+Launch command:
+%EMULATOR_RETROARCH% %EXTRA_CONFIGFILE%=/storage/emulated/0/Android/data/%ANDROIDPACKAGE%/files/retroarch.cfg %EXTRA_LIBRETRO%=/data/data/%ANDROIDPACKAGE%/cores/citra_libretro_android.so %EXTRA_ROM%=%ROM%
+
+Alternative launch commands:
+%EMULATOR_CITRA% %ACTIVITY_CLEAR_TASK% %ACTIVITY_CLEAR_TOP% %DATA%=%ROMSAF%
+%EMULATOR_CITRA-CANARY% %ACTIVITY_CLEAR_TASK% %ACTIVITY_CLEAR_TOP% %DATA%=%ROMSAF%
+%EMULATOR_CITRA-MMJ% %EXTRA_GamePath%=%ROM%
+%EMULATOR_MANDARINE% %ACTIVITY_CLEAR_TASK% %ACTIVITY_CLEAR_TOP% %DATA%=%ROMSAF%
+%EMULATOR_LIME3DS% %ACTIVITY_CLEAR_TASK% %ACTIVITY_CLEAR_TOP% %DATA%=%ROMSAF%
+%EMULATOR_PANDA3DS% %DATA%=%ROMPROVIDER%
+
+Platform (for scraping):
+n3ds
+
+Theme folder:
+n3ds
+
+Games Found:
+(No games found in folder)
+
+Available Emulators (RetroArch Cores):
+- citra_libretro_android.so (Default)
+
+External Emulators:
+- Citra
+- Citra Canary
+- Citra MMJ
+- Mandarine
+- Lime3DS
+- Panda3DS

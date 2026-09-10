@@ -1,0 +1,22 @@
+System name:
+ports
+
+Full system name:
+Ports
+
+Supported file extensions:
+.exe .EXE .game .GAME .phd .PHD .psx .PSX
+
+Launch command:
+%EMULATOR_RETROARCH% %EXTRA_CONFIGFILE%=/storage/emulated/0/Android/data/%ANDROIDPACKAGE%/files/retroarch.cfg %EXTRA_LIBRETRO%=ecwolf_libretro_android.so %EXTRA_ROM%=%ROM%
+
+Alternative launch commands:
+%EMULATOR_RETROARCH% %EXTRA_CONFIGFILE%=/storage/emulated/0/Android/data/%ANDROIDPACKAGE%/files/retroarch.cfg %EXTRA_LIBRETRO%=nxengine_libretro_android.so %EXTRA_ROM%=%ROM%
+%EMULATOR_RETROARCH% %EXTRA_CONFIGFILE%=/storage/emulated/0/Android/data/%ANDROIDPACKAGE%/files/retroarch.cfg %EXTRA_LIBRETRO%=openlara_libretro_android.so %EXTRA_ROM%=%ROM%
+%EMULATOR_RETROARCH% %EXTRA_CONFIGFILE%=/storage/emulated/0/Android/data/%ANDROIDPACKAGE%/files/retroarch.cfg %EXTRA_LIBRETRO%=superbroswar_libretro_android.so %EXTRA_ROM%=%ROM%
+
+Platforms (for scraping):
+pc, pcwindows
+
+Theme folder:
+ports

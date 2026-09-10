@@ -1,0 +1,336 @@
+{
+  "version": "4.0.0-ULTRA-ARCHITECT-OMNISCENCE",
+  "engine": "Speccy Identity & Architect Engine",
+  "soc_profiles": {
+    "unisoc_t620": {
+      "name": "Unisoc T620 (GameMT E5 Ultra)",
+      "gpu": "Mali-G57",
+      "vulkan_support": "High",
+      "performance_notes": "Excelente para sistemas hasta Dreamcast/PSP. Sufre con PS2/GameCube pesados; requiere Standalone y perfil EXTREME.",
+      "global_tuning": { "cpu_governor": "schedutil", "fan_control": true }
+    },
+    "unisoc_t618": {
+      "name": "Unisoc T618 (Anbernic RG405M / RG505 / Retroid Pocket 3+)",
+      "gpu": "Mali-G52",
+      "vulkan_support": "Medium",
+      "performance_notes": "Sólido para PS1/Dreamcast. PS2/GameCube muy ligero en resoluciones nativas.",
+      "global_tuning": { "cpu_governor": "performance", "fan_control": false }
+    },
+    "unisoc_t820": {
+      "name": "Unisoc T820 (Anbernic RG556 / RG Cube / RG406V)",
+      "gpu": "Mali-G57 MP4",
+      "vulkan_support": "High",
+      "performance_notes": "Excelente para PS2/GameCube/Wii a 1.5x o 2x de resolución. Usar perfil EXTREME con ventilador activo para sesiones largas.",
+      "global_tuning": { "cpu_governor": "performance", "fan_control": true }
+    },
+    "rk3566": {
+      "name": "Rockchip RK3566 (RG353V / RGB30 / Powkiddy X55)",
+      "gpu": "Mali-G52",
+      "vulkan_support": "Low",
+      "performance_notes": "Perfecto para 8/16/32 bits hasta PS1. Sufre con N64 y Dreamcast, usar perfil PERFORMANCE y frameskip si es necesario.",
+      "global_tuning": { "cpu_governor": "schedutil", "fan_control": false }
+    },
+    "dimensity_900": {
+      "name": "MediaTek Dimensity 900 (Retroid Pocket 4 / Odin Lite)",
+      "gpu": "Mali-G68",
+      "vulkan_support": "High",
+      "performance_notes": "Muy capaz para PS2/GC en resoluciones nativas o 1.5x. Buen rendimiento térmico.",
+      "global_tuning": { "cpu_governor": "schedutil", "fan_control": true }
+    },
+    "dimensity_1100": {
+      "name": "MediaTek Dimensity 1100 (Retroid Pocket 4 Pro)",
+      "gpu": "Mali-G77",
+      "vulkan_support": "High",
+      "performance_notes": "Rendimiento bestial para PS2/GC/Wii a 2x o 3x. Recomendado activar EXTREME para emulación de Switch ligera.",
+      "global_tuning": { "cpu_governor": "performance", "fan_control": true }
+    },
+    "snapdragon_8_gen_2": {
+      "name": "Snapdragon 8 Gen 2 (Odin 2 / Galaxy S23 Ultra / POCO F6 Pro)",
+      "gpu": "Adreno 740",
+      "vulkan_support": "Extreme",
+      "performance_notes": "Potencia absoluta. Mueve PS2/GC a 4x/5x sin problemas. Perfecto para emulación avanzada de Nintendo Switch (Yuzu/Sudachi).",
+      "global_tuning": { "cpu_governor": "performance", "fan_control": true }
+    },
+    "snapdragon_8_gen_3": {
+      "name": "Snapdragon 8 Gen 3 (Galaxy S24 Ultra / RedMagic 9 Pro)",
+      "gpu": "Adreno 750",
+      "vulkan_support": "Extreme",
+      "performance_notes": "Hardware tope de gama. Emulación perfecta de todos los sistemas actuales soportados en Android. Perfil ECO suficiente para casi todo.",
+      "global_tuning": { "cpu_governor": "schedutil", "fan_control": true }
+    }
+  },
+  "systems": [
+    {
+      "id": "nes",
+      "name": "Nintendo Entertainment System",
+      "tuning": { "unisoc_t620": { "mode": "ECO" } },
+      "emulation": { "retroarch": { "core": "fceumm" } },
+      "scraper": { "system_id": 3 }
+    },
+    {
+      "id": "snes",
+      "name": "Super Nintendo",
+      "tuning": { "unisoc_t620": { "mode": "ECO" } },
+      "emulation": { "retroarch": { "core": "snes9x" } },
+      "scraper": { "system_id": 4 }
+    },
+    {
+      "id": "n64",
+      "name": "Nintendo 64",
+      "tuning": { "unisoc_t620": { "mode": "PERFORMANCE", "api": "Vulkan" } },
+      "emulation": { "retroarch": { "core": "mupen64plus_next" }, "standalone": { "package": "org.mupen64plusae.v3.fzurita" } },
+      "scraper": { "system_id": 14 }
+    },
+    {
+      "id": "gamecube",
+      "name": "Nintendo GameCube",
+      "tuning": { "unisoc_t620": { "mode": "EXTREME", "api": "Vulkan", "res": "1x" } },
+      "emulation": { "standalone": { "package": "org.dolphinemu.dolphinemu" } },
+      "scraper": { "system_id": 13 }
+    },
+    {
+      "id": "wii",
+      "name": "Nintendo Wii",
+      "tuning": { "unisoc_t620": { "mode": "EXTREME", "api": "Vulkan", "res": "1x" } },
+      "emulation": { "standalone": { "package": "org.dolphinemu.dolphinemu" } },
+      "scraper": { "system_id": 9 }
+    },
+    {
+      "id": "gb",
+      "name": "Game Boy",
+      "tuning": { "unisoc_t620": { "mode": "ECO" } },
+      "emulation": { "retroarch": { "core": "gambatte" } },
+      "scraper": { "system_id": 9 }
+    },
+    {
+      "id": "gbc",
+      "name": "Game Boy Color",
+      "tuning": { "unisoc_t620": { "mode": "ECO" } },
+      "emulation": { "retroarch": { "core": "gambatte" } },
+      "scraper": { "system_id": 10 }
+    },
+    {
+      "id": "gba",
+      "name": "Game Boy Advance",
+      "tuning": { "unisoc_t620": { "mode": "ECO" } },
+      "emulation": { "retroarch": { "core": "mgba" } },
+      "scraper": { "system_id": 12 }
+    },
+    {
+      "id": "nds",
+      "name": "Nintendo DS",
+      "tuning": { "unisoc_t620": { "mode": "BALANCED" } },
+      "emulation": { "retroarch": { "core": "melonds" }, "standalone": { "package": "com.dsemu.drastic" } },
+      "scraper": { "system_id": 15 }
+    },
+    {
+      "id": "n3ds",
+      "name": "Nintendo 3DS",
+      "tuning": { "unisoc_t620": { "mode": "EXTREME", "api": "Vulkan" } },
+      "emulation": { "standalone": { "package": "org.citra.emu" } },
+      "scraper": { "system_id": 137 }
+    },
+    {
+      "id": "switch",
+      "name": "Nintendo Switch",
+      "tuning": { "unisoc_t620": { "mode": "EXTREME", "api": "Vulkan" } },
+      "emulation": { "standalone": { "package": "org.yuzu.yuzu_emu" } },
+      "scraper": { "system_id": 225 }
+    },
+    {
+      "id": "psx",
+      "name": "Sony PlayStation (PS1)",
+      "tuning": { "unisoc_t620": { "mode": "BALANCED", "res": "2x" } },
+      "emulation": { "retroarch": { "core": "pcsx_rearmed", "core_alt": "duckstation" }, "standalone": { "package": "com.github.stenzek.duckstation" } },
+      "scraper": { "system_id": 57 }
+    },
+    {
+      "id": "ps2",
+      "name": "Sony PlayStation 2",
+      "tuning": { "unisoc_t620": { "mode": "EXTREME", "api": "Vulkan", "res": "1x" } },
+      "emulation": { "standalone": { "package": "xyz.aethersx2.android" } },
+      "scraper": { "system_id": 58 }
+    },
+    {
+      "id": "psp",
+      "name": "Sony PlayStation Portable",
+      "tuning": { "unisoc_t620": { "mode": "PERFORMANCE", "api": "Vulkan", "res": "2x" } },
+      "emulation": { "retroarch": { "core": "ppsspp" }, "standalone": { "package": "org.ppsspp.ppsspp" } },
+      "scraper": { "system_id": 61 }
+    },
+    {
+      "id": "vita",
+      "name": "Sony PlayStation Vita",
+      "tuning": { "unisoc_t620": { "mode": "EXTREME", "api": "Vulkan" } },
+      "emulation": { "standalone": { "package": "org.vita3k.emulator" } },
+      "scraper": { "system_id": 62 }
+    },
+    {
+      "id": "sms",
+      "name": "Sega Master System",
+      "tuning": { "unisoc_t620": { "mode": "ECO" } },
+      "emulation": { "retroarch": { "core": "genesis_plus_gx" } },
+      "scraper": { "system_id": 2 }
+    },
+    {
+      "id": "megadrive",
+      "name": "Sega Mega Drive / Genesis",
+      "tuning": { "unisoc_t620": { "mode": "ECO" } },
+      "emulation": { "retroarch": { "core": "genesis_plus_gx", "core_alt": "picodrive" } },
+      "scraper": { "system_id": 1 }
+    },
+    {
+      "id": "segacd",
+      "name": "Sega CD / Mega-CD",
+      "tuning": { "unisoc_t620": { "mode": "ECO" } },
+      "emulation": { "retroarch": { "core": "genesis_plus_gx" } },
+      "scraper": { "system_id": 20 }
+    },
+    {
+      "id": "32x",
+      "name": "Sega 32X",
+      "tuning": { "unisoc_t620": { "mode": "ECO" } },
+      "emulation": { "retroarch": { "core": "picodrive" } },
+      "scraper": { "system_id": 19 }
+    },
+    {
+      "id": "saturn",
+      "name": "Sega Saturn",
+      "tuning": { "unisoc_t620": { "mode": "PERFORMANCE" } },
+      "emulation": { "retroarch": { "core": "yabause" }, "standalone": { "package": "org.yabause.yabausae" } },
+      "scraper": { "system_id": 22 }
+    },
+    {
+      "id": "dc",
+      "name": "Sega Dreamcast",
+      "tuning": { "unisoc_t620": { "mode": "PERFORMANCE", "api": "Vulkan" } },
+      "emulation": { "retroarch": { "core": "flycast" }, "standalone": { "package": "io.reicast.snes" } },
+      "scraper": { "system_id": 23 }
+    },
+    {
+      "id": "mame",
+      "name": "Arcade (MAME)",
+      "tuning": { "unisoc_t620": { "mode": "BALANCED" } },
+      "emulation": { "retroarch": { "core": "mame2003_plus" } },
+      "scraper": { "system_id": 75 }
+    },
+    {
+      "id": "fbneo",
+      "name": "FinalBurn Neo",
+      "tuning": { "unisoc_t620": { "mode": "BALANCED" } },
+      "emulation": { "retroarch": { "core": "fbneo" } },
+      "scraper": { "system_id": 100 }
+    },
+    {
+      "id": "neogeo",
+      "name": "SNK Neo Geo AES/MVS",
+      "tuning": { "unisoc_t620": { "mode": "BALANCED" } },
+      "emulation": { "retroarch": { "core": "fbneo", "core_alt": "mame2003_plus" } },
+      "scraper": { "system_id": 80 }
+    },
+    {
+      "id": "cps1",
+      "name": "Capcom Play System I",
+      "tuning": { "unisoc_t620": { "mode": "BALANCED" } },
+      "emulation": { "retroarch": { "core": "fbalpha2012_cps1" } },
+      "scraper": { "system_id": 6 }
+    },
+    {
+      "id": "cps2",
+      "name": "Capcom Play System II",
+      "tuning": { "unisoc_t620": { "mode": "BALANCED" } },
+      "emulation": { "retroarch": { "core": "fbalpha2012_cps2" } },
+      "scraper": { "system_id": 7 }
+    },
+    {
+      "id": "cps3",
+      "name": "Capcom Play System III",
+      "tuning": { "unisoc_t620": { "mode": "BALANCED" } },
+      "emulation": { "retroarch": { "core": "fbalpha2012_cps3" } },
+      "scraper": { "system_id": 17 }
+    },
+    {
+      "id": "model2",
+      "name": "Sega Model 2",
+      "tuning": { "unisoc_t620": { "mode": "PERFORMANCE" } },
+      "emulation": { "retroarch": { "core": "mame2003_plus" } },
+      "scraper": { "system_id": 111 }
+    },
+    {
+      "id": "model3",
+      "name": "Sega Model 3",
+      "tuning": { "unisoc_t620": { "mode": "EXTREME", "api": "Vulkan" } },
+      "emulation": { "retroarch": { "core": "mame" } },
+      "scraper": { "system_id": 112 }
+    },
+    {
+      "id": "naomi",
+      "name": "Sega NAOMI",
+      "tuning": { "unisoc_t620": { "mode": "PERFORMANCE", "api": "Vulkan" } },
+      "emulation": { "retroarch": { "core": "flycast" } },
+      "scraper": { "system_id": 56 }
+    },
+    {
+      "id": "atomiswave",
+      "name": "Sammy Atomiswave",
+      "tuning": { "unisoc_t620": { "mode": "PERFORMANCE", "api": "Vulkan" } },
+      "emulation": { "retroarch": { "core": "flycast" } },
+      "scraper": { "system_id": 53 }
+    },
+    {
+      "id": "amiga",
+      "name": "Commodore Amiga",
+      "tuning": { "unisoc_t620": { "mode": "BALANCED" } },
+      "emulation": { "retroarch": { "core": "puae" } },
+      "scraper": { "system_id": 64 }
+    },
+    {
+      "id": "c64",
+      "name": "Commodore 64",
+      "tuning": { "unisoc_t620": { "mode": "ECO" } },
+      "emulation": { "retroarch": { "core": "vice_x64" } },
+      "scraper": { "system_id": 66 }
+    },
+    {
+      "id": "zxspectrum",
+      "name": "Sinclair ZX Spectrum",
+      "tuning": { "unisoc_t620": { "mode": "ECO" } },
+      "emulation": { "retroarch": { "core": "fuse" } },
+      "scraper": { "system_id": 76 }
+    },
+    {
+      "id": "msx",
+      "name": "MSX / MSX2",
+      "tuning": { "unisoc_t620": { "mode": "ECO" } },
+      "emulation": { "retroarch": { "core": "bluemsx", "core_alt": "fmsx" } },
+      "scraper": { "system_id": 113 }
+    },
+    {
+      "id": "dos",
+      "name": "MS-DOS",
+      "tuning": { "unisoc_t620": { "mode": "BALANCED" } },
+      "emulation": { "retroarch": { "core": "dosbox_pure" }, "standalone": { "package": "com.magicbox.magicbox" } },
+      "scraper": { "system_id": 135 }
+    },
+    {
+      "id": "scummvm",
+      "name": "ScummVM",
+      "tuning": { "unisoc_t620": { "mode": "ECO" } },
+      "emulation": { "retroarch": { "core": "scummvm" }, "standalone": { "package": "org.scummvm.scummvm" } },
+      "scraper": { "system_id": 123 }
+    },
+    {
+      "id": "pico8",
+      "name": "PICO-8",
+      "tuning": { "unisoc_t620": { "mode": "ECO" } },
+      "emulation": { "retroarch": { "core": "retro8" } },
+      "scraper": { "system_id": 238 }
+    }
+  ],
+  "global_scraper_settings": {
+    "user_agent": "SpeccyOS-E5-Ultra/4.0",
+    "hashing_enabled": true,
+    "fuzzy_search": true,
+    "media_types": ["box-2d", "video", "wheel", "fanart"]
+  }
+}

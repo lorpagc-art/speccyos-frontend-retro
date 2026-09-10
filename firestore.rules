@@ -1,0 +1,83 @@
+rules_version = '2';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SpeccyOS — reglas de Firestore
+//
+// Antes: no existían reglas publicadas y el cliente indexaba por CORREO
+// ELECTRÓNICO sin autenticación, lo que obligaba a `allow read, write: if true`.
+// Cualquiera podía listar los correos de los usuarios, borrar sus partidas y
+// falsificar el ranking.
+//
+// Ahora: todo por UID de Firebase Auth (anónimo), con validación de tipos y
+// límites en las escrituras públicas.
+// ─────────────────────────────────────────────────────────────────────────────
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+    function isOwner(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    // Datos privados del usuario: config y progreso de juegos.
+    // Sólo su dueño puede leerlos o escribirlos. Nadie puede listar la colección.
+    match /users/{uid} {
+      allow read, write: if isOwner(uid);
+      match /{document=**} {
+        allow read, write: if isOwner(uid);
+      }
+    }
+
+    // Ranking de benchmarks: lectura pública, escritura acotada.
+    // - Sólo se puede CREAR, nunca modificar ni borrar una entrada ajena.
+    // - La puntuación debe ser un entero dentro de un rango plausible.
+    // - Un usuario sólo puede firmar entradas con su propio uid.
+    match /speccy_benchmarks/{entryId} {
+      allow read: if true;
+      allow create: if signedIn()
+                    && request.resource.data.uid == request.auth.uid
+                    && request.resource.data.total_score is int
+                    && request.resource.data.total_score > 0
+                    && request.resource.data.total_score < 500000
+                    && request.resource.data.user_name is string
+                    && request.resource.data.user_name.size() <= 32
+                    && request.resource.data.device_model is string
+                    && request.resource.data.device_model.size() <= 64;
+      allow update, delete: if false;
+    }
+
+    // Reto diario: mismas garantías.
+    match /daily_challenge_results/{day}/entries/{entryId} {
+      allow read: if true;
+      allow create: if signedIn()
+                    && request.resource.data.uid == request.auth.uid
+                    && request.resource.data.score is int
+                    && request.resource.data.score >= 0
+                    && request.resource.data.score < 1000000
+                    && request.resource.data.userName is string
+                    && request.resource.data.userName.size() <= 32;
+      allow update, delete: if false;
+    }
+    match /daily_challenge_results/{day} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Reportes de error: se pueden enviar, nunca leer ni alterar desde el cliente.
+    match /bug_reports/{reportId} {
+      allow create: if signedIn()
+                    && request.resource.data.userId == request.auth.uid
+                    && request.resource.data.description is string
+                    && request.resource.data.description.size() <= 4000;
+      allow read, update, delete: if false;
+    }
+
+    // Todo lo demás, cerrado.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

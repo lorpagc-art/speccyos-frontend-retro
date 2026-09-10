@@ -1,0 +1,30 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/BpeTokenizer.kt</file>
+  <line>86</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.BpeTokenizer java.util.Map&lt;java.lang.String,java.lang.Integer&gt; loadVocab(android.content.Context context, java.lang.String fileName)" />
+  <problem_class id="SameParameterValue" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Method parameter always has the same value</problem_class>
+  <hints />
+  <description>Value of parameter &lt;code&gt;fileName&lt;/code&gt; is always '&quot;vocab.json&quot;'</description>
+  <highlighted_element>fileName</highlighted_element>
+  <language>kotlin</language>
+  <offset>44</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/BpeTokenizer.kt</file>
+  <line>100</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.BpeTokenizer java.util.List&lt;kotlin.Pair&lt;java.lang.String,java.lang.String&gt;&gt; loadMerges(android.content.Context context, java.lang.String fileName)" />
+  <problem_class id="SameParameterValue" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Method parameter always has the same value</problem_class>
+  <hints />
+  <description>Value of parameter &lt;code&gt;fileName&lt;/code&gt; is always '&quot;merges.txt&quot;'</description>
+  <highlighted_element>fileName</highlighted_element>
+  <language>kotlin</language>
+  <offset>45</offset>
+  <length>8</length>
+</problem>
+</problems>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Imágenes generadas por la app (boot share, carátulas temporales) -->
+    <cache-path name="cache" path="images/" />
+    <cache-path name="boot_share" path="." />
+    <cache-path name="ra_configs" path="ra_configs/" />
+
+    <!-- Caché externa (screenshots, medios descargados) -->
+    <external-cache-path name="external_cache" path="." />
+
+    <!-- Archivos de la app en almacenamiento externo -->
+    <external-files-path name="my_images" path="." />
+
+    <!--
+        Almacenamiento externo primario — cubre ROMs en /storage/emulated/0/
+        Necesario para FileProvider.getUriForFile() con ROMs del usuario.
+        NOTA: Las ROMs en SD cards secundarias (/storage/XXXX-XXXX/) no pueden
+        ser servidas por FileProvider y usan el fallback Uri.fromFile().
+    -->
+    <external-path name="external_files" path="." />
+
+</paths>

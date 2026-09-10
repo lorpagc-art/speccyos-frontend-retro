@@ -1,0 +1,15 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/ScrapingManager.kt</file>
+  <line>11</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.ScrapingManager java.lang.Object scrapeGameData(com.example.speccyose5ultrav021b.Game game, kotlin.coroutines.Continuation&lt;? super com.example.speccyose5ultrav021b.Game&gt; $completion)" />
+  <problem_class id="SimplifyBooleanWithConstants" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Boolean expression can be simplified</problem_class>
+  <description>Boolean expression can be simplified</description>
+  <highlighted_element>RetrofitInstance.API_KEY == &quot;PASTE_YOUR_API_KEY_HERE&quot;</highlighted_element>
+  <language>kotlin</language>
+  <offset>12</offset>
+  <length>53</length>
+</problem>
+</problems>

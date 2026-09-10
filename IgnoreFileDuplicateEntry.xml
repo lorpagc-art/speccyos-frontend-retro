@@ -1,0 +1,38 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.gitignore</file>
+  <line>233</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.gitignore" />
+  <problem_class id="IgnoreFileDuplicateEntry" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ignore file duplicates</problem_class>
+  <description>&lt;code&gt;gfx/common/wayland/viewporter.c&lt;/code&gt; pattern is defined more than once #loc</description>
+  <highlighted_element>gfx/common/wayland/viewporter.c</highlighted_element>
+  <language>IgnoreLang</language>
+  <offset>0</offset>
+  <length>31</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.gitignore</file>
+  <line>234</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.gitignore" />
+  <problem_class id="IgnoreFileDuplicateEntry" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ignore file duplicates</problem_class>
+  <description>&lt;code&gt;gfx/common/wayland/viewporter.h&lt;/code&gt; pattern is defined more than once #loc</description>
+  <highlighted_element>gfx/common/wayland/viewporter.h</highlighted_element>
+  <language>IgnoreLang</language>
+  <offset>0</offset>
+  <length>31</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.gitignore</file>
+  <line>263</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.gitignore" />
+  <problem_class id="IgnoreFileDuplicateEntry" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Ignore file duplicates</problem_class>
+  <description>&lt;code&gt;*.elf&lt;/code&gt; pattern is defined more than once #loc</description>
+  <highlighted_element>*.elf</highlighted_element>
+  <language>IgnoreLang</language>
+  <offset>0</offset>
+  <length>5</length>
+</problem>
+</problems>

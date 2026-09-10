@@ -1,0 +1,122 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/docs/daijishou_console.md</file>
+  <line>26</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/docs/daijishou_console.md" />
+  <problem_class id="MarkdownIncorrectTableFormatting" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Incorrect table formatting</problem_class>
+  <description>Table is not correctly formatted</description>
+  <highlighted_element>| Key | Data Type | Description | |---|---|---| | `force_set_wallpaper_for_all` | Boolean | Set wal...</highlighted_element>
+  <language>Markdown</language>
+  <offset>0</offset>
+  <length>848</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/docs/retro_achievements_status.md</file>
+  <line>6</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/docs/retro_achievements_status.md" />
+  <problem_class id="MarkdownIncorrectTableFormatting" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Incorrect table formatting</problem_class>
+  <description>Table is not correctly formatted</description>
+  <highlighted_element>| Name | Working | |---|---| | Profile Metadata | No | | Profile Recent | No | | Profile Completion ...</highlighted_element>
+  <language>Markdown</language>
+  <offset>0</offset>
+  <length>214</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/Pigs-In-A-Blanket/README.md</file>
+  <line>49</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/Pigs-In-A-Blanket/README.md" />
+  <problem_class id="MarkdownIncorrectTableFormatting" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Incorrect table formatting</problem_class>
+  <description>Table is not correctly formatted</description>
+  <highlighted_element>|GL|EGL| |:-:|:-:| |GL_EXT_draw_instanced|EGL_SCE_piglet_sync| |GL_EXT_instanced_arrays|EGL_SCE_pigl...</highlighted_element>
+  <language>Markdown</language>
+  <offset>0</offset>
+  <length>655</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/xxHash/README.md</file>
+  <line>10</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/xxHash/README.md" />
+  <problem_class id="MarkdownIncorrectTableFormatting" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Incorrect table formatting</problem_class>
+  <description>Table is not correctly formatted</description>
+  <highlighted_element>|Branch |Status | |------------|---------| |release | [![Build Status](https://github.com...</highlighted_element>
+  <language>Markdown</language>
+  <offset>0</offset>
+  <length>419</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/xxHash/README.md</file>
+  <line>22</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/xxHash/README.md" />
+  <problem_class id="MarkdownIncorrectTableFormatting" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Incorrect table formatting</problem_class>
+  <description>Table is not correctly formatted</description>
+  <highlighted_element>| Hash Name | Width | Bandwidth (GB/s) | Small Data Velocity | Quality | Comment | | --------- ...</highlighted_element>
+  <language>Markdown</language>
+  <offset>0</offset>
+  <length>1280</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/xxHash/tests/collisions/README.md</file>
+  <line>103</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/xxHash/tests/collisions/README.md" />
+  <problem_class id="MarkdownIncorrectTableFormatting" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Incorrect table formatting</problem_class>
+  <description>Table is not correctly formatted</description>
+  <highlighted_element>| Algorithm | Input Len | Nb Hashes | Expected | Nb Collisions | Notes | | --- | --- | --- ...</highlighted_element>
+  <language>Markdown</language>
+  <offset>0</offset>
+  <length>420</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/xxHash/tests/collisions/README.md</file>
+  <line>113</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/xxHash/tests/collisions/README.md" />
+  <problem_class id="MarkdownIncorrectTableFormatting" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Incorrect table formatting</problem_class>
+  <description>Table is not correctly formatted</description>
+  <highlighted_element>| Algorithm | Input Len | Nb Hashes | Expected | Nb Collisions | Notes | | --- | --- | --- ...</highlighted_element>
+  <language>Markdown</language>
+  <offset>0</offset>
+  <length>638</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>42</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownIncorrectTableFormatting" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Incorrect table formatting</problem_class>
+  <description>Table is not correctly formatted</description>
+  <highlighted_element>| Compressor name | Ratio | Compression| Decompress.| | --------------- | ------| --...</highlighted_element>
+  <language>Markdown</language>
+  <offset>0</offset>
+  <length>805</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>75</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownIncorrectTableFormatting" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Incorrect table formatting</problem_class>
+  <description>Table is not correctly formatted</description>
+  <highlighted_element>Compression Speed vs Ratio | Decompression Speed ---------------------------|-------------------- ![...</highlighted_element>
+  <language>Markdown</language>
+  <offset>0</offset>
+  <length>251</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>96</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownIncorrectTableFormatting" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Incorrect table formatting</problem_class>
+  <description>Table is not correctly formatted</description>
+  <highlighted_element>Compression Ratio | Compression Speed | Decompression Speed ------------------|-------------------|-...</highlighted_element>
+  <language>Markdown</language>
+  <offset>0</offset>
+  <length>322</length>
+</problem>
+</problems>

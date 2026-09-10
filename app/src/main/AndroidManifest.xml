@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:sharedUserId="com.generacionarcade.speccyos.shared"
+    android:sharedUserMaxSdkVersion="32">
+    <!--
+      sharedUserId está OBSOLETO desde API 29 y no se puede quitar sin que los
+      usuarios existentes pierdan sus datos. `sharedUserMaxSdkVersion="32"` congela
+      el comportamiento para instalaciones NUEVAS: dejan de compartir UID, con lo
+      que ninguna otra app firmada con la misma clave puede leer nuestros
+      SharedPreferences ni reescribir los scripts privilegiados.
+    -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!--
+      QUERY_ALL_PACKAGES ELIMINADO: el bloque <queries> de abajo declara todos los
+      emuladores por nombre más un filtro MAIN/LAUNCHER que, para un launcher, cubre
+      el resto. Play deniega el permiso cuando existe esta alternativa.
+    -->
+
+    <!-- Bluetooth: sólo para mandos inalámbricos -->
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation" tools:targetApi="s" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!-- Compatibilidad con Android 12 y anteriores -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+
+    <!--
+      READ_MEDIA_IMAGES / VIDEO / AUDIO ELIMINADOS: daban acceso a TODA la galería y
+      la música del usuario. SpeccyOS lee ROMs y carátulas por SAF sobre un árbol que
+      el usuario elige, no necesita nada de eso. La política de Fotos y Vídeos de Play
+      deniega el acceso amplio a apps cuya función principal no es gestionar fotos.
+      Para una imagen puntual se usa el Photo Picker, que no requiere permiso.
+    -->
+
+    <!-- SHIZUKU (control de rendimiento sin root) -->
+    <uses-permission android:name="moe.shizuku.manager.permission.API_V23" />
+
+    <!-- COMPATIBILIDAD DE HARDWARE: nada es obligatorio -->
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.faketouch" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.software.leanback" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.gamepad" android:required="false" />
+
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.sensor.compass" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.sensor.proximity" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.sensor.light" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.sensor.barometer" android:required="false" tools:replace="android:required" />
+
+    <uses-feature android:name="android.hardware.telephony" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.telephony.gsm" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.telephony.cdma" android:required="false" tools:replace="android:required" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" tools:replace="android:required" />
+
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.wifi" android:required="false" tools:replace="android:required" />
+
+    <uses-feature android:name="android.hardware.location" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.location.network" android:required="false" tools:replace="android:required" />
+
+    <uses-feature android:name="android.hardware.microphone" android:required="false" tools:replace="android:required" />
+    <uses-feature android:name="android.hardware.vibrator" android:required="false" tools:replace="android:required" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <queries>
+        <!-- RetroArch -->
+        <package android:name="com.retroarch.speccy" />
+        <package android:name="com.retroarch.aarch64" />
+        <package android:name="com.retroarch.ra32" />
+        <package android:name="com.retroarch" />
+        <package android:name="com.retroarch.plus" />
+        <!-- Standalone -->
+        <package android:name="org.dolphinemu.dolphinemu" />
+        <package android:name="org.dolphinemu.dolphinemu.debug" />
+        <package android:name="com.ps2.aethersx2" />
+        <package android:name="xyz.aethersx2.android" />
+        <package android:name="com.tahlreth.aethersx2.android" />
+        <package android:name="org.ppsspp.ppsspp" />
+        <package android:name="org.ppsspp.ppssppgold" />
+        <package android:name="org.citra.citra_emu" />
+        <package android:name="io.github.azahar_emu.azahar" />
+        <package android:name="com.panda3ds.pandroid" />
+        <package android:name="me.magnum.melonds" />
+        <package android:name="com.dsemu.drastic" />
+        <package android:name="com.github.stenzek.duckstation" />
+        <package android:name="io.recompiled.redream" />
+        <package android:name="com.flycast.emulator" />
+        <package android:name="org.uoyabause.android.uoyabause2" />
+        <package android:name="com.supermodel3.android" />
+        <package android:name="org.mupen64plusae.v3.fzurita" />
+        <package android:name="paulscode.android.mupen64plusae" />
+        <package android:name="com.seleuco.mame4droid" />
+        <package android:name="com.seleuco.mame4d2024" />
+        <package android:name="com.swordfish.lemuroid" />
+        <package android:name="org.eden_emu.eden" />
+        <package android:name="dev.eden.eden_emulator" />
+        <package android:name="com.vita3k.emulator" />
+        <package android:name="net.rpcs3" />
+        <package android:name="info.cemu.Cemu" />
+        <package android:name="com.winlator" />
+        <package android:name="com.winlator.cmod" />
+        <package android:name="com.micewine.emulator" />
+        <package android:name="com.explusalpha.Snes9xPlus" />
+        <package android:name="com.explusalpha.MdEmu" />
+        <package android:name="com.explusalpha.GbaEmu" />
+        <!-- Sistema -->
+        <package android:name="moe.shizuku.privileged.api" />
+        <package android:name="com.android.vending" />
+        <package android:name="com.google.android.play.games" />
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".SpeccyApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:banner="@drawable/tv_banner"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:localeConfig="@xml/locales_config"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/Theme.SpeccyOSE5UltraV021b"
+        android:enableOnBackInvokedCallback="true"
+        tools:replace="android:allowBackup"
+        tools:targetApi="tiramisu">
+        <!--
+          requestLegacyExternalStorage ELIMINADO: es inerte con targetSdk >= 30 y
+          sólo confunde al revisor de Play.
+          play.integrity.opt_out ELIMINADO: renunciaba a las señales de integridad
+          justo cuando el backend no validaba nada. App Check lo necesita activo.
+          AdMob APPLICATION_ID ELIMINADO junto con el SDK: recogía el identificador
+          publicitario sin mostrar ni un anuncio y sin consentimiento GDPR.
+        -->
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboard|keyboardHidden|navigation|uiMode|density|fontScale|locale|layoutDirection"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="false"
+            android:theme="@style/Theme.SpeccyOSE5UltraV021b">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- Sin LEANBACK_LAUNCHER la app no aparece en el home de Android TV -->
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+            <!-- Soporte de plegables y doble pantalla: no reiniciar al plegar -->
+            <layout
+                android:defaultWidth="1280dp"
+                android:defaultHeight="720dp"
+                android:minWidth="320dp"
+                android:minHeight="240dp" />
+        </activity>
+
+        <service
+            android:name=".OverlayService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse|mediaProjection">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Quick-access overlay menu that the user opens on top of the running emulator to switch performance profile, take a save state and return to the library." />
+        </service>
+
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:foregroundServiceType="dataSync"
+            tools:node="merge" />
+
+        <!--
+          SpeccyAccessibilityService se declara SÓLO en el flavor `systemos`
+          (sideload / custom ROM). En Play la política de la API de accesibilidad
+          es de las de aplicación más estricta y "remapear un botón de mando" es
+          exactamente el caso que Google retira. En playstore/website las teclas se
+          capturan con dispatchKeyEvent en MainActivity.
+        -->
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

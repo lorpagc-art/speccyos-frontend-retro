@@ -1,0 +1,220 @@
+{
+  "systems": [
+    {
+      "id": "arcade",
+      "name": "Arcade (MAME / FBNeo)",
+      "extensions": [".zip", ".7z", ".chd"],
+      "defaultCore": "fbneo",
+      "alternativeCores": ["mame2003_plus", "mame"],
+      "scrapingPlatform": "arcade"
+    },
+    {
+      "id": "nes",
+      "name": "Nintendo Entertainment System",
+      "extensions": [".nes", ".zip"],
+      "defaultCore": "fceumm",
+      "alternativeCores": ["nestopia", "mesen"],
+      "scrapingPlatform": "nes"
+    },
+    {
+      "id": "snes",
+      "name": "Super Nintendo",
+      "extensions": [".sfc", ".smc", ".zip"],
+      "defaultCore": "snes9x",
+      "alternativeCores": ["snes9x2010", "bsnes"],
+      "scrapingPlatform": "snes"
+    },
+    {
+      "id": "n64",
+      "name": "Nintendo 64",
+      "extensions": [".n64", ".z64", ".v64", ".zip"],
+      "defaultCore": "mupen64plus_next",
+      "alternativeCores": ["parallel_n64"],
+      "scrapingPlatform": "n64"
+    },
+    {
+      "id": "gc",
+      "name": "Nintendo GameCube",
+      "extensions": [".iso", ".rvz", ".gcm"],
+      "defaultCore": "dolphin",
+      "alternativeCores": [],
+      "scrapingPlatform": "gc"
+    },
+    {
+      "id": "wii",
+      "name": "Nintendo Wii",
+      "extensions": [".iso", ".wbfs", ".rvz"],
+      "defaultCore": "dolphin",
+      "alternativeCores": [],
+      "scrapingPlatform": "wii"
+    },
+    {
+      "id": "gb",
+      "name": "Game Boy",
+      "extensions": [".gb", ".zip"],
+      "defaultCore": "gambatte",
+      "alternativeCores": ["sameboy", "mgba"],
+      "scrapingPlatform": "gb"
+    },
+    {
+      "id": "gbc",
+      "name": "Game Boy Color",
+      "extensions": [".gbc", ".zip"],
+      "defaultCore": "gambatte",
+      "alternativeCores": ["sameboy", "mgba"],
+      "scrapingPlatform": "gbc"
+    },
+    {
+      "id": "gba",
+      "name": "Game Boy Advance",
+      "extensions": [".gba", ".zip"],
+      "defaultCore": "mgba",
+      "alternativeCores": ["gpsp"],
+      "scrapingPlatform": "gba"
+    },
+    {
+      "id": "nds",
+      "name": "Nintendo DS",
+      "extensions": [".nds", ".zip"],
+      "defaultCore": "melonds",
+      "alternativeCores": ["desmume"],
+      "scrapingPlatform": "nds"
+    },
+    {
+      "id": "3ds",
+      "name": "Nintendo 3DS",
+      "extensions": [".3ds", ".cia", ".cci"],
+      "defaultCore": "citra",
+      "alternativeCores": ["citra_canary"],
+      "scrapingPlatform": "3ds"
+    },
+    {
+      "id": "mastersystem",
+      "name": "Sega Master System",
+      "extensions": [".sms", ".bin", ".zip"],
+      "defaultCore": "genesis_plus_gx",
+      "alternativeCores": ["picodrive"],
+      "scrapingPlatform": "mastersystem"
+    },
+    {
+      "id": "genesis",
+      "name": "Sega Genesis / Mega Drive",
+      "extensions": [".md", ".smd", ".gen", ".bin", ".zip"],
+      "defaultCore": "genesis_plus_gx",
+      "alternativeCores": ["picodrive"],
+      "scrapingPlatform": "genesis"
+    },
+    {
+      "id": "segacd",
+      "name": "Sega CD / Mega CD",
+      "extensions": [".iso", ".cue", ".chd"],
+      "defaultCore": "genesis_plus_gx",
+      "alternativeCores": ["picodrive"],
+      "scrapingPlatform": "segacd"
+    },
+    {
+      "id": "saturn",
+      "name": "Sega Saturn",
+      "extensions": [".iso", ".cue", ".chd"],
+      "defaultCore": "yabause",
+      "alternativeCores": ["beetle_saturn"],
+      "scrapingPlatform": "saturn"
+    },
+    {
+      "id": "dreamcast",
+      "name": "Sega Dreamcast",
+      "extensions": [".gdi", ".cdi", ".chd"],
+      "defaultCore": "flycast",
+      "alternativeCores": [],
+      "scrapingPlatform": "dreamcast"
+    },
+    {
+      "id": "gamegear",
+      "name": "Sega Game Gear",
+      "extensions": [".gg", ".zip"],
+      "defaultCore": "genesis_plus_gx",
+      "alternativeCores": ["picodrive"],
+      "scrapingPlatform": "gamegear"
+    },
+    {
+      "id": "psx",
+      "name": "PlayStation",
+      "extensions": [".iso", ".bin", ".cue", ".chd", ".pbp"],
+      "defaultCore": "pcsx_rearmed",
+      "alternativeCores": ["duckstation", "beetle_psx"],
+      "scrapingPlatform": "psx"
+    },
+    {
+      "id": "ps2",
+      "name": "PlayStation 2",
+      "extensions": [".iso", ".chd", ".gz"],
+      "defaultCore": "pcsx2",
+      "alternativeCores": ["play"],
+      "scrapingPlatform": "ps2"
+    },
+    {
+      "id": "psp",
+      "name": "PlayStation Portable",
+      "extensions": [".iso", ".cso", ".pbp"],
+      "defaultCore": "ppsspp",
+      "alternativeCores": [],
+      "scrapingPlatform": "psp"
+    },
+    {
+      "id": "psvita",
+      "name": "PlayStation Vita",
+      "extensions": [".vpk", ".zip"],
+      "defaultCore": "vita3k",
+      "alternativeCores": [],
+      "scrapingPlatform": "psvita"
+    },
+    {
+      "id": "neogeo",
+      "name": "SNK Neo Geo",
+      "extensions": [".zip", ".7z"],
+      "defaultCore": "fbneo",
+      "alternativeCores": ["mame"],
+      "scrapingPlatform": "neogeo"
+    },
+    {
+      "id": "ngp",
+      "name": "Neo Geo Pocket / Color",
+      "extensions": [".ngp", ".ngc", ".zip"],
+      "defaultCore": "mednafen_ngp",
+      "alternativeCores": [],
+      "scrapingPlatform": "ngpc"
+    },
+    {
+      "id": "pce",
+      "name": "PC Engine / TurboGrafx-16",
+      "extensions": [".pce", ".cue", ".zip"],
+      "defaultCore": "mednafen_pce_fast",
+      "alternativeCores": [],
+      "scrapingPlatform": "pce"
+    },
+    {
+      "id": "msx",
+      "name": "MSX / MSX2",
+      "extensions": [".rom", ".mx1", ".mx2", ".zip"],
+      "defaultCore": "bluemsx",
+      "alternativeCores": ["fmsx"],
+      "scrapingPlatform": "msx"
+    },
+    {
+      "id": "dos",
+      "name": "MS-DOS",
+      "extensions": [".exe", ".com", ".bat", ".conf", ".zip"],
+      "defaultCore": "dosbox_pure",
+      "alternativeCores": ["dosbox_svn"],
+      "scrapingPlatform": "pc"
+    },
+    {
+      "id": "amiga",
+      "name": "Commodore Amiga",
+      "extensions": [".adf", ".lha", ".chd", ".zip"],
+      "defaultCore": "puae",
+      "alternativeCores": ["uae4arm"],
+      "scrapingPlatform": "amiga"
+    }
+  ]
+}

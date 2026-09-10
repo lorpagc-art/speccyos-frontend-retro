@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Traducción inglesa. Hasta ahora el idioma se resolvía con
+  `if (lang == "es") "…" else "…"` repetido a mano 22 veces por el código y el
+  resto de textos estaban incrustados en español: era imposible traducir,
+  imposible pseudo-localizar para detectar desbordes de texto, e imposible RTL.
+-->
+<resources>
+    <string name="accessibility_desc">Speccy OS uses the Accessibility API to detect when an emulator closes and to let the physical Menu/Select buttons open the control panel over your games. We do not collect or share personal data.</string>
+    <string name="accessibility_summary">Lets the physical gamepad buttons open the Speccy OS quick panel.</string>
+
+    <string name="perm_accessibility_title">Accessibility Service</string>
+    <string name="perm_accessibility_msg">Speccy OS needs the Accessibility Service to intercept your handheld\'s physical buttons and bring you back to the dashboard when you leave a game.\n\nNo screen content is read or stored.</string>
+    <string name="perm_storage_title">File Access</string>
+    <string name="perm_storage_msg">To index your game library and download box art and preview videos, Speccy OS needs permission to read and write your storage.</string>
+    <string name="perm_query_packages_title">App Visibility</string>
+    <string name="perm_query_packages_msg">Speccy OS lists your installed apps so it can launch your games straight into emulators such as RetroArch, Dolphin or AetherSX2.</string>
+    <string name="perm_overlay_title">Screen Overlay</string>
+    <string name="perm_overlay_msg">This lets Speccy OS show its quick menu on top of your games so you can change CPU power or fan speed in real time.</string>
+    <string name="perm_notifications_title">System Notifications</string>
+    <string name="perm_notifications_msg">Notifications keep you posted on scraper progress (media downloads) and Nebula Sync cloud status.</string>
+
+    <string name="account_delete_title">Delete my account and data</string>
+    <string name="account_delete_summary">Removes your profile, your cloud saves and your leaderboard entries. This cannot be undone.</string>
+    <string name="account_delete_confirm">Your profile, synced saves and scores will be permanently deleted. Your local library and ROMs are untouched. Continue?</string>
+    <string name="account_delete_working">Deleting your data…</string>
+    <string name="account_delete_done">Account deleted. Your data is no longer on our servers.</string>
+    <string name="account_delete_failed">We could not finish the deletion. Check your connection and try again.</string>
+    <string name="account_delete_cta">Delete account</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="launching">Starting %1$s…</string>
+    <string name="launch_failed">Could not open the emulator: %1$s</string>
+    <string name="tier_warning">%1$s is beyond what %2$s handles comfortably (%3$s).</string>
+    <string name="bios_missing_title">Missing BIOS files</string>
+    <string name="bios_missing_body">%1$s is missing %2$d BIOS files. Copy them into the BIOS folder of your ROMs and try again.</string>
+    <string name="launch_anyway">Start anyway</string>
+
+    <string name="state_loading">Loading your library…</string>
+    <string name="state_empty_title">Nothing here yet</string>
+    <string name="state_empty_body">Pick the folder where you keep your ROMs and Speccy OS will index it.</string>
+    <string name="state_error_title">Something went wrong</string>
+    <string name="state_retry">Try again</string>
+
+    <string name="perf_no_backend">No Shizuku or root: Speccy OS will only tune RetroArch and the interface.</string>
+    <string name="perf_applied">%1$s profile applied (%2$d settings).</string>
+    <string name="perf_throttling">Running hot: dropping to Balanced to protect your handheld.</string>
+</resources>

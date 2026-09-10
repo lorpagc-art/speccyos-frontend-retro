@@ -1,0 +1,40 @@
+{
+  "soc": "Unisoc T618",
+  "modes": {
+    "ECO": {
+      "cpu_cluster0_gov": "powersave",
+      "cpu_cluster1_gov": "powersave",
+      "gpu_governor": "powersave",
+      "io_scheduler": "noop",
+      "description": "Modo ahorro Gamma. Ideal para optimizar batería en sistemas 2D."
+    },
+    "BALANCED": {
+      "cpu_cluster0_gov": "schedutil",
+      "cpu_cluster1_gov": "schedutil",
+      "gpu_governor": "simple_ondemand",
+      "io_scheduler": "cfq",
+      "description": "Modo equilibrado Gamma. Escalado dinámico para uso general."
+    },
+    "PERFORMANCE": {
+      "cpu_cluster0_gov": "performance",
+      "cpu_cluster1_gov": "performance",
+      "gpu_governor": "performance",
+      "io_scheduler": "deadline",
+      "description": "Modo rendimiento Gamma. Frecuencias máximas para GameCube y PS2."
+    },
+    "EXTREME": {
+      "cpu_cluster0_gov": "performance",
+      "cpu_cluster1_gov": "performance",
+      "gpu_governor": "performance",
+      "touch_boost": true,
+      "io_scheduler": "deadline",
+      "description": "Modo Max Gamma. Potencia total sin restricciones para emulación pesada."
+    }
+  },
+  "sysfs_mapping": {
+    "cpu0_path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_governor",
+    "cpu1_path": "/sys/devices/system/cpu/cpufreq/policy6/scaling_governor",
+    "gpu_path": "/sys/class/devfreq/6000000.gpu/governor",
+    "io_sched_path": "/sys/block/mmcblk0/queue/scheduler"
+  }
+}

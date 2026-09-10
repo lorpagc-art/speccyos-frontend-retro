@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application>
+        <!--
+          MainActivity como LANZADOR DEL SISTEMA (HOME).
+
+          OJO con el filtro: un <intent-filter> que solo lleva <category> y no
+          lleva <action> NO CASA NUNCA con ningun intent. El fusionador de
+          manifiestos no mete la categoria dentro del filtro que ya existe en
+          src/main: anade un filtro nuevo. Por eso aqui va el filtro COMPLETO
+          con MAIN + HOME + DEFAULT; si no, el flavor systemos se instalaba
+          pero jamas aparecia como opcion de pantalla de inicio.
+
+          launchMode=singleTask es obligatorio en un HOME: sin el, cada
+          pulsacion de la tecla Inicio crearia una instancia nueva.
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            tools:node="merge">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--
+          El AccessibilityService vive SOLO aqui (sideload / custom ROM), fuera del
+          alcance de la politica de Play. En playstore y website las teclas del mando
+          se capturan con dispatchKeyEvent en MainActivity.
+        -->
+        <service
+            android:name=".SpeccyAccessibilityService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+    </application>
+</manifest>

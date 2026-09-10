@@ -1,0 +1,8 @@
+Novidades da 1.2.0
+
+⚡ Ajuste de desempenho por aparelho: 83 modelos reconhecidos (Retroid, AYN Odin, Anbernic RG, AYANEO, GameMT). CPU, GPU e ventoinha se ajustam sozinhas antes de cada jogo.
+🌡️ Controle térmico com histerese: acabou o sobe e desce que estraga os 60 fps.
+🧩 Verificador de BIOS de 24 sistemas por MD5.
+🕹️ Navegação com analógico.
+🎮 Configuração do RetroArch ajustada ao seu aparelho.
+🐛 Corrigidos fechamentos em RG557, RG Vita e Chromecast.

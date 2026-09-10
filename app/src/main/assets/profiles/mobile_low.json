@@ -1,0 +1,35 @@
+{
+  "soc": "Snapdragon 400/600 / Helio G35-G85",
+  "modes": {
+    "ECO": {
+      "cpu_cluster0_gov": "powersave",
+      "gpu_governor": "powersave",
+      "io_scheduler": "noop",
+      "description": "Ahorro máximo. Ideal para lectura o emulación de 8 bits (NES/GB)."
+    },
+    "BALANCED": {
+      "cpu_cluster0_gov": "schedutil",
+      "gpu_governor": "simple_ondemand",
+      "io_scheduler": "cfq",
+      "description": "Uso normal. Fluidez en menús y sistemas de 16 bits."
+    },
+    "PERFORMANCE": {
+      "cpu_cluster0_gov": "performance",
+      "gpu_governor": "performance",
+      "io_scheduler": "deadline",
+      "description": "Rendimiento extra. Necesario para PS1 y N64 con fluidez."
+    },
+    "EXTREME": {
+      "cpu_cluster0_gov": "performance",
+      "gpu_governor": "performance",
+      "touch_boost": true,
+      "io_scheduler": "deadline",
+      "description": "Potencia límite. Intenta alcanzar Dreamcast y PSP básicos."
+    }
+  },
+  "sysfs_mapping": {
+    "cpu0_path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_governor",
+    "gpu_path": "/sys/class/kgsl/kgsl-3d0/devfreq/governor",
+    "io_sched_path": "/sys/block/mmcblk0/queue/scheduler"
+  }
+}

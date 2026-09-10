@@ -1,0 +1,189 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/GameDao.kt</file>
+  <line>6</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="class" FQNAME="com.example.speccyose5ultrav021b.GameDao" />
+  <language>kotlin</language>
+  <offset>0</offset>
+  <length>4</length>
+  <highlighted_element>@Dao</highlighted_element>
+  <problem_class id="" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+  <hints>
+    <hint value="comment" />
+    <hint value="delete" />
+  </hints>
+  <description>Interface is not implemented.</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/MainActivity.kt</file>
+  <line>71</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="class" FQNAME="com.example.speccyose5ultrav021b.MainActivity" />
+  <language>kotlin</language>
+  <offset>0</offset>
+  <length>42</length>
+  <highlighted_element>class MainActivity : ComponentActivity() {</highlighted_element>
+  <problem_class id="" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+  <hints>
+    <hint value="comment" />
+    <hint value="delete" />
+  </hints>
+  <description>Class is not instantiated.</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/network/GameApiResponse.kt</file>
+  <line>8</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b.network</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.network.GameSearchResponse GameSearchResponse(com.example.speccyose5ultrav021b.network.GameListData data, java.lang.Integer remainingDownloads)" />
+  <language>kotlin</language>
+  <offset>29</offset>
+  <length>1</length>
+  <highlighted_element>(</highlighted_element>
+  <problem_class id="" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+  <hints>
+    <hint value="comment" />
+    <hint value="delete" />
+  </hints>
+  <description>Constructor is never used.</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/network/GameApiResponse.kt</file>
+  <line>14</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b.network</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.network.GameListData GameListData(java.util.List&lt;com.example.speccyose5ultrav021b.network.GameApiData&gt; games)" />
+  <language>kotlin</language>
+  <offset>23</offset>
+  <length>1</length>
+  <highlighted_element>(</highlighted_element>
+  <problem_class id="" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+  <hints>
+    <hint value="comment" />
+    <hint value="delete" />
+  </hints>
+  <description>Constructor is never used.</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/network/GameApiResponse.kt</file>
+  <line>20</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b.network</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.network.GameApiData GameApiData(long id, java.lang.String gameTitle, java.lang.String overview, java.lang.String releaseDate, java.lang.String developer, java.util.List&lt;java.lang.String&gt; genre)" />
+  <language>kotlin</language>
+  <offset>22</offset>
+  <length>1</length>
+  <highlighted_element>(</highlighted_element>
+  <problem_class id="" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+  <hints>
+    <hint value="comment" />
+    <hint value="delete" />
+  </hints>
+  <description>Constructor is never used.</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/network/ScreenScraperResponse.kt</file>
+  <line>8</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b.network</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.network.ScreenScraperResponse ScreenScraperResponse(com.example.speccyose5ultrav021b.network.ResponseData response)" />
+  <language>kotlin</language>
+  <offset>32</offset>
+  <length>1</length>
+  <highlighted_element>(</highlighted_element>
+  <problem_class id="" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+  <hints>
+    <hint value="comment" />
+    <hint value="delete" />
+  </hints>
+  <description>Constructor is never used.</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/network/ScreenScraperResponse.kt</file>
+  <line>13</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b.network</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.network.ResponseData ResponseData(com.example.speccyose5ultrav021b.network.GameData game)" />
+  <language>kotlin</language>
+  <offset>23</offset>
+  <length>1</length>
+  <highlighted_element>(</highlighted_element>
+  <problem_class id="" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+  <hints>
+    <hint value="comment" />
+    <hint value="delete" />
+  </hints>
+  <description>Constructor is never used.</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/network/ScreenScraperResponse.kt</file>
+  <line>19</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b.network</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.network.GameData GameData(java.lang.String name, java.lang.String synopsis, java.lang.String developer, java.lang.String publisher, java.util.List&lt;com.example.speccyose5ultrav021b.network.GameDate&gt; dates, java.util.List&lt;com.example.speccyose5ultrav021b.network.GameGenre&gt; genres, java.util.List&lt;com.example.speccyose5ultrav021b.network.GameMedia&gt; medias)" />
+  <language>kotlin</language>
+  <offset>19</offset>
+  <length>1</length>
+  <highlighted_element>(</highlighted_element>
+  <problem_class id="" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+  <hints>
+    <hint value="comment" />
+    <hint value="delete" />
+  </hints>
+  <description>Constructor is never used.</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/network/ScreenScraperResponse.kt</file>
+  <line>30</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b.network</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.network.GameDate GameDate(java.lang.String region, java.lang.String text)" />
+  <language>kotlin</language>
+  <offset>19</offset>
+  <length>1</length>
+  <highlighted_element>(</highlighted_element>
+  <problem_class id="" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+  <hints>
+    <hint value="comment" />
+    <hint value="delete" />
+  </hints>
+  <description>Constructor is never used.</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/network/ScreenScraperResponse.kt</file>
+  <line>36</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b.network</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.network.GameGenre GameGenre(java.lang.String text)" />
+  <language>kotlin</language>
+  <offset>20</offset>
+  <length>1</length>
+  <highlighted_element>(</highlighted_element>
+  <problem_class id="" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+  <hints>
+    <hint value="comment" />
+    <hint value="delete" />
+  </hints>
+  <description>Constructor is never used.</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/network/ScreenScraperResponse.kt</file>
+  <line>41</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b.network</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.network.GameMedia GameMedia(java.lang.String type, java.lang.String url)" />
+  <language>kotlin</language>
+  <offset>20</offset>
+  <length>1</length>
+  <highlighted_element>(</highlighted_element>
+  <problem_class id="" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+  <hints>
+    <hint value="comment" />
+    <hint value="delete" />
+  </hints>
+  <description>Constructor is never used.</description>
+</problem>
+</problems>

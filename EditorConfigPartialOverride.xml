@@ -1,0 +1,38 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.editorconfig</file>
+  <line>14</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.editorconfig" />
+  <problem_class id="EditorConfigPartialOverride" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Overlapping sections</problem_class>
+  <description>The section overlaps another section</description>
+  <highlighted_element>[*.{c,h,js,css,html}]</highlighted_element>
+  <language>EditorConfig</language>
+  <offset>0</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.editorconfig</file>
+  <line>19</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.editorconfig" />
+  <problem_class id="EditorConfigPartialOverride" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Overlapping sections</problem_class>
+  <description>The section overlaps another section</description>
+  <highlighted_element>[*.{json,xml,yaml,yml}]</highlighted_element>
+  <language>EditorConfig</language>
+  <offset>0</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.editorconfig</file>
+  <line>24</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.editorconfig" />
+  <problem_class id="EditorConfigPartialOverride" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Overlapping sections</problem_class>
+  <description>The section overlaps another section</description>
+  <highlighted_element>[Makefile*]</highlighted_element>
+  <language>EditorConfig</language>
+  <offset>0</offset>
+  <length>11</length>
+</problem>
+</problems>

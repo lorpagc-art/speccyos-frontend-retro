@@ -1,0 +1,26 @@
+<problems>
+<problem>
+  <file>Speccy_OS_E5_Ultra_V_0.2.1b.app.unitTest</file>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.unitTest</module>
+  <entry_point TYPE="module" FQNAME="Speccy_OS_E5_Ultra_V_0.2.1b.app.unitTest" />
+  <problem_class id="UnnecessaryModuleDependencyInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary module dependency</problem_class>
+  <hints>
+    <hint value="Speccy_OS_E5_Ultra_V_0.2.1b.app.main" />
+  </hints>
+  <description>Module 'Speccy_OS_E5_Ultra_V_0.2.1b.app.unitTest' sources do not depend on module 'Speccy_OS_E5_Ultra_V_0.2.1b.app.main' sources</description>
+  <highlighted_element />
+  <language />
+</problem>
+<problem>
+  <file>Speccy_OS_E5_Ultra_V_0.2.1b.app.androidTest</file>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.androidTest</module>
+  <entry_point TYPE="module" FQNAME="Speccy_OS_E5_Ultra_V_0.2.1b.app.androidTest" />
+  <problem_class id="UnnecessaryModuleDependencyInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary module dependency</problem_class>
+  <hints>
+    <hint value="Speccy_OS_E5_Ultra_V_0.2.1b.app.main" />
+  </hints>
+  <description>Module 'Speccy_OS_E5_Ultra_V_0.2.1b.app.androidTest' sources do not depend on module 'Speccy_OS_E5_Ultra_V_0.2.1b.app.main' sources</description>
+  <highlighted_element />
+  <language />
+</problem>
+</problems>

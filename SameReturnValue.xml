@@ -1,0 +1,30 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/AiManager.kt</file>
+  <line>12</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.AiManager java.lang.Object generateResponse(java.lang.String prompt, kotlin.coroutines.Continuation&lt;? super java.lang.String&gt; $completion)" />
+  <problem_class id="SameReturnValue" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Method always returns the same value</problem_class>
+  <hints />
+  <description>Method &lt;code&gt;generateResponse()&lt;/code&gt; always returns &lt;code&gt;Respuesta simulada del Arquitecto IA (modo offline temporalmente desactivado).&lt;/code&gt;</description>
+  <highlighted_element>generateResponse</highlighted_element>
+  <language>kotlin</language>
+  <offset>16</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/AiManager.kt</file>
+  <line>18</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.AiManager boolean isOnlineMode()" />
+  <problem_class id="SameReturnValue" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Method always returns the same value</problem_class>
+  <hints />
+  <description>Method &lt;code&gt;isOnlineMode()&lt;/code&gt; always returns &lt;code&gt;false&lt;/code&gt;</description>
+  <highlighted_element>isOnlineMode</highlighted_element>
+  <language>kotlin</language>
+  <offset>8</offset>
+  <length>12</length>
+</problem>
+</problems>

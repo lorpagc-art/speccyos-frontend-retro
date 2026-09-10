@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+      Texto claro prohibido en toda la app. Con targetSdk >= 28 ya es el
+      comportamiento por defecto, pero declararlo lo hace explícito y auditable,
+      y evita que una dependencia futura lo reactive.
+    -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <!--
+      Dominios por los que viajan credenciales del usuario. Se mantienen sobre las
+      CAs del sistema (sin pinning) para no romper la app cuando roten certificado;
+      si se quiere pinning, añadir aquí <pin-set> con los SPKI y una fecha de
+      caducidad, y planificar la rotación.
+    -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">retroachievements.org</domain>
+        <domain includeSubdomains="true">screenscraper.fr</domain>
+        <domain includeSubdomains="true">api.thegamesdb.net</domain>
+        <domain includeSubdomains="true">api.igdb.com</domain>
+    </domain-config>
+</network-security-config>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Solo para el flavor `playstore`, que usa ML Kit en variante unbundled.
+  Este meta-data hace que Google Play Services descargue el modelo de OCR al
+  instalar la app, en lugar de en la primera traduccion (que fallaria mientras
+  se descarga). En los flavors website/systemos no aplica: alli el modelo va
+  empaquetado dentro del APK.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="ocr" />
+    </application>
+</manifest>

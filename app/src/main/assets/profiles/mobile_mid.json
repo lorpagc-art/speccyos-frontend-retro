@@ -1,0 +1,40 @@
+{
+  "soc": "Snapdragon 600/700 / Helio G90+",
+  "modes": {
+    "ECO": {
+      "cpu_cluster0_gov": "powersave",
+      "cpu_cluster1_gov": "powersave",
+      "gpu_governor": "powersave",
+      "io_scheduler": "noop",
+      "description": "Ahorro equilibrado. Ideal para emulación de 16/32 bits."
+    },
+    "BALANCED": {
+      "cpu_cluster0_gov": "schedutil",
+      "cpu_cluster1_gov": "schedutil",
+      "gpu_governor": "simple_ondemand",
+      "io_scheduler": "cfq",
+      "description": "Rendimiento óptimo para uso diario y juegos ligeros."
+    },
+    "PERFORMANCE": {
+      "cpu_cluster0_gov": "performance",
+      "cpu_cluster1_gov": "performance",
+      "gpu_governor": "performance",
+      "io_scheduler": "deadline",
+      "description": "Modo Gaming. Frecuencias estables para PSP y Dreamcast."
+    },
+    "EXTREME": {
+      "cpu_cluster0_gov": "performance",
+      "cpu_cluster1_gov": "performance",
+      "gpu_governor": "performance",
+      "touch_boost": true,
+      "io_scheduler": "deadline",
+      "description": "Máximo potencial. Forzado para intentar PS2 y GameCube."
+    }
+  },
+  "sysfs_mapping": {
+    "cpu0_path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_governor",
+    "cpu1_path": "/sys/devices/system/cpu/cpufreq/policy6/scaling_governor",
+    "gpu_path": "/sys/class/kgsl/kgsl-3d0/devfreq/governor",
+    "io_sched_path": "/sys/block/mmcblk0/queue/scheduler"
+  }
+}

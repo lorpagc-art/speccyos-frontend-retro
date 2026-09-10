@@ -1,0 +1,18 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SystemControlManager.kt</file>
+  <line>36</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.SystemControlManager void setWifiEnabled(boolean enabled)" />
+  <problem_class id="EmptyMethod" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty method</problem_class>
+  <hints>
+    <hint value="false" />
+  </hints>
+  <description>The method is empty</description>
+  <highlighted_element>setWifiEnabled</highlighted_element>
+  <language>kotlin</language>
+  <offset>8</offset>
+  <length>14</length>
+</problem>
+</problems>

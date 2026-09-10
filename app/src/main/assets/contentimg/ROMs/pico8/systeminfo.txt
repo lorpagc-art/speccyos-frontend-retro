@@ -1,0 +1,28 @@
+System name:
+pico8
+
+Full system name:
+PICO-8 Fantasy Console
+
+Supported file extensions:
+.p8 .P8 .png .PNG
+
+Launch command:
+%EMULATOR_RETROARCH% %EXTRA_CONFIGFILE%=/storage/emulated/0/Android/data/%ANDROIDPACKAGE%/files/retroarch.cfg %EXTRA_LIBRETRO%=fake08_libretro_android.so %EXTRA_ROM%=%ROM%
+
+Alternative launch command:
+%EMULATOR_RETROARCH% %EXTRA_CONFIGFILE%=/storage/emulated/0/Android/data/%ANDROIDPACKAGE%/files/retroarch.cfg %EXTRA_LIBRETRO%=retro8_libretro_android.so %EXTRA_ROM%=%ROM%
+
+Platform (for scraping):
+pico8
+
+Theme folder:
+pico8
+
+Games Found:
+- Celeste X.p8
+- Pico Tetris.p8
+
+Available Emulators (RetroArch Cores):
+- fake08_libretro_android.so (Default)
+- retro8_libretro_android.so

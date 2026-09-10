@@ -1,0 +1,14 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/pandora/PXML.xml</file>
+  <line>2</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/pandora/PXML.xml" />
+  <problem_class id="XmlPathReference" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Unresolved file reference</problem_class>
+  <description>Cannot resolve file 'PXML_schema.xsd'</description>
+  <highlighted_element>PXML_schema.xsd</highlighted_element>
+  <language>XML</language>
+  <offset>138</offset>
+  <length>15</length>
+</problem>
+</problems>

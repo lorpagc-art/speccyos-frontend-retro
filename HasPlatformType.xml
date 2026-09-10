@@ -1,0 +1,15 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/ui/theme/Typography.kt</file>
+  <line>10</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b.ui.theme</package>
+  <entry_point TYPE="field" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/ui/theme/Typography.kt Typography" />
+  <problem_class id="HasPlatformType" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Function or property has platform type</problem_class>
+  <description>Declaration has type inferred from a platform call, which can lead to unchecked nullability issues. Specify type explicitly as nullable or non-nullable.</description>
+  <highlighted_element>Typography</highlighted_element>
+  <language>kotlin</language>
+  <offset>4</offset>
+  <length>10</length>
+</problem>
+</problems>

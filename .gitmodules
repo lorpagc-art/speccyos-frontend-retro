@@ -1,0 +1,6 @@
+[submodule "emulators/xanite"]
+	path = emulators/xanite
+	url = https://github.com/dev-Ali2008/xanite.git
+[submodule "emulators/x1-box"]
+	path = emulators/x1-box
+	url = https://github.com/WinDroidEmulation/X1-BOX.git

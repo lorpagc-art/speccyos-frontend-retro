@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Idiomas por aplicación (Android 13+). Permite al usuario elegir el idioma de
+  SpeccyOS desde los ajustes del sistema sin tocar el del teléfono.
+-->
+<locale-config xmlns:android="http://schemas.android.com/apk/res/android">
+    <locale android:name="es" />
+    <locale android:name="en" />
+    <locale android:name="fr" />
+    <locale android:name="de" />
+    <locale android:name="it" />
+    <locale android:name="pt" />
+    <locale android:name="zh" />
+</locale-config>

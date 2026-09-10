@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Speccy OS E5 Ultra</string>
+    <string name="accessibility_desc">Servicio de accesibilidad para detectar botones físicos y mostrar el menú de acceso rápido de Speccy OS.</string>
+    <!-- Gemini API Key -->
+    <string name="gemini_api_key">AIzaSyADfk4qF1pPIbDW5eAM6tMErYdtepDXB8o</string>
+</resources>

@@ -1,0 +1,182 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/gradle/libs.versions.toml</file>
+  <line>26</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/gradle/libs.versions.toml" />
+  <problem_class id="UnusedVersionCatalogEntry" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused version catalog entry</problem_class>
+  <description>Dependency alias 'androidx-core-ktx' is not used in build scripts</description>
+  <highlighted_element>androidx-core-ktx</highlighted_element>
+  <language>TOML</language>
+  <offset>0</offset>
+  <length>17</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/gradle/libs.versions.toml</file>
+  <line>27</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/gradle/libs.versions.toml" />
+  <problem_class id="UnusedVersionCatalogEntry" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused version catalog entry</problem_class>
+  <description>Dependency alias 'junit' is not used in build scripts</description>
+  <highlighted_element>junit</highlighted_element>
+  <language>TOML</language>
+  <offset>0</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/gradle/libs.versions.toml</file>
+  <line>28</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/gradle/libs.versions.toml" />
+  <problem_class id="UnusedVersionCatalogEntry" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused version catalog entry</problem_class>
+  <description>Dependency alias 'androidx-junit' is not used in build scripts</description>
+  <highlighted_element>androidx-junit</highlighted_element>
+  <language>TOML</language>
+  <offset>0</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/gradle/libs.versions.toml</file>
+  <line>29</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/gradle/libs.versions.toml" />
+  <problem_class id="UnusedVersionCatalogEntry" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused version catalog entry</problem_class>
+  <description>Dependency alias 'androidx-espresso-core' is not used in build scripts</description>
+  <highlighted_element>androidx-espresso-core</highlighted_element>
+  <language>TOML</language>
+  <offset>0</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/gradle/libs.versions.toml</file>
+  <line>30</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/gradle/libs.versions.toml" />
+  <problem_class id="UnusedVersionCatalogEntry" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused version catalog entry</problem_class>
+  <description>Dependency alias 'androidx-appcompat' is not used in build scripts</description>
+  <highlighted_element>androidx-appcompat</highlighted_element>
+  <language>TOML</language>
+  <offset>0</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/gradle/libs.versions.toml</file>
+  <line>36</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/gradle/libs.versions.toml" />
+  <problem_class id="UnusedVersionCatalogEntry" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused version catalog entry</problem_class>
+  <description>Dependency alias 'google-generativeai' is not used in build scripts</description>
+  <highlighted_element>google-generativeai</highlighted_element>
+  <language>TOML</language>
+  <offset>0</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/gradle/libs.versions.toml</file>
+  <line>37</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/gradle/libs.versions.toml" />
+  <problem_class id="UnusedVersionCatalogEntry" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused version catalog entry</problem_class>
+  <description>Dependency alias 'androidx-documentfile' is not used in build scripts</description>
+  <highlighted_element>androidx-documentfile</highlighted_element>
+  <language>TOML</language>
+  <offset>0</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/gradle/libs.versions.toml</file>
+  <line>45</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/gradle/libs.versions.toml" />
+  <problem_class id="UnusedVersionCatalogEntry" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused version catalog entry</problem_class>
+  <description>Dependency alias 'androidx-compose-ui-test-junit4' is not used in build scripts</description>
+  <highlighted_element>androidx-compose-ui-test-junit4</highlighted_element>
+  <language>TOML</language>
+  <offset>0</offset>
+  <length>31</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/gradle/libs.versions.toml</file>
+  <line>46</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/gradle/libs.versions.toml" />
+  <problem_class id="UnusedVersionCatalogEntry" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused version catalog entry</problem_class>
+  <description>Dependency alias 'androidx-compose-ui-tooling' is not used in build scripts</description>
+  <highlighted_element>androidx-compose-ui-tooling</highlighted_element>
+  <language>TOML</language>
+  <offset>0</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/gradle/libs.versions.toml</file>
+  <line>47</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/gradle/libs.versions.toml" />
+  <problem_class id="UnusedVersionCatalogEntry" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused version catalog entry</problem_class>
+  <description>Dependency alias 'androidx-compose-ui-test-manifest' is not used in build scripts</description>
+  <highlighted_element>androidx-compose-ui-test-manifest</highlighted_element>
+  <language>TOML</language>
+  <offset>0</offset>
+  <length>33</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/gradle/libs.versions.toml</file>
+  <line>52</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/gradle/libs.versions.toml" />
+  <problem_class id="UnusedVersionCatalogEntry" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused version catalog entry</problem_class>
+  <description>Dependency alias 'androidx-media3-exoplayer' is not used in build scripts</description>
+  <highlighted_element>androidx-media3-exoplayer</highlighted_element>
+  <language>TOML</language>
+  <offset>0</offset>
+  <length>25</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/gradle/libs.versions.toml</file>
+  <line>53</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/gradle/libs.versions.toml" />
+  <problem_class id="UnusedVersionCatalogEntry" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused version catalog entry</problem_class>
+  <description>Dependency alias 'androidx-media3-ui' is not used in build scripts</description>
+  <highlighted_element>androidx-media3-ui</highlighted_element>
+  <language>TOML</language>
+  <offset>0</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/gradle/libs.versions.toml</file>
+  <line>54</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/gradle/libs.versions.toml" />
+  <problem_class id="UnusedVersionCatalogEntry" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused version catalog entry</problem_class>
+  <description>Dependency alias 'androidx-compose-material-icons-extended' is not used in build scripts</description>
+  <highlighted_element>androidx-compose-material-icons-extended</highlighted_element>
+  <language>TOML</language>
+  <offset>0</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/gradle/libs.versions.toml</file>
+  <line>66</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/gradle/libs.versions.toml" />
+  <problem_class id="UnusedVersionCatalogEntry" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused version catalog entry</problem_class>
+  <description>Plugin alias 'kotlin-android' is not used in build scripts</description>
+  <highlighted_element>kotlin-android</highlighted_element>
+  <language>TOML</language>
+  <offset>0</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/gradle/libs.versions.toml</file>
+  <line>67</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/gradle/libs.versions.toml" />
+  <problem_class id="UnusedVersionCatalogEntry" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused version catalog entry</problem_class>
+  <description>Plugin alias 'kotlin-compose' is not used in build scripts</description>
+  <highlighted_element>kotlin-compose</highlighted_element>
+  <language>TOML</language>
+  <offset>0</offset>
+  <length>14</length>
+</problem>
+</problems>

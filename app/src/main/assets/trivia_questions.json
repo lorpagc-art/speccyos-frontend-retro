@@ -1,0 +1,820 @@
+[
+  {
+    "id": 1,
+    "q": "¿Qué empresa española creó el mítico juego de carreras Radikal Bikers?",
+    "opts": ["Gaelco", "Dinamic", "Bit Managers", "Opera Soft"],
+    "ans": "Gaelco",
+    "level": "medium",
+    "fun_fact": "¡Gaelco era conocida por su espectacular chip de protección 'Dallas' que volvía locos a los hackers de ROMs!",
+    "image": "file:///android_asset/contentimg/logos/arcade.png"
+  },
+  {
+    "id": 2,
+    "q": "En el juego Snow Bros, ¿cómo se llaman los dos hermanos protagonistas?",
+    "opts": ["Nick y Tom", "Joe y Mac", "Billy y Jimmy", "Bub y Bob"],
+    "ans": "Nick y Tom",
+    "level": "medium",
+    "fun_fact": "Snow Bros fue desarrollado por Toaplan, la misma empresa que luego crearía la saga Metal Slug para Neo Geo."
+  },
+  {
+    "id": 3,
+    "q": "¿Cuál fue el sistema arcade más caro y potente vendido para uso doméstico en los 90?",
+    "opts": ["Sega Naomi", "Neo Geo AES", "CPS-3", "Sega Model 2"],
+    "ans": "Neo Geo AES",
+    "level": "hard",
+    "fun_fact": "Se conocía como el 'Rolls Royce de las consolas' y sus cartuchos llegaban a costar más de 200 dólares en su época.",
+    "image": "file:///android_asset/contentimg/logos/neogeo.png"
+  },
+  {
+    "id": 4,
+    "q": "¿Qué juego de la placa CPS-2 de Capcom salvó la industria de los salones recreativos en 1991?",
+    "opts": ["Final Fight", "Street Fighter II", "Cadillacs and Dinosaurs", "Alien vs Predator"],
+    "ans": "Street Fighter II",
+    "level": "easy",
+    "fun_fact": "El sistema de combos (encadenar golpes sin que el rival pueda defenderse) nació por un 'bug' no intencionado en la programación."
+  },
+  {
+    "id": 5,
+    "q": "¿Cuál es la máxima puntuación teórica posible en el clásico Pac-Man antes del famoso 'Kill Screen'?",
+    "opts": ["999,990", "3,333,360", "1,000,000", "9,999,999"],
+    "ans": "3,333,360",
+    "level": "expert",
+    "fun_fact": "En el nivel 256, un error por desbordamiento de enteros corrompe la mitad de la pantalla con letras y símbolos, haciendo imposible pasarlo."
+  },
+  {
+    "id": 6,
+    "q": "¿Qué consola de Nintendo se lanzó con el revolucionario eslogan 'Now You're Playing With Power'?",
+    "opts": ["Super Nintendo (SNES)", "Nintendo 64", "Nintendo Entertainment System (NES)", "Game Boy"],
+    "ans": "Nintendo Entertainment System (NES)",
+    "level": "medium",
+    "fun_fact": "En EE.UU. la llamaron 'Entertainment System' y no 'Console' para desvincularse de la crisis del videojuego de 1983.",
+    "image": "file:///android_asset/contentimg/logos/nes.png"
+  },
+  {
+    "id": 7,
+    "q": "En el juego 'World Rally Championship' de Gaelco, ¿qué legendario coche pilotas?",
+    "opts": ["Subaru Impreza", "Lancia Stratos", "Toyota Celica", "Ford Celica"],
+    "ans": "Toyota Celica",
+    "level": "hard",
+    "fun_fact": "Estaba inspirado en el piloto Carlos Sainz. Gaelco no tenía licencias oficiales, pero el coche era inconfundible."
+  },
+  {
+    "id": 8,
+    "q": "¿Qué juego de Sega usaba la tecnología de escalado de sprites 'Super Scaler' para simular 3D a alta velocidad en 1985?",
+    "opts": ["OutRun", "Space Harrier", "After Burner", "Hang-On"],
+    "ans": "Space Harrier",
+    "level": "hard",
+    "fun_fact": "Space Harrier corría en una placa con dos procesadores Motorola 68000 a 10MHz, ¡una locura para la época!"
+  },
+  {
+    "id": 9,
+    "q": "¿Qué juego de lucha de SNK permite mover a los personajes entre dos planos de profundidad diferentes?",
+    "opts": ["Samurai Shodown", "The King of Fighters", "Art of Fighting", "Fatal Fury"],
+    "ans": "Fatal Fury",
+    "level": "medium",
+    "fun_fact": "Este sistema de dos planos fue una respuesta directa de SNK para intentar diferenciarse de Street Fighter II."
+  },
+  {
+    "id": 10,
+    "q": "¿Qué microordenador británico dominó el mercado europeo en los años 80 con sus característicos colores y teclas de goma?",
+    "opts": ["Commodore 64", "Amstrad CPC", "ZX Spectrum", "MSX"],
+    "ans": "ZX Spectrum",
+    "level": "medium",
+    "fun_fact": "A sus usuarios se les generó una fuerte rivalidad con los de Commodore 64 y Amstrad, los 'tres tenores' de la informática retro de 8 bits.",
+    "image": "file:///android_asset/contentimg/logos/zxspectrum.png"
+  },
+  {
+    "id": 11,
+    "q": "¿Cuál es la 'Fatality' más icónica y polémica que provocó la creación del sistema de edades ESRB?",
+    "opts": ["El beso de fuego de Sonya", "Sub-Zero arrancando la columna vertebral", "El arpón de Scorpion", "El rayo de Raiden"],
+    "ans": "Sub-Zero arrancando la columna vertebral",
+    "level": "easy",
+    "fun_fact": "La violencia de Mortal Kombat y Night Trap llevó al senado estadounidense a investigar a la industria del videojuego."
+  },
+  {
+    "id": 12,
+    "q": "¿Qué juego de recreativa de 1981 presentaba a un personaje saltando barriles rescatando a su novia Pauline?",
+    "opts": ["Popeye", "Pitfall", "Donkey Kong", "Frogger"],
+    "ans": "Donkey Kong",
+    "level": "easy",
+    "fun_fact": "El personaje principal se llamaba 'Jumpman', y poco después fue rebautizado mundialmente como Mario."
+  },
+  {
+    "id": 13,
+    "q": "¿Qué compañía creó el legendario sistema de arcade CPS-3, responsable del juego 'Street Fighter III'?",
+    "opts": ["SNK", "Konami", "Capcom", "Sega"],
+    "ans": "Capcom",
+    "level": "medium",
+    "fun_fact": "La placa CPS-3 era tan frágil (y su encriptación tan severa) que un simple cambio de batería podía dejar el juego inservible para siempre."
+  },
+  {
+    "id": 14,
+    "q": "En el universo de The King of Fighters, ¿cómo se llama el protagonista portador de las llamas carmesí?",
+    "opts": ["Terry Bogard", "Iori Yagami", "Kyo Kusanagi", "Ryo Sakazaki"],
+    "ans": "Kyo Kusanagi",
+    "level": "medium",
+    "fun_fact": "Kyo Kusanagi fue diseñado expresamente para ser el nuevo ídolo de SNK, fusionando un estilo gamberro y heroico."
+  },
+  {
+    "id": 15,
+    "q": "¿Qué consola de 16 bits presumía del uso del 'Blast Processing'?",
+    "opts": ["Super Nintendo", "Sega Mega Drive", "TurboGrafx-16", "Neo Geo"],
+    "ans": "Sega Mega Drive",
+    "level": "easy",
+    "fun_fact": "El 'Blast Processing' fue realmente un término de marketing inventado para destacar la velocidad de su CPU Motorola frente a la de Super Nintendo.",
+    "image": "file:///android_asset/contentimg/logos/megadrive.png"
+  },
+  {
+    "id": 16,
+    "q": "En el mítico Metal Slug 3, ¿qué nuevo vehículo secreto permite a los personajes bucear y lanzar torpedos?",
+    "opts": ["Slug Copter", "Slug Mariner", "Slug Driller", "Astro Slug"],
+    "ans": "Slug Mariner",
+    "level": "hard",
+    "fun_fact": "Metal Slug 3 es considerado por muchos la obra magna de SNK por su increíble arte pixelado y rutas alternativas gigantescas."
+  },
+  {
+    "id": 17,
+    "q": "¿Qué máquina arcade multijugador permitía hasta 6 personas jugando simultáneamente a X-Men?",
+    "opts": ["Un mueble gigante de cuatro pantallas", "Un mueble con doble monitor panorámico", "Se jugaba por red en dos máquinas separadas", "Un proyector holográfico"],
+    "ans": "Un mueble con doble monitor panorámico",
+    "level": "hard",
+    "fun_fact": "El mueble original de X-Men (1992) usaba dos pantallas reflejadas a través de un espejo interno para crear un campo de visión ultrawide continuo."
+  },
+  {
+    "id": 18,
+    "q": "¿Qué juego español de recreativa de Gaelco usaba un sensor óptico real en lugar de un joystick?",
+    "opts": ["World Rally", "Radikal Bikers", "Glass", "Squash"],
+    "ans": "Glass",
+    "level": "expert",
+    "fun_fact": "Gaelco siempre buscaba controles únicos, pero en Radikal Bikers se popularizó el control físico en forma de manillar de scooter."
+  },
+  {
+    "id": 19,
+    "q": "¿Qué consola de 32 bits de Sony popularizó el uso del CD-ROM como estándar para la industria?",
+    "opts": ["Sega Saturn", "PlayStation (PSX)", "3DO", "Philips CD-i"],
+    "ans": "PlayStation (PSX)",
+    "level": "easy",
+    "fun_fact": "El sonido de inicio de la PSX fue compuesto por Takafumi Fujisawa; dura apenas unos segundos pero su diseño evoca apertura y grandeza.",
+    "image": "file:///android_asset/contentimg/logos/psx.png"
+  },
+  {
+    "id": 20,
+    "q": "¿Qué conocido emulador fue diseñado para unificar emuladores de consola en 'núcleos' bajo una misma interfaz?",
+    "opts": ["MAME", "RetroArch", "DuckStation", "Dolphin"],
+    "ans": "RetroArch",
+    "level": "medium",
+    "fun_fact": "RetroArch es en realidad el frontend; la verdadera API que permite que todo funcione se llama 'Libretro'."
+  },
+  {
+    "id": 21,
+    "q": "¿Qué saga de juegos de plataformas y disparos fue la estrella indiscutible de Konami en los salones recreativos?",
+    "opts": ["Metal Slug", "Mercs", "Contra", "Ikari Warriors"],
+    "ans": "Contra",
+    "level": "medium",
+    "fun_fact": "En Europa, el juego Contra original fue censurado y renombrado a 'Probotector', reemplazando a los humanos por robots."
+  },
+  {
+    "id": 22,
+    "q": "¿Cuál era la limitación principal de los colores en pantalla de la primera Game Boy?",
+    "opts": ["Mostraba 16 colores pastel", "Solo 4 tonos de gris/verde", "Blanco y negro puro (1 bit)", "Escala de rojos"],
+    "ans": "Solo 4 tonos de gris/verde",
+    "level": "easy",
+    "fun_fact": "Su pantalla LCD sin retroiluminación le permitió tener una duración de batería colosal comparada con la Sega Game Gear.",
+    "image": "file:///android_asset/contentimg/logos/gb.png"
+  },
+  {
+    "id": 23,
+    "q": "¿Qué juego arcade es famoso por incluir el coche rojo 'OutRun' o Ferrari Testarossa Spider?",
+    "opts": ["Chase H.Q.", "Rad Mobile", "Cruis'n USA", "OutRun"],
+    "ans": "OutRun",
+    "level": "easy",
+    "fun_fact": "Yu Suzuki, el creador, condujo un Ferrari real por Europa para grabar sonidos e inspirarse para los escenarios del juego."
+  },
+  {
+    "id": 24,
+    "q": "¿En qué juego de lucha 3D es habitual lanzar al enemigo fuera del cuadrilátero (Ring Out)?",
+    "opts": ["Tekken", "Virtua Fighter", "Soul Calibur / Soul Edge", "Mortal Kombat"],
+    "ans": "Virtua Fighter",
+    "level": "medium",
+    "fun_fact": "Virtua Fighter fue el primer juego de lucha en 3D de la historia, creado por AM2 (Sega) en 1993."
+  },
+  {
+    "id": 25,
+    "q": "En The Legend of Zelda: Ocarina of Time, ¿qué instrumento mágico debes tocar para controlar el clima o el tiempo?",
+    "opts": ["Flauta Mágica", "Arpa de los Dioses", "Ocarina", "Lira de Sheik"],
+    "ans": "Ocarina",
+    "level": "easy",
+    "fun_fact": "Shigeru Miyamoto introdujo la ocarina porque quería un instrumento musical real que el jugador sintiera que estaba tocando con los botones C.",
+    "image": "file:///android_asset/contentimg/logos/n64.png"
+  },
+  {
+    "id": 26,
+    "q": "¿Qué ordenador Commodore de 16 bits dominó la 'Demoscene' gracias a sus espectaculares chips customizados de audio y vídeo?",
+    "opts": ["Amiga 500", "Atari ST", "Commodore 64", "MSX 2"],
+    "ans": "Amiga 500",
+    "level": "hard",
+    "fun_fact": "El Amiga 500 tenía un chip de sonido llamado 'Paula' que permitía 4 canales de audio digital por hardware (PCM)."
+  },
+  {
+    "id": 27,
+    "q": "¿Qué juego de disparos espacial creado por Irem sentó las bases de los 'Bullet Hell' modernos?",
+    "opts": ["Gradius", "R-Type", "DoDonPachi", "Space Invaders"],
+    "ans": "R-Type",
+    "level": "hard",
+    "fun_fact": "R-Type incluía el 'Force', un pod invencible que el jugador podía anclar al frente o detrás de su nave como escudo y arma."
+  },
+  {
+    "id": 28,
+    "q": "¿Qué consola de Sega fue pionera en incluir un módem integrado para jugar online?",
+    "opts": ["Sega Saturn", "Sega Dreamcast", "Sega Genesis", "Sega 32X"],
+    "ans": "Sega Dreamcast",
+    "level": "medium",
+    "fun_fact": "Gracias a Dreamcast y a Phantasy Star Online, muchos consoleros tuvieron su primer contacto real con internet.",
+    "image": "file:///android_asset/contentimg/logos/dreamcast.png"
+  },
+  {
+    "id": 29,
+    "q": "¿Cómo se llama el villano principal de la saga Final Fight?",
+    "opts": ["Bison", "Geese Howard", "Belger", "Rugal"],
+    "ans": "Belger",
+    "level": "hard",
+    "fun_fact": "Al final del juego, el protagonista Haggar derrota a Belger empujándolo por la ventana de un rascacielos con un gancho."
+  },
+  {
+    "id": 30,
+    "q": "¿Cuál es la famosa combinación secreta de golpes y saltos que ejecuta el temido 'Akuma' (Gouki) en Super Street Fighter II Turbo?",
+    "opts": ["Shun Goku Satsu (Raging Demon)", "Hadouken Oscuro", "Ataque del Dragón Ascendente", "Tatsumaki Senpukyaku"],
+    "ans": "Shun Goku Satsu (Raging Demon)",
+    "level": "hard",
+    "fun_fact": "El Shun Goku Satsu oculta la pantalla en blanco o negro porque los desarrolladores no tenían memoria gráfica libre para animar todos los golpes."
+  },
+  {
+    "id": 31,
+    "q": "¿Qué juego de Rareware para Nintendo 64 destacó por su multijugador a 4 pantallas divididas?",
+    "opts": ["Perfect Dark", "GoldenEye 007", "Conker's Bad Fur Day", "Banjo-Kazooie"],
+    "ans": "GoldenEye 007",
+    "level": "medium",
+    "fun_fact": "El modo multijugador de GoldenEye fue añadido a escondidas por los desarrolladores en el último minuto antes del lanzamiento.",
+    "image": "file:///android_asset/contentimg/logos/n64.png"
+  },
+  {
+    "id": 32,
+    "q": "¿En qué juego de terror de supervivencia de Capcom te persigue un imparable Tyrant con gabardina?",
+    "opts": ["Dino Crisis", "Resident Evil 3", "Resident Evil 2", "Silent Hill"],
+    "ans": "Resident Evil 2",
+    "level": "easy",
+    "fun_fact": "A Mr. X (El Tyrant) se le programó originalmente para aparecer a través de paredes de forma aleatoria, pero la consola PSX no podía soportarlo en todas las salas."
+  },
+  {
+    "id": 33,
+    "q": "¿Qué animal es el protagonista del juego 'Crash Bandicoot'?",
+    "opts": ["Zorro", "Tejón", "Bandicut (Marsupial)", "Mapache"],
+    "ans": "Bandicut (Marsupial)",
+    "level": "easy",
+    "fun_fact": "El nombre en clave original de Crash Bandicoot durante su desarrollo en Naughty Dog era 'Willy the Wombat'.",
+    "image": "file:///android_asset/contentimg/logos/psx.png"
+  },
+  {
+    "id": 34,
+    "q": "¿Qué sistema portátil de Nintendo introdujo una pantalla doble, siendo la inferior táctil?",
+    "opts": ["Game Boy Advance SP", "Nintendo 3DS", "Nintendo DS", "Game Boy Micro"],
+    "ans": "Nintendo DS",
+    "level": "easy",
+    "fun_fact": "La Nintendo DS es la consola portátil más vendida de todos los tiempos y la segunda consola más vendida en general.",
+    "image": "file:///android_asset/contentimg/logos/nds.png"
+  },
+  {
+    "id": 35,
+    "q": "¿Cuál de estas franquicias NO pertenece a SNK?",
+    "opts": ["Metal Slug", "Samurai Shodown", "Guilty Gear", "The King of Fighters"],
+    "ans": "Guilty Gear",
+    "level": "medium",
+    "fun_fact": "Guilty Gear es una creación del estudio Arc System Works, conocida por su compleja música heavy metal y sprites estilo anime."
+  },
+  {
+    "id": 36,
+    "q": "¿Qué accesorio de la Sega Mega Drive le añadía capacidades de 32 bits y permitía jugar títulos poligonales rudimentarios?",
+    "opts": ["Mega-CD", "Sega 32X", "Sega VR", "Power Base Converter"],
+    "ans": "Sega 32X",
+    "level": "medium",
+    "fun_fact": "El 32X necesitaba su propia fuente de alimentación y un cable 'loopback' de vídeo hacia la consola principal.",
+    "image": "file:///android_asset/contentimg/logos/sega32x.png"
+  },
+  {
+    "id": 37,
+    "q": "¿Qué popular juego de puzles fue desarrollado originalmente por el programador soviético Alekséi Pázhitnov?",
+    "opts": ["Dr. Mario", "Columns", "Tetris", "Puyo Puyo"],
+    "ans": "Tetris",
+    "level": "easy",
+    "fun_fact": "Pázhitnov no recibió derechos de autor por Tetris hasta 1996, a pesar de que el juego vendió millones de copias en Game Boy en los años 80."
+  },
+  {
+    "id": 38,
+    "q": "¿Qué consola de 64 bits de Atari fue anunciada erróneamente como el primer sistema de 64 bits del mundo?",
+    "opts": ["Atari Panther", "Atari Jaguar", "Atari Lynx", "Atari 7800"],
+    "ans": "Atari Jaguar",
+    "level": "hard",
+    "fun_fact": "La Jaguar en realidad usaba dos procesadores de 32 bits (Tom y Jerry) trabajando en paralelo, no una verdadera CPU de 64 bits.",
+    "image": "file:///android_asset/contentimg/logos/atarijaguar.png"
+  },
+  {
+    "id": 39,
+    "q": "¿Qué juego de rol de Squaresoft para Super Nintendo introdujo el sistema de combate 'Active Time Battle' (ATB)?",
+    "opts": ["Final Fantasy IV", "Chrono Trigger", "Secret of Mana", "Dragon Quest VI"],
+    "ans": "Final Fantasy IV",
+    "level": "hard",
+    "fun_fact": "El sistema ATB fue patentado por Square y definía que la acción no se pausaba al elegir un comando, aumentando el estrés del jugador."
+  },
+  {
+    "id": 40,
+    "q": "En el juego 'Ghosts 'n Goblins', ¿cuántas veces debes completar el juego para ver el verdadero final?",
+    "opts": ["Una vez", "Tres veces", "Dos veces", "No tiene final"],
+    "ans": "Dos veces",
+    "level": "medium",
+    "fun_fact": "Al terminar la primera vuelta, el juego se burlaba de ti diciendo que todo había sido una trampa de Satán y te devolvía al nivel 1."
+  },
+  {
+    "id": 41,
+    "q": "¿Qué mítica pistola de luz venía incluida con muchas consolas NES occidentales?",
+    "opts": ["Super Scope", "Zapper", "Light Phaser", "GunCon"],
+    "ans": "Zapper",
+    "level": "easy",
+    "fun_fact": "Originalmente, la Zapper era gris y de aspecto realista. Más tarde la pintaron de naranja chillón por leyes federales en EE.UU."
+  },
+  {
+    "id": 42,
+    "q": "¿Qué popular saga de RPG en primera persona para PC fue creada por id Software antes de Doom?",
+    "opts": ["The Elder Scrolls", "Ultima", "Catacomb 3-D", "Wolfenstein 3D"],
+    "ans": "Catacomb 3-D",
+    "level": "hard",
+    "fun_fact": "John Carmack desarrolló la tecnología de 'raycasting' para Catacomb 3-D, que permitía crear entornos 3D en computadoras sin tarjetas gráficas."
+  },
+  {
+    "id": 43,
+    "q": "¿Qué mascota de Sega fue creada originalmente como un villano llamado 'Mr. Needlemouse'?",
+    "opts": ["Alex Kidd", "Ristar", "Sonic the Hedgehog", "Tails"],
+    "ans": "Sonic the Hedgehog",
+    "level": "medium",
+    "fun_fact": "Antes de decidirse por un erizo, los bocetos iniciales de la mascota de Sega incluían un conejo, un armadillo e incluso un hombre con bigote... ¡que acabó siendo el Dr. Eggman!"
+  },
+  {
+    "id": 44,
+    "q": "¿Qué innovador controlador de Nintendo 64 popularizó el uso del 'stick' analógico en los juegos 3D caseros?",
+    "opts": ["DualShock", "El mando Tridente de N64", "Mando Pro de Wii", "Sixaxis"],
+    "ans": "El mando Tridente de N64",
+    "level": "easy",
+    "fun_fact": "El diseño de tres agarres se hizo porque Nintendo no estaba segura de si los jugadores preferirían usar la cruceta clásica o el nuevo stick analógico."
+  },
+  {
+    "id": 45,
+    "q": "¿Qué juego arcade de carreras isométrico de 1982 es considerado uno de los primeros en usar una perspectiva de persecución (detrás del coche)?",
+    "opts": ["Pole Position", "OutRun", "Hang-On", "RoadBlasters"],
+    "ans": "Pole Position",
+    "level": "hard",
+    "fun_fact": "Pole Position de Namco fue el arcade más taquillero de 1983 y definió las convenciones del género de carreras para la siguiente década."
+  },
+  {
+    "id": 46,
+    "q": "¿Qué consola de la quinta generación (32/64 bits) usaba cartuchos en lugar de CDs para evitar los tiempos de carga?",
+    "opts": ["Sega Saturn", "Nintendo 64", "Atari Jaguar", "3DO"],
+    "ans": "Nintendo 64",
+    "level": "medium",
+    "fun_fact": "Aunque los cartuchos evitaban tiempos de carga y la piratería, su altísimo coste de fabricación alejó a desarrolladoras como Squaresoft, que se fue a PlayStation."
+  },
+  {
+    "id": 47,
+    "q": "En la saga 'Castlevania', ¿cómo se llama la mítica familia de cazavampiros?",
+    "opts": ["Belnades", "Morris", "Tepes", "Belmont"],
+    "ans": "Belmont",
+    "level": "easy",
+    "fun_fact": "El icónico látigo de la familia Belmont, introducido desde el primer juego en 1986, es conocido en Japón como 'Vampire Killer'."
+  },
+  {
+    "id": 48,
+    "q": "¿Cuál fue el primer juego de la historia en utilizar tecnología de captura de movimiento (rotoscopia) para lograr animaciones fluidas?",
+    "opts": ["Prince of Persia", "Mortal Kombat", "Out of This World / Another World", "Karateka"],
+    "ans": "Karateka",
+    "level": "expert",
+    "fun_fact": "Jordan Mechner creó Karateka (1984) rotoscopiando a su maestro de kárate, una técnica que luego usaría también en su obra maestra: Prince of Persia."
+  },
+  {
+    "id": 49,
+    "q": "¿Qué ordenador de 8 bits era famoso por incluir una ranura para cartuchos y usar el sistema operativo Microsoft BASIC?",
+    "opts": ["Amstrad CPC", "MSX", "Commodore 64", "ZX Spectrum"],
+    "ans": "MSX",
+    "level": "medium",
+    "fun_fact": "El MSX fue un intento de crear un estándar mundial de hardware para ordenadores domésticos, muy exitoso en Japón, España y Países Bajos.",
+    "image": "file:///android_asset/contentimg/logos/msx.png"
+  },
+  {
+    "id": 50,
+    "q": "¿Qué franquicia de juegos de estrategia en tiempo real para PC fue lanzada por Blizzard Entertainment en 1994?",
+    "opts": ["StarCraft", "Age of Empires", "Command & Conquer", "Warcraft: Orcs & Humans"],
+    "ans": "Warcraft: Orcs & Humans",
+    "level": "medium",
+    "fun_fact": "Warcraft fue concebido originalmente como un juego con la licencia oficial de Warhammer, pero las negociaciones con Games Workshop fracasaron."
+  },
+  {
+    "id": 51,
+    "q": "¿Qué juego de Super Nintendo incluía un chip especial llamado Super FX para renderizar gráficos poligonales?",
+    "opts": ["Super Mario World", "Star Fox", "Donkey Kong Country", "F-Zero"],
+    "ans": "Star Fox",
+    "level": "medium",
+    "fun_fact": "El chip Super FX era en realidad un procesador RISC diseñado por Argonaut Games que era mucho más potente que la propia CPU de la Super Nintendo."
+  },
+  {
+    "id": 52,
+    "q": "¿Qué recreativa de 1980 presentaba un laberinto en el que tenías que limpiar la pantalla de puntos mientras escapabas de enemigos y disparabas?",
+    "opts": ["Dig Dug", "Robotron: 2084", "Defender", "Tempest"],
+    "ans": "Robotron: 2084",
+    "level": "hard",
+    "fun_fact": "Robotron: 2084 fue revolucionario por usar dos joysticks: uno para moverse y otro independiente para disparar en ocho direcciones."
+  },
+  {
+    "id": 53,
+    "q": "En el universo de Halo, ¿quién es el protagonista principal de la saga original de Xbox?",
+    "opts": ["Sgt. Johnson", "Cortana", "El Inquisidor", "Jefe Maestro (Master Chief)"],
+    "ans": "Jefe Maestro (Master Chief)",
+    "level": "easy",
+    "fun_fact": "Halo originalmente se diseñó como un juego de estrategia en tiempo real para Mac, antes de que Bungie fuera adquirida por Microsoft."
+  },
+  {
+    "id": 54,
+    "q": "¿Qué consola portátil de Sega fue la gran competidora de la Game Boy, ofreciendo pantalla a color y retroiluminación?",
+    "opts": ["Sega Nomad", "Atari Lynx", "Game Gear", "TurboExpress"],
+    "ans": "Game Gear",
+    "level": "medium",
+    "fun_fact": "La Game Gear era esencialmente una Master System portátil. Requería 6 pilas AA y apenas duraban entre 3 y 5 horas.",
+    "image": "file:///android_asset/contentimg/logos/gamegear.png"
+  },
+  {
+    "id": 55,
+    "q": "¿Qué icónico juego de la primera PlayStation consistía en conducir un taxi a lo loco realizando trucos?",
+    "opts": ["Crazy Taxi", "Twisted Metal", "Carmageddon", "Destruction Derby"],
+    "ans": "Crazy Taxi",
+    "level": "easy",
+    "fun_fact": "Crazy Taxi fue inicialmente un rotundo éxito en los salones arcade sobre la placa Sega NAOMI, antes de saltar a Dreamcast y PS2."
+  },
+  {
+    "id": 56,
+    "q": "¿En qué juego de rol para PC del año 2000 despertabas sin memoria con la misión de descubrir tu identidad en la Ciudad de las Puertas?",
+    "opts": ["Baldur's Gate II", "Fallout 2", "Planescape: Torment", "Deus Ex"],
+    "ans": "Planescape: Torment",
+    "level": "expert",
+    "fun_fact": "Planescape: Torment tiene uno de los guiones más extensos jamás escritos para un juego, con alrededor de 800,000 palabras."
+  },
+  {
+    "id": 57,
+    "q": "¿Qué empresa británica desarrolló la saga de aventuras 'Tomb Raider' en 1996?",
+    "opts": ["Eidos Interactive", "Core Design", "Rareware", "Psygnosis"],
+    "ans": "Core Design",
+    "level": "medium",
+    "fun_fact": "Lara Croft fue inicialmente concebida como un personaje masculino clon de Indiana Jones, pero el equipo lo cambió para evitar demandas."
+  },
+  {
+    "id": 58,
+    "q": "¿Qué juego arcade introdujo la primera 'fatality' oculta antes que Mortal Kombat?",
+    "opts": ["Time Killers", "Pit-Fighter", "Killer Instinct", "Primal Rage"],
+    "ans": "Pit-Fighter",
+    "level": "expert",
+    "fun_fact": "Pit-Fighter (1990) de Atari también fue pionero en el uso de luchadores digitalizados a partir de actores reales, antes de que Mortal Kombat popularizara la técnica."
+  },
+  {
+    "id": 59,
+    "q": "¿Cuál fue la primera consola portátil en usar cartuchos intercambiables?",
+    "opts": ["Game Boy", "Milton Bradley Microvision", "Microvision", "Atari Lynx"],
+    "ans": "Microvision",
+    "level": "hard",
+    "fun_fact": "Lanzada por Milton Bradley en 1979, la Microvision incluía la CPU dentro de los propios cartuchos, no en la consola."
+  },
+  {
+    "id": 60,
+    "q": "En el clásico juego 'Lemmings', ¿qué peculiar habilidad tenían los personajes para salvar a los demás construyendo escaleras?",
+    "opts": ["Blocker", "Builder", "Basher", "Miner"],
+    "ans": "Builder",
+    "level": "medium",
+    "fun_fact": "Lemmings fue desarrollado por DMA Design, la compañía escocesa que más tarde crearía la franquicia Grand Theft Auto bajo el nombre de Rockstar North."
+  },
+  {
+    "id": 61,
+    "q": "¿Qué juego de lucha para Neo Geo fue el primero en introducir el concepto de los movimientos de 'Desesperación' (Desperation Moves) cuando la barra de vida parpadea?",
+    "opts": ["Fatal Fury: King of Fighters", "Art of Fighting", "Samurai Shodown", "The King of Fighters '94"],
+    "ans": "Art of Fighting",
+    "level": "hard",
+    "fun_fact": "Art of Fighting también fue pionero en mostrar daño visual (moretones y cortes) en el rostro de los personajes a medida que avanzaba el combate."
+  },
+  {
+    "id": 62,
+    "q": "¿Cuál es el título del aclamado juego de rol táctico para Game Boy Advance donde controlas a un grupo de mercenarios en Ivalice?",
+    "opts": ["Final Fantasy Tactics Advance", "Fire Emblem", "Tactics Ogre: The Knight of Lodis", "Advance Wars"],
+    "ans": "Final Fantasy Tactics Advance",
+    "level": "medium",
+    "fun_fact": "En este juego se introdujo la figura de los 'Jueces', quienes imponían leyes aleatorias en cada combate que, de romperse, te enviaban a la cárcel."
+  },
+  {
+    "id": 63,
+    "q": "¿Qué pionera consola de 16 bits, creada por SNK, se vendió con un stick arcade idéntico al de las recreativas?",
+    "opts": ["Sega Genesis", "Super Nintendo", "Neo Geo AES", "TurboGrafx-16"],
+    "ans": "Neo Geo AES",
+    "level": "medium",
+    "fun_fact": "La publicidad de Neo Geo proclamaba 'Bigger, Badder, Better', destacando sus colosales cartuchos de hasta 330 Megabits."
+  },
+  {
+    "id": 64,
+    "q": "¿En qué año se produjo la infame crisis de la industria de los videojuegos que casi la destruye por completo en Estados Unidos?",
+    "opts": ["1979", "1983", "1985", "1991"],
+    "ans": "1983",
+    "level": "easy",
+    "fun_fact": "Esta crisis estuvo marcada por la superproducción de juegos de baja calidad, como la infame adaptación del juego de E.T. para Atari 2600."
+  },
+  {
+    "id": 65,
+    "q": "En el juego 'Chrono Trigger' (SNES), ¿qué misterioso personaje usa una guadaña y lanza magia oscura?",
+    "opts": ["Frog", "Robo", "Magus", "Glenn"],
+    "ans": "Magus",
+    "level": "medium",
+    "fun_fact": "Chrono Trigger fue desarrollado por un 'Dream Team' que incluía a los creadores de Final Fantasy (Sakaguchi), Dragon Quest (Horii) y al artista de Dragon Ball (Akira Toriyama)."
+  },
+  {
+    "id": 66,
+    "q": "¿Qué juego arcade es famoso por incluir cuatro fantasmas cuyos nombres son Blinky, Pinky, Inky y Clyde?",
+    "opts": ["Ms. Pac-Man", "Pac-Man", "Q*bert", "Dig Dug"],
+    "ans": "Pac-Man",
+    "level": "easy",
+    "fun_fact": "Cada fantasma tiene una inteligencia artificial única: Blinky te persigue directamente, Pinky intenta emboscarte por delante, Inky es errático y Clyde se aleja si te acercas."
+  },
+  {
+    "id": 67,
+    "q": "¿Qué consola de 32 bits fallida intentó Panasonic convertir en un centro multimedia interactivo para toda la familia?",
+    "opts": ["Philips CD-i", "Amiga CD32", "3DO Interactive Multiplayer", "Pippin"],
+    "ans": "3DO Interactive Multiplayer",
+    "level": "hard",
+    "fun_fact": "La 3DO no fue fabricada por la compañía que la diseñó (The 3DO Company), sino que licenció los planos a Panasonic, Sanyo y GoldStar.",
+    "image": "file:///android_asset/contentimg/logos/3do.png"
+  },
+  {
+    "id": 68,
+    "q": "¿Cuál es el verdadero nombre del erizo azul 'Sonic' revelado en los cómics de Archie (aunque Sega Japón no lo reconozca)?",
+    "opts": ["Maurice", "Arthur", "Nicky", "Olgilvie Maurice Hedgehog"],
+    "ans": "Olgilvie Maurice Hedgehog",
+    "level": "expert",
+    "fun_fact": "El creador original de Sonic, Yuji Naka, ha desmentido esto, afirmando que para Sega, su nombre siempre fue y será simplemente Sonic."
+  },
+  {
+    "id": 69,
+    "q": "¿Qué juego de plataformas de Naughty Dog para PS1 tenía niveles donde huías hacia la cámara perseguido por una roca gigante o un dinosaurio?",
+    "opts": ["Spyro the Dragon", "Crash Bandicoot", "Croc", "Gex"],
+    "ans": "Crash Bandicoot",
+    "level": "easy",
+    "fun_fact": "El equipo de desarrollo tuvo que reescribir parte del código fuente de la PSX y hackear sus herramientas de desarrollo para poder cargar los detallados niveles de Crash."
+  },
+  {
+    "id": 70,
+    "q": "¿Qué popular juego de acción y sigilo de Kojima para MSX sentó las bases de la saga Metal Gear?",
+    "opts": ["Snatcher", "Policenauts", "Metal Gear", "Contra"],
+    "ans": "Metal Gear",
+    "level": "medium",
+    "fun_fact": "La idea del sigilo nació por las severas limitaciones del MSX: la consola no podía dibujar muchos enemigos disparando a la vez, por lo que Kojima hizo que el objetivo fuera evitarlos."
+  },
+  {
+    "id": 71,
+    "q": "¿Qué juego de Dreamcast popularizó los gráficos 'Cel-shading' haciéndolo parecer un anime interactivo?",
+    "opts": ["Jet Set Radio", "Shenmue", "Space Channel 5", "Crazy Taxi"],
+    "ans": "Space Channel 5",
+    "level": "hard",
+    "fun_fact": "Aunque Jet Set Radio es el máximo exponente del Cel-shading en Dreamcast, Space Channel 5 (protagonizado por Ulala) utilizaba escenarios pre-renderizados."
+  },
+  {
+    "id": 72,
+    "q": "¿Qué saga de Nintendo protagonizada por la cazarrecompensas Samus Aran se inspira fuertemente en las películas de Alien?",
+    "opts": ["F-Zero", "Star Fox", "Metroid", "EarthBound"],
+    "ans": "Metroid",
+    "level": "easy",
+    "fun_fact": "El villano recurrente 'Ridley' lleva ese nombre en honor a Ridley Scott, el director de la película original de Alien."
+  },
+  {
+    "id": 73,
+    "q": "¿Cuál fue el primer juego de peleas crossover oficial entre Capcom y SNK, lanzado en 1999 para Neo Geo Pocket Color?",
+    "opts": ["Capcom vs. SNK", "SNK vs. Capcom: The Match of the Millennium", "Marvel vs. Capcom", "SNK Gals' Fighters"],
+    "ans": "SNK vs. Capcom: The Match of the Millennium",
+    "level": "expert",
+    "fun_fact": "Fue uno de los pocos juegos en la historia desarrollados directamente en colaboración amistosa por los dos gigantes rivales del arcade."
+  },
+  {
+    "id": 74,
+    "q": "¿Qué juego de Sega Saturn, famoso por su control de 3D, es considerado uno de los precursores del 'mundo semi-abierto'?",
+    "opts": ["Nights into Dreams", "Panzer Dragoon", "Burning Rangers", "Tomb Raider"],
+    "ans": "Panzer Dragoon",
+    "level": "medium",
+    "fun_fact": "Sega regalaba con algunas consolas una demo llamada 'Panzer Dragoon Playable Demo' que revolucionó las ventas en Japón."
+  },
+  {
+    "id": 75,
+    "q": "En el mítico Doom (1993), ¿cuál es el código de truco que te otorga Modo Dios (invencibilidad)?",
+    "opts": ["IDKFA", "IDCLIP", "IDDQD", "IDDQD"],
+    "ans": "IDDQD",
+    "level": "medium",
+    "fun_fact": "IDKFA, el otro truco famoso, te daba todas las llaves, armas y munición al máximo ('Keys, Firearms, Armor')."
+  },
+  {
+    "id": 76,
+    "q": "¿Qué consola de Nintendo fue la última en utilizar cartuchos como medio principal de almacenamiento de juegos en el mercado doméstico?",
+    "opts": ["GameCube", "Nintendo 64", "Super Nintendo", "Wii"],
+    "ans": "Nintendo 64",
+    "level": "easy",
+    "fun_fact": "Esta decisión técnica motivó a muchas empresas, incluida Square con Final Fantasy VII, a migrar sus títulos a la PlayStation por su capacidad en CD-ROM."
+  },
+  {
+    "id": 77,
+    "q": "¿En qué juego de rol para PC del año 2000 despertabas sin memoria con la misión de descubrir tu identidad en la Ciudad de las Puertas?",
+    "opts": ["Baldur's Gate II", "Fallout 2", "Planescape: Torment", "Deus Ex"],
+    "ans": "Planescape: Torment",
+    "level": "hard",
+    "fun_fact": "Planescape: Torment tiene uno de los guiones más extensos jamás escritos para un juego, con alrededor de 800,000 palabras."
+  },
+  {
+    "id": 78,
+    "q": "¿Qué empresa británica desarrolló la saga de aventuras 'Tomb Raider' en 1996?",
+    "opts": ["Eidos Interactive", "Core Design", "Rareware", "Psygnosis"],
+    "ans": "Core Design",
+    "level": "medium",
+    "fun_fact": "Lara Croft fue inicialmente concebida como un personaje masculino clon de Indiana Jones, pero el equipo lo cambió para evitar demandas."
+  },
+  {
+    "id": 79,
+    "q": "¿Cuál fue el primer juego de la historia en utilizar tecnología de captura de movimiento (rotoscopia) para lograr animaciones fluidas?",
+    "opts": ["Prince of Persia", "Mortal Kombat", "Out of This World / Another World", "Karateka"],
+    "ans": "Karateka",
+    "level": "expert",
+    "fun_fact": "Jordan Mechner creó Karateka (1984) rotoscopiando a su maestro de kárate, una técnica que luego usaría también en su obra maestra: Prince of Persia."
+  },
+  {
+    "id": 80,
+    "q": "¿Cuál era el nombre del procesador principal que impulsaba la Super Nintendo (SNES)?",
+    "opts": ["Motorola 68000", "Zilog Z80", "Ricoh 5A22", "Intel 8088"],
+    "ans": "Ricoh 5A22",
+    "level": "expert",
+    "fun_fact": "Aunque el procesador Ricoh 5A22 (basado en el 65816) era más lento en hercios que el de Mega Drive, la arquitectura de SNES compensaba con potentes coprocesadores de vídeo y audio."
+  },
+  {
+    "id": 81,
+    "q": "¿Qué juego arcade introdujo la primera 'fatality' oculta antes que Mortal Kombat?",
+    "opts": ["Time Killers", "Pit-Fighter", "Killer Instinct", "Primal Rage"],
+    "ans": "Pit-Fighter",
+    "level": "expert",
+    "fun_fact": "Pit-Fighter (1990) de Atari también fue pionero en el uso de luchadores digitalizados a partir de actores reales, antes de que Mortal Kombat popularizara la técnica."
+  },
+  {
+    "id": 82,
+    "q": "¿Qué pionera consola de 16 bits, creada por SNK, se vendió con un stick arcade idéntico al de las recreativas?",
+    "opts": ["Sega Genesis", "Super Nintendo", "Neo Geo AES", "TurboGrafx-16"],
+    "ans": "Neo Geo AES",
+    "level": "medium",
+    "fun_fact": "La publicidad de Neo Geo proclamaba 'Bigger, Badder, Better', destacando sus colosales cartuchos de hasta 330 Megabits."
+  },
+  {
+    "id": 83,
+    "q": "¿En qué año se produjo la infame crisis de la industria de los videojuegos que casi la destruye por completo en Estados Unidos?",
+    "opts": ["1979", "1983", "1985", "1991"],
+    "ans": "1983",
+    "level": "easy",
+    "fun_fact": "Esta crisis estuvo marcada por la superproducción de juegos de baja calidad, como la infame adaptación del juego de E.T. para Atari 2600."
+  },
+  {
+    "id": 84,
+    "q": "En el juego 'Chrono Trigger' (SNES), ¿qué misterioso personaje usa una guadaña y lanza magia oscura?",
+    "opts": ["Frog", "Robo", "Magus", "Glenn"],
+    "ans": "Magus",
+    "level": "medium",
+    "fun_fact": "Chrono Trigger fue desarrollado por un 'Dream Team' que incluía a los creadores de Final Fantasy (Sakaguchi), Dragon Quest (Horii) y al artista de Dragon Ball (Akira Toriyama)."
+  },
+  {
+    "id": 85,
+    "q": "¿Qué juego arcade es famoso por incluir cuatro fantasmas cuyos nombres son Blinky, Pinky, Inky y Clyde?",
+    "opts": ["Ms. Pac-Man", "Pac-Man", "Q*bert", "Dig Dug"],
+    "ans": "Pac-Man",
+    "level": "easy",
+    "fun_fact": "Cada fantasma tiene una inteligencia artificial única: Blinky te persigue directamente, Pinky intenta emboscarte por delante, Inky es errático y Clyde se aleja si te acercas."
+  },
+  {
+    "id": 86,
+    "q": "¿Qué consola de 32 bits fallida intentó Panasonic convertir en un centro multimedia interactivo para toda la familia?",
+    "opts": ["Philips CD-i", "Amiga CD32", "3DO Interactive Multiplayer", "Pippin"],
+    "ans": "3DO Interactive Multiplayer",
+    "level": "hard",
+    "fun_fact": "La 3DO no fue fabricada por la compañía que la diseñó (The 3DO Company), sino que licenció los planos a Panasonic, Sanyo y GoldStar.",
+    "image": "file:///android_asset/contentimg/logos/3do.png"
+  },
+  {
+    "id": 87,
+    "q": "¿Cuál es el verdadero nombre del erizo azul 'Sonic' revelado en los cómics de Archie (aunque Sega Japón no lo reconozca)?",
+    "opts": ["Maurice", "Arthur", "Nicky", "Olgilvie Maurice Hedgehog"],
+    "ans": "Olgilvie Maurice Hedgehog",
+    "level": "expert",
+    "fun_fact": "El creador original de Sonic, Yuji Naka, ha desmentido esto, afirmando que para Sega, su nombre siempre fue y será simplemente Sonic."
+  },
+  {
+    "id": 88,
+    "q": "¿Qué juego de plataformas de Naughty Dog para PS1 tenía niveles donde huías hacia la cámara perseguido por una roca gigante o un dinosaurio?",
+    "opts": ["Spyro the Dragon", "Crash Bandicoot", "Croc", "Gex"],
+    "ans": "Crash Bandicoot",
+    "level": "easy",
+    "fun_fact": "El equipo de desarrollo tuvo que reescribir parte del código fuente de la PSX y hackear sus herramientas de desarrollo para poder cargar los detallados niveles de Crash."
+  },
+  {
+    "id": 89,
+    "q": "¿Qué popular juego de acción y sigilo de Kojima para MSX sentó las bases de la saga Metal Gear?",
+    "opts": ["Snatcher", "Policenauts", "Metal Gear", "Contra"],
+    "ans": "Metal Gear",
+    "level": "medium",
+    "fun_fact": "La idea del sigilo nació por las severas limitaciones del MSX: la consola no podía dibujar muchos enemigos disparando a la vez, por lo que Kojima hizo que el objetivo fuera evitarlos."
+  },
+  {
+    "id": 90,
+    "q": "¿Qué juego de Dreamcast popularizó los gráficos 'Cel-shading' haciéndolo parecer un anime interactivo?",
+    "opts": ["Jet Set Radio", "Shenmue", "Space Channel 5", "Crazy Taxi"],
+    "ans": "Space Channel 5",
+    "level": "hard",
+    "fun_fact": "Aunque Jet Set Radio es el máximo exponente del Cel-shading en Dreamcast, Space Channel 5 (protagonizado por Ulala) utilizaba escenarios pre-renderizados."
+  },
+  {
+    "id": 91,
+    "q": "¿Qué saga de Nintendo protagonizada por la cazarrecompensas Samus Aran se inspira fuertemente en las películas de Alien?",
+    "opts": ["F-Zero", "Star Fox", "Metroid", "EarthBound"],
+    "ans": "Metroid",
+    "level": "easy",
+    "fun_fact": "El villano recurrente 'Ridley' lleva ese nombre en honor a Ridley Scott, el director de la película original de Alien."
+  },
+  {
+    "id": 92,
+    "q": "¿Cuál fue el primer juego de peleas crossover oficial entre Capcom y SNK, lanzado en 1999 para Neo Geo Pocket Color?",
+    "opts": ["Capcom vs. SNK", "SNK vs. Capcom: The Match of the Millennium", "Marvel vs. Capcom", "SNK Gals' Fighters"],
+    "ans": "SNK vs. Capcom: The Match of the Millennium",
+    "level": "expert",
+    "fun_fact": "Fue uno de los pocos juegos en la historia desarrollados directamente en colaboración amistosa por los dos gigantes rivales del arcade."
+  },
+  {
+    "id": 93,
+    "q": "¿Qué juego de Sega Saturn, famoso por su control de 3D, es considerado uno de los precursores del 'mundo semi-abierto'?",
+    "opts": ["Nights into Dreams", "Panzer Dragoon", "Burning Rangers", "Tomb Raider"],
+    "ans": "Panzer Dragoon",
+    "level": "medium",
+    "fun_fact": "Sega regalaba con algunas consolas una demo llamada 'Panzer Dragoon Playable Demo' que revolucionó las ventas en Japón."
+  },
+  {
+    "id": 94,
+    "q": "En el mítico Doom (1993), ¿cuál es el código de truco que te otorga Modo Dios (invencibilidad)?",
+    "opts": ["IDKFA", "IDCLIP", "IDDQD", "IDDQD"],
+    "ans": "IDDQD",
+    "level": "medium",
+    "fun_fact": "IDKFA, el otro truco famoso, te daba todas las llaves, armas y munición al máximo ('Keys, Firearms, Armor')."
+  },
+  {
+    "id": 95,
+    "q": "¿Qué consola de Nintendo fue la última en utilizar cartuchos como medio principal de almacenamiento de juegos en el mercado doméstico?",
+    "opts": ["GameCube", "Nintendo 64", "Super Nintendo", "Wii"],
+    "ans": "Nintendo 64",
+    "level": "easy",
+    "fun_fact": "Esta decisión técnica motivó a muchas empresas, incluida Square con Final Fantasy VII, a migrar sus títulos a la PlayStation por su capacidad en CD-ROM."
+  },
+  {
+    "id": 96,
+    "q": "¿En qué juego de rol para PC del año 2000 despertabas sin memoria con la misión de descubrir tu identidad en la Ciudad de las Puertas?",
+    "opts": ["Baldur's Gate II", "Fallout 2", "Planescape: Torment", "Deus Ex"],
+    "ans": "Planescape: Torment",
+    "level": "hard",
+    "fun_fact": "Planescape: Torment tiene uno de los guiones más extensos jamás escritos para un juego, con alrededor de 800,000 palabras."
+  },
+  {
+    "id": 97,
+    "q": "¿Qué empresa británica desarrolló la saga de aventuras 'Tomb Raider' en 1996?",
+    "opts": ["Eidos Interactive", "Core Design", "Rareware", "Psygnosis"],
+    "ans": "Core Design",
+    "level": "medium",
+    "fun_fact": "Lara Croft fue inicialmente concebida como un personaje masculino clon de Indiana Jones, pero el equipo lo cambió para evitar demandas."
+  },
+  {
+    "id": 98,
+    "q": "¿Cuál fue el primer juego de la historia en utilizar tecnología de captura de movimiento (rotoscopia) para lograr animaciones fluidas?",
+    "opts": ["Prince of Persia", "Mortal Kombat", "Out of This World / Another World", "Karateka"],
+    "ans": "Karateka",
+    "level": "expert",
+    "fun_fact": "Jordan Mechner creó Karateka (1984) rotoscopiando a su maestro de kárate, una técnica que luego usaría también en su obra maestra: Prince of Persia."
+  },
+  {
+    "id": 99,
+    "q": "¿Cuál era el nombre del procesador principal que impulsaba la Super Nintendo (SNES)?",
+    "opts": ["Motorola 68000", "Zilog Z80", "Ricoh 5A22", "Intel 8088"],
+    "ans": "Ricoh 5A22",
+    "level": "expert",
+    "fun_fact": "Aunque el procesador Ricoh 5A22 (basado en el 65816) era más lento en hercios que el de Mega Drive, la arquitectura de SNES compensaba con potentes coprocesadores de vídeo y audio."
+  },
+  {
+    "id": 100,
+    "q": "¿Qué juego arcade introdujo la primera 'fatality' oculta antes que Mortal Kombat?",
+    "opts": ["Time Killers", "Pit-Fighter", "Killer Instinct", "Primal Rage"],
+    "ans": "Pit-Fighter",
+    "level": "expert",
+    "fun_fact": "Pit-Fighter (1990) de Atari también fue pionero en el uso de luchadores digitalizados a partir de actores reales, antes de que Mortal Kombat popularizara la técnica."
+  }
+]

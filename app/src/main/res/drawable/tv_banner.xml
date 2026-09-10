@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Banner de Android TV (16:9, se escala a 320x180 xhdpi).
+  Obligatorio para que la app aparezca en el home de Leanback.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+
+    <path
+        android:fillColor="#0C1113"
+        android:pathData="M0,0h320v180h-320z" />
+
+    <!-- Barras cromaticas tipo ZX Spectrum -->
+    <path android:fillColor="#C42A1C" android:pathData="M32,132h40v14h-40z" />
+    <path android:fillColor="#B27400" android:pathData="M76,132h40v14h-40z" />
+    <path android:fillColor="#1B7A46" android:pathData="M120,132h40v14h-40z" />
+    <path android:fillColor="#0B6E8A" android:pathData="M164,132h40v14h-40z" />
+    <path android:fillColor="#A81C84" android:pathData="M208,132h40v14h-40z" />
+
+    <!-- Marca "SPECCY" simplificada -->
+    <path
+        android:fillColor="#E6EDEF"
+        android:pathData="M40,48h56v14h-42v12h42v40h-56v-14h42v-12h-42z" />
+    <path
+        android:fillColor="#E6EDEF"
+        android:pathData="M108,48h50v34h-36v32h-14z M122,62h22v6h-22z" />
+    <path
+        android:fillColor="#E6EDEF"
+        android:pathData="M168,48h48v14h-34v12h34v14h-34v12h34v14h-48z" />
+    <path
+        android:fillColor="#A81C84"
+        android:pathData="M228,48h52v14h-38v38h38v14h-52z" />
+</vector>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ALCANCE REDUCIDO AL MÍNIMO.
+  Antes: accessibilityEventTypes="typeAllMask" + flagRetrieveInteractiveWindows,
+  es decir acceso al CONTENIDO DE PANTALLA de todas las apps, cuando el servicio
+  sólo implementa onKeyEvent y deja onAccessibilityEvent vacío.
+  Ahora: cero eventos observados, sólo filtrado de teclas físicas del mando.
+  Este servicio se declara únicamente en el flavor `systemos` (sideload).
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeViewFocused"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagRequestFilterKeyEvents"
+    android:canRequestFilterKeyEvents="true"
+    android:notificationTimeout="100"
+    android:isAccessibilityTool="false"
+    android:summary="@string/accessibility_summary"
+    android:description="@string/accessibility_desc" />

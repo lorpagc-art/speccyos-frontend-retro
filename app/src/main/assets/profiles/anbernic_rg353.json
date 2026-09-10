@@ -1,0 +1,35 @@
+{
+  "soc": "Rockchip RK3566",
+  "modes": {
+    "ECO": {
+      "cpu_cluster0_gov": "powersave",
+      "gpu_governor": "powersave",
+      "io_scheduler": "noop",
+      "description": "Máximo ahorro de batería para sistemas clásicos."
+    },
+    "BALANCED": {
+      "cpu_cluster0_gov": "schedutil",
+      "gpu_governor": "simple_ondemand",
+      "io_scheduler": "cfq",
+      "description": "Rendimiento inteligente para uso diario."
+    },
+    "PERFORMANCE": {
+      "cpu_cluster0_gov": "performance",
+      "gpu_governor": "performance",
+      "io_scheduler": "deadline",
+      "description": "Modo Pro. Frecuencias máximas para sistemas 3D."
+    },
+    "EXTREME": {
+      "cpu_cluster0_gov": "performance",
+      "gpu_governor": "performance",
+      "touch_boost": true,
+      "io_scheduler": "deadline",
+      "description": "Máxima potencia Xanite. Overclock estable para Saturn y Dreamcast."
+    }
+  },
+  "sysfs_mapping": {
+    "cpu0_path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_governor",
+    "gpu_path": "/sys/class/devfreq/fb000000.gpu/governor",
+    "io_sched_path": "/sys/block/mmcblk0/queue/scheduler"
+  }
+}

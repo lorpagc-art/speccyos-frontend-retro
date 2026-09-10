@@ -1,0 +1,278 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/com.libretro.RetroArch.svg</file>
+  <line>64</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/com.libretro.RetroArch.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;dc:title&gt;&lt;/dc:title&gt;</highlighted_element>
+  <language>SVG</language>
+  <offset>8</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;stop offset=&quot;0&quot; stop-color=&quot;#000000&quot; stop-opacity=&quot;0.1&quot;&gt;&lt;/stop&gt;</highlighted_element>
+  <language>SVG</language>
+  <offset>240</offset>
+  <length>64</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;stop offset=&quot;1&quot; stop-color=&quot;#000000&quot; stop-opacity=&quot;0&quot;&gt;&lt;/stop&gt;</highlighted_element>
+  <language>SVG</language>
+  <offset>304</offset>
+  <length>62</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .8 0&quot;&gt;&lt;/feColorMatrix&gt;</highlighted_element>
+  <language>SVG</language>
+  <offset>412</offset>
+  <length>98</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;feOffset dx=&quot;0&quot; dy=&quot;1&quot;&gt;&lt;/feOffset&gt;</highlighted_element>
+  <language>SVG</language>
+  <offset>511</offset>
+  <length>35</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;feGaussianBlur stdDeviation=&quot;1&quot;&gt;&lt;/feGaussianBlur&gt;</highlighted_element>
+  <language>SVG</language>
+  <offset>547</offset>
+  <length>50</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;feComposite in=&quot;SourceGraphic&quot;&gt;&lt;/feComposite&gt;</highlighted_element>
+  <language>SVG</language>
+  <offset>598</offset>
+  <length>46</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;feColorMatrix type=&quot;matrix&quot; values=&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0&quot;&gt;&lt;/feColorMatrix&gt;</highlighted_element>
+  <language>SVG</language>
+  <offset>729</offset>
+  <length>98</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;feOffset dx=&quot;0&quot; dy=&quot;1&quot;&gt;&lt;/feOffset&gt;</highlighted_element>
+  <language>SVG</language>
+  <offset>828</offset>
+  <length>35</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;feGaussianBlur stdDeviation=&quot;0.5&quot;&gt;&lt;/feGaussianBlur&gt;</highlighted_element>
+  <language>SVG</language>
+  <offset>864</offset>
+  <length>52</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;feComposite in=&quot;SourceGraphic&quot;&gt;&lt;/feComposite&gt;</highlighted_element>
+  <language>SVG</language>
+  <offset>917</offset>
+  <length>46</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;path d=&quot;M7,43c-1.10457,0 -2,-0.89543 -2,-2v-34c0,-1.10457 0.89543,-2 2,-2h34c1.10457,0 2,0.89543 2,...</highlighted_element>
+  <language>SVG</language>
+  <offset>1266</offset>
+  <length>223</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;path d=&quot;M6.92643,25.75144l1.92777,-7.711h2.08065l2.82078,2.82078c0.06031,-0.24109 0.12585,-0.50311 ...</highlighted_element>
+  <language>SVG</language>
+  <offset>1489</offset>
+  <length>624</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;path d=&quot;M15.22145,30.65895l1.83613,-2.09819l-2.61179,-0.00597c-1.43648,-0.00328 -2.61148,-0.00858 -...</highlighted_element>
+  <language>SVG</language>
+  <offset>2113</offset>
+  <length>1769</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;path d=&quot;M15.22145,30.65895l1.83613,-2.09819l-2.61179,-0.00597c-1.43648,-0.00328 -2.61148,-0.00858 -...</highlighted_element>
+  <language>SVG</language>
+  <offset>3882</offset>
+  <length>1580</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;path d=&quot;M2,24c0,-12.15026 9.84974,-22 22,-22c12.15026,0 22,9.84974 22,22c0,12.15026 -9.84974,22 -22...</highlighted_element>
+  <language>SVG</language>
+  <offset>5462</offset>
+  <length>228</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;g id=&quot;layer1 1 1&quot;&gt;&lt;/g&gt;</highlighted_element>
+  <language>SVG</language>
+  <offset>5861</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;rect x=&quot;2&quot; y=&quot;2&quot; width=&quot;44&quot; height=&quot;22&quot; fill=&quot;none&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; stroke-miterlimi...</highlighted_element>
+  <language>SVG</language>
+  <offset>5888</offset>
+  <length>114</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;path d=&quot;M2,24v-22h44v22z&quot; fill=&quot;none&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; stroke-miterlimit=&quot;10&quot;&gt;&lt;/path&gt;</highlighted_element>
+  <language>SVG</language>
+  <offset>6002</offset>
+  <length>100</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;path d=&quot;M2,24v-22h44v22z&quot; fill=&quot;none&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; stroke-miterlimit=&quot;10&quot;&gt;&lt;/path&gt;</highlighted_element>
+  <language>SVG</language>
+  <offset>6102</offset>
+  <length>100</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;path d=&quot;M2,24v-22h44v22z&quot; fill=&quot;none&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; stroke-miterlimit=&quot;10&quot;&gt;&lt;/path&gt;</highlighted_element>
+  <language>SVG</language>
+  <offset>6202</offset>
+  <length>100</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/media/icons/icon.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;path d=&quot;M2,24v-22h44v22z&quot; fill=&quot;none&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; stroke-miterlimit=&quot;10&quot;&gt;&lt;/path&gt;</highlighted_element>
+  <language>SVG</language>
+  <offset>6302</offset>
+  <length>100</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/apple/WebServer/GCDWebUploader/GCDWebUploader.bundle/Contents/Resources/fonts/glyphicons-halflings-regular.svg</file>
+  <line>4</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/apple/WebServer/GCDWebUploader/GCDWebUploader.bundle/Contents/Resources/fonts/glyphicons-halflings-regular.svg" />
+  <problem_class id="CheckTagEmptyBody" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Empty element content</problem_class>
+  <description>XML tag has empty body</description>
+  <highlighted_element>&lt;metadata&gt;&lt;/metadata&gt;</highlighted_element>
+  <language>SVG</language>
+  <offset>0</offset>
+  <length>21</length>
+</problem>
+</problems>

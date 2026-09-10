@@ -1,0 +1,17 @@
+System name:
+bbcmicro
+
+Full system name:
+Acorn Computers BBC Micro
+
+Supported file extensions:
+.dsd .DSD .img .IMG .ssd .SSD .7z .7Z .zip .ZIP
+
+Launch command:
+%EMULATOR_MAME4DROID-2024% %ACTION%=android.intent.action.VIEW %EXTRA_cli_params%="-rompath '%GAMEDIRRAW%;%ROMPATHRAW%/bbcmicro' -autoboot_delay '2' -autoboot_command '*cat\n\n*exec !boot\n' -analogue acornjoy -flop1 '%ROMRAW%'" %DATA%=bbcb
+
+Platform (for scraping):
+bbcmicro
+
+Theme folder:
+bbcmicro

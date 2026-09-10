@@ -1,0 +1,25 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="120dp"
+    android:viewportWidth="80"
+    android:viewportHeight="120">
+    <!-- Cuerpo de la consola -->
+    <path
+        android:pathData="M15,10 h50 a10,10 0 0 1 10,10 v80 a10,10 0 0 1 -10,10 h-50 a10,10 0 0 1 -10,-10 v-80 a10,10 0 0 1 10,-10 z"
+        android:fillColor="#1A1A1A"
+        android:strokeColor="#333333"
+        android:strokeWidth="1"/>
+    <!-- Pantalla -->
+    <path
+        android:pathData="M15,20 h50 v45 h-50 z"
+        android:fillColor="#000000"
+        android:strokeColor="#444444"
+        android:strokeWidth="0.5"/>
+    <!-- Dpad -->
+    <path android:pathData="M25,80 v12 M20,86 h10" android:strokeColor="#555555" android:strokeWidth="2"/>
+    <!-- Botones ABXY (usando paths en lugar de circle radius directo) -->
+    <path android:pathData="M55,80 m-3,0 a3,3 0 1,1 6,0 a3,3 0 1,1 -6,0" android:fillColor="#555555"/>
+    <path android:pathData="M61,86 m-3,0 a3,3 0 1,1 6,0 a3,3 0 1,1 -6,0" android:fillColor="#555555"/>
+    <path android:pathData="M49,86 m-3,0 a3,3 0 1,1 6,0 a3,3 0 1,1 -6,0" android:fillColor="#555555"/>
+    <path android:pathData="M55,92 m-3,0 a3,3 0 1,1 6,0 a3,3 0 1,1 -6,0" android:fillColor="#555555"/>
+</vector>

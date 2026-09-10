@@ -1,0 +1,46 @@
+{
+  "soc": "Snapdragon 8 Gen 2",
+  "modes": {
+    "ECO": {
+      "cpu_cluster0_gov": "powersave",
+      "cpu_cluster1_gov": "powersave",
+      "gpu_governor": "powersave",
+      "io_scheduler": "noop",
+      "fan_level": 0,
+      "description": "Ahorro extremo. Ideal para consolas de 8/16 bits."
+    },
+    "BALANCED": {
+      "cpu_cluster0_gov": "schedutil",
+      "cpu_cluster1_gov": "schedutil",
+      "gpu_governor": "msm-adreno-tz",
+      "io_scheduler": "cfq",
+      "fan_level": 1,
+      "description": "Rendimiento inteligente. Equilibrio para PSP y Dreamcast."
+    },
+    "PERFORMANCE": {
+      "cpu_cluster0_gov": "performance",
+      "cpu_cluster1_gov": "performance",
+      "gpu_governor": "performance",
+      "io_scheduler": "deadline",
+      "fan_level": 2,
+      "description": "Modo Pro. Frecuencias máximas para PS2, GameCube y Switch."
+    },
+    "EXTREME": {
+      "cpu_cluster0_gov": "performance",
+      "cpu_cluster1_gov": "performance",
+      "gpu_governor": "performance",
+      "touch_boost": true,
+      "io_scheduler": "deadline",
+      "fan_level": 3,
+      "description": "Overclock Imperial. Desbloquea todo el potencial para Xanite y Windows."
+    }
+  },
+  "sysfs_mapping": {
+    "cpu0_path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_governor",
+    "cpu1_path": "/sys/devices/system/cpu/cpufreq/policy4/scaling_governor",
+    "cpu2_path": "/sys/devices/system/cpu/cpufreq/policy7/scaling_governor",
+    "gpu_path": "/sys/class/kgsl/kgsl-3d0/devfreq/governor",
+    "fan_path": "/sys/class/thermal/cooling_device0/cur_state",
+    "io_sched_path": "/sys/block/mmcblk0/queue/scheduler"
+  }
+}

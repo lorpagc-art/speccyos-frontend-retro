@@ -1,0 +1,506 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/DashboardScreen.kt</file>
+  <line>413</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/DashboardScreen.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;String.toUri&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>Uri.parse(game.videoPreview!!)</highlighted_element>
+  <language>kotlin</language>
+  <offset>81</offset>
+  <length>30</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt</file>
+  <line>12</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt</file>
+  <line>16</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt</file>
+  <line>20</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt</file>
+  <line>24</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt</file>
+  <line>29</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt</file>
+  <line>33</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt</file>
+  <line>37</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt</file>
+  <line>41</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt</file>
+  <line>46</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt</file>
+  <line>50</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt</file>
+  <line>54</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt</file>
+  <line>58</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt</file>
+  <line>62</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt</file>
+  <line>65</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/KeyMapper.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>8</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/LauncherManager.kt</file>
+  <line>46</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/LauncherManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;String.toUri&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>Uri.parse(game.path)</highlighted_element>
+  <language>kotlin</language>
+  <offset>26</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/LauncherManager.kt</file>
+  <line>89</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/LauncherManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;String.toUri&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>Uri.parse(&quot;market://details?id=$packageName&quot;)</highlighted_element>
+  <language>kotlin</language>
+  <offset>48</offset>
+  <length>45</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/RomScanner.kt</file>
+  <line>22</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/RomScanner.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;String.toUri&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>Uri.parse(romsUriOrPath)</highlighted_element>
+  <language>kotlin</language>
+  <offset>60</offset>
+  <length>24</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/RomScanner.kt</file>
+  <line>41</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/RomScanner.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;String.toUri&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>Uri.parse(romsUriOrPath)</highlighted_element>
+  <language>kotlin</language>
+  <offset>60</offset>
+  <length>24</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt</file>
+  <line>14</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt</file>
+  <line>19</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt</file>
+  <line>26</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>16</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt</file>
+  <line>31</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt</file>
+  <line>36</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt</file>
+  <line>40</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt</file>
+  <line>44</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt</file>
+  <line>48</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt</file>
+  <line>53</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt</file>
+  <line>57</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt</file>
+  <line>61</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt</file>
+  <line>66</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt</file>
+  <line>70</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt</file>
+  <line>74</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt</file>
+  <line>78</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>21</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt</file>
+  <line>81</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>60</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt</file>
+  <line>83</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsManager.kt" />
+  <problem_class id="AndroidLintUseKtx" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use KTX extension function</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use the KTX extension function &lt;code&gt;SharedPreferences.edit&lt;/code&gt; instead?&lt;/html&gt;</description>
+  <highlighted_element>prefs.edit()</highlighted_element>
+  <language>kotlin</language>
+  <offset>67</offset>
+  <length>12</length>
+</problem>
+</problems>

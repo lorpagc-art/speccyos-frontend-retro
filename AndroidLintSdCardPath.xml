@@ -1,0 +1,16 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/LauncherManager.kt</file>
+  <line>56</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/LauncherManager.kt" />
+  <problem_class id="AndroidLintSdCardPath" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Hardcoded reference to /sdcard</problem_class>
+  <hints />
+  <description>&lt;html&gt;Do not hardcode &quot;&lt;code&gt;/data/&lt;/code&gt;&quot;; use &lt;code&gt;Context.getFilesDir().getPath()&lt;/code&gt; instead&lt;/html&gt;</description>
+  <highlighted_element>/data/data/</highlighted_element>
+  <language>kotlin</language>
+  <offset>40</offset>
+  <length>11</length>
+</problem>
+</problems>

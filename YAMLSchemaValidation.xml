@@ -1,0 +1,203 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.gitlab-ci.yml</file>
+  <line>574</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.gitlab-ci.yml" />
+  <problem_class id="YAMLSchemaValidation" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Validation by JSON Schema</problem_class>
+  <description>Schema validation: Incompatible types.
+ Required one of: array, string. Actual: null.</description>
+  <highlighted_element>:</highlighted_element>
+  <language>yaml</language>
+  <offset>8</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml</file>
+  <line>15</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml" />
+  <problem_class id="YAMLSchemaValidation" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Validation by JSON Schema</problem_class>
+  <description>Schema validation: Value should be one of: &quot;clang&quot;, &quot;gcc&quot;</description>
+  <highlighted_element>mingw-x86</highlighted_element>
+  <language>yaml</language>
+  <offset>16</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml</file>
+  <line>16</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml" />
+  <problem_class id="YAMLSchemaValidation" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Validation by JSON Schema</problem_class>
+  <description>Schema validation: Incompatible types.
+ Required: object. Actual: boolean.</description>
+  <highlighted_element>true</highlighted_element>
+  <language>yaml</language>
+  <offset>14</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml</file>
+  <line>18</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml" />
+  <problem_class id="YAMLSchemaValidation" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Validation by JSON Schema</problem_class>
+  <description>Schema validation: Value should be one of: &quot;clang&quot;, &quot;gcc&quot;</description>
+  <highlighted_element>mingw-x86</highlighted_element>
+  <language>yaml</language>
+  <offset>16</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml</file>
+  <line>19</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml" />
+  <problem_class id="YAMLSchemaValidation" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Validation by JSON Schema</problem_class>
+  <description>Schema validation: Incompatible types.
+ Required: object. Actual: boolean.</description>
+  <highlighted_element>true</highlighted_element>
+  <language>yaml</language>
+  <offset>14</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml</file>
+  <line>21</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml" />
+  <problem_class id="YAMLSchemaValidation" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Validation by JSON Schema</problem_class>
+  <description>Schema validation: Value should be one of: &quot;clang&quot;, &quot;gcc&quot;</description>
+  <highlighted_element>mingw-x86</highlighted_element>
+  <language>yaml</language>
+  <offset>16</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml</file>
+  <line>22</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml" />
+  <problem_class id="YAMLSchemaValidation" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Validation by JSON Schema</problem_class>
+  <description>Schema validation: Incompatible types.
+ Required: object. Actual: boolean.</description>
+  <highlighted_element>true</highlighted_element>
+  <language>yaml</language>
+  <offset>14</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml</file>
+  <line>24</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml" />
+  <problem_class id="YAMLSchemaValidation" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Validation by JSON Schema</problem_class>
+  <description>Schema validation: Value should be one of: &quot;clang&quot;, &quot;gcc&quot;</description>
+  <highlighted_element>mingw-x64</highlighted_element>
+  <language>yaml</language>
+  <offset>16</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml</file>
+  <line>25</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml" />
+  <problem_class id="YAMLSchemaValidation" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Validation by JSON Schema</problem_class>
+  <description>Schema validation: Incompatible types.
+ Required: object. Actual: boolean.</description>
+  <highlighted_element>true</highlighted_element>
+  <language>yaml</language>
+  <offset>14</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml</file>
+  <line>27</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml" />
+  <problem_class id="YAMLSchemaValidation" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Validation by JSON Schema</problem_class>
+  <description>Schema validation: Value should be one of: &quot;clang&quot;, &quot;gcc&quot;</description>
+  <highlighted_element>mingw-x64</highlighted_element>
+  <language>yaml</language>
+  <offset>16</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml</file>
+  <line>28</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml" />
+  <problem_class id="YAMLSchemaValidation" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Validation by JSON Schema</problem_class>
+  <description>Schema validation: Incompatible types.
+ Required: object. Actual: boolean.</description>
+  <highlighted_element>true</highlighted_element>
+  <language>yaml</language>
+  <offset>14</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml</file>
+  <line>30</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml" />
+  <problem_class id="YAMLSchemaValidation" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Validation by JSON Schema</problem_class>
+  <description>Schema validation: Value should be one of: &quot;clang&quot;, &quot;gcc&quot;</description>
+  <highlighted_element>mingw-x64</highlighted_element>
+  <language>yaml</language>
+  <offset>16</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml</file>
+  <line>31</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml" />
+  <problem_class id="YAMLSchemaValidation" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Validation by JSON Schema</problem_class>
+  <description>Schema validation: Incompatible types.
+ Required: object. Actual: boolean.</description>
+  <highlighted_element>true</highlighted_element>
+  <language>yaml</language>
+  <offset>14</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml</file>
+  <line>90</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.travis.yml" />
+  <problem_class id="YAMLSchemaValidation" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Validation by JSON Schema</problem_class>
+  <description>Schema validation: Property 'allow_failure' is not allowed. A typo?</description>
+  <highlighted_element>allow_failure</highlighted_element>
+  <language>yaml</language>
+  <offset>2</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/glslang/glslang/.clang-format</file>
+  <line>6</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/glslang/glslang/.clang-format" />
+  <problem_class id="YAMLSchemaValidation" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Validation by JSON Schema</problem_class>
+  <description>Schema validation: Incompatible types.
+ Required: string. Actual: boolean.</description>
+  <highlighted_element>false</highlighted_element>
+  <language>yaml</language>
+  <offset>16</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/glslang/glslang/.clang-format</file>
+  <line>10</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/glslang/glslang/.clang-format" />
+  <problem_class id="YAMLSchemaValidation" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Validation by JSON Schema</problem_class>
+  <description>Schema validation: Incompatible types.
+ Required: string. Actual: boolean.</description>
+  <highlighted_element>false</highlighted_element>
+  <language>yaml</language>
+  <offset>31</offset>
+  <length>5</length>
+</problem>
+</problems>

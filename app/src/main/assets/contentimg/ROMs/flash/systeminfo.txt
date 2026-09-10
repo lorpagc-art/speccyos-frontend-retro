@@ -1,0 +1,26 @@
+System name:
+flash
+
+Full system name:
+Adobe Flash
+
+Supported file extensions:
+.swf .SWF
+
+Launch command:
+%EMULATOR_RUFFLE% %ACTION%=android.intent.action.VIEW %DATA%=%ROMPROVIDER%
+
+Platform (for scraping):
+flash
+
+Theme folder:
+flash
+
+Games Found:
+(No games found in folder)
+
+Available Emulators (RetroArch Cores):
+(None defined)
+
+External Emulators:
+- Ruffle (Default)

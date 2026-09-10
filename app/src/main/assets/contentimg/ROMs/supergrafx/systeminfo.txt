@@ -1,0 +1,21 @@
+System name:
+supergrafx
+
+Full system name:
+NEC SuperGrafx
+
+Supported file extensions:
+.ccd .CCD .chd .CHD .cue .CUE .pce .PCE .sgx .SGX .7z .7Z .zip .ZIP
+
+Launch command:
+%EMULATOR_RETROARCH% %EXTRA_CONFIGFILE%=/storage/emulated/0/Android/data/%ANDROIDPACKAGE%/files/retroarch.cfg %EXTRA_LIBRETRO%=mednafen_supergrafx_libretro_android.so %EXTRA_ROM%=%ROM%
+
+Alternative launch commands:
+%EMULATOR_RETROARCH% %EXTRA_CONFIGFILE%=/storage/emulated/0/Android/data/%ANDROIDPACKAGE%/files/retroarch.cfg %EXTRA_LIBRETRO%=mednafen_pce_libretro_android.so %EXTRA_ROM%=%ROM%
+%EMULATOR_PCE-EMU% %DATA%=%ROMPROVIDER%
+
+Platform (for scraping):
+supergrafx
+
+Theme folder:
+supergrafx

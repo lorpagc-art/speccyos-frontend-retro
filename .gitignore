@@ -1,0 +1,38 @@
+# Android Studio / IntelliJ ignore
+.idea/
+*.iml
+.gradle/
+build/
+app/build/
+.kotlin/
+
+# Secrets and Private Keys
+*.jks
+*.p12
+*.key
+*.json
+!app/src/main/assets/**/*.json
+!app/src/main/assets/metadata/*.json
+local.properties
+google-services.json
+app/google-services.json
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Gradle properties (contains API Keys)
+gradle.properties
+
+# Copia de referencia del codigo fuente de RetroArch (no es codigo del proyecto).
+# Ademas sus rutas superan el limite de Windows y rompen `git add`.
+Sample/
+
+# Volcados del IDE y de depuracion: no son fuente y pesan decenas de MB.
+*.logcat
+SpellCheckingInspection.xml
+GrazieInspection.xml
+GrazieStyle.xml
+.descriptions.xml
+dumped files/
+_backup_auditoria/

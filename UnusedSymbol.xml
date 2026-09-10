@@ -1,0 +1,80 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/androidTest/java/com/example/speccyose5ultrav021b/ExampleInstrumentedTest.kt</file>
+  <line>17</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.androidTest</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="class" FQNAME="com.example.speccyose5ultrav021b.ExampleInstrumentedTest" />
+  <problem_class id="UnusedSymbol" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused symbol</problem_class>
+  <description>Class &quot;ExampleInstrumentedTest&quot; is never used</description>
+  <highlighted_element>ExampleInstrumentedTest</highlighted_element>
+  <language>kotlin</language>
+  <offset>6</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/androidTest/java/com/example/speccyose5ultrav021b/ExampleInstrumentedTest.kt</file>
+  <line>19</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.androidTest</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.ExampleInstrumentedTest void useAppContext()" />
+  <problem_class id="UnusedSymbol" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused symbol</problem_class>
+  <description>Function &quot;useAppContext&quot; is never used</description>
+  <highlighted_element>useAppContext</highlighted_element>
+  <language>kotlin</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/ScrapingManager.kt</file>
+  <line>6</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="class" FQNAME="com.example.speccyose5ultrav021b.ScrapingManager" />
+  <problem_class id="UnusedSymbol" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused symbol</problem_class>
+  <description>Object &quot;ScrapingManager&quot; is never used</description>
+  <highlighted_element>ScrapingManager</highlighted_element>
+  <language>kotlin</language>
+  <offset>7</offset>
+  <length>15</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/ScrapingManager.kt</file>
+  <line>10</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.ScrapingManager java.lang.Object scrapeGameData(com.example.speccyose5ultrav021b.Game game, kotlin.coroutines.Continuation&lt;? super com.example.speccyose5ultrav021b.Game&gt; $completion)" />
+  <problem_class id="UnusedSymbol" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused symbol</problem_class>
+  <description>Function &quot;scrapeGameData&quot; is never used</description>
+  <highlighted_element>scrapeGameData</highlighted_element>
+  <language>kotlin</language>
+  <offset>16</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/test/java/com/example/speccyose5ultrav021b/ExampleUnitTest.kt</file>
+  <line>12</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.unitTest</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="class" FQNAME="com.example.speccyose5ultrav021b.ExampleUnitTest" />
+  <problem_class id="UnusedSymbol" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused symbol</problem_class>
+  <description>Class &quot;ExampleUnitTest&quot; is never used</description>
+  <highlighted_element>ExampleUnitTest</highlighted_element>
+  <language>kotlin</language>
+  <offset>6</offset>
+  <length>15</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/test/java/com/example/speccyose5ultrav021b/ExampleUnitTest.kt</file>
+  <line>14</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.unitTest</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.ExampleUnitTest void addition_isCorrect()" />
+  <problem_class id="UnusedSymbol" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused symbol</problem_class>
+  <description>Function &quot;addition_isCorrect&quot; is never used</description>
+  <highlighted_element>addition_isCorrect</highlighted_element>
+  <language>kotlin</language>
+  <offset>8</offset>
+  <length>18</length>
+</problem>
+</problems>

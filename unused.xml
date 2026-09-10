@@ -1,0 +1,98 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/ArchitectChatScreen.kt</file>
+  <line>46</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.ArchitectChatScreenKt void ArchitectChatScreen(com.example.speccyose5ultrav021b.MainViewModel mainViewModel, com.example.speccyose5ultrav021b.HardwareViewModel hardwareViewModel, kotlin.jvm.functions.Function0&lt;kotlin.Unit&gt; onSafeClose)" />
+  <problem_class id="unused" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused declaration</problem_class>
+  <hints>
+    <hint value="hardwareViewModel" />
+  </hints>
+  <description>Parameter &lt;code&gt;hardwareViewModel&lt;/code&gt; is not used</description>
+  <highlighted_element>hardwareViewModel</highlighted_element>
+  <language>kotlin</language>
+  <offset>4</offset>
+  <length>17</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/DashboardScreen.kt</file>
+  <line>76</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.DashboardScreenKt void DashboardScreen(com.example.speccyose5ultrav021b.MainViewModel mainViewModel, com.example.speccyose5ultrav021b.HardwareViewModel hardwareViewModel, com.example.speccyose5ultrav021b.SettingsManager settingsManager, kotlin.jvm.functions.Function0&lt;kotlin.Unit&gt; onSettingsClick, kotlin.jvm.functions.Function0&lt;kotlin.Unit&gt; onArchitectClick)" />
+  <problem_class id="unused" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused declaration</problem_class>
+  <hints>
+    <hint value="settingsManager" />
+  </hints>
+  <description>Parameter &lt;code&gt;settingsManager&lt;/code&gt; is not used</description>
+  <highlighted_element>settingsManager</highlighted_element>
+  <language>kotlin</language>
+  <offset>4</offset>
+  <length>15</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/DashboardScreen.kt</file>
+  <line>562</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.DashboardScreenKt void HardwareMetricsVisualizer(java.lang.String profile, float temp)" />
+  <problem_class id="unused" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused declaration</problem_class>
+  <hints>
+    <hint value="temp" />
+  </hints>
+  <description>Parameter &lt;code&gt;temp&lt;/code&gt; is not used</description>
+  <highlighted_element>temp</highlighted_element>
+  <language>kotlin</language>
+  <offset>47</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsScreen.kt</file>
+  <line>90</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.SettingsScreenKt void HardwareSettingsUltra(com.example.speccyose5ultrav021b.HardwareViewModel viewModel, com.example.speccyose5ultrav021b.SettingsManager settingsManager)" />
+  <problem_class id="unused" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused declaration</problem_class>
+  <hints>
+    <hint value="settingsManager" />
+  </hints>
+  <description>Parameter &lt;code&gt;settingsManager&lt;/code&gt; is not used</description>
+  <highlighted_element>settingsManager</highlighted_element>
+  <language>kotlin</language>
+  <offset>56</offset>
+  <length>15</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SettingsScreen.kt</file>
+  <line>263</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.SettingsScreenKt void KeyMappingRow(java.lang.String label, int keyCode, kotlin.jvm.functions.Function0&lt;kotlin.Unit&gt; onClick)" />
+  <problem_class id="unused" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused declaration</problem_class>
+  <hints>
+    <hint value="keyCode" />
+  </hints>
+  <description>Parameter &lt;code&gt;keyCode&lt;/code&gt; is not used</description>
+  <highlighted_element>keyCode</highlighted_element>
+  <language>kotlin</language>
+  <offset>33</offset>
+  <length>7</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/src/main/java/com/example/speccyose5ultrav021b/SystemControlManager.kt</file>
+  <line>36</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app.main</module>
+  <package>com.example.speccyose5ultrav021b</package>
+  <entry_point TYPE="method" FQNAME="com.example.speccyose5ultrav021b.SystemControlManager void setWifiEnabled(boolean enabled)" />
+  <problem_class id="unused" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unused declaration</problem_class>
+  <hints>
+    <hint value="enabled" />
+  </hints>
+  <description>Parameter &lt;code&gt;enabled&lt;/code&gt; is not used</description>
+  <highlighted_element>enabled</highlighted_element>
+  <language>kotlin</language>
+  <offset>23</offset>
+  <length>7</length>
+</problem>
+</problems>

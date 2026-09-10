@@ -1,0 +1,38 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/apple/WebServer/GCDWebUploader/GCDWebUploader.bundle/Contents/Resources/index.html</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/apple/WebServer/GCDWebUploader/GCDWebUploader.bundle/Contents/Resources/index.html" />
+  <problem_class id="BuyFluidPluginNoteInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Try it out now!</problem_class>
+  <description>Do you know, that there is a TYPO3 Fluid plugin for PhpStorm and IntelliJ IDEA?</description>
+  <highlighted_element>&lt;!-- Copyright (c) 2012-2019, Pierre-Olivier Latour All rights reserved. Redistribution and use...</highlighted_element>
+  <language>HTML</language>
+  <offset>0</offset>
+  <length>7938</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html" />
+  <problem_class id="BuyFluidPluginNoteInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Try it out now!</problem_class>
+  <description>Do you know, that there is a TYPO3 Fluid plugin for PhpStorm and IntelliJ IDEA?</description>
+  <highlighted_element>&lt;!doctype html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;title&gt;RetroArch Web P...</highlighted_element>
+  <language>HTML</language>
+  <offset>0</offset>
+  <length>7129</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro-thread/index.html</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro-thread/index.html" />
+  <problem_class id="BuyFluidPluginNoteInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Try it out now!</problem_class>
+  <description>Do you know, that there is a TYPO3 Fluid plugin for PhpStorm and IntelliJ IDEA?</description>
+  <highlighted_element>&lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;title&gt;RetroArch Web Player&lt;/tit...</highlighted_element>
+  <language>HTML</language>
+  <offset>0</offset>
+  <length>4942</length>
+</problem>
+</problems>

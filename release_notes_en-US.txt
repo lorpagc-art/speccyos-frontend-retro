@@ -1,0 +1,8 @@
+What's new in 1.2.0
+
+⚡ Per-device performance tuning: 83 models recognised (Retroid, AYN Odin, Anbernic RG, AYANEO, GameMT). CPU, GPU and fan set themselves before each game.
+🌡️ Thermal control with hysteresis: no more frequency see-saw breaking 60 fps.
+🧩 BIOS checker for 24 systems, verified by MD5.
+🕹️ Analogue stick navigation.
+🎮 RetroArch configuration matched to your device.
+🐛 Fixed crashes on RG557, RG Vita and Chromecast.

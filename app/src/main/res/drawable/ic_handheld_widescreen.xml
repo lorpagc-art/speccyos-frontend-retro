@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="80dp"
+    android:viewportWidth="120"
+    android:viewportHeight="80">
+    <!-- Cuerpo de la consola -->
+    <path
+        android:pathData="M10,20 h100 a10,10 0 0 1 10,10 v20 a10,10 0 0 1 -10,10 h-100 a10,10 0 0 1 -10,-10 v-20 a10,10 0 0 1 10,-10 z"
+        android:fillColor="#1A1A1A"
+        android:strokeColor="#333333"
+        android:strokeWidth="1"/>
+    <!-- Pantalla -->
+    <path
+        android:pathData="M25,25 h70 v30 h-70 z"
+        android:fillColor="#000000"
+        android:strokeColor="#444444"
+        android:strokeWidth="0.5"/>
+    <!-- Controles Izquierda (Stick/Dpad) -->
+    <path android:pathData="M12,35 m-5,0 a5,5 0 1,1 10,0 a5,5 0 1,1 -10,0" android:fillColor="#222222"/>
+    <path android:pathData="M12,45 v6 M9,48 h6" android:strokeColor="#555555" android:strokeWidth="2"/>
+    <!-- Controles Derecha (Botones/Stick) -->
+    <path android:pathData="M108,45 m-5,0 a5,5 0 1,1 10,0 a5,5 0 1,1 -10,0" android:fillColor="#222222"/>
+    <path android:pathData="M108,32 m-2,0 a2,2 0 1,1 4,0 a2,2 0 1,1 -4,0" android:fillColor="#555555"/>
+    <path android:pathData="M113,35 m-2,0 a2,2 0 1,1 4,0 a2,2 0 1,1 -4,0" android:fillColor="#555555"/>
+    <path android:pathData="M103,35 m-2,0 a2,2 0 1,1 4,0 a2,2 0 1,1 -4,0" android:fillColor="#555555"/>
+    <path android:pathData="M108,38 m-2,0 a2,2 0 1,1 4,0 a2,2 0 1,1 -4,0" android:fillColor="#555555"/>
+</vector>

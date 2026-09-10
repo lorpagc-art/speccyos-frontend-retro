@@ -1,0 +1,30 @@
+{
+  "soc": "Allwinner H700",
+  "modes": {
+    "ECO": {
+      "cpu_cluster0_gov": "powersave",
+      "gpu_governor": "powersave",
+      "description": "Máxima eficiencia para GameBoy y NES."
+    },
+    "BALANCED": {
+      "cpu_cluster0_gov": "schedutil",
+      "gpu_governor": "simple_ondemand",
+      "description": "Equilibrio para sistemas de 16 bits y PS1."
+    },
+    "PERFORMANCE": {
+      "cpu_cluster0_gov": "performance",
+      "gpu_governor": "performance",
+      "description": "Rendimiento óptimo para Arcade y Dreamcast."
+    },
+    "EXTREME": {
+      "cpu_cluster0_gov": "performance",
+      "gpu_governor": "performance",
+      "touch_boost": true,
+      "description": "Modo turbo para PSP y ports pesados."
+    }
+  },
+  "sysfs_mapping": {
+    "cpu0_path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_governor",
+    "gpu_path": "/sys/class/devfreq/fb000000.gpu/governor"
+  }
+}

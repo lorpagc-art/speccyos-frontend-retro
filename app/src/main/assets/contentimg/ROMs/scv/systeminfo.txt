@@ -1,0 +1,26 @@
+System name:
+scv
+
+Full system name:
+Epoch Super Cassette Vision
+
+Supported file extensions:
+.0 .bin .BIN .7z .7Z .zip .ZIP
+
+Launch command:
+%EMULATOR_MAME4DROID-2024% %ACTION%=android.intent.action.VIEW %EXTRA_cli_params%="-rompath '%GAMEDIRRAW%;%ROMPATHRAW%/scv' -cart '%ROMRAW%'" %DATA%=scv
+
+Platform (for scraping):
+scv
+
+Theme folder:
+scv
+
+Games Found:
+(No games found in folder)
+
+Available Emulators (RetroArch Cores):
+(None defined)
+
+External Emulators:
+- MAME4DROID-2024

@@ -1,0 +1,33 @@
+System name:
+gba
+
+Full system name:
+Nintendo Game Boy Advance
+
+Supported file extensions:
+.agb .AGB .bin .BIN .cgb .CGB .dmg .DMG .gb .GB .gba .GBA .gbc .GBC .sgb .SGB .7z .7Z .zip .ZIP
+
+Launch command:
+%EMULATOR_RETROARCH% %EXTRA_CONFIGFILE%=/storage/emulated/0/Android/data/%ANDROIDPACKAGE%/files/retroarch.cfg %EXTRA_LIBRETRO%=mgba_libretro_android.so %EXTRA_ROM%=%ROM%
+
+Alternative launch commands:
+%EMULATOR_RETROARCH% %EXTRA_CONFIGFILE%=/storage/emulated/0/Android/data/%ANDROIDPACKAGE%/files/retroarch.cfg %EXTRA_LIBRETRO%=vbam_libretro_android.so %EXTRA_ROM%=%ROM%
+%EMULATOR_RETROARCH% %EXTRA_CONFIGFILE%=/storage/emulated/0/Android/data/%ANDROIDPACKAGE%/files/retroarch.cfg %EXTRA_LIBRETRO%=vba_next_libretro_android.so %EXTRA_ROM%=%ROM%
+%EMULATOR_RETROARCH% %EXTRA_CONFIGFILE%=/storage/emulated/0/Android/data/%ANDROIDPACKAGE%/files/retroarch.cfg %EXTRA_LIBRETRO%=gpsp_libretro_android.so %EXTRA_ROM%=%ROM%
+%EMULATOR_GBA-EMU% %DATA%=%ROMPROVIDER%
+%EMULATOR_MY-BOY% %ACTION%=android.intent.action.VIEW %DATA%=%ROMSAF%
+%EMULATOR_NOODS% %ACTIVITY_CLEAR_TASK% %ACTIVITY_CLEAR_TOP% %EXTRA_LaunchPath%=%ROM%
+%EMULATOR_PIZZA-BOY-GBA% %ACTIVITY_CLEAR_TASK% %ACTIVITY_CLEAR_TOP% %EXTRA_rom_uri%=%ROM%
+
+Platform (for scraping):
+gba
+
+Theme folder:
+gba
+
+Games:
+- Apotris.zip
+- Goodboy Galaxy DEMO.zip
+
+Emulator:
+%EMULATOR_RETROARCH% (mgba_libretro_android.so)

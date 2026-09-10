@@ -1,0 +1,50 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html</file>
+  <line>24</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html" />
+  <problem_class id="HtmlUnknownTag" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown tag</problem_class>
+  <description>Element div is not allowed here</description>
+  <highlighted_element>div</highlighted_element>
+  <language>XML</language>
+  <offset>19</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html</file>
+  <line>25</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html" />
+  <problem_class id="HtmlUnknownTag" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown tag</problem_class>
+  <description>Element li is not allowed here</description>
+  <highlighted_element>li</highlighted_element>
+  <language>XML</language>
+  <offset>22</offset>
+  <length>2</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html</file>
+  <line>45</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html" />
+  <problem_class id="HtmlUnknownTag" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown tag</problem_class>
+  <description>Element li is not allowed here</description>
+  <highlighted_element>li</highlighted_element>
+  <language>XML</language>
+  <offset>23</offset>
+  <length>2</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html</file>
+  <line>46</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html" />
+  <problem_class id="HtmlUnknownTag" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unknown tag</problem_class>
+  <description>Element div is not allowed here</description>
+  <highlighted_element>div</highlighted_element>
+  <language>XML</language>
+  <offset>20</offset>
+  <length>3</length>
+</problem>
+</problems>

@@ -1,0 +1,30 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/app/build.gradle.kts</file>
+  <line>37</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app</module>
+  <package>&lt;default&gt;</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/build.gradle.kts" />
+  <problem_class id="AndroidLintUseTomlInstead" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use TOML Version Catalog Instead</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use version catalog instead&lt;/html&gt;</description>
+  <highlighted_element>&quot;com.squareup.moshi:moshi-kotlin:1.15.2&quot;</highlighted_element>
+  <language>kotlin</language>
+  <offset>19</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/app/build.gradle.kts</file>
+  <line>41</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b.app</module>
+  <package>&lt;default&gt;</package>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/build.gradle.kts" />
+  <problem_class id="AndroidLintUseTomlInstead" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Use TOML Version Catalog Instead</problem_class>
+  <hints />
+  <description>&lt;html&gt;Use version catalog instead&lt;/html&gt;</description>
+  <highlighted_element>&quot;com.squareup.okhttp3:okhttp:5.3.2&quot;</highlighted_element>
+  <language>kotlin</language>
+  <offset>19</offset>
+  <length>35</length>
+</problem>
+</problems>

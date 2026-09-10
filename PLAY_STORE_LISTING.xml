@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  =============================================================================
+  SPECCY OS E5 ULTRA - GOOGLE PLAY STORE LISTING (VISIONARY EDITION V1.1.3)
+  =============================================================================
+  Límites estrictos de Google Play:
+  - title: Máximo 30 caracteres
+  - short_description: Máximo 80 caracteres
+  - full_description: Máximo 4000 caracteres
+  =============================================================================
+-->
+<play_store_listing>
+
+    <!-- 1. ESPAÑOL (es-ES) -->
+    <locale code="es-ES">
+        <title>Speccy OS: Emulation Frontend</title>
+        <short_description>El Meta-Sistema para tus juegos retro. IA, Dual Screen y Enlace Imperial.</short_description>
+        <full_description>
+**Transforma tu dispositivo Android en la máquina arcade del futuro.** 🕹️✨
+
+**Speccy OS E5 Ultra** no es solo un lanzador; es el primer **Meta-Sistema Operativo** de emulación diseñado para fusionarse con tu hardware. Olvídate de los menús genéricos. Bienvenido a una experiencia de consola *Premium* con IA integrada, optimización extrema y un diseño visual que redefine el retrogaming.
+
+🔥 **¿POR QUÉ ELEGIR EL IMPERIO?**
+
+⚙️ **ENLACE IMPERIAL: CONTROL TOTAL DEL HARDWARE**
+Extrae hasta la última gota de potencia de tu chip. Gracias a la integración con **Shizuku**, Speccy OS ajusta frecuencias de CPU/GPU y controla el ventilador de tu consola sin necesidad de Root. Maximiza tus FPS en PS2 y GameCube o ahorra batería en sistemas clásicos con el modo ECO.
+
+🧠 **EL ARQUITECTO: IA NEURAL INTEGRADA**
+Tu asistente personal para el juego. Habla con nuestra Inteligencia Artificial nativa para recibir recomendaciones, descubrir curiosidades de tus títulos o pedirle que **lance un juego por ti**. Di *"Quiero jugar a Super Mario 64"* y la IA abrirá el emulador con la configuración óptima.
+
+🎨 **DUAL SCREEN EVOLUTION Y ATTRACT MODE**
+El primer frontend diseñado para la era de los plegables. Nuestro tema **Pure NDS** simula una consola de doble pantalla con relieve 3D y respuesta háptica. Además, el **Attract Mode** convierte tu dispositivo en una recreativa real, reproduciendo vídeos cinematográficos de tu biblioteca mientras no juegas.
+
+☁️ **NEBULA SYNC: TUS PARTIDAS EN TODAS PARTES**
+Juega en tu consola portátil y continúa en tu smartphone. Sincroniza tus estados de guardado (.state) automáticamente en una partición segura de Google Drive. Tus progresos nunca se pierden.
+
+🛰️ **ULTRA-SCRAPER: ZERO-SCRAPING LOGIC**
+Sincroniza carátulas, vídeos y logos a la velocidad del rayo. Si reinstalas la app o cambias de dispositivo, Speccy OS detecta tu media previa y enlaza miles de juegos en milisegundos sin consumir datos de internet.
+
+🎮 **ACCESIBILIDAD TOTAL (NON-TOUCH READY)**
+Diseñado para ser controlado 100% con mando físico. El sistema de **Foco Visual Neón** resalta cada selección con una escala de 1.25x, ideal para consolas Anbernic, Retroid, Ayaneo o mandos Bluetooth.
+
+**CARACTERÍSTICAS DE ÉLITE:**
+• **Time-Machine:** Reanudado rápido para volver al segundo exacto donde dejaste tu partida.
+• **Trivial Arcade:** Pon a prueba tus conocimientos retro con nuestro motor de preguntas IA.
+• **ADN de Hardware:** Perfiles específicos para chipsets Snapdragon, Unisoc, Dimensity y Rockchip.
+
+*Nota: Speccy OS es un frontend. NO INCLUYE ROMS, JUEGOS NI BIOS. Requiere la instalación previa de emuladores compatibles (como RetroArch).*
+
+**Únete a la evolución. Despierta al Arquitecto. Instala Speccy OS.** 🚩
+        </full_description>
+    </locale>
+
+    <!-- 2. INGLÉS (en-US) -->
+    <locale code="en-US">
+        <title>Speccy OS: Emulation Frontend</title>
+        <short_description>The ultimate Meta-System for retro games. AI, Dual Screen &amp; Imperial Link.</short_description>
+        <full_description>
+**Transform your Android device into the arcade machine of the future.** 🕹️✨
+
+**Speccy OS E5 Ultra** is not just a launcher; it is the first emulation **Meta-Operating System** designed to merge with your hardware. Forget generic menus. Welcome to a *Premium* console experience with built-in AI, extreme optimization, and a visual design that redefines retrogaming.
+
+🔥 **WHY CHOOSE THE EMPIRE?**
+
+⚙️ **IMPERIAL LINK: TOTAL HARDWARE CONTROL**
+Squeeze every drop of power from your chip. Thanks to **Shizuku** integration, Speccy OS adjusts CPU/GPU frequencies and controls your console's fan without needing Root. Maximize your FPS in PS2 and GameCube or save battery on classic systems with ECO mode.
+
+🧠 **THE ARCHITECT: INTEGRATED NEURAL AI**
+Your personal gaming assistant. Chat with our native Artificial Intelligence to get recommendations, discover trivia about your titles, or ask it to **launch a game for you**. Say *"I want to play Super Mario 64"* and the AI will open the emulator with the optimal configuration.
+
+🎨 **DUAL SCREEN EVOLUTION &amp; ATTRACT MODE**
+The first frontend designed for the era of foldables. Our **Pure NDS** theme simulates a dual-screen console with 3D relief and haptic feedback. Additionally, **Attract Mode** turns your device into a real arcade cabinet, playing cinematic videos of your library while you're not playing.
+
+☁️ **NEBULA SYNC: YOUR GAMES EVERYWHERE**
+Play on your handheld and continue on your smartphone. Automatically sync your save states (.state) to a secure Google Drive partition. Your progress is never lost.
+
+🛰️ **ULTRA-SCRAPER: ZERO-SCRAPING LOGIC**
+Sync boxart, videos, and logos at lightning speed. If you reinstall the app or switch devices, Speccy OS detects your previous media and links thousands of games in milliseconds without consuming data.
+
+🎮 **TOTAL ACCESSIBILITY (NON-TOUCH READY)**
+Designed to be 100% controlled with a physical controller. The **Neon Visual Focus** system highlights each selection with a 1.25x scale, ideal for Anbernic, Retroid, Ayaneo consoles, or Bluetooth controllers.
+
+**ELITE FEATURES:**
+• **Time-Machine:** Quick resume to return to the exact second where you left off.
+• **Arcade Trivia:** Test your retro knowledge with our AI question engine.
+• **Hardware DNA:** Specific profiles for Snapdragon, Unisoc, Dimensity, and Rockchip chipsets.
+
+*Note: Speccy OS is a frontend. IT DOES NOT INCLUDE ROMS, GAMES, OR BIOS. It requires the prior installation of compatible emulators (such as RetroArch).*
+
+**Join the evolution. Awaken the Architect. Install Speccy OS.** 🚩
+        </full_description>
+    </locale>
+
+    <!-- 3. FRANCÉS (fr-FR) -->
+    <locale code="fr-FR">
+        <title>Speccy OS: Emulation Frontend</title>
+        <short_description>Le Méta-Système pour vos jeux rétro. IA, Dual Screen et Lien Impérial.</short_description>
+        <full_description>
+**Transformez votre appareil Android en la machine d'arcade du futur.** 🕹️✨
+
+**Speccy OS E5 Ultra** n'est pas seulement un lanceur ; c'est le premier **Méta-Système d'Exploitation** d'émulation conçu pour fusionner avec votre matériel. Oubliez les menus génériques. Bienvenue dans une expérience de console *Premium* avec IA intégrée, optimisation extrême et un design visuel qui redéfinit le retrogaming.
+
+🔥 **POURQUOI CHOISIR L'EMPIRE ?**
+
+⚙️ **LIEN IMPÉRIAL : CONTRÔLE TOTAL DU MATÉRIEL**
+Extrayez jusqu'à la dernière goutte de puissance de votre puce. Grâce à l'intégration **Shizuku**, Speccy OS ajuste les fréquences CPU/GPU et contrôle le ventilateur de votre console sans Root. Maximisez vos FPS sur PS2 et GameCube ou économisez la batterie sur les systèmes classiques avec le mode ECO.
+
+🧠 **L'ARCHITECTE : IA NEURONALE INTÉGRÉE**
+Votre assistant personnel pour le jeu. Parlez à notre Intelligence Artificielle native pour recevoir des recommandations, découvrir des anecdotes ou lui demander de **lancer un jeu pour vous**. Dites *"Je veux jouer à Super Mario 64"* et l'IA ouvrira l'émulateur avec la configuration optimale.
+
+🎨 **DUAL SCREEN EVOLUTION ET ATTRACT MODE**
+Le premier frontend conçu pour l'ère des pliables. Notre thème **Pure NDS** simule une console à double écran avec relief 3D et retour haptique. De plus, le **Attract Mode** transforme votre appareil en une véritable borne d'arcade, diffusant des vidéos cinématiques de votre bibliothèque pendant que vous ne jouez pas.
+
+☁️ **NEBULA SYNC : VOS PARTIES PARTOUT**
+Jouez sur votre console portable et continuez sur votre smartphone. Synchronisez vos sauvegardes (.state) automatiquement sur une partition sécurisée de Google Drive. Vos progrès ne sont jamais perdus.
+
+🛰️ **ULTRA-SCRAPER : ZERO-SCRAPING LOGIC**
+Synchronisez jaquettes, vidéos et logos à la vitesse de l'éclair. Si vous réinstallez l'app ou changez d'appareil, Speccy OS détecte vos médias précédents et lie des milliers de jeux en quelques millisecondes sans consommer de données.
+
+🎮 **ACCESSIBILITÉ TOTALE (NON-TOUCH READY)**
+Conçu pour être contrôlé à 100% par manette physique. Le système **Neon Visual Focus** met en évidence chaque sélection avec une échelle de 1.25x, idéal pour les consoles Anbernic, Retroid, Ayaneo ou les manettes Bluetooth.
+
+**CARACTÉRISTIQUES D'ÉLITE :**
+• **Time-Machine :** Reprise rapide pour revenir à la seconde exacte où vous vous étiez arrêté.
+• **Trivial Arcade :** Testez vos connaissances rétro avec notre moteur de questions IA.
+• **ADN Matériel :** Profils spécifiques pour les puces Snapdragon, Unisoc, Dimensity et Rockchip.
+
+*Note : Speccy OS est un frontend. IL N'INCLUT NI ROMS, NI JEUX, NI BIOS. Nécessite l'installation préalable d'émulateurs compatibles (comme RetroArch).*
+
+**Rejoignez l'évolution. Éveillez l'Architecte. Installez Speccy OS.** 🚩
+        </full_description>
+    </locale>
+
+    <!-- 4. ALEMÁN (de-DE) -->
+    <locale code="de-DE">
+        <title>Speccy OS: Emulation Frontend</title>
+        <short_description>Das Meta-System für Ihre Retro-Spiele. KI, Dual Screen &amp; Imperial Link.</short_description>
+        <full_description>
+**Verwandeln Sie Ihr Android-Gerät in die Arcade-Maschine der Zukunft.** 🕹️✨
+
+**Speccy OS E5 Ultra** ist nicht nur ein Launcher; es ist das erste Emulations-**Meta-Betriebssystem**, das entwickelt wurde, um mit Ihrer Hardware zu verschmelzen. Vergessen Sie generische Menüs. Willkommen zu einem *Premium*-Konsolenerlebnis mit integrierter KI, extremer Optimierung und einem visuellen Design, das Retrogaming neu definiert.
+
+🔥 **WARUM DAS IMPERIUM WÄHLEN?**
+
+⚙️ **IMPERIAL LINK: VOLLE HARDWARE-KONTROLLE**
+Holen Sie das Beste aus Ihrem Chip heraus. Dank der **Shizuku**-Integration passt Speccy OS CPU/GPU-Frequenzen an und steuert den Lüfter Ihrer Konsole ohne Root. Maximieren Sie Ihre FPS in PS2 und GameCube oder sparen Sie Akku bei klassischen Systemen mit dem ECO-Modus.
+
+🧠 **DER ARCHITEKT: INTEGRIERTE NEURALE KI**
+Ihr persönlicher Gaming-Assistent. Sprechen Sie mit unserer nativen Künstlichen Intelligenz, um Empfehlungen zu erhalten, Kuriositäten zu entdecken oder sie zu bitten, **ein Spiel für Sie zu starten**. Sagen Sie *"Ich möchte Super Mario 64 spielen"* und die KI öffnet den Emulator mit der optimalen Konfiguration.
+
+🎨 **DUAL SCREEN EVOLUTION &amp; ATTRACT MODE**
+Das erste Frontend für die Ära der faltbaren Geräte. Unser **Pure NDS**-Theme simuliert eine Dual-Screen-Konsole mit 3D-Relief und haptischem Feedback. Darüber hinaus verwandelt der **Attract Mode** Ihr Gerät in einen echten Arcade-Automaten und spielt filmische Videos Ihrer Bibliothek ab, während Sie nicht spielen.
+
+☁️ **NEBULA SYNC: IHRE SPIELE ÜBERALL**
+Spielen Sie auf Ihrem Handheld und machen Sie auf Ihrem Smartphone weiter. Synchronisieren Sie Ihre Spielstände (.state) automatisch in einer sicheren Google Drive-Partition. Ihr Fortschritt geht nie verloren.
+
+🛰️ **ULTRA-SCRAPER: ZERO-SCRAPING LOGIC**
+Synchronisieren Sie Cover, Videos und Logos blitzschnell. Wenn Sie die App neu installieren oder das Gerät wechseln, erkennt Speccy OS Ihre vorherigen Medien und verknüpft Tausende von Spielen in Millisekunden, ohne Daten zu verbrauchen.
+
+🎮 **VOLLE BARRIEREFREIHEIT (NON-TOUCH READY)**
+Entwickelt für die 100%ige Steuerung mit einem physischen Controller. Das **Neon Visual Focus**-System hebt jede Auswahl mit einer 1,25-fachen Skalierung hervor, ideal für Anbernic-, Retroid-, Ayaneo-Konsolen oder Bluetooth-Controller.
+
+**ELITE-FUNKTIONEN:**
+• **Time-Machine:** Schnelle Fortsetzung, um genau zu der Sekunde zurückzukehren, in der Sie aufgehört haben.
+• **Trivial Arcade:** Testen Sie Ihr Retro-Wissen mit unserer KI-Fragen-Engine.
+• **Hardware-DNA:** Spezifische Profile für Snapdragon-, Unisoc-, Dimensity- und Rockchip-Chipsätze.
+
+*Hinweis: Speccy OS ist ein Frontend. ES ENTHÄLT KEINE ROMS, SPIELE ODER BIOS. Erfordert die vorherige Installation kompatibler Emulatoren (wie RetroArch).*
+
+**Werden Sie Teil der Evolution. Wecken Sie den Architekten. Installieren Sie Speccy OS.** 🚩
+        </full_description>
+    </locale>
+
+    <!-- 5. ITALIANO (it-IT) -->
+    <locale code="it-IT">
+        <title>Speccy OS: Emulation Frontend</title>
+        <short_description>Il Meta-Sistema per i tuoi giochi retro. IA, Dual Screen e Imperial Link.</short_description>
+        <full_description>
+**Trasforma il tuo dispositivo Android nella macchina arcade del futuro.** 🕹️✨
+
+**Speccy OS E5 Ultra** non è solo un launcher; è il primo **Meta-Sistema Operativo** di emulazione progettato per fondersi con il tuo hardware. Dimentica i menu generici. Benvenuto in un'esperienza di console *Premium* con IA integrata, ottimizzazione estrema e un design visivo che ridefinisce il retrogaming.
+
+🔥 **PERCHÉ SCEGLIERE L'IMPERO?**
+
+⚙️ **IMPERIAL LINK: CONTROLLO TOTALE DELL'HARDWARE**
+Estrai fino all'ultima goccia di potenza dal tuo chip. Grazie all'integrazione con **Shizuku**, Speccy OS regola le frequenze CPU/GPU e controlla la ventola della tua console senza necessità di Root. Massimizza i tuoi FPS su PS2 e GameCube o risparmia batteria sui sistemi classici con la modalità ECO.
+
+🧠 **L'ARCHITETTO: IA NEURALE INTEGRATA**
+Il tuo assistente personale per il gioco. Parla con la nostra Intelligenza Artificiale nativa per ricevere consigli, scoprire curiosità o chiederle di **avviare un gioco per te**. Di' *"Voglio giocare a Super Mario 64"* e l'IA aprirà l'emulatore con la configurazione ottimale.
+
+🎨 **DUAL SCREEN EVOLUTION E ATTRACT MODE**
+Il primo frontend progettato per l'era dei pieghevoli. Il nostro tema **Pure NDS** simula una console a doppio schermo con rilievo 3D e feedback aptico. Inoltre, l'**Attract Mode** trasforma il tuo dispositivo in una vera sala giochi, riproducendo video cinematografici della tua libreria mentre non giochi.
+
+☁️ **NEBULA SYNC: LE TUE PARTITE OVUNQUE**
+Gioca sulla tua console portatile e continua sul tuo smartphone. Sincronizza i tuoi salvataggi (.state) automaticamente in una partizione sicura di Google Drive. I tuoi progressi non andranno mai perduti.
+
+🛰️ **ULTRA-SCRAPER: ZERO-SCRAPING LOGIC**
+Sincronizza copertine, video e loghi alla velocità della luce. Se reinstalli l'app o cambi dispositivo, Speccy OS rileva i tuoi media precedenti e collega migliaia di giochi in millisecondi senza consumare dati.
+
+🎮 **ACCESSIBILITÀ TOTALE (NON-TOUCH READY)**
+Progettato per essere controllato al 100% con un controller fisico. Il sistema **Neon Visual Focus** evidenzia ogni selezione con una scala 1.25x, ideale per console Anbernic, Retroid, Ayaneo o controller Bluetooth.
+
+**CARATTERISTICHE ELITE:**
+• **Time-Machine:** Ripresa rapida per tornare all'esatto secondo in cui avevi interrotto la partita.
+• **Trivial Arcade:** Metti alla prova le tue conoscenze retro con il nostro motore di domande IA.
+• **DNA Hardware:** Profili specifici per chipset Snapdragon, Unisoc, Dimensity e Rockchip.
+
+*Nota: Speccy OS è un frontend. NON INCLUDE ROM, GIOCHI O BIOS. Richiede l'installazione preventiva di emulatori compatibili (come RetroArch).*
+
+**Unisciti all'evoluzione. Sveglia l'Architetto. Installa Speccy OS.** 🚩
+        </full_description>
+    </locale>
+
+    <!-- 6. PORTUGUÉS (pt-BR) -->
+    <locale code="pt-BR">
+        <title>Speccy OS: Emulation Frontend</title>
+        <short_description>O Meta-Sistema para seus jogos retrô. IA, Dual Screen e Link Imperial.</short_description>
+        <full_description>
+**Transforme seu dispositivo Android na máquina arcade do futuro.** 🕹️✨
+
+**Speccy OS E5 Ultra** não é apenas um lançador; é o primeiro **Meta-Sistema Operacional** de emulação projetado para se fundir com seu hardware. Esqueça menus genéricos. Bem-vindo a uma experiência de console *Premium* com IA integrada, otimização extrema e um design visual que redefine o retrogaming.
+
+🔥 **POR QUE ESCOLHER O IMPÉRIO?**
+
+⚙️ **LINK IMPERIAL: CONTROLE TOTAL DE HARDWARE**
+Extraia até a última gota de potência do seu chip. Graças à integração com **Shizuku**, o Speccy OS ajusta frequências de CPU/GPU e controla a ventoinha do seu console sem necessidade de Root. Maximize seus FPS no PS2 e GameCube ou economize bateria em sistemas clássicos com o modo ECO.
+
+🧠 **O ARQUITETO: IA NEURAL INTEGRADA**
+Seu assistente pessoal para o jogo. Converse com nossa Inteligência Artificial nativa para receber recomendações, descobrir curiosidades ou pedir para ela **lançar um jogo para você**. Diga *"Quero jogar Super Mario 64"* e a IA abrirá o emulador com a configuração ideal.
+
+🎨 **DUAL SCREEN EVOLUTION E ATTRACT MODE**
+O primeiro frontend projetado para a era dos dobráveis. Nosso tema **Pure NDS** simula um console de tela dupla com relevo 3D e resposta tátil. Além disso, o **Attract Mode** transforma seu dispositivo em um fliperama real, reproduzindo vídeos cinematográficos da sua biblioteca enquanto você não joga.
+
+☁️ **NEBULA SYNC: SEUS JOGOS EM TODOS OS LUGARES**
+Jogue no seu console portátil e continue no seu smartphone. Sincronize seus estados de salvamento (.state) automaticamente em uma partição segura do Google Drive. Seus progressos nunca são perdidos.
+
+🛰️ **ULTRA-SCRAPER: ZERO-SCRAPING LOGIC**
+Sincronize capas, vídeos e logotipos na velocidade da luz. Se você reinstalar o app ou trocar de dispositivo, o Speccy OS detecta sua mídia anterior e vincula milhares de jogos em milissegundos sem consumir dados.
+
+🎮 **ACESSIBILIDADE TOTAL (NON-TOUCH READY)**
+Projetado para ser controlado 100% com controle físico. O sistema de **Foco Visual Neon** destaca cada seleção com uma escala de 1.25x, ideal para consoles Anbernic, Retroid, Ayaneo ou controles Bluetooth.
+
+**CARACTERÍSTICAS DE ELITE:**
+• **Time-Machine:** Retomada rápida para voltar ao segundo exato onde você parou.
+• **Trivial Arcade:** Teste seus conhecimentos retrô com nosso motor de perguntas IA.
+• **DNA de Hardware:** Perfis específicos para chipsets Snapdragon, Unisoc, Dimensity e Rockchip.
+
+*Nota: Speccy OS é um frontend. NÃO INCLUI ROMS, JOGOS NEM BIOS. Requer a instalação prévia de emuladores compatíveis (como RetroArch).*
+
+**Junte-se à evolução. Desperte o Arquiteto. Instale o Speccy OS.** 🚩
+        </full_description>
+    </locale>
+
+    <!-- 7. JAPONÉS (ja-JP) -->
+    <locale code="ja-JP">
+        <title>Speccy OS: Emulation Frontend</title>
+        <short_description>レトロゲームのためのメタシステム。AI、デュアルスクリーン、インペリアルリンク。</short_description>
+        <full_description>
+**あなたのAndroidデバイスを未来のアーケードマシンに変えましょう。** 🕹️✨
+
+**Speccy OS E5 Ultra**は単なるランチャーではありません。ハードウェアと融合するように設計された初のエミュレーション用**メタOS**です。汎用的なメニューはもう必要ありません。組み込みAI、究極の最適化、そしてレトロゲームを再定義するビジュアルデザインを備えた、プレミアムなコンソール体験へようこそ。
+
+🔥 **なぜ帝国を選ぶのか？**
+
+⚙️ **インペリアルリンク：ハードウェアの完全制御**
+チップのパワーを最大限に引き出します。**Shizuku**との統合により、Speccy OSはルート権限なしでCPU/GPU周波数を調整し、コンソールのファンを制御します。PS2やGameCubeでFPSを最大化したり、ECOモードでクラシックシステムのバッテリーを節約したりできます。
+
+🧠 **アーキテクト：統合型ニューラルAI**
+あなたのパーソナルゲームアシスタント。ネイティブの人工知能と対話して、おすすめを受け取ったり、タイトルの豆知識を発見したり、**代わりにゲームを起動**してもらうことができます。「スーパーマリオ64をプレイしたい」と言うだけで、AIが最適な設定でエミュレータを起動します。
+
+🎨 **デュアルスクリーン・エボリューション ＆ アトラクトモード**
+折りたたみデバイス時代のために設計された初のフロントエンド。私たちの**Pure NDS**テーマは、3Dレリーフと触覚フィードバックを備えた2画面コンソールをシミュレートします。さらに、**アトラクトモード**はデバイスを本物のアーケード機に変え、プレイしていない間にライブラリのシネマティックなビデオを再生します。
+
+☁️ **ネブラ・シンク：どこでも続きをプレイ**
+携帯ゲーム機でプレイし、スマートフォンで続きを。セーブデータ (.state) をGoogleドライブの安全なパーティションに自動的に同期します。進捗が失われることはありません。
+
+🛰️ **ウルトラスクレイパー：ゼロスクレイピング・ロジック**
+ボックスアート、ビデオ、ロゴを光速で同期します。アプリを再インストールしたりデバイスを変更したりしても、Speccy OSは以前のメディアを検出し、データを消費することなく数ミリ秒で数千のゲームをリンクします。
+
+🎮 **完全なアクセシビリティ（非タッチ対応）**
+物理コントローラーで100%制御できるように設計されています。**ネオン・ビジュアル・フォーカス**システムは、各選択を1.25倍のスケールで強調表示し、Anbernic、Retroid、AyaneoコンソールやBluetoothコントローラーに最適です。
+
+**エリート機能：**
+• **タイムマシン：** 中断した正確な秒数にすぐ戻れるクイックレジューム。
+• **トリビア・アーケード：** 私たちのAI質問エンジンでレトロの知識をテストしましょう。
+• **ハードウェアDNA：** Snapdragon、Unisoc、Dimensity、Rockchipチップセット専用のプロファイル。
+
+*注意：Speccy OSはフロントエンドです。ROM、ゲーム、BIOSは含まれていません。RetroArchなどの互換性のあるエミュレータの事前インストールが必要です。*
+
+**進化に参加しましょう。アーキテクトを目覚めさせましょう。Speccy OSをインストールしてください。** 🚩
+        </full_description>
+    </locale>
+
+    <!-- 8. COREANO (ko-KR) -->
+    <locale code="ko-KR">
+        <title>Speccy OS: Emulation Frontend</title>
+        <short_description>레트로 게임을 위한 메타 시스템. AI, 듀얼 스크린 및 임페리얼 링크.</short_description>
+        <full_description>
+**당신의 안드로이드 기기를 미래의 아케이드 머신으로 바꾸십시오.** 🕹️✨
+
+**Speccy OS E5 Ultra**는 단순한 런처가 아닙니다. 하드웨어와 융합되도록 설계된 최초의 에뮬레이션용 **메타 운영 체제**입니다. 일반적인 메뉴는 잊으십시오. 내장 AI, 극한의 최적화, 그리고 레트로 게임을 재정의하는 비주얼 디자인을 갖춘 프리미엄 콘솔 경험에 오신 것을 환영합니다.
+
+🔥 **왜 제국을 선택해야 하는가?**
+
+⚙️ **임페리얼 링크: 하드웨어 완전 제어**
+칩의 성능을 마지막 한 방울까지 짜내십시오. **Shizuku** 통합 덕분에 Speccy OS는 루트 권한 없이 CPU/GPU 주파수를 조정하고 콘솔의 팬을 제어합니다. PS2 및 GameCube에서 FPS를 극대화하거나 ECO 모드로 클래식 시스템의 배터리를 절약하십시오.
+
+🧠 **아키텍트: 통합 신경망 AI**
+당신의 개인 게임 어시스턴트. 네이티브 인공지능과 대화하여 추천을 받거나, 게임의 숨겨진 이야기를 발견하거나, **대신 게임을 실행**하도록 요청하십시오. "슈퍼 마리오 64를 플레이하고 싶어"라고 말하면 AI가 최적의 설정으로 에뮬레이터를 열 것입니다.
+
+🎨 **듀얼 스크린 에볼루션 및 어트랙트 모드**
+폴더블 시대를 위해 설계된 최초의 프론트엔드. **Pure NDS** 테마는 3D 릴리프와 햅틱 피드백을 갖춘 듀얼 스크린 콘솔을 시뮬레이션합니다. 또한 **어트랙트 모드**는 기기를 실제 아케이드 기계로 변신시켜, 게임을 하지 않을 때 라이브러리의 시네마틱 비디오를 재생합니다.
+
+☁️ **네뷸라 싱크: 어디서나 즐기는 게임**
+휴대용 콘솔에서 플레이하고 스마트폰에서 계속하십시오. 세이브 상태(.state)를 구글 드라이브의 안전한 파티션에 자동으로 동기화합니다. 당신의 진행 상황은 절대 사라지지 않습니다.
+
+🛰️ **울트라 스크래퍼: 제로 스크래핑 로직**
+박스 아트, 비디오, 로고를 빛의 속도로 동기화하십시오. 앱을 재설치하거나 기기를 변경해도 Speccy OS는 이전 미디어를 감지하고 데이터를 소비하지 않고 수 밀리초 만에 수천 개의 게임을 연결합니다.
+
+🎮 **완벽한 접근성 (비터치 대응)**
+물리적 컨트롤러로 100% 제어할 수 있도록 설계되었습니다. **네온 비주얼 포커스** 시스템은 각 선택 항목을 1.25배 배율로 강조하여 Anbernic, Retroid, Ayaneo 콘솔 또는 블루투스 컨트롤러에 이상적입니다.
+
+**엘리트 기능:**
+• **타임머신:** 게임을 중단한 정확한 초로 즉시 돌아가는 퀵 레쥬메.
+• **트리비아 아케이드:** AI 질문 엔진으로 레트로 지식을 테스트하십시오.
+• **하드웨어 DNA:** Snapdragon, Unisoc, Dimensity 및 Rockchip 칩셋을 위한 전용 프로필.
+
+*참고: Speccy OS는 프론트엔드입니다. ROM, 게임 또는 BIOS는 포함되어 있지 않습니다. RetroArch와 같은 호환 에뮬레이터를 미리 설치해야 합니다.*
+
+**진화에 동참하십시오. 아키텍트를 깨우십시오. Speccy OS를 설치하십시오.** 🚩
+        </full_description>
+    </locale>
+
+</play_store_listing>

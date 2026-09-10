@@ -1,0 +1,110 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>26</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="HtmlUnknownTarget" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved file in a link</problem_class>
+  <description>Cannot resolve directory 'release-notes'</description>
+  <highlighted_element>release-notes</highlighted_element>
+  <language>HTML</language>
+  <offset>10</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>26</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="HtmlUnknownTarget" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved file in a link</problem_class>
+  <description>Cannot resolve file '1_4_release_note.md'</description>
+  <highlighted_element>1_4_release_note.md</highlighted_element>
+  <language>HTML</language>
+  <offset>24</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html</file>
+  <line>14</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html" />
+  <problem_class id="HtmlUnknownTarget" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved file in a link</problem_class>
+  <description>Cannot resolve directory 'media'</description>
+  <highlighted_element>media</highlighted_element>
+  <language>HTML</language>
+  <offset>38</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html</file>
+  <line>14</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html" />
+  <problem_class id="HtmlUnknownTarget" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved file in a link</problem_class>
+  <description>Cannot resolve file 'retroarch.ico'</description>
+  <highlighted_element>retroarch.ico</highlighted_element>
+  <language>HTML</language>
+  <offset>44</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html</file>
+  <line>102</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html" />
+  <problem_class id="HtmlUnknownTarget" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved file in a link</problem_class>
+  <description>Cannot resolve directory 'media'</description>
+  <highlighted_element>media</highlighted_element>
+  <language>HTML</language>
+  <offset>58</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html</file>
+  <line>102</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html" />
+  <problem_class id="HtmlUnknownTarget" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved file in a link</problem_class>
+  <description>Cannot resolve file 'canvas.png'</description>
+  <highlighted_element>canvas.png</highlighted_element>
+  <language>HTML</language>
+  <offset>64</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html</file>
+  <line>109</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro/index.html" />
+  <problem_class id="HtmlUnknownTarget" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved file in a link</problem_class>
+  <description>Cannot resolve file 'analytics.js'</description>
+  <highlighted_element>analytics.js</highlighted_element>
+  <language>HTML</language>
+  <offset>19</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro-thread/index.html</file>
+  <line>8</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro-thread/index.html" />
+  <problem_class id="HtmlUnknownTarget" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved file in a link</problem_class>
+  <description>Cannot resolve directory 'media'</description>
+  <highlighted_element>media</highlighted_element>
+  <language>HTML</language>
+  <offset>34</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro-thread/index.html</file>
+  <line>8</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/emscripten/libretro-thread/index.html" />
+  <problem_class id="HtmlUnknownTarget" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved file in a link</problem_class>
+  <description>Cannot resolve file 'retroarch.ico'</description>
+  <highlighted_element>retroarch.ico</highlighted_element>
+  <language>HTML</language>
+  <offset>40</offset>
+  <length>13</length>
+</problem>
+</problems>

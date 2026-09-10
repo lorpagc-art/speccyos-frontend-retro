@@ -1,0 +1,758 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'imgs'</description>
+  <highlighted_element>imgs</highlighted_element>
+  <language>Markdown</language>
+  <offset>21</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>1</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'cover_new.png'</description>
+  <highlighted_element>cover_new.png</highlighted_element>
+  <language>Markdown</language>
+  <offset>26</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>58</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'imgs'</description>
+  <highlighted_element>imgs</highlighted_element>
+  <language>Markdown</language>
+  <offset>20</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>58</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'widgets_4.png'</description>
+  <highlighted_element>widgets_4.png</highlighted_element>
+  <language>Markdown</language>
+  <offset>25</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>62</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'release-notes'</description>
+  <highlighted_element>release-notes</highlighted_element>
+  <language>Markdown</language>
+  <offset>5</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>62</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory '1_4_release_note'</description>
+  <highlighted_element>1_4_release_note</highlighted_element>
+  <language>Markdown</language>
+  <offset>19</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>62</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'appearance_general.png'</description>
+  <highlighted_element>appearance_general.png</highlighted_element>
+  <language>Markdown</language>
+  <offset>36</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>66</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'imgs'</description>
+  <highlighted_element>imgs</highlighted_element>
+  <language>Markdown</language>
+  <offset>19</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>66</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'genres_3.png'</description>
+  <highlighted_element>genres_3.png</highlighted_element>
+  <language>Markdown</language>
+  <offset>24</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>70</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'imgs'</description>
+  <highlighted_element>imgs</highlighted_element>
+  <language>Markdown</language>
+  <offset>30</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>70</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'achievement_7.png'</description>
+  <highlighted_element>achievement_7.png</highlighted_element>
+  <language>Markdown</language>
+  <offset>35</offset>
+  <length>17</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>74</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'imgs'</description>
+  <highlighted_element>imgs</highlighted_element>
+  <language>Markdown</language>
+  <offset>19</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>74</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'search_2.png'</description>
+  <highlighted_element>search_2.png</highlighted_element>
+  <language>Markdown</language>
+  <offset>24</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>86</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'imgs'</description>
+  <highlighted_element>imgs</highlighted_element>
+  <language>Markdown</language>
+  <offset>22</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>86</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'platform_collection_wallpaper_view_2.png'</description>
+  <highlighted_element>platform_collection_wallpaper_view_2.png</highlighted_element>
+  <language>Markdown</language>
+  <offset>27</offset>
+  <length>40</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>88</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'imgs'</description>
+  <highlighted_element>imgs</highlighted_element>
+  <language>Markdown</language>
+  <offset>20</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>88</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'platform_library_3.png'</description>
+  <highlighted_element>platform_library_3.png</highlighted_element>
+  <language>Markdown</language>
+  <offset>25</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>93</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'imgs'</description>
+  <highlighted_element>imgs</highlighted_element>
+  <language>Markdown</language>
+  <offset>29</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>93</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'download_platforms_2.png'</description>
+  <highlighted_element>download_platforms_2.png</highlighted_element>
+  <language>Markdown</language>
+  <offset>34</offset>
+  <length>24</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>101</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'imgs'</description>
+  <highlighted_element>imgs</highlighted_element>
+  <language>Markdown</language>
+  <offset>20</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>101</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'tapicofox_widgets.png'</description>
+  <highlighted_element>tapicofox_widgets.png</highlighted_element>
+  <language>Markdown</language>
+  <offset>25</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>115</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'docs'</description>
+  <highlighted_element>docs</highlighted_element>
+  <language>Markdown</language>
+  <offset>23</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>115</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'daijishou_console.md'</description>
+  <highlighted_element>daijishou_console.md</highlighted_element>
+  <language>Markdown</language>
+  <offset>28</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>116</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'docs'</description>
+  <highlighted_element>docs</highlighted_element>
+  <language>Markdown</language>
+  <offset>21</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>116</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'dsess.md'</description>
+  <highlighted_element>dsess.md</highlighted_element>
+  <language>Markdown</language>
+  <offset>26</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>117</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'docs'</description>
+  <highlighted_element>docs</highlighted_element>
+  <language>Markdown</language>
+  <offset>38</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md</file>
+  <line>117</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'daijishou_player_template.md'</description>
+  <highlighted_element>daijishou_player_template.md</highlighted_element>
+  <language>Markdown</language>
+  <offset>43</offset>
+  <length>28</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/docs/daijishou_console.md</file>
+  <line>12</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/docs/daijishou_console.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'imgs'</description>
+  <highlighted_element>imgs</highlighted_element>
+  <language>Markdown</language>
+  <offset>5</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/docs/daijishou_console.md</file>
+  <line>12</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/docs/daijishou_console.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'daijishou_console.png'</description>
+  <highlighted_element>daijishou_console.png</highlighted_element>
+  <language>Markdown</language>
+  <offset>10</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/docs/daijishou_console.md</file>
+  <line>21</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/docs/daijishou_console.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file '\docs\DSESS.md'</description>
+  <highlighted_element>\docs\DSESS.md</highlighted_element>
+  <language>Markdown</language>
+  <offset>90</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/docs/dsess.md</file>
+  <line>187</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/docs/dsess.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'docs'</description>
+  <highlighted_element>docs</highlighted_element>
+  <language>Markdown</language>
+  <offset>41</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/docs/dsess.md</file>
+  <line>187</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/docs/dsess.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'daijishou_console.md'</description>
+  <highlighted_element>daijishou_console.md</highlighted_element>
+  <language>Markdown</language>
+  <offset>46</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/release-notes/1_4_release_note.md</file>
+  <line>6</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/release-notes/1_4_release_note.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'docs'</description>
+  <highlighted_element>docs</highlighted_element>
+  <language>Markdown</language>
+  <offset>54</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/release-notes/1_4_release_note.md</file>
+  <line>6</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/release-notes/1_4_release_note.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'daijishou_player_template.md'</description>
+  <highlighted_element>daijishou_player_template.md</highlighted_element>
+  <language>Markdown</language>
+  <offset>59</offset>
+  <length>28</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/release-notes/1_4_release_note.md</file>
+  <line>49</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/release-notes/1_4_release_note.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'docs'</description>
+  <highlighted_element>docs</highlighted_element>
+  <language>Markdown</language>
+  <offset>27</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/release-notes/1_4_release_note.md</file>
+  <line>49</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/release-notes/1_4_release_note.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'dsess.md'</description>
+  <highlighted_element>dsess.md</highlighted_element>
+  <language>Markdown</language>
+  <offset>32</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/release-notes/1_4_release_note.md</file>
+  <line>96</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/release-notes/1_4_release_note.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'docs'</description>
+  <highlighted_element>docs</highlighted_element>
+  <language>Markdown</language>
+  <offset>38</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/release-notes/1_4_release_note.md</file>
+  <line>96</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/Daijishou-main/Daijishou-main/release-notes/1_4_release_note.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'daijishou_console.md'</description>
+  <highlighted_element>daijishou_console.md</highlighted_element>
+  <language>Markdown</language>
+  <offset>43</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/glslang/glslang/README.md</file>
+  <line>158</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/glslang/glslang/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file ''</description>
+  <highlighted_element />
+  <language>Markdown</language>
+  <offset>13</offset>
+  <length>0</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/libShake/README.md</file>
+  <line>36</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/libShake/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file ''</description>
+  <highlighted_element />
+  <language>Markdown</language>
+  <offset>129</offset>
+  <length>0</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>77</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'doc'</description>
+  <highlighted_element>doc</highlighted_element>
+  <language>Markdown</language>
+  <offset>30</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>77</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'images'</description>
+  <highlighted_element>images</highlighted_element>
+  <language>Markdown</language>
+  <offset>34</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>77</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'CSpeed2.png'</description>
+  <highlighted_element>CSpeed2.png</highlighted_element>
+  <language>Markdown</language>
+  <offset>41</offset>
+  <length>11</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>77</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'doc'</description>
+  <highlighted_element>doc</highlighted_element>
+  <language>Markdown</language>
+  <offset>108</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>77</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'images'</description>
+  <highlighted_element>images</highlighted_element>
+  <language>Markdown</language>
+  <offset>112</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>77</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'DSpeed3.png'</description>
+  <highlighted_element>DSpeed3.png</highlighted_element>
+  <language>Markdown</language>
+  <offset>119</offset>
+  <length>11</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>80</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'doc'</description>
+  <highlighted_element>doc</highlighted_element>
+  <language>Markdown</language>
+  <offset>64</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>80</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'images'</description>
+  <highlighted_element>images</highlighted_element>
+  <language>Markdown</language>
+  <offset>68</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>80</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'DCspeed5.png'</description>
+  <highlighted_element>DCspeed5.png</highlighted_element>
+  <language>Markdown</language>
+  <offset>75</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>98</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'doc'</description>
+  <highlighted_element>doc</highlighted_element>
+  <language>Markdown</language>
+  <offset>21</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>98</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'images'</description>
+  <highlighted_element>images</highlighted_element>
+  <language>Markdown</language>
+  <offset>25</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>98</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'dict-cr.png'</description>
+  <highlighted_element>dict-cr.png</highlighted_element>
+  <language>Markdown</language>
+  <offset>32</offset>
+  <length>11</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>98</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'doc'</description>
+  <highlighted_element>doc</highlighted_element>
+  <language>Markdown</language>
+  <offset>88</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>98</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'images'</description>
+  <highlighted_element>images</highlighted_element>
+  <language>Markdown</language>
+  <offset>92</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>98</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'dict-cs.png'</description>
+  <highlighted_element>dict-cs.png</highlighted_element>
+  <language>Markdown</language>
+  <offset>99</offset>
+  <length>11</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>98</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'doc'</description>
+  <highlighted_element>doc</highlighted_element>
+  <language>Markdown</language>
+  <offset>157</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>98</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'images'</description>
+  <highlighted_element>images</highlighted_element>
+  <language>Markdown</language>
+  <offset>161</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>98</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'dict-ds.png'</description>
+  <highlighted_element>dict-ds.png</highlighted_element>
+  <language>Markdown</language>
+  <offset>168</offset>
+  <length>11</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>144</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'programs'</description>
+  <highlighted_element>programs</highlighted_element>
+  <language>Markdown</language>
+  <offset>30</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>144</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'README.md'</description>
+  <highlighted_element>README.md</highlighted_element>
+  <language>Markdown</language>
+  <offset>39</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>168</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve directory 'build'</description>
+  <highlighted_element>build</highlighted_element>
+  <language>Markdown</language>
+  <offset>51</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>168</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file 'meson'</description>
+  <highlighted_element>meson</highlighted_element>
+  <language>Markdown</language>
+  <offset>57</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md</file>
+  <line>171</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/deps/zstd/README.md" />
+  <problem_class id="MarkdownUnresolvedFileReference" severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved file references</problem_class>
+  <description>Cannot resolve file '.travis.yml'</description>
+  <highlighted_element>.travis.yml</highlighted_element>
+  <language>Markdown</language>
+  <offset>44</offset>
+  <length>11</length>
+</problem>
+</problems>

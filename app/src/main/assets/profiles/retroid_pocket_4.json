@@ -1,0 +1,45 @@
+{
+  "soc": "Dimensity 1100",
+  "modes": {
+    "ECO": {
+      "cpu_cluster0_gov": "powersave",
+      "cpu_cluster1_gov": "powersave",
+      "gpu_governor": "powersave",
+      "io_scheduler": "noop",
+      "fan_level": 0,
+      "description": "Modo ahorro. Frecuencias bajas para optimizar batería en 2D."
+    },
+    "BALANCED": {
+      "cpu_cluster0_gov": "schedutil",
+      "cpu_cluster1_gov": "schedutil",
+      "gpu_governor": "simple_ondemand",
+      "io_scheduler": "cfq",
+      "fan_level": 1,
+      "description": "Equilibrio dinámico para emulación general hasta PSP."
+    },
+    "PERFORMANCE": {
+      "cpu_cluster0_gov": "performance",
+      "cpu_cluster1_gov": "performance",
+      "gpu_governor": "performance",
+      "io_scheduler": "deadline",
+      "fan_level": 2,
+      "description": "Rendimiento sostenido. Ideal para PS2 y GameCube a 2x."
+    },
+    "EXTREME": {
+      "cpu_cluster0_gov": "performance",
+      "cpu_cluster1_gov": "performance",
+      "gpu_governor": "performance",
+      "touch_boost": true,
+      "io_scheduler": "deadline",
+      "fan_level": 3,
+      "description": "Fuerza Bruta. Desbloquea el Dimensity para Switch y Xanite."
+    }
+  },
+  "sysfs_mapping": {
+    "cpu0_path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_governor",
+    "cpu1_path": "/sys/devices/system/cpu/cpufreq/policy4/scaling_governor",
+    "gpu_path": "/sys/class/misc/mali0/device/power_policy",
+    "fan_path": "/sys/class/thermal/cooling_device0/cur_state",
+    "io_sched_path": "/sys/block/mmcblk0/queue/scheduler"
+  }
+}

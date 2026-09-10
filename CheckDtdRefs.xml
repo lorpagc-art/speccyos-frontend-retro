@@ -1,0 +1,14 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/wiiu/meta.xml</file>
+  <line>5</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/wiiu/meta.xml" />
+  <problem_class id="CheckDtdRefs" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Unresolved DTD reference</problem_class>
+  <description>Unresolved entity reference version</description>
+  <highlighted_element>version</highlighted_element>
+  <language>XML</language>
+  <offset>12</offset>
+  <length>7</length>
+</problem>
+</problems>

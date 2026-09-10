@@ -1,0 +1,26 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/apple/WebServer/GCDWebUploader/GCDWebUploader.bundle/Contents/Resources/index.html</file>
+  <line>108</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/apple/WebServer/GCDWebUploader/GCDWebUploader.bundle/Contents/Resources/index.html" />
+  <problem_class id="HtmlFormInputWithoutLabel" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing associated label</problem_class>
+  <description>Missing associated label</description>
+  <highlighted_element>input</highlighted_element>
+  <language>XML</language>
+  <offset>15</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/apple/WebServer/GCDWebUploader/GCDWebUploader.bundle/Contents/Resources/index.html</file>
+  <line>129</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/pkg/apple/WebServer/GCDWebUploader/GCDWebUploader.bundle/Contents/Resources/index.html" />
+  <problem_class id="HtmlFormInputWithoutLabel" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missing associated label</problem_class>
+  <description>Missing associated label</description>
+  <highlighted_element>input</highlighted_element>
+  <language>XML</language>
+  <offset>15</offset>
+  <length>5</length>
+</problem>
+</problems>

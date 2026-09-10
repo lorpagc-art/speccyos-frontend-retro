@@ -1,0 +1,45 @@
+{
+  "soc": "Unisoc T620",
+  "modes": {
+    "ECO": {
+      "cpu_cluster0_gov": "powersave",
+      "cpu_cluster1_gov": "powersave",
+      "gpu_governor": "powersave",
+      "io_scheduler": "noop",
+      "fan_level": 0,
+      "description": "Maximum battery life. Lowers frequencies to minimum."
+    },
+    "BALANCED": {
+      "cpu_cluster0_gov": "schedutil",
+      "cpu_cluster1_gov": "schedutil",
+      "gpu_governor": "simple_ondemand",
+      "io_scheduler": "cfq",
+      "fan_level": 1,
+      "description": "Standard usage. Dynamic scaling for daily tasks and light gaming."
+    },
+    "PERFORMANCE": {
+      "cpu_cluster0_gov": "performance",
+      "cpu_cluster1_gov": "performance",
+      "gpu_governor": "performance",
+      "io_scheduler": "deadline",
+      "fan_level": 2,
+      "description": "High performance. Sustained max frequencies for GameCube and PS2."
+    },
+    "EXTREME": {
+      "cpu_cluster0_gov": "performance",
+      "cpu_cluster1_gov": "performance",
+      "gpu_governor": "performance",
+      "touch_boost": true,
+      "io_scheduler": "deadline",
+      "fan_level": 3,
+      "description": "Maximum power. Overrides all thermal limits (Use with caution)."
+    }
+  },
+  "sysfs_mapping": {
+    "cpu0_path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_governor",
+    "cpu1_path": "/sys/devices/system/cpu/cpufreq/policy6/scaling_governor",
+    "gpu_path": "/sys/class/devfreq/6000000.gpu/governor",
+    "fan_path": "/sys/class/fan/level",
+    "io_sched_path": "/sys/block/mmcblk0/queue/scheduler"
+  }
+}

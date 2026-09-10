@@ -1,0 +1,40 @@
+{
+  "soc": "Unisoc T618 (GammaOS Core)",
+  "modes": {
+    "ECO": {
+      "cpu_cluster0_gov": "powersave",
+      "cpu_cluster1_gov": "powersave",
+      "gpu_governor": "powersave",
+      "io_scheduler": "noop",
+      "description": "GammaOS: Ahorro de energía. Ideal para juegos 2D y extender autonomía."
+    },
+    "BALANCED": {
+      "cpu_cluster0_gov": "schedutil",
+      "cpu_cluster1_gov": "schedutil",
+      "gpu_governor": "simple_ondemand",
+      "io_scheduler": "cfq",
+      "description": "GammaOS: Rendimiento equilibrado. Optimizado para uso general."
+    },
+    "PERFORMANCE": {
+      "cpu_cluster0_gov": "performance",
+      "cpu_cluster1_gov": "performance",
+      "gpu_governor": "performance",
+      "io_scheduler": "deadline",
+      "description": "GammaOS: Máximo rendimiento. Frecuencias fijas para PS2 y GameCube."
+    },
+    "EXTREME": {
+      "cpu_cluster0_gov": "performance",
+      "cpu_cluster1_gov": "performance",
+      "gpu_governor": "performance",
+      "touch_boost": true,
+      "io_scheduler": "deadline",
+      "description": "GammaOS MAX: Potencia extrema. Elimina cualquier restricción del sistema."
+    }
+  },
+  "sysfs_mapping": {
+    "cpu0_path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_governor",
+    "cpu1_path": "/sys/devices/system/cpu/cpufreq/policy6/scaling_governor",
+    "gpu_path": "/sys/class/devfreq/6000000.gpu/governor",
+    "io_sched_path": "/sys/block/mmcblk0/queue/scheduler"
+  }
+}

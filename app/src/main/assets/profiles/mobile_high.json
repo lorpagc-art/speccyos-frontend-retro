@@ -1,0 +1,41 @@
+{
+  "soc": "Snapdragon 8 Gen 1/2/3",
+  "modes": {
+    "ECO": {
+      "cpu_cluster0_gov": "powersave",
+      "cpu_cluster1_gov": "powersave",
+      "gpu_governor": "powersave",
+      "io_scheduler": "noop",
+      "description": "Ahorro de energía máximo para smartphones de gama alta."
+    },
+    "BALANCED": {
+      "cpu_cluster0_gov": "schedutil",
+      "cpu_cluster1_gov": "schedutil",
+      "gpu_governor": "msm-adreno-tz",
+      "io_scheduler": "cfq",
+      "description": "Rendimiento inteligente. Optimización térmica para sesiones largas."
+    },
+    "PERFORMANCE": {
+      "cpu_cluster0_gov": "performance",
+      "cpu_cluster1_gov": "performance",
+      "gpu_governor": "performance",
+      "io_scheduler": "deadline",
+      "description": "Máxima potencia sostenida. Ideal para emulación pesada."
+    },
+    "EXTREME": {
+      "cpu_cluster0_gov": "performance",
+      "cpu_cluster1_gov": "performance",
+      "gpu_governor": "performance",
+      "touch_boost": true,
+      "io_scheduler": "deadline",
+      "description": "Modo Ultra. Desbloquea clusters de alto rendimiento para Xanite."
+    }
+  },
+  "sysfs_mapping": {
+    "cpu0_path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_governor",
+    "cpu1_path": "/sys/devices/system/cpu/cpufreq/policy4/scaling_governor",
+    "cpu2_path": "/sys/devices/system/cpu/cpufreq/policy7/scaling_governor",
+    "gpu_path": "/sys/class/kgsl/kgsl-3d0/devfreq/governor",
+    "io_sched_path": "/sys/block/mmcblk0/queue/scheduler"
+  }
+}

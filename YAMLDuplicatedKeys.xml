@@ -1,0 +1,26 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.gitlab-ci.yml</file>
+  <line>574</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.gitlab-ci.yml" />
+  <problem_class id="YAMLDuplicatedKeys" severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Duplicated YAML keys</problem_class>
+  <description>Key 'script' is duplicated</description>
+  <highlighted_element>script</highlighted_element>
+  <language>yaml</language>
+  <offset>2</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.gitlab-ci.yml</file>
+  <line>575</line>
+  <module>Speccy_OS_E5_Ultra_V_0.2.1b</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Sample/RetroArch-master/RetroArch-master/.gitlab-ci.yml" />
+  <problem_class id="YAMLDuplicatedKeys" severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Duplicated YAML keys</problem_class>
+  <description>Key 'script' is duplicated</description>
+  <highlighted_element>script</highlighted_element>
+  <language>yaml</language>
+  <offset>2</offset>
+  <length>6</length>
+</problem>
+</problems>

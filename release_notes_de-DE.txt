@@ -1,0 +1,8 @@
+Neu in 1.2.0
+
+⚡ Leistungsprofile pro Gerät: 83 Modelle erkannt (Retroid, AYN Odin, Anbernic RG, AYANEO, GameMT). CPU, GPU und Lüfter stellen sich vor jedem Spiel selbst ein.
+🌡️ Temperaturregelung mit Hysterese: Schluss mit dem Takt-Hin-und-Her, das die 60 fps zerlegt.
+🧩 BIOS-Prüfung für 24 Systeme per MD5.
+🕹️ Navigation mit Analog-Stick.
+🎮 RetroArch-Konfiguration passend zum Gerät.
+🐛 Abstürze auf RG557, RG Vita und Chromecast behoben.

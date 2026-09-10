@@ -40,8 +40,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import androidx.compose.ui.unit.sp
 import com.generacionarcade.speccyos.theme.NeonBlue
 import com.google.firebase.Firebase
@@ -222,15 +227,45 @@ fun DailyChallengeCard(
         lookupDone = true
     }
 
-    // El panel va ACOTADO y OPACO, y arranca por debajo de la barra de estado.
-    // Antes era `fillMaxWidth()` con un fondo al 5 % de opacidad pegado al borde
-    // superior: se comia media pantalla, dejaba ver el carrusel por debajo -no
-    // se leia ni una cosa ni la otra- y su aspa de cerrar caia justo debajo del
-    // avatar del usuario, que la interceptaba.
+    // ── DISCRETO POR DEFECTO ─────────────────────────────────────────────
+    //
+    // En el dashboard solo se ve una pastilla pequena. El detalle -consejo del
+    // Arquitecto, botones y ranking- se abre al tocarla, en un dialogo centrado.
+    //
+    // Antes esto era un panel `fillMaxWidth()` con el fondo al 5 % de opacidad
+    // pegado al borde superior: se comia media pantalla, dejaba ver el carrusel
+    // por debajo -no se leia ni una cosa ni la otra- y competia con el carrusel,
+    // que es lo que el usuario viene a mirar.
+    //
+    // La posicion (arriba a la derecha, por debajo del bloque de usuario) es la
+    // unica banda libre en los tres temas que ofrece Ajustes: en Ultra queda
+    // bajo el avatar, en Speccy OS bajo el chip de CPU/TEMP y por encima de la
+    // rejilla, y en Pure sobre arte sin interfaz.
+    var expanded by remember { mutableStateOf(false) }
+
+    ChipRetoDelDia(
+        challenge = ch,
+        onOpen = { expanded = true },
+        onHide = {
+            settingsManager.dailyChallengeHiddenOn = ch.date
+            hiddenOn = ch.date
+        }
+    )
+
+    if (!expanded) return
+
+    // usePlatformDefaultWidth = false es necesario: con el valor por defecto,
+    // Dialog impone el ancho estandar de Android y se queda MUY por debajo de
+    // los 460.dp que pide el contenido. El sintoma era el boton "RANKING"
+    // partido en tres lineas ("RAN/KIN/G").
+    Dialog(
+        onDismissRequest = { expanded = false },
+        properties = DialogProperties(usePlatformDefaultWidth = false)
+    ) {
     Column(
         modifier = Modifier
-            .padding(start = 16.dp, end = 16.dp, top = 72.dp, bottom = 8.dp)
-            .widthIn(max = 460.dp)
+            .width(460.dp)
+            .verticalScroll(rememberScrollState())
     ) {
 
         // ── RETO DEL DÍA ──────────────────────────────────────────
@@ -318,7 +353,7 @@ fun DailyChallengeCard(
                             ) {
                                 Icon(Icons.Default.Leaderboard, null, tint = MaterialTheme.colorScheme.onSurface, modifier = Modifier.size(16.dp))
                                 Spacer(Modifier.width(4.dp))
-                                Text("RANKING", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                                Text("RANKING", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold, fontSize = 12.sp, maxLines = 1)
                             }
                         }
 
@@ -348,14 +383,14 @@ fun DailyChallengeCard(
                         }
                     }
                 }
+                // Aqui dentro el aspa solo CIERRA el detalle. Ocultar el reto
+                // del dia es la otra aspa, la de la pastilla: son dos acciones
+                // distintas y conviene que no se confundan.
                 IconButton(
-                    onClick = {
-                        settingsManager.dailyChallengeHiddenOn = ch.date
-                        hiddenOn = ch.date
-                    },
+                    onClick = { expanded = false },
                     modifier = Modifier.align(Alignment.TopEnd).padding(4.dp)
                 ) {
-                    Icon(Icons.Default.Close, "Ocultar Reto", tint = MaterialTheme.colorScheme.onSurface)
+                    Icon(Icons.Default.Close, "Cerrar", tint = MaterialTheme.colorScheme.onSurface)
                 }
             }
         }
@@ -397,6 +432,80 @@ fun DailyChallengeCard(
                         }
                     }
                 }
+            }
+        }
+    }
+    }
+}
+
+/**
+ * La pastilla que se ve en el dashboard: una linea de titulo y el nombre del
+ * juego. Nada mas.
+ *
+ * Es lo unico que ocupa sitio de forma permanente, asi que se mantiene por
+ * debajo del ancho de una tarjeta del carrusel y sin animaciones continuas: el
+ * dashboard ya tiene 20 corriendo y el objetivo del proyecto es la fluidez en
+ * Mali-G57.
+ */
+@Composable
+private fun ChipRetoDelDia(
+    challenge: DailyChallenge,
+    onOpen: () -> Unit,
+    onHide: () -> Unit
+) {
+    Surface(
+        modifier = Modifier
+            .padding(top = 104.dp, end = 24.dp)
+            .widthIn(max = 260.dp)
+            .clickable(onClick = onOpen),
+        shape = RoundedCornerShape(12.dp),
+        color = MaterialTheme.colorScheme.surface.copy(alpha = 0.88f),
+        border = BorderStroke(1.dp, NeonBlue.copy(alpha = 0.35f)),
+        shadowElevation = 6.dp
+    ) {
+        Row(
+            modifier = Modifier.padding(start = 12.dp, top = 8.dp, bottom = 8.dp, end = 4.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                Icons.Default.EmojiEvents, null,
+                tint = SpeccyPalette.imperial,
+                modifier = Modifier.size(18.dp)
+            )
+            Spacer(Modifier.width(8.dp))
+            Column(modifier = Modifier.weight(1f, fill = false)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        "RETO DEL DÍA",
+                        color = SpeccyPalette.imperial,
+                        fontSize = 9.sp,
+                        fontWeight = FontWeight.Black,
+                        letterSpacing = 1.sp
+                    )
+                    Spacer(Modifier.width(6.dp))
+                    Text(
+                        "+${challenge.points}",
+                        color = NeonBlue,
+                        fontSize = 9.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+                Text(
+                    challenge.title,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Bold,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+            }
+            IconButton(onClick = onHide, modifier = Modifier.size(28.dp)) {
+                Icon(
+                    Icons.Default.Close,
+                    "Ocultar el reto de hoy",
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.size(14.dp)
+                )
             }
         }
     }

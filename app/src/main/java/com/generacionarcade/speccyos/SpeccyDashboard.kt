@@ -646,11 +646,12 @@ fun SpeccyDashboard(
         if (selectedPlatform == null && !isSearchVisible && !isAndroidSettingsVisible &&
             !isAppViewActive && !isAttractModeActive && !isRouletteVisible && !isDnaVisible
         ) {
+            // Arriba a la derecha: la unica banda libre en los tres temas que
+            // ofrece Ajustes. Centrado competia con el carrusel, que es lo que
+            // el usuario viene a mirar.
             Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .align(Alignment.TopCenter),
-                contentAlignment = Alignment.TopCenter
+                modifier = Modifier.align(Alignment.TopEnd),
+                contentAlignment = Alignment.TopEnd
             ) {
                 DailyChallengeCard(
                     mainViewModel = mainViewModel,

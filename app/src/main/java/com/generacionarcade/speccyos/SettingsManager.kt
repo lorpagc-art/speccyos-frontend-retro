@@ -422,6 +422,24 @@ class SettingsManager(context: Context) {
      * permiso sensible, con riesgo de rechazo-. La via SAF no tiene ese
      * problema y es la misma que ya se usa para las ROMs.
      */
+    /**
+     * Enviar el extra CONFIGFILE al lanzar RetroArch, apuntando a su propio
+     * retroarch.cfg.
+     *
+     * Sin el, RetroArch arranca SIN CARGAR NINGUNA configuracion: avisa de
+     * "Config directory is not set", no pinta el overlay y **los atajos de
+     * teclado no funcionan** (el combo L3+R3 no abre el Quick Menu). Verificado
+     * con una prueba A/B en una GameMT EX8 el 11 de septiembre de 2026.
+     *
+     * Se deja como interruptor porque la ruta no se puede verificar antes de
+     * mandarla -Android 11+ prohibe mirar el Android/data de otra app-, y en un
+     * RetroArch que guarde su configuracion en otro sitio esto le haria empezar
+     * con una nueva. Es la misma ruta que usa ES-DE en estas consolas.
+     */
+    var sendRetroArchConfigFile: Boolean
+        get() = prefs.getBoolean("send_retroarch_configfile", true)
+        set(value) = prefs.edit().putBoolean("send_retroarch_configfile", value).apply()
+
     var retroarchFolderUri: String
         get() = prefs.getString("retroarch_folder_uri", "") ?: ""
         set(value) = prefs.edit().putString("retroarch_folder_uri", value).apply()

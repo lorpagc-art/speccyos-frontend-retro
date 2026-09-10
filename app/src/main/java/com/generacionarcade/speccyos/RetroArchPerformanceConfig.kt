@@ -240,7 +240,17 @@ object RetroArchPerformanceConfig {
                 val dataDir = try {
                     context.packageManager.getPackageInfo(pkg, 0).applicationInfo?.dataDir ?: "/data/user/0/$pkg"
                 } catch (e: Exception) { "/data/user/0/$pkg" }
-                appendLine("dir_config = \"$dataDir/files\"")
+                // La clave es `rgui_config_directory`, NO `dir_config`.
+                //
+                // `dir_config` no existe en RetroArch: comprobado contra su
+                // propio codigo fuente (`configuration.c` declara
+                // SETTING_PATH("rgui_config_directory", ...) y no hay ni una
+                // aparicion de "dir_config"). La linea se escribia, RetroArch la
+                // ignoraba, y el directorio de configuracion se quedaba SIN
+                // DEFINIR: de ahi el aviso "Config directory is not set" que sale
+                // abajo al arrancar cada juego (command.c:1750, cuando
+                // `dir_menu_config` y `rarch_path_config` estan vacios).
+                appendLine("rgui_config_directory = \"$dataDir/files\"")
 
 
 

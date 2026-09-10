@@ -4,6 +4,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.os.Environment
 import android.os.StrictMode
 import android.provider.DocumentsContract
 import android.util.Log
@@ -31,8 +32,11 @@ import java.io.File
  *    - RetroArch ≥ 1.15 acepta APPENDCONFIG para sobreescribir cfg sin tocar el global.
  *    - Soluciona desincronización de video_driver / audio_driver entre sesiones.
  *
- * 4. CONFIGFILE CORREGIDO:
- *    - Ya no se envia. Ver el comentario largo en launchRetroArch().
+ * 4. CONFIGFILE:
+ *    - SI se envia, apuntando al retroarch.cfg del PROPIO RetroArch, y solo si
+ *      se puede verificar que existe. Sin el, RetroArch arranca sin cargar
+ *      ninguna configuracion: sin overlay y sin atajos de teclado. Ver el
+ *      comentario largo en launchRetroArch().
  *
  * 5. FALLBACK DE ACTIVIDAD MEJORADO:
  *    - Prueba RetroActivityFuture → RetroActivity → getLaunchIntentForPackage
@@ -118,6 +122,7 @@ class LauncherManager(private val context: Context) {
         private const val EXTRA_ROM          = "ROM"
         private const val EXTRA_LIBRETRO     = "LIBRETRO"
         private const val EXTRA_APPENDCONFIG = "APPENDCONFIG"  // ← NUEVO: sobreescribe cfg sin romper el global
+        private const val EXTRA_CONFIGFILE   = "CONFIGFILE"
         private const val EXTRA_STATE        = "STATE"
         private const val EXTRA_SUBSYSTEM    = "SUBSYSTEM"
 
@@ -398,6 +403,37 @@ class LauncherManager(private val context: Context) {
         // (o el .cfg que dejo el arranque anterior) y el fichero se regenera
         // despues, en IO, para el siguiente lanzamiento.
         val platformConfig = RetroArchPerformanceConfig.cachedFor(platformId)
+
+        // ── CONFIGFILE: hay que mandarlo, y apuntando al cfg PROPIO de RetroArch
+        //
+        // Aqui habia un comentario diciendo que este extra no se manda NUNCA
+        // porque "sustituye la configuracion del usuario". El matiz que faltaba
+        // es que apuntandolo al retroarch.cfg DEL PROPIO RetroArch no sustituye
+        // nada: le dice cual es el suyo. Sin este extra, RetroArch arranca SIN
+        // CARGAR NINGUNA configuracion.
+        //
+        // Verificado en una GameMT EX8 el 11 de septiembre de 2026, prueba A/B
+        // con el mismo core (Gambatte), el mismo juego y la misma pulsacion:
+        //
+        //   - sin CONFIGFILE -> "Config directory is not set" al arrancar, sin
+        //     overlay, y el combo L3+R3 NO abre el Quick Menu.
+        //   - con CONFIGFILE -> el combo L3+R3 abre el Quick Menu.
+        //
+        // Es ademas lo que hacen los `systeminfo.txt` de ES-DE, de donde salen
+        // los comandos de lanzamiento de este proyecto:
+        //   %EXTRA_CONFIGFILE%=/storage/emulated/0/Android/data/<pkg>/files/retroarch.cfg
+        //
+        // NO se puede comprobar que el fichero exista: desde Android 11 ninguna
+        // app puede mirar dentro del Android/data de otra, asi que un
+        // File(...).exists() sobre el de RetroArch da false SIEMPRE y el extra
+        // no se enviaria nunca. Se manda tal cual, que es lo que hace ES-DE en
+        // estas mismas consolas, y se deja un interruptor por si acaso.
+        val retroArchConfigPath =
+            if (!settingsManager.sendRetroArchConfigFile) null
+            else File(
+                Environment.getExternalStorageDirectory(),
+                "Android/data/$installedPkg/files/retroarch.cfg"
+            ).absolutePath
         prelaunchScope.launch {
             runCatching { RetroArchPerformanceConfig.buildFor(context, platformId, installedPkg) }
         }
@@ -430,6 +466,7 @@ class LauncherManager(private val context: Context) {
                 putExtra(EXTRA_ROM, safePath)
                 
                 if (corePath.isNotBlank()) putExtra(EXTRA_LIBRETRO, corePath)
+                retroArchConfigPath?.let { putExtra(EXTRA_CONFIGFILE, it) }
                 
                 if (hasAppendConfig) putExtra(EXTRA_APPENDCONFIG, appendConfigPath)
                 if (saveStateFile != null && saveStateFile.exists()) {
@@ -454,6 +491,7 @@ class LauncherManager(private val context: Context) {
                     ?.apply {
                         putExtra(EXTRA_ROM, safePath)
                         if (corePath.isNotBlank()) putExtra(EXTRA_LIBRETRO, corePath)
+                retroArchConfigPath?.let { putExtra(EXTRA_CONFIGFILE, it) }
                         if (hasAppendConfig) putExtra(EXTRA_APPENDCONFIG, appendConfigPath)
                         if (saveStateFile != null && saveStateFile.exists())
                             putExtra(EXTRA_STATE, saveStateFile.absolutePath)

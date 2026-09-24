@@ -463,6 +463,7 @@ owners and are used only to identify each system inside the interface.
 ## Credits
 
 Developed by **Speccy81** (LORPAGC) for **LV-Webstudio** · 2026.
+Published on Google Play under the developer account **Speccy**.
 
 - Web: [lv-webstudio.com](https://lv-webstudio.com)
 - Email: **administracion@lv-webstudio.com**

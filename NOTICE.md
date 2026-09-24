@@ -2,6 +2,7 @@
 
 Copyright © 2026 **LV-Webstudio** — Granada, España.
 Desarrollado por **Speccy81** (LORPAGC).
+Publicada en Google Play por el desarrollador **Speccy**.
 
 - Web: https://lv-webstudio.com
 - Correo: administracion@lv-webstudio.com

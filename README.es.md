@@ -467,6 +467,7 @@ dentro de la interfaz.
 ## Créditos
 
 Desarrollado por **Speccy81** (LORPAGC) para **LV-Webstudio** · 2026.
+Publicada en Google Play bajo la cuenta de desarrollador **Speccy**.
 
 - Web: [lv-webstudio.com](https://lv-webstudio.com)
 - Correo: **administracion@lv-webstudio.com**

@@ -1,3 +1,9 @@
+/*
+ * Speccy OS — frontend retro para Android
+ * Copyright (c) 2026 LV-Webstudio · lv-webstudio.com
+ * Desarrollado por Speccy81 (LORPAGC) · administracion@lv-webstudio.com
+ * Todos los derechos reservados.
+ */
 @file:OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 package com.generacionarcade.speccyos
 

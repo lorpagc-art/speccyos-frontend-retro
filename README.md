@@ -1,10 +1,13 @@
 # Speccy OS
 
-**Frontend retro para Android.** Ordena tu colección, la pone bonita y lanza cada
-juego con el emulador que le conviene, ajustando la consola antes de arrancar.
+**[English](README.md) · [Español](README.es.md)**
 
-Gratis, sin anuncios y sin suscripciones. **No incluye juegos ni BIOS**: es el
-escaparate y el director de orquesta de lo que ya tienes.
+**A retro frontend for Android.** It organises your collection, makes it look
+good, and launches every game with the right emulator — tuning the device before
+the game starts.
+
+Free, no ads, no subscriptions. **No games or BIOS files included**: it is the
+shop window and the conductor for what you already own.
 
 [![Google Play](https://img.shields.io/badge/Google_Play-Speccy_OS-3DDC84?logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=com.generacionarcade.speccyos)
 ![Android 7+](https://img.shields.io/badge/Android-7.0%2B-3DDC84)
@@ -12,67 +15,68 @@ escaparate y el director de orquesta de lo que ya tienes.
 
 ---
 
-## De dónde viene
+## Where it comes from
 
-Speccy OS nació con un objetivo muy concreto: **sacarle todo el partido a una
-GameMT E5 Ultra**. Una consola china honesta, con buen mando y una pantalla
-decente, pero con un lanzador de serie pobre y un procesador que hay que saber
-tratar para que mueva una PS2.
+Speccy OS started with one very specific goal: **getting the most out of a GameMT
+E5 Ultra**. An honest Chinese handheld, with good controls and a decent screen,
+but a poor stock launcher and a chip you have to treat properly before it will
+run a PS2 game.
 
-Resolver eso bien —detectar el hardware real, subir las frecuencias solo cuando
-hace falta, encontrar las BIOS donde el emulador las busca, elegir el core que de
-verdad arranca— resultó ser lo mismo que hace falta en **cualquier** consola
-Android. Así que hoy Speccy OS funciona igual de bien en una Retroid Pocket 6, en
-una AYN Odin 3, en un móvil con un mando o en una tele con un Fire TV Stick; y,
-por supuesto, **en toda la gama nueva de GameMT** (EX8, EX5, E6, E5 Ultra…).
+Doing that right — reading the real hardware, raising clocks only when they are
+needed, finding the BIOS where the emulator actually looks for it, picking a core
+that really boots — turned out to be exactly what **every** Android handheld
+needs. So today Speccy OS works just as well on a Retroid Pocket 6, an AYN Odin 3,
+a phone with a controller or a TV with a Fire TV Stick — and, of course, on the
+**whole new GameMT range** (EX8, EX5, E6, E5 Ultra…).
 
-La E5 Ultra sigue siendo la consola de referencia donde se prueba cada versión,
-pero ya no es la única que importa.
-
----
-
-## Qué hace
-
-**Biblioteca**
-- Escanea tus carpetas de ROMs y las organiza por sistema, con carátulas, vídeos
-  y fichas descargadas con el scraper integrado (ScreenScraper).
-- Cinco temas distintos: Ultra HD, Speccy OS, Pure, **Studio** (carril de
-  sistemas con logotipos y rejilla de juegos) y **Dos pantallas**, pensado para
-  plegables y consolas de doble pantalla (AYANEO Pocket DS, ONEXSUGAR, RG DS).
-- Recientes, favoritos, retos diarios y "continuar donde lo dejaste".
-
-**Rendimiento (lo que de verdad marca la diferencia)**
-- Reconoce **95 modelos** de consola, móvil y TV box, y cuando no conoce el
-  aparato deduce su gama por el procesador.
-- Antes de lanzar un juego aplica el perfil que ese sistema necesita: gobernador
-  de CPU y GPU, **suelo de frecuencia** (lo único que respetan muchos kernels
-  MediaTek y Unisoc), planificador de E/S, ventilador y el Game Mode de Android.
-- Vigilancia térmica con histéresis: baja el perfil al llegar al techo y lo
-  recupera al enfriarse, en vez de dejarte en modo ahorro el resto de la partida.
-- Funciona con **root, con Shizuku o sin nada** (en este último caso se limita a
-  lo que puede hacer una app normal, y lo dice claramente).
-
-**Emuladores**
-- Lanza RetroArch con el core adecuado, o el emulador independiente que
-  corresponda: Dolphin, ARMSX2, NetherSX2, DuckStation, PPSSPP, Flycast, Redream,
-  Azahar, Eden, Vita3K, aX360e, Winlator, GameNative y unos cuantos más.
-- **Elige el core por gama**: en una consola modesta PS1 va con `pcsx_rearmed` y
-  no con el `mednafen_psx` que traen los ficheros heredados, que es un intérprete
-  puro. Y aprende: si un core no arranca, prueba el siguiente.
-- Comprobador de BIOS de 24 sistemas que mira **la carpeta que de verdad usan los
-  cores**, no donde uno supone.
-- Guardado automático, RetroAchievements y estados compartidos con RetroArch.
+The E5 Ultra is still the reference device where every release is tested, but it
+is no longer the only one that matters.
 
 ---
 
-## Consolas y dispositivos compatibles
+## What it does
 
-Cualquier Android 7 o superior vale. Estos son los que Speccy OS **reconoce por
-nombre** y para los que trae perfil de rendimiento y refrigeración propios:
+**Library**
+- Scans your ROM folders and sorts them by system, with box art, videos and
+  metadata fetched by the built-in scraper (ScreenScraper).
+- Five themes: Ultra HD, Speccy OS, Pure, **Studio** (system rail with real logos
+  plus a game grid) and **Dual Screen**, made for foldables and dual-screen
+  handhelds (AYANEO Pocket DS, ONEXSUGAR, Anbernic RG DS).
+- Recents, favourites, daily challenges and "resume where you left off".
+
+**Performance (the part that actually matters)**
+- Recognises **95 handhelds, phones and TV boxes**, and falls back to guessing the
+  tier from the chipset when the device is unknown.
+- Before launching a game it applies the profile that system needs: CPU and GPU
+  governor, **frequency floor** (the only thing many MediaTek and Unisoc kernels
+  respect), I/O scheduler, fan and Android's Game Mode.
+- Thermal watch with hysteresis: it steps the profile down at the ceiling and
+  brings it back once the device cools, instead of leaving you in power-save mode
+  for the rest of the session.
+- Works **with root, with Shizuku, or with neither** (in that last case it does
+  what a normal app can, and says so plainly).
+
+**Emulators**
+- Launches RetroArch with the right core, or the matching standalone emulator:
+  Dolphin, ARMSX2, NetherSX2, DuckStation, PPSSPP, Flycast, Redream, Azahar,
+  Eden, Vita3K, aX360e, Winlator, GameNative and a few more.
+- **Picks the core by device tier**: on a modest handheld PS1 runs on
+  `pcsx_rearmed` rather than the inherited `mednafen_psx`, which is a pure
+  interpreter. And it learns: if a core fails to boot, the next one is tried.
+- BIOS checker for 24 systems that looks **in the folder cores actually read**,
+  not where one assumes.
+- Auto save states, RetroAchievements and states shared with RetroArch.
+
+---
+
+## Supported handhelds and devices
+
+Any Android 7 or newer will do. These are the ones Speccy OS **recognises by
+name**, with their own performance and cooling profile:
 
 ### AYANEO
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
 | AYANEO Pocket S Mini | Snapdragon G3x Gen 2 | 8/12/16 GB | Switch · Wii U · Windows |
 | AYANEO Pocket AIR Mini | Helio G90T | 4/6/8 GB | Dreamcast · PSP · NDS |
@@ -85,44 +89,44 @@ nombre** y para los que trae perfil de rendimiento y refrigeración propios:
 | AYANEO Pocket MICRO Classic | Helio G99 | 6/8 GB | Dreamcast · PSP · NDS |
 | AYANEO Pocket S | Snapdragon G3x Gen 2 | 12/16 GB | Switch · Wii U · Windows |
 | AYANEO Pocket MICRO | Helio G99 | 6/8 GB | Dreamcast · PSP · NDS |
-| AYANEO Pocket AIR | Dimensity 1200 | 8/12 GB | PS2 completo · 3DS |
+| AYANEO Pocket AIR | Dimensity 1200 | 8/12 GB | full PS2 · 3DS |
 
 ### AYN
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
 | AYN Thor (Base / Pro / Max) | Snapdragon 8 Gen 2 | 8/12/16 GB | Switch · Wii U · Windows |
 | AYN Odin 3 | Dragonwing Q8 (Snapdragon 8 Elite) | 12/16 GB | Switch · Wii U · Windows |
 | AYN Odin 2 Portal | Snapdragon 8 Gen 2 | 12 GB | Switch · Wii U · Windows |
 | AYN Odin 2 Mini | Snapdragon 8 Gen 2 | 8/12 GB | Switch · Wii U · Windows |
 | AYN Odin 2 / Pro / Max | Snapdragon 8 Gen 2 | 8/12/16 GB | Switch · Wii U · Windows |
-| AYN Odin Lite | Dimensity 900 | 4/6/8 GB | GameCube · Wii · PS2 medio |
-| AYN Odin Pro / Base | Snapdragon 845 | 4/8 GB | GameCube · Wii · PS2 medio |
+| AYN Odin Lite | Dimensity 900 | 4/6/8 GB | GameCube · Wii · mid PS2 |
+| AYN Odin Pro / Base | Snapdragon 845 | 4/8 GB | GameCube · Wii · mid PS2 |
 
 ### Anbernic
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
 | Anbernic RG477M | Dimensity 8300 | 12 GB | Switch · Wii U · Windows |
 | Anbernic RG477V | Dimensity 8300 | 8/12 GB | Switch · Wii U · Windows |
-| Anbernic RG476H | Unisoc T820 | 8 GB | GameCube · Wii · PS2 medio |
+| Anbernic RG476H | Unisoc T820 | 8 GB | GameCube · Wii · mid PS2 |
 | Anbernic RG DS / DS Plus (doble pantalla) | Rockchip RK3568 | 3 GB | PS1 · N64 · Saturn |
 | Anbernic RG557 | Dimensity 8300 | 8/12 GB | Switch · Wii U · Windows |
-| Anbernic RG Vita | Snapdragon 865 | 8 GB | PS2 completo · 3DS |
-| Anbernic RG Slide | Unisoc T820 | 8 GB | GameCube · Wii · PS2 medio |
-| Anbernic RG556 | Unisoc T820 | 8 GB | GameCube · Wii · PS2 medio |
-| Anbernic RG Cube / Cube XX | Unisoc T820 | 8 GB | GameCube · Wii · PS2 medio |
-| Anbernic RG406V / RG406H | Unisoc T820 | 8 GB | GameCube · Wii · PS2 medio |
+| Anbernic RG Vita | Snapdragon 865 | 8 GB | full PS2 · 3DS |
+| Anbernic RG Slide | Unisoc T820 | 8 GB | GameCube · Wii · mid PS2 |
+| Anbernic RG556 | Unisoc T820 | 8 GB | GameCube · Wii · mid PS2 |
+| Anbernic RG Cube / Cube XX | Unisoc T820 | 8 GB | GameCube · Wii · mid PS2 |
+| Anbernic RG406V / RG406H | Unisoc T820 | 8 GB | GameCube · Wii · mid PS2 |
 | Anbernic RG505 | Unisoc T618 | 4 GB | Dreamcast · PSP · NDS |
 | Anbernic RG405M / RG405V | Unisoc T618 | 4 GB | Dreamcast · PSP · NDS |
 | Anbernic RG353 (Android) | Rockchip RK3566 | 1/2 GB | PS1 · N64 · Saturn |
 
 ### GameMT
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
-| GameMT E5 Ultra | Unisoc T620 | 6 GB | GameCube · Wii · PS2 medio |
-| GameMT EX8 | Helio G99 | 6/8 GB | GameCube · Wii · PS2 medio |
+| GameMT E5 Ultra | Unisoc T620 | 6 GB | GameCube · Wii · mid PS2 |
+| GameMT EX8 | Helio G99 | 6/8 GB | GameCube · Wii · mid PS2 |
 | GameMT EX5 (PSK5000) | Helio G81 | 4 GB | Dreamcast · PSP · NDS |
 | GameMT E5 Plus (GammaOS) | Rockchip RK3566 | 4 GB | Dreamcast · PSP · NDS |
 | GameMT E5 Plus (Stock) | Rockchip RK3566 | 4 GB | Dreamcast · PSP · NDS |
@@ -130,164 +134,164 @@ nombre** y para los que trae perfil de rendimiento y refrigeración propios:
 
 ### Retroid
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
-| Retroid Pocket G2 | Snapdragon G2 Gen 2 | 8 GB | PS2 completo · 3DS |
+| Retroid Pocket G2 | Snapdragon G2 Gen 2 | 8 GB | full PS2 · 3DS |
 | Retroid Pocket Nova | QCS8550 (Snapdragon 8 Gen 2) | 8/12 GB | Switch · Wii U · Windows |
-| Retroid Pocket Classic | Snapdragon G1 Gen 2 | 4/6 GB | GameCube · Wii · PS2 medio |
+| Retroid Pocket Classic | Snapdragon G1 Gen 2 | 4/6 GB | GameCube · Wii · mid PS2 |
 | Retroid Pocket 6 | Snapdragon 8 Gen 2 | 8/12 GB | Switch · Wii U · Windows |
-| Retroid Pocket Flip 2 | Snapdragon 865 | 8 GB | PS2 completo · 3DS |
-| Retroid Pocket 5 | Snapdragon 865 | 8 GB | PS2 completo · 3DS |
-| Retroid Pocket Mini / Mini V2 | Snapdragon 865 | 6/8 GB | PS2 completo · 3DS |
-| Retroid Pocket 4 Pro | Dimensity 1100 | 8 GB | GameCube · Wii · PS2 medio |
-| Retroid Pocket 4 | Dimensity 900 | 4/6 GB | GameCube · Wii · PS2 medio |
+| Retroid Pocket Flip 2 | Snapdragon 865 | 8 GB | full PS2 · 3DS |
+| Retroid Pocket 5 | Snapdragon 865 | 8 GB | full PS2 · 3DS |
+| Retroid Pocket Mini / Mini V2 | Snapdragon 865 | 6/8 GB | full PS2 · 3DS |
+| Retroid Pocket 4 Pro | Dimensity 1100 | 8 GB | GameCube · Wii · mid PS2 |
+| Retroid Pocket 4 | Dimensity 900 | 4/6 GB | GameCube · Wii · mid PS2 |
 | Retroid Pocket 2S | Unisoc T610 | 3/4 GB | Dreamcast · PSP · NDS |
 | Retroid Pocket 3+ | Unisoc T618 | 4 GB | Dreamcast · PSP · NDS |
 
 ### ASUS
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
 | ASUS ROG Phone 9 / Pro | Snapdragon 8 Elite | 12/16/24 GB | Switch · Wii U · Windows |
 | ASUS ROG Phone 8 / Pro | Snapdragon 8 Gen 3 | 12/16 GB | Switch · Wii U · Windows |
 
 ### Abxylute
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
-| Abxylute One | Dimensity 900 | 8 GB | GameCube · Wii · PS2 medio |
+| Abxylute One | Dimensity 900 | 8 GB | GameCube · Wii · mid PS2 |
 
 ### Amazon
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
 | Fire TV Stick 4K Max | MT8696 (Cortex-A73) | 2 GB | PS1 · N64 · Saturn |
 | Fire TV Cube (3ª gen) | Octa-core A73/A53 | 2 GB | Dreamcast · PSP · NDS |
 
 ### GPD
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
-| GPD XP Plus | Dimensity 1200 | 6/8 GB | GameCube · Wii · PS2 medio |
+| GPD XP Plus | Dimensity 1200 | 6/8 GB | GameCube · Wii · mid PS2 |
 
 ### Google
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
-| Pixel 9 / 9 Pro | Tensor G4 | 12/16 GB | PS2 completo · 3DS |
-| Pixel 8 / 8 Pro | Tensor G3 | 8/12 GB | PS2 completo · 3DS |
+| Pixel 9 / 9 Pro | Tensor G4 | 12/16 GB | full PS2 · 3DS |
+| Pixel 8 / 8 Pro | Tensor G3 | 8/12 GB | full PS2 · 3DS |
 | Chromecast con Google TV 4K | Amlogic S905X3 | 2 GB | PS1 · N64 · Saturn |
 
 ### KT Pocket
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
-| KT-R1 / KT Pocket | Helio G99 | 4/6/8 GB | GameCube · Wii · PS2 medio |
+| KT-R1 / KT Pocket | Helio G99 | 4/6/8 GB | GameCube · Wii · mid PS2 |
 
 ### Kinhank
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
-| Kinhank Super Console X (Android) | Amlogic S905X | 2 GB | 8/16 bits |
+| Kinhank Super Console X (Android) | Amlogic S905X | 2 GB | 8/16-bit |
 
 ### Lenovo
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
 | Lenovo Legion Y700 (3ª gen) | Snapdragon 8 Gen 3 | 12/16 GB | Switch · Wii U · Windows |
-| Lenovo Legion Y700 (2ª gen) | Snapdragon 8+ Gen 1 | 8/12/16 GB | PS2 completo · 3DS |
+| Lenovo Legion Y700 (2ª gen) | Snapdragon 8+ Gen 1 | 8/12/16 GB | full PS2 · 3DS |
 
 ### Logitech
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
 | Logitech G Cloud | Snapdragon 720G | 4 GB | Dreamcast · PSP · NDS |
 
 ### Mangmi
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
 | Mangmi Pocket Max | Snapdragon 8 Gen 2 | 12 GB | Switch · Wii U · Windows |
 
 ### NVIDIA
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
-| NVIDIA Shield TV Pro | Tegra X1+ | 3 GB | GameCube · Wii · PS2 medio |
+| NVIDIA Shield TV Pro | Tegra X1+ | 3 GB | GameCube · Wii · mid PS2 |
 | NVIDIA Shield TV (2019 tubo) | Tegra X1+ | 2 GB | Dreamcast · PSP · NDS |
 
 ### Nubia
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
 | RedMagic 10 Pro | Snapdragon 8 Elite | 12/16/24 GB | Switch · Wii U · Windows |
 | RedMagic 9 Pro | Snapdragon 8 Gen 3 | 12/16 GB | Switch · Wii U · Windows |
 
 ### ONEXPLAYER
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
 | ONEXSUGAR Sugar 1 (plegable doble pantalla) | Snapdragon G3x Gen 2 | 12 GB | Switch · Wii U · Windows |
 
 ### OnePlus
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
 | OnePlus 13 | Snapdragon 8 Elite | 12/16/24 GB | Switch · Wii U · Windows |
 | OnePlus 12 | Snapdragon 8 Gen 3 | 12/16 GB | Switch · Wii U · Windows |
 
 ### POCO
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
-| POCO X7 Pro | Dimensity 8400 Ultra | 8/12 GB | PS2 completo · 3DS |
+| POCO X7 Pro | Dimensity 8400 Ultra | 8/12 GB | full PS2 · 3DS |
 | POCO F6 Pro | Snapdragon 8 Gen 2 | 12/16 GB | Switch · Wii U · Windows |
-| POCO X6 Pro | Dimensity 8300 Ultra | 8/12 GB | PS2 completo · 3DS |
-| POCO F5 Pro | Snapdragon 8+ Gen 1 | 8/12 GB | PS2 completo · 3DS |
+| POCO X6 Pro | Dimensity 8300 Ultra | 8/12 GB | full PS2 · 3DS |
+| POCO F5 Pro | Snapdragon 8+ Gen 1 | 8/12 GB | full PS2 · 3DS |
 
 ### Powkiddy
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
 | Powkiddy X55 | Rockchip RK3566 | 2/4 GB | PS1 · N64 · Saturn |
 | Powkiddy X28 | Unisoc T618 | 4 GB | Dreamcast · PSP · NDS |
 
 ### Razer
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
-| Razer Edge | Snapdragon G3x Gen 1 | 6/8 GB | PS2 completo · 3DS |
+| Razer Edge | Snapdragon G3x Gen 1 | 6/8 GB | full PS2 · 3DS |
 
 ### Samsung
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
 | Galaxy S25 Ultra | Snapdragon 8 Elite | 12/16 GB | Switch · Wii U · Windows |
 | Galaxy Z Fold 7 | Snapdragon 8 Elite | 12/16 GB | Switch · Wii U · Windows |
 | Galaxy S24 Ultra | Snapdragon 8 Gen 3 | 12 GB | Switch · Wii U · Windows |
 | Galaxy Z Fold 6 | Snapdragon 8 Gen 3 | 12 GB | Switch · Wii U · Windows |
-| Galaxy Z Flip 6 | Snapdragon 8 Gen 3 | 12 GB | PS2 completo · 3DS |
+| Galaxy Z Flip 6 | Snapdragon 8 Gen 3 | 12 GB | full PS2 · 3DS |
 | Galaxy Tab S10 Ultra / S10+ | Dimensity 9300+ | 12/16 GB | Switch · Wii U · Windows |
 | Galaxy S23 Ultra | Snapdragon 8 Gen 2 | 8/12 GB | Switch · Wii U · Windows |
 | Galaxy Z Fold 5 | Snapdragon 8 Gen 2 | 12 GB | Switch · Wii U · Windows |
 | Galaxy Tab S9 / S9+ / Ultra | Snapdragon 8 Gen 2 | 8/12/16 GB | Switch · Wii U · Windows |
-| Galaxy S22 Ultra | SD 8 Gen 1 / Exynos 2200 | 8/12 GB | PS2 completo · 3DS |
+| Galaxy S22 Ultra | SD 8 Gen 1 / Exynos 2200 | 8/12 GB | full PS2 · 3DS |
 
 ### Tanix
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
-| Tanix TX3 Mini | Amlogic S905W | 2 GB | 8/16 bits |
+| Tanix TX3 Mini | Amlogic S905W | 2 GB | 8/16-bit |
 
 ### Walmart
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
 | onn. 4K Pro (Google TV) | Amlogic S905X4-J | 3 GB | Dreamcast · PSP · NDS |
 
 ### Xiaomi
 
-| Modelo | SoC | RAM | Hasta |
+| Model | SoC | RAM | Up to |
 |---|---|---|---|
 | Xiaomi 15 / 15 Pro / Ultra | Snapdragon 8 Elite | 12/16 GB | Switch · Wii U · Windows |
 | Xiaomi 14 / Pro / Ultra | Snapdragon 8 Gen 3 | 12/16 GB | Switch · Wii U · Windows |
@@ -295,118 +299,114 @@ nombre** y para los que trae perfil de rendimiento y refrigeración propios:
 
 ---
 
-## Cómo se ve
+## Screenshots
 
-| Biblioteca | Tema Studio (GameMT EX8) |
+| Library | Studio theme (GameMT EX8) |
 |---|---|
-| ![Biblioteca](docs/capturas/biblioteca.png) | ![Tema Studio](docs/capturas/tema-studio-ex8.png) |
+| ![Library](docs/capturas/biblioteca.png) | ![Studio theme](docs/capturas/tema-studio-ex8.png) |
 
-| Perfil de rendimiento | Control térmico | Comprobador de BIOS |
+| Performance profile | Thermal control | BIOS checker |
 |---|---|---|
-| ![Rendimiento](docs/capturas/rendimiento.png) | ![Control térmico](docs/capturas/control-termico.png) | ![BIOS](docs/capturas/comprobador-bios.png) |
+| ![Performance](docs/capturas/rendimiento.png) | ![Thermal](docs/capturas/control-termico.png) | ![BIOS](docs/capturas/comprobador-bios.png) |
 
-| Dos pantallas y plegables | Mando |
+| Dual screen and foldables | Controller |
 |---|---|
-| ![Dos pantallas](docs/capturas/dos-pantallas.png) | ![Mando](docs/capturas/mando.png) |
+| ![Dual screen](docs/capturas/dos-pantallas.png) | ![Controller](docs/capturas/mando.png) |
 
 ---
 
-## Qué mejora de verdad: mediciones
+## What actually improves: measurements
 
-Un frontend bonito no hace que un juego vaya mejor. Lo que sí lo hace es **cómo
-queda la consola configurada en el momento de lanzar**. Estas son medidas reales,
-no estimaciones.
+A pretty frontend does not make a game run better. What does is **how the device
+is configured at the moment you press play**. These are real measurements, not
+estimates.
 
-**Equipo de prueba:** GameMT EX8 (MediaTek Helio G99, Mali-G57, 8 GB, Android 14),
-con Shizuku concedido. **Método:** el mismo juego en marcha, se leen 15 muestras
-de `scaling_cur_freq` del clúster grande (`policy6`), de la frecuencia de la GPU y
-de `thermal_zone0` antes y después de aplicar el perfil, sin reiniciar el juego.
-Cada prueba se verificó con una captura de pantalla del juego corriendo.
+**Test device:** GameMT EX8 (MediaTek Helio G99, Mali-G57, 8 GB, Android 14), with
+Shizuku granted. **Method:** same game running throughout; 15 samples of the big
+cluster's `scaling_cur_freq` (`policy6`), GPU frequency and `thermal_zone0` before
+and after applying the profile, without restarting the game. Every run was
+verified with a screenshot of the game actually on screen.
 
 ### Nintendo 64 — AeroGauge (RetroArch · mupen64plus-next)
 
-| | CPU media | CPU mínima | Temperatura |
+| | Average CPU | Minimum CPU | Temperature |
 |---|---|---|---|
-| Sin perfil (como lo deja el sistema) | 725 MHz | 725 MHz | 45 °C |
-| **Con el perfil de Speccy OS** | **2200 MHz** | **2200 MHz** | 47 °C |
+| No profile (as the system leaves it) | 725 MHz | 725 MHz | 45 °C |
+| **With the Speccy OS profile** | **2200 MHz** | **2200 MHz** | 47 °C |
 
-El dato importante no es la media: es que **el gobernador dejó el clúster grande
-en su frecuencia mínima, 725 MHz, mientras emulaba una Nintendo 64**. Los
-emuladores cargan uno o dos hilos de forma irregular, y el planificador de
-Android interpreta eso como "no hace falta potencia". Por eso aparecen tirones en
-juegos que deberían ir sobrados.
+The average is not the interesting part: it is that **the governor left the big
+cluster at its minimum, 725 MHz, while emulating a Nintendo 64**. Emulators load
+one or two threads in bursts, and Android's scheduler reads that as "no power
+needed". That is where stutter in supposedly easy games comes from.
 
 ### PSP — Dragon Ball Z Shin Budokai 2 (PPSSPP)
 
-| | CPU media | CPU mínima | Velocidad |
+| | Average CPU | Minimum CPU | Speed |
 |---|---|---|---|
-| Sin perfil | 725 MHz | 725 MHz | 60/60 fps |
-| **Con el perfil de Speccy OS** | **1400 MHz** | **1400 MHz** | 60/60 fps |
+| No profile | 725 MHz | 725 MHz | 60/60 fps |
+| **With the Speccy OS profile** | **1400 MHz** | **1400 MHz** | 60/60 fps |
 
-Aquí el juego ya iba a pleno rendimiento, y la lección es la contraria: **el
-perfil no es "subirlo todo al máximo"**. Speccy OS aplica el nivel que ese sistema
-necesita (PSP entra en el escalón intermedio) en lugar de freír la batería.
+Here the game was already running at full speed, and the lesson is the opposite
+one: **the profile is not "max everything"**. Speccy OS applies the tier that
+system needs — PSP sits in the middle step — instead of cooking the battery.
 
-### Por qué funciona: el suelo de frecuencia
+### Why it works: the frequency floor
 
-Muchos kernels MediaTek y Unisoc **ignoran** el gobernador `performance`: su
-gestor de energía propio lo pisa. Lo que sí respetan es `scaling_min_freq`. Speccy
-OS fija ese suelo (60 % del máximo en modo Rendimiento, el máximo en Extremo) y
-por eso la frecuencia deja de caer a mitad de partida. Es la diferencia entre una
-media alta con bajones y una **frecuencia sostenida**.
+Many MediaTek and Unisoc kernels **ignore** the `performance` governor: their own
+power manager overrides it. What they do respect is `scaling_min_freq`. Speccy OS
+sets that floor (60 % of maximum in Performance mode, the maximum in Extreme), and
+that is why the clock stops dropping mid-session. It is the difference between a
+high average with dips and a **sustained clock**.
 
 ---
 
-## Comparativa con otros frontends
+## Compared with other frontends
 
-Speccy OS no compite en catálogo de temas ni en número de plataformas: compite en
-lo que pasa **al pulsar "jugar"**. Comparado con los dos frontends de referencia
-en Android, según lo que cada uno documenta:
+Speccy OS does not compete on theme count or platform count: it competes on what
+happens **when you press play**. Against the two reference Android frontends,
+based on what each one documents:
 
 | | Speccy OS | Daijishō | ES-DE |
 |---|---|---|---|
-| Biblioteca, scraper y temas | ✅ | ✅ | ✅ |
-| Precio | Gratis, sin anuncios | Gratis | De pago en Android |
-| Perfil de CPU/GPU **por sistema** al lanzar | ✅ | ❌ | ❌ |
-| Suelo de frecuencia (kernels MediaTek/Unisoc) | ✅ | ❌ | ❌ |
-| Control del ventilador de la consola | ✅ | ❌ | ❌ |
-| Game Mode de Android para el emulador | ✅ | ❌ | ❌ |
-| Vigilancia térmica con histéresis | ✅ | ❌ | ❌ |
-| Catálogo de 95 consolas con perfil propio | ✅ | ❌ | ❌ |
-| Comprobador de BIOS (24 sistemas, con MD5) | ✅ | ❌ | ❌ |
-| Elección del core según la gama del aparato | ✅ | ❌ | ❌ |
-| Funciona con root, con Shizuku o sin nada | ✅ | — | — |
+| Library, scraper and themes | ✅ | ✅ | ✅ |
+| Price | Free, no ads | Free | Paid on Android |
+| CPU/GPU profile **per system** on launch | ✅ | ❌ | ❌ |
+| Frequency floor (MediaTek/Unisoc kernels) | ✅ | ❌ | ❌ |
+| Handheld fan control | ✅ | ❌ | ❌ |
+| Android Game Mode for the emulator | ✅ | ❌ | ❌ |
+| Thermal watch with hysteresis | ✅ | ❌ | ❌ |
+| 95-device catalogue with real profiles | ✅ | ❌ | ❌ |
+| BIOS checker (24 systems, MD5 verified) | ✅ | ❌ | ❌ |
+| Core chosen by device tier | ✅ | ❌ | ❌ |
+| Works with root, Shizuku or neither | ✅ | — | — |
 
-Para ajustar frecuencias con Daijishō o ES-DE hace falta una segunda aplicación
-(con root) y configurarla a mano por cada juego. En Speccy OS va dentro y se
-aplica solo.
-
+To tune clocks alongside Daijishō or ES-DE you need a second (root) app, set up by
+hand for every game. In Speccy OS it is built in and applied automatically.
 
 ---
 
-## Sistemas emulados
+## Emulated systems
 
-27 sistemas configurados de serie (y 175 carpetas reconocidas al escanear):
-NES, SNES, Mega Drive, Master System, Game Gear, Game Boy / Color / Advance,
-Nintendo DS, Nintendo 64, GameCube, Wii, PlayStation, PlayStation 2, PSP,
+27 systems configured out of the box (and 175 folder names recognised while
+scanning): NES, SNES, Mega Drive, Master System, Game Gear, Game Boy / Color /
+Advance, Nintendo DS, Nintendo 64, GameCube, Wii, PlayStation, PlayStation 2, PSP,
 PS Vita, Dreamcast, Saturn, Sega CD, Naomi, Atomiswave, Xbox, Xbox 360, 3DS,
-Neo Geo, PC Engine, MSX, Amiga, DOS y el arcade completo (MAME / FinalBurn Neo).
+Neo Geo, PC Engine, MSX, Amiga, DOS and full arcade (MAME / FinalBurn Neo).
 
-**Emuladores reconocidos** (31 fichas de compatibilidad, con enlace de descarga y
-aviso de requisitos): RetroArch, Dolphin, ARMSX2, NetherSX2/AetherSX2, Play!,
+**Recognised emulators** (31 compatibility entries, each with a download link and
+its requirements): RetroArch, Dolphin, ARMSX2, NetherSX2/AetherSX2, Play!,
 DuckStation, PPSSPP, Flycast, Redream, Yaba Sanshiro, Supermodel, mupen64plus FZ,
 melonDS, DraStic, Azahar, Lime3DS, Mandarine, Borked3DS, Panda3DS, Eden, Citron,
 Sudachi, Torzu, Uzuy, Kenji-NX, Vita3K, aX360e, X1 BOX, Xanite, Cemu, RPCS3,
-Winlator, GameNative, GameHub, MiceWine, MAME4droid y los emuladores de Robert
-Broglia.
+Winlator, GameNative, GameHub, MiceWine, MAME4droid and Robert Broglia's emulators.
 
 ---
 
-## Instalación
+## Installing
 
-**La forma normal:** [descargarla de Google Play](https://play.google.com/store/apps/details?id=com.generacionarcade.speccyos).
+**The normal way:** [get it from Google Play](https://play.google.com/store/apps/details?id=com.generacionarcade.speccyos).
 
-**Compilarla tú:**
+**Building it yourself:**
 
 ```bash
 git clone https://github.com/lorpagc-art/speccyos-frontend-retro.git
@@ -414,70 +414,66 @@ cd speccyos-frontend-retro
 ./gradlew assemblePlaystoreDebug
 ```
 
-El APK sale en `app/build/outputs/apk/playstore/debug/`.
+The APK lands in `app/build/outputs/apk/playstore/debug/`.
 
-Hacen falta el SDK de Android (API 36) y un JDK 17. El proyecto tiene tres
-variantes: `playstore` (la de la tienda), `website` y `systemos` (esta última
-incluye un servicio de accesibilidad para funciones de sistema, que **no** viaja
-en la versión de Google Play).
+You need the Android SDK (API 36) and JDK 17. The project has three flavours:
+`playstore` (the store build), `website` and `systemos` — the last one includes an
+accessibility service for system-level features, which does **not** ship in the
+Google Play build.
 
-Para compilar una versión firmada hay que añadir a `local.properties` la ruta y
-las contraseñas del almacén de claves. Ese fichero, `google-services.json` y
-cualquier clave quedan fuera del repositorio a propósito.
+For a signed build, add the keystore path and passwords to `local.properties`.
+That file, `google-services.json` and any key are deliberately kept out of this
+repository.
 
-### Sacarle todo el partido (opcional)
+### Getting everything out of it (optional)
 
-Sin permisos especiales, Speccy OS organiza, lanza y avisa. Para que además pueda
-ajustar la consola necesita una de estas dos cosas:
+With no special permissions, Speccy OS organises, launches and warns you. For it
+to also tune the device, it needs one of these:
 
-- **Root**, si tu consola lo tiene.
-- **[Shizuku](https://shizuku.rikka.app/)**, que no requiere root: se instala, se
-  arranca por ADB (o con root) y se le concede permiso a Speccy OS una vez. En
-  consolas cuyo `adbd` ya corre como root —muchas chinas lo hacen—, Shizuku
-  hereda ese nivel y el control es completo.
-
----
-
-## Tecnología
-
-Kotlin y Jetpack Compose · Media3/ExoPlayer para los vídeos · Coil para las
-imágenes · Room para la caché · Firebase (Remote Config, App Check y Crashlytics)
-· AIDL sobre Shizuku para el servicio privilegiado · Gradle con tres variantes y
-R8 en las versiones de publicación.
-
-Arquitectura del motor de rendimiento: `SpeccyHardwareRegistry` (catálogo de
-consolas) → `SpeccySysfsProbe` (sondea el hardware real: nada de rutas fijas) →
-`SpeccyPerformanceTuner` (aplica y verifica) → `PerformanceService` (ejecuta con
-privilegios, tras una lista blanca de rutas y valores).
+- **Root**, if your handheld has it.
+- **[Shizuku](https://shizuku.rikka.app/)**, which does not need root: install it,
+  start it over ADB (or with root) and grant Speccy OS permission once. On
+  handhelds whose `adbd` already runs as root — many Chinese ones do — Shizuku
+  inherits that level and control is complete.
 
 ---
 
-## Aviso legal
+## Built with
 
-Speccy OS **no incluye ni distribuye juegos, BIOS ni emuladores**. Es un
-organizador y lanzador: cada usuario aporta sus propios archivos y elige qué
-emuladores instalar. Las marcas y logotipos de consolas pertenecen a sus
-respectivos propietarios y se usan únicamente para identificar cada sistema
-dentro de la interfaz.
+Kotlin and Jetpack Compose · Media3/ExoPlayer for video · Coil for images · Room
+for caching · Firebase (Remote Config, App Check, Crashlytics) · AIDL over Shizuku
+for the privileged service · Gradle with three flavours and R8 on release builds.
+
+Performance engine architecture: `SpeccyHardwareRegistry` (device catalogue) →
+`SpeccySysfsProbe` (probes the real hardware — no hardcoded paths) →
+`SpeccyPerformanceTuner` (applies and verifies) → `PerformanceService` (executes
+with privileges, behind a path and value allowlist).
 
 ---
 
-## Créditos
+## Legal notice
 
-Desarrollado por **Speccy81** (LORPAGC) para **LV-Webstudio** · 2026.
+Speccy OS **does not include or distribute games, BIOS files or emulators**. It is
+an organiser and launcher: users provide their own files and choose which
+emulators to install. Console trademarks and logos belong to their respective
+owners and are used only to identify each system inside the interface.
+
+---
+
+## Credits
+
+Developed by **Speccy81** (LORPAGC) for **LV-Webstudio** · 2026.
 
 - Web: [lv-webstudio.com](https://lv-webstudio.com)
-- Correo: **administracion@lv-webstudio.com**
+- Email: **administracion@lv-webstudio.com**
 - Google Play: [Speccy OS: Emulation Frontend](https://play.google.com/store/apps/details?id=com.generacionarcade.speccyos)
 
-LV-Webstudio es un estudio de desarrollo web y aplicaciones de Granada (España).
-Si tienes un negocio y necesitas web, tienda online o una aplicación a medida,
-escríbenos.
+LV-Webstudio is a web and app development studio based in Granada, Spain. If you
+run a business and need a website, an online shop or a custom app, get in touch.
 
 ---
 
-## Licencia
+## Licence
 
-Pendiente de definir. Mientras tanto, todos los derechos reservados: el código se
-publica para consulta y para que cualquiera pueda compilar su propia copia, no
-para su redistribución.
+To be decided. Until then, all rights reserved: the code is published so it can be
+read and so anyone can build their own copy, not for redistribution.

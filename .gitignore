@@ -43,3 +43,6 @@ _backup_auditoria/
 *.idsig
 app/playstore/release/
 app/src/main.zip
+
+# Documentacion interna: bitacoras, estrategia, marketing y guias privadas
+_docs_internos/

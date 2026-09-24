@@ -86,13 +86,72 @@ object SpeccyCoreResolver {
         "consolearcade", "fbneo", "fba", "hbmame"
     )
 
+    /**
+     * Curado por GAMA DE DISPOSITIVO (sep-2026). Los systeminfo.txt heredados
+     * traen como core por defecto el mas "preciso" del escritorio, que en un
+     * Unisoc T610 o un Helio G99 es justo el que no llega a 60 fps:
+     *
+     *   - psx: `mednafen_psx` es interprete puro (sin dynarec ARM). En gama
+     *     baja/media va `pcsx_rearmed` (dynarec NEON); en gama alta
+     *     `swanstation` (DuckStation: reescalado, PGXP) y ya con margen.
+     *   - saturn: `mednafen_saturn` tampoco tiene dynarec ARM y pide un
+     *     Snapdragon 8 Gen 2 para ir fluido; `yabasanshiro` es el unico que
+     *     se juega en un T820 o un G99.
+     *   - n64: `parallel_n64` (renderer glN64/rice) rinde mas en Mali de gama
+     *     baja; `mupen64plus_next` da mejor imagen en gama media/alta.
+     *   - snes: `snes9x2010` es un 30-40 % mas rapido que `snes9x` actual y
+     *     lo notan los Rockchip/T610 con juegos SuperFX; en gama alta `snes9x`.
+     *   - nes: `mesen` es exacto pero pesado; `fceumm` para gama baja.
+     *   - gba/gb: `mgba` en todo salvo gama baja, donde `gpsp` (GBA) y
+     *     `gambatte` (GB/GBC) van sobrados.
+     *
+     * Solo REORDENA lo que la plataforma declara, como el resto del curado.
+     */
+    private val CURADO_BAJA: Map<String, List<String>> = mapOf(
+        "psx" to listOf("pcsx_rearmed", "swanstation", "mednafen_psx_hw", "mednafen_psx"),
+        "saturn" to listOf("yabasanshiro", "yabause", "mednafen_saturn"),
+        "n64" to listOf("parallel_n64", "mupen64plus_next_gles3", "mupen64plus_next"),
+        "snes" to listOf("snes9x2010", "snes9x2005_plus", "snes9x", "mednafen_supafaust"),
+        "nes" to listOf("fceumm", "nestopia", "quicknes", "mesen"),
+        "gba" to listOf("gpsp", "mgba", "vba_next", "vbam"),
+        "psp" to listOf("ppsspp"),
+        "dreamcast" to listOf("flycast")
+    )
+    private val CURADO_MEDIA: Map<String, List<String>> = mapOf(
+        "psx" to listOf("pcsx_rearmed", "swanstation", "mednafen_psx_hw", "mednafen_psx"),
+        "saturn" to listOf("yabasanshiro", "mednafen_saturn", "yabause"),
+        "n64" to listOf("mupen64plus_next_gles3", "mupen64plus_next", "parallel_n64"),
+        "snes" to listOf("snes9x", "snes9x2010", "bsnes", "mednafen_supafaust"),
+        "nes" to listOf("fceumm", "nestopia", "mesen", "quicknes"),
+        "gba" to listOf("mgba", "vbam", "gpsp", "vba_next")
+    )
+    private val CURADO_ALTA: Map<String, List<String>> = mapOf(
+        "psx" to listOf("swanstation", "pcsx_rearmed", "mednafen_psx_hw", "mednafen_psx"),
+        "saturn" to listOf("yabasanshiro", "mednafen_saturn", "yabause"),
+        "n64" to listOf("mupen64plus_next_gles3", "mupen64plus_next", "parallel_n64"),
+        "snes" to listOf("snes9x", "bsnes", "bsnes_hd_beta", "snes9x2010"),
+        "nes" to listOf("mesen", "nestopia", "fceumm", "quicknes"),
+        "gba" to listOf("mgba", "vbam", "vba_next", "gpsp")
+    )
+
+    /** Alias de carpeta -> clave de la tabla de curado. */
+    private val ALIAS = mapOf(
+        "ps1" to "psx", "sfc" to "snes", "snesna" to "snes", "famicom" to "nes", "fds" to "nes",
+        "saturnjp" to "saturn", "n64dd" to "n64", "dc" to "dreamcast", "gbc" to "gba", "gb" to "gba"
+    )
+
     private fun curadoPara(platformId: String): List<String> {
         val id = platformId.lowercase().trim()
-        return when {
-            id == "neogeo" -> CURADO_NEOGEO
-            id in FAMILIA_ARCADE -> CURADO_ARCADE
-            else -> emptyList()
+        if (id == "neogeo") return CURADO_NEOGEO
+        if (id in FAMILIA_ARCADE) return CURADO_ARCADE
+        val key = ALIAS[id] ?: id
+        val rank = runCatching { SpeccyPerformanceTuner.activeDevice().tier.rank }.getOrDefault(2)
+        val tabla = when {
+            rank <= 1 -> CURADO_BAJA          // Rockchip RK3566, Amlogic, T610 sin ventilador
+            rank <= 3 -> CURADO_MEDIA         // T820, Helio G99, Dimensity 900-1100, SD 845
+            else -> CURADO_ALTA               // SD 865+, Dimensity 8300+, 8 Gen 2+
         }
+        return tabla[key].orEmpty()
     }
 
     // ─────────────────────────────────────────────────────────────────────

@@ -114,6 +114,21 @@ class LauncherManager(private val context: Context) {
         private const val PKG_MICEWINE         = "com.micewine.emulator"
         private const val PKG_MUPEN_FZ_REAL    = "org.mupen64plusae.v3.fzurita"
 
+        // ── Añadidos sep-2026 (emuladores aparecidos en 2025-2026) ──────────
+        private const val PKG_ARMSX2           = "com.armsx2"                     // PS2, fork de PCSX2 para ARM64
+        private const val PKG_ARMSX2_NIGHTLY   = "com.armsx2.nightly"
+        private const val PKG_PLAY_PS2         = "com.virtualapplications.play"   // Play! (PS2, sin BIOS)
+        private const val PKG_VITA3K_ORG       = "org.vita3k.emulator"            // id real de Vita3K-Android
+        private const val PKG_AX360E           = "aenu.ax360e"                    // Xbox 360 (Xenia canary)
+        private const val PKG_AX360E_FREE      = "aenu.ax360e.free"
+        private const val PKG_GAMENATIVE       = "app.gamenative"                 // Windows/Steam
+        private const val PKG_GAMEHUB          = "com.xiaoji.gamesirnsemulator"   // GameHub (GameSir)
+        private const val PKG_TORZU            = "org.torzu.torzu_emu"            // Switch, forks de yuzu
+        private const val PKG_UZUY             = "org.uzuy.uzuy_emu"
+        private const val PKG_KENJINX          = "org.kenjinx.android"            // Switch, fork de Ryujinx
+        private const val PKG_MANDARINE        = "io.github.mandarine3ds.mandarine" // 3DS, forks de Citra
+        private const val PKG_BORKED3DS        = "io.github.borked3ds.android"
+
         private const val RETROARCH_STABLE_URL =
             "https://play.google.com/store/apps/details?id=com.retroarch.aarch64"
 
@@ -256,7 +271,8 @@ class LauncherManager(private val context: Context) {
                     launchByPackage(preferredPkg, romUri, platformId)
                 } else {
                     when (platformId) {
-                        "ps2"                        -> launchNetherSX2(romUri)
+                        "ps2"                        -> launchPS2(romUri)
+                        "xbox360", "x360"            -> launchXbox360(romUri)
                         "wii", "gamecube", "gc"      -> launchDolphin(romUri)
                         "3ds", "n3ds"                -> launchCitraNew(romUri, null)
                         "nds"                        -> launchNds(romUri)
@@ -514,6 +530,10 @@ class LauncherManager(private val context: Context) {
 
     private fun tryStartActivity(intent: Intent): Boolean = try {
         context.startActivity(intent)
+        // Con el emulador ya arrancando: Game Mode para su paquete y RAM libre.
+        // En IO, para no retrasar el foco del emulador (mismo motivo que applyForPlatform).
+        val pkg = intent.component?.packageName ?: intent.`package`
+        prelaunchScope.launch { runCatching { SpeccyPerformanceTuner.onEmulatorStarted(pkg) } }
         true
     } catch (e: Exception) {
         Log.w(TAG, "Actividad no disponible: ${intent.component?.className} — ${e.message}")
@@ -527,14 +547,15 @@ class LauncherManager(private val context: Context) {
     fun getCompatibleInstalledEmulators(platformId: String): List<Pair<String, String>> {
         val list = mutableListOf<Pair<String, String>>()
         when (platformId.lowercase()) {
-            "ps2"                    -> { addIf(list, PKG_NETHERSX2, "NetherSX2"); addIf(list, PKG_AETHERSX2, "AetherSX2") }
+            "ps2"                    -> { addIf(list, PKG_ARMSX2, "ARMSX2"); addIf(list, PKG_ARMSX2_NIGHTLY, "ARMSX2 nightly"); addIf(list, PKG_NETHERSX2, "NetherSX2"); addIf(list, PKG_AETHERSX2, "AetherSX2"); addIf(list, PKG_PLAY_PS2, "Play!") }
+            "xbox360", "x360"        -> { addIf(list, PKG_AX360E, "aX360e"); addIf(list, PKG_AX360E_FREE, "aX360e Free") }
             "wii", "gamecube", "gc"  -> addIf(list, PKG_DOLPHIN, "Dolphin")
-            "3ds", "n3ds"            -> { addIf(list, PKG_LIME3DS, "Lime3DS"); addIf(list, PKG_AZAHAR, "Azahar"); addIf(list, PKG_CITRA, "Citra") }
+            "3ds", "n3ds"            -> { addIf(list, PKG_AZAHAR, "Azahar"); addIf(list, PKG_LIME3DS, "Lime3DS"); addIf(list, PKG_MANDARINE, "Mandarine"); addIf(list, PKG_BORKED3DS, "Borked3DS"); addIf(list, PKG_PANDA3DS, "Panda3DS"); addIf(list, PKG_CITRA, "Citra") }
             "nds"                    -> addIf(list, PKG_DRASTIC, "DraStic")
             "psp"                    -> { addIf(list, PKG_PPSSPP, "PPSSPP"); addIf(list, PKG_PPSSPP_GOLD, "PPSSPP Gold") }
             "n64"                    -> { addIf(list, PKG_M64PLUS_FZ, "M64Plus FZ"); addIf(list, PKG_M64PLUS_FZ_PRO, "M64Plus FZ Pro") }
-            "switch"                 -> { addIf(list, PKG_SUDACHI, "Sudachi"); addIf(list, PKG_SUDACHI_EA, "Sudachi EA"); addIf(list, PKG_CITRON, "Citron"); addIf(list, PKG_RYUJINX, "Ryujinx"); addIf(list, PKG_YUZU, "yuzu") }
-            "vita", "psvita"         -> addIf(list, PKG_VITA3K, "Vita3K")
+            "switch"                 -> { addIf(list, PKG_EDEN, "Eden"); addIf(list, PKG_EDEN_ALT, "Eden"); addIf(list, PKG_CITRON, "Citron"); addIf(list, PKG_SUDACHI, "Sudachi"); addIf(list, PKG_SUDACHI_EA, "Sudachi EA"); addIf(list, PKG_TORZU, "Torzu"); addIf(list, PKG_UZUY, "Uzuy"); addIf(list, PKG_KENJINX, "Kenji-NX"); addIf(list, PKG_RYUJINX, "Ryujinx"); addIf(list, PKG_YUZU, "yuzu") }
+            "vita", "psvita"         -> { addIf(list, PKG_VITA3K_ORG, "Vita3K"); addIf(list, PKG_VITA3K, "Vita3K") }
             "psx", "ps1"             -> addIf(list, PKG_DUCKSTATION, "DuckStation")
             "gba"                    -> addIf(list, PKG_GBA_EMU, "GBA.emu")
             "sfc", "snes", "snesna"  -> addIf(list, PKG_SNES9X_EX, "Snes9x EX+")
@@ -543,7 +564,7 @@ class LauncherManager(private val context: Context) {
             "dc", "dreamcast"        -> { addIf(list, PKG_REDREAM, "Redream"); addIf(list, PKG_FLYCAST, "Flycast") }
             "saturn"                 -> addIf(list, PKG_YABA_SANSHIRO, "Yaba Sanshiro")
             "model3"                 -> addIf(list, PKG_SUPERMODEL, "Supermodel 3")
-            "windows", "win", "exodos" -> { addIf(list, PKG_WINLATOR, "Winlator"); addIf(list, PKG_WINLATOR_CMOD, "Winlator CMod") }
+            "windows", "win", "exodos" -> { addIf(list, PKG_WINLATOR, "Winlator"); addIf(list, PKG_WINLATOR_CMOD, "Winlator CMod"); addIf(list, PKG_GAMENATIVE, "GameNative"); addIf(list, PKG_GAMEHUB, "GameHub"); addIf(list, PKG_MICEWINE, "MiceWine") }
             "xbox"                     -> { addIf(list, PKG_X1BOX, "X1 BOX"); addIf(list, PKG_XANITE, "Xanite") }
         }
         return list
@@ -560,6 +581,9 @@ class LauncherManager(private val context: Context) {
     private fun launchByPackage(pkg: String, romUri: Uri, platformId: String) {
         when {
             pkg.contains("aethersx2") || pkg.contains("nethersx2") -> launchNetherSX2(romUri, pkg)
+            pkg.contains("armsx2") || pkg.contains("virtualapplications.play") -> launchStandalone(pkg, "", romUri)
+            pkg.contains("torzu") || pkg.contains("uzuy") || pkg.contains("kenjinx") || pkg.contains("citron") || pkg.contains("ryujinx") -> launchSwitch(romUri, pkg)
+            pkg.contains("mandarine") || pkg.contains("borked3ds") || pkg.contains("lime3ds") || pkg.contains("azahar") || pkg.contains("panda3ds") -> launchCitra(romUri, pkg)
             pkg.contains("dolphin")       -> launchDolphin(romUri, pkg)
             pkg.contains("mupen64plusae") -> launchN64(romUri, pkg)
             pkg.contains("drastic")       -> launchDraStic(romUri, pkg)
@@ -575,6 +599,28 @@ class LauncherManager(private val context: Context) {
             pkg.contains("x1box") || pkg.contains("izzy2lost") -> launchX1Box(romUri, pkg)
             else                          -> launchGenericStandalone(pkg, romUri)
         }
+    }
+
+    /**
+     * PS2: ARMSX2 (fork de PCSX2 para ARM64, 2025-2026, en desarrollo activo)
+     * por delante de NetherSX2/AetherSX2 (sin mantenimiento desde 2023). Play!
+     * el ultimo: no necesita BIOS pero su compatibilidad es mucho menor.
+     */
+    private fun launchPS2(romUri: Uri) {
+        when {
+            isPackageInstalled(PKG_ARMSX2)         -> launchStandalone(PKG_ARMSX2, "", romUri)
+            isPackageInstalled(PKG_ARMSX2_NIGHTLY) -> launchStandalone(PKG_ARMSX2_NIGHTLY, "", romUri)
+            isPackageInstalled(PKG_NETHERSX2) || isPackageInstalled(PKG_AETHERSX2) -> launchNetherSX2(romUri)
+            isPackageInstalled(PKG_PLAY_PS2)       -> launchStandalone(PKG_PLAY_PS2, "", romUri)
+            else -> openStoreOrLink(PKG_ARMSX2, "https://github.com/ARMSX2/ARMSX2/releases")
+        }
+    }
+
+    /** Xbox 360: aX360e (port de Xenia). Solo tiene sentido en gama Snapdragon 8 Gen 2+. */
+    private fun launchXbox360(romUri: Uri) {
+        val pkg = listOf(PKG_AX360E, PKG_AX360E_FREE).firstOrNull { isPackageInstalled(it) }
+        if (pkg == null) { openStoreOrLink(PKG_AX360E_FREE); return }
+        launchStandalone(pkg, "", romUri)
     }
 
     private fun launchNetherSX2(romUri: Uri, pkgName: String? = null) {
@@ -624,14 +670,14 @@ class LauncherManager(private val context: Context) {
     }
 
     private fun launchSwitch(romUri: Uri, pkgName: String? = null) {
-        val pkg = pkgName ?: listOf(PKG_EDEN, PKG_EDEN_ALT, PKG_SUDACHI, PKG_SUDACHI_EA, PKG_CITRON, PKG_RYUJINX, PKG_YUZU)
+        val pkg = pkgName ?: listOf(PKG_EDEN, PKG_EDEN_ALT, PKG_CITRON, PKG_SUDACHI, PKG_SUDACHI_EA, PKG_TORZU, PKG_UZUY, PKG_KENJINX, PKG_RYUJINX, PKG_YUZU)
             .firstOrNull { isPackageInstalled(it) }
         if (pkg == null) { openStoreOrLink(PKG_SUDACHI); return }
         launchStandalone(pkg, "", romUri)
     }
 
     private fun launchCitraNew(romUri: Uri, pkgName: String?) {
-        val pkg = pkgName ?: listOf(PKG_AZAHAR, PKG_LIME3DS, PKG_PANDA3DS, PKG_CITRA)
+        val pkg = pkgName ?: listOf(PKG_AZAHAR, PKG_LIME3DS, PKG_MANDARINE, PKG_BORKED3DS, PKG_PANDA3DS, PKG_CITRA)
             .firstOrNull { isPackageInstalled(it) }
         if (pkg == null) { openStoreOrLink(PKG_LIME3DS); return }
         launchStandalone(pkg, "", romUri)
@@ -676,14 +722,17 @@ class LauncherManager(private val context: Context) {
     }
 
     private fun launchWinlator(romUri: Uri) {
-        val pkg = listOf(PKG_WINLATOR_CMOD, PKG_WINLATOR, PKG_MICEWINE)
+        val pkg = listOf(PKG_WINLATOR_CMOD, PKG_WINLATOR, PKG_GAMENATIVE, PKG_GAMEHUB, PKG_MICEWINE)
             .firstOrNull { isPackageInstalled(it) } ?: PKG_WINLATOR
         launchStandalone(pkg, "", romUri)
     }
 
     private fun launchVita3K(romUri: Uri) {
-        if (!isPackageInstalled(PKG_VITA3K)) { openStoreOrLink(PKG_VITA3K); return }
-        launchStandalone(PKG_VITA3K, "org.vita3k.emulator.Vita3KEmu", romUri)
+        // El id real de Vita3K-Android es org.vita3k.emulator; com.vita3k.emulator
+        // se conserva por si alguna build antigua lo usaba.
+        val pkg = listOf(PKG_VITA3K_ORG, PKG_VITA3K).firstOrNull { isPackageInstalled(it) }
+        if (pkg == null) { openStoreOrLink(PKG_VITA3K_ORG, "https://github.com/Vita3K/Vita3K-Android/releases"); return }
+        launchStandalone(pkg, "org.vita3k.emulator.Vita3KEmu", romUri)
     }
 
     private fun launchPPSSPP(romUri: Uri, pkgName: String? = null) {

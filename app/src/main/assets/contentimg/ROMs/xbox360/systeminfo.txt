@@ -1,0 +1,26 @@
+System name:
+xbox360
+
+Full system name:
+Microsoft Xbox 360
+
+Supported file extensions:
+.iso .ISO .xex .XEX .zar .ZAR .zip .ZIP .7z .7Z
+
+Launch command:
+%EMULATOR_AX360E% %DATA%=%ROMSAF%
+
+Platform (for scraping):
+xbox360
+
+Theme folder:
+xbox360
+
+Games Found:
+(No games found in folder)
+
+Available Emulators (RetroArch Cores):
+(None defined)
+
+External Emulators:
+- aX360e (Xenia) (Default)

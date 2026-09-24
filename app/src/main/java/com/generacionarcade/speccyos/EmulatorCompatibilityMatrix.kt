@@ -68,19 +68,37 @@ object EmulatorCompatibilityMatrix {
                 isRecommended = true
             ),
             EmulatorEntry(
+                name       = "ARMSX2 (PS2)",
+                packageIds = listOf("com.armsx2", "com.armsx2.nightly"),
+                platforms  = listOf("ps2"),
+                status     = if (installed("com.armsx2", "com.armsx2.nightly")) InstallStatus.INSTALLED else InstallStatus.NOT_INSTALLED,
+                downloadUrl = "https://github.com/ARMSX2/ARMSX2/releases",
+                notes      = "PCSX2 para ARM64, en desarrollo activo (2026). Sustituye a NetherSX2.",
+                isRecommended = true,
+                minAndroid = 10
+            ),
+            EmulatorEntry(
                 name       = "NetherSX2 / AetherSX2 (PS2)",
                 packageIds = listOf("xyz.aethersx2.android", "com.tahlreth.aethersx2.android"),
                 platforms  = listOf("ps2"),
                 status     = if (installed("xyz.aethersx2.android", "com.tahlreth.aethersx2.android")) InstallStatus.INSTALLED else InstallStatus.NOT_INSTALLED,
                 downloadUrl = "https://github.com/Tahlreth/aethersx2/releases",
-                notes      = "Requiere SD 845+ para títulos exigentes.",
-                isRecommended = true
+                notes      = "Sin mantenimiento desde 2023, pero muy estable. Requiere SD 845+."
+            ),
+            EmulatorEntry(
+                name       = "aX360e (Xbox 360)",
+                packageIds = listOf("aenu.ax360e", "aenu.ax360e.free"),
+                platforms  = listOf("xbox360", "x360"),
+                status     = if (installed("aenu.ax360e", "aenu.ax360e.free")) InstallStatus.INSTALLED else InstallStatus.NOT_INSTALLED,
+                downloadUrl = "https://play.google.com/store/apps/details?id=aenu.ax360e.free",
+                notes      = "Port de Xenia. Experimental: pocos juegos y solo en SD 8 Gen 2 o superior.",
+                minAndroid = 11
             ),
             EmulatorEntry(
                 name       = "Vita3K (PS Vita)",
-                packageIds = listOf("com.vita3k.emulator"),
+                packageIds = listOf("org.vita3k.emulator", "com.vita3k.emulator"),
                 platforms  = listOf("vita", "psvita"),
-                status     = if (installed("com.vita3k.emulator")) InstallStatus.INSTALLED else InstallStatus.NOT_INSTALLED,
+                status     = if (installed("org.vita3k.emulator", "com.vita3k.emulator")) InstallStatus.INSTALLED else InstallStatus.NOT_INSTALLED,
                 downloadUrl = "https://github.com/Vita3K/Vita3K-Android/releases",
                 notes      = "Experimental. Solo algunos títulos comerciales.",
                 minAndroid = 10
@@ -114,12 +132,39 @@ object EmulatorCompatibilityMatrix {
                 notes      = "Fork activo de Citra con mejoras de rendimiento."
             ),
             EmulatorEntry(
+                name       = "Mandarine / Borked3DS (3DS)",
+                packageIds = listOf("io.github.mandarine3ds.mandarine", "io.github.borked3ds.android"),
+                platforms  = listOf("3ds", "n3ds"),
+                status     = if (installed("io.github.mandarine3ds.mandarine", "io.github.borked3ds.android")) InstallStatus.INSTALLED else InstallStatus.NOT_INSTALLED,
+                downloadUrl = "https://github.com/mandarine3ds/mandarine/releases",
+                notes      = "Forks de Citra con mejoras de rendimiento en Mali/Adreno."
+            ),
+            EmulatorEntry(
                 name       = "Citra (3DS — legacy)",
                 packageIds = listOf("org.citra.citra_emu"),
                 platforms  = listOf("3ds"),
                 status     = if (installed("org.citra.citra_emu")) InstallStatus.DEPRECATED else InstallStatus.NOT_INSTALLED,
                 downloadUrl = "https://github.com/citra-emu/citra-android/releases",
                 notes      = "Discontinuado. Usa Lime3DS o Azahar."
+            ),
+            EmulatorEntry(
+                name       = "Eden (Switch)",
+                packageIds = listOf("org.eden_emu.eden", "dev.eden.eden_emulator"),
+                platforms  = listOf("switch"),
+                status     = if (installed("org.eden_emu.eden", "dev.eden.eden_emulator")) InstallStatus.INSTALLED else InstallStatus.NOT_INSTALLED,
+                downloadUrl = "https://github.com/eden-emulator/Releases/releases",
+                notes      = "El fork de yuzu más activo en 2026. Requiere SD 8 Gen 2+.",
+                isRecommended = true,
+                minAndroid = 11
+            ),
+            EmulatorEntry(
+                name       = "Torzu / Uzuy / Kenji-NX (Switch)",
+                packageIds = listOf("org.torzu.torzu_emu", "org.uzuy.uzuy_emu", "org.kenjinx.android"),
+                platforms  = listOf("switch"),
+                status     = if (installed("org.torzu.torzu_emu", "org.uzuy.uzuy_emu", "org.kenjinx.android")) InstallStatus.INSTALLED else InstallStatus.NOT_INSTALLED,
+                downloadUrl = "https://kenji-nx.com",
+                notes      = "Otros forks (yuzu y Ryujinx). Kenji-NX prioriza precisión sobre velocidad.",
+                minAndroid = 11
             ),
             EmulatorEntry(
                 name       = "Sudachi (Switch)",
@@ -226,6 +271,23 @@ object EmulatorCompatibilityMatrix {
                 downloadUrl = "https://winlator.org",
                 notes      = "Juegos Windows en Android. Requiere SD 845+ y Vulkan.",
                 minAndroid = 10
+            ),
+            EmulatorEntry(
+                name       = "GameNative / GameHub (Windows)",
+                packageIds = listOf("app.gamenative", "com.xiaoji.gamesirnsemulator"),
+                platforms  = listOf("windows", "exodos"),
+                status     = if (installed("app.gamenative", "com.xiaoji.gamesirnsemulator")) InstallStatus.INSTALLED else InstallStatus.NOT_INSTALLED,
+                downloadUrl = "https://github.com/GameNative/GameNative/releases",
+                notes      = "Alternativas 2026 a Winlator: GameNative (Steam, código abierto) y GameHub (GameSir).",
+                minAndroid = 11
+            ),
+            EmulatorEntry(
+                name       = "melonDS (NDS)",
+                packageIds = listOf("me.magnum.melonds"),
+                platforms  = listOf("nds"),
+                status     = if (installed("me.magnum.melonds")) InstallStatus.INSTALLED else InstallStatus.NOT_INSTALLED,
+                downloadUrl = "https://play.google.com/store/apps/details?id=me.magnum.melonds",
+                notes      = "Alternativa libre a DraStic (retirado de Play). Doble pantalla nativa en plegables."
             ),
 
             // ── Experimentales ──────────────────────────────────────────

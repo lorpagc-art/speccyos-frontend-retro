@@ -1,0 +1,27 @@
+System name:
+xbox
+
+Full system name:
+Microsoft Xbox
+
+Supported file extensions:
+.iso .ISO .xiso .XISO .xbe .XBE .zip .ZIP .7z .7Z
+
+Launch command:
+%EMULATOR_X1BOX% %DATA%=%ROMSAF%
+
+Platform (for scraping):
+xbox
+
+Theme folder:
+xbox
+
+Games Found:
+(No games found in folder)
+
+Available Emulators (RetroArch Cores):
+(None defined)
+
+External Emulators:
+- X1 BOX (xemu) (Default)
+- Xanite

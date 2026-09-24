@@ -128,3 +128,12 @@
     public static *** v(...);
     public static int println(...);
 }
+
+# ── Servicio privilegiado propio (AIDL sobre Shizuku) ────────────────────────
+# Shizuku arranca PerformanceService en OTRO proceso y carga la clase por su
+# nombre, y el binder se resuelve por reflexion sobre el Stub generado del AIDL.
+# Si R8 renombra o elimina cualquiera de los dos, el motor de rendimiento deja
+# de funcionar SOLO en las versiones de publicacion, sin error visible.
+-keep class com.generacionarcade.speccyos.PerformanceService { *; }
+-keep class com.generacionarcade.speccyos.IPerformanceService { *; }
+-keep class com.generacionarcade.speccyos.IPerformanceService$* { *; }

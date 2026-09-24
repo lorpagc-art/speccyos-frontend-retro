@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.documentfile.provider.DocumentFile
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import java.io.File
 import java.security.MessageDigest
 
 /**
@@ -34,8 +35,24 @@ object SpeccyBiosManager {
         val fileName: String,
         val md5: String?,
         val required: Boolean,
-        val note: String = ""
-    )
+        val note: String = "",
+        /**
+         * Otros nombres con los que el mismo dump es valido. Los cores no se
+         * ponen de acuerdo: la BIOS de Saturn vale como `mpr-17933.bin`,
+         * `sega_101.bin` o `saturn_bios.bin`, y a PCSX2 le sirve cualquier
+         * `SCPH-*.BIN`. Sin esto, la app pedia ficheros que el usuario YA tenia
+         * con otro nombre (visto en la E5 Ultra el 24-sep-2026).
+         */
+        val alternativas: List<String> = emptyList(),
+        /**
+         * Subcarpeta dentro de la carpeta `system` de RetroArch donde el core
+         * busca el fichero. Dreamcast, Naomi y Atomiswave van en `dc/`.
+         */
+        val subcarpeta: String = ""
+    ) {
+        /** Todos los nombres aceptables, en minusculas. */
+        val nombres: List<String> get() = (listOf(fileName) + alternativas).map { it.lowercase() }
+    }
 
     data class BiosStatus(
         val systemId: String,
@@ -67,6 +84,9 @@ object SpeccyBiosManager {
         ),
         "ps2" to listOf(
             BiosFile("SCPH-70012_BIOS_V12_USA_200.BIN", null, true, "Cualquier BIOS de PS2 válida")
+        ),
+        "stv" to listOf(
+            BiosFile("stvbios.zip", null, true, "BIOS set de Sega ST-V")
         ),
         "saturn" to listOf(
             BiosFile("sega_101.bin", "85ec9ca47d8f6807718151cbcca8b964", true, "NTSC-J"),
@@ -104,14 +124,20 @@ object SpeccyBiosManager {
             BiosFile("firmware.bin", null, true, "Firmware DS")
         ),
         "dreamcast" to listOf(
-            BiosFile("dc_boot.bin", "e10c53c2f8b90bab96ead2d368858623", true, "Boot ROM"),
-            BiosFile("dc_flash.bin", "0a93f7940c455905bea6e392dfde92a4", true, "Flash")
+            BiosFile("dc_boot.bin", "e10c53c2f8b90bab96ead2d368858623", true, "Boot ROM", subcarpeta = "dc"),
+            BiosFile("dc_flash.bin", "0a93f7940c455905bea6e392dfde92a4", true, "Flash", subcarpeta = "dc")
         ),
         "naomi" to listOf(
-            BiosFile("naomi.zip", null, true, "BIOS set de NAOMI")
+            BiosFile("naomi.zip", null, true, "BIOS set de NAOMI", subcarpeta = "dc")
+        ),
+        "naomi2" to listOf(
+            BiosFile("naomi2.zip", null, true, "BIOS set de NAOMI 2", listOf("naomi.zip"), subcarpeta = "dc")
+        ),
+        "naomigd" to listOf(
+            BiosFile("naomi.zip", null, true, "BIOS set de NAOMI", subcarpeta = "dc")
         ),
         "atomiswave" to listOf(
-            BiosFile("awbios.zip", null, true, "BIOS set de Atomiswave")
+            BiosFile("awbios.zip", null, true, "BIOS set de Atomiswave", subcarpeta = "dc")
         ),
         "pcfx" to listOf(
             BiosFile("pcfx.rom", "08e36edbea28a017f79f8d4f7ff9b6d7", true)
@@ -150,6 +176,55 @@ object SpeccyBiosManager {
 
     /** Carpetas donde la gente guarda las BIOS, en orden de probabilidad. */
     private val BIOS_FOLDER_NAMES = listOf("bios", "BIOS", "system", "System", "firmware")
+
+    /**
+     * Carpetas `system` de RetroArch mas habituales, por si no se puede leer el
+     * `system_directory` de su retroarch.cfg. La primera es la de serie.
+     */
+    private val SYSTEM_DIRS_CONOCIDOS = listOf(
+        "/storage/emulated/0/RetroArch/system",
+        "/storage/emulated/0/Android/data/com.retroarch.aarch64/files/system",
+        "/storage/emulated/0/Android/data/com.retroarch/files/system"
+    )
+
+    private val RETROARCH_CFGS = listOf(
+        "/storage/emulated/0/Android/data/com.retroarch.aarch64/files/retroarch.cfg",
+        "/storage/emulated/0/Android/data/com.retroarch/files/retroarch.cfg",
+        "/storage/emulated/0/Android/data/com.retroarch.plus/files/retroarch.cfg"
+    )
+
+    /** Carpeta `system` real de RetroArch, segun su propia configuracion. */
+    fun systemDirDeRetroArch(): String? {
+        val svc = HardwareControlManagerBeta.performanceService
+        for (cfg in RETROARCH_CFGS) {
+            val texto = runCatching { svc?.readSysfs(cfg) }.getOrNull().orEmpty()
+            val ruta = Regex("""^system_directory\s*=\s*"(.+)"""", RegexOption.MULTILINE)
+                .find(texto)?.groupValues?.get(1)
+            if (!ruta.isNullOrBlank() && ruta != "default") return ruta.trimEnd('/')
+        }
+        return SYSTEM_DIRS_CONOCIDOS.firstOrNull { dir ->
+            File(dir).isDirectory || !runCatching { svc?.listDir(dir) }.getOrNull().isNullOrBlank()
+        }
+    }
+
+    /**
+     * Nombres (en minusculas) que hay en la carpeta `system` de RetroArch y en
+     * su subcarpeta `dc`. Se intenta primero con File -por si el usuario ha dado
+     * acceso total- y si no, con el servicio privilegiado: en Android 11+ una app
+     * normal no puede listar esa carpeta aunque las BIOS esten ahi, y es LA UNICA
+     * que miran los cores.
+     */
+    private fun indexarSystemDeRetroArch(): Map<String, Set<String>> {
+        val base = systemDirDeRetroArch() ?: return emptyMap()
+        val svc = HardwareControlManagerBeta.performanceService
+        fun listar(dir: String): Set<String> {
+            val directo = runCatching { File(dir).list()?.toList() }.getOrNull()
+            if (!directo.isNullOrEmpty()) return directo.map { it.lowercase() }.toSet()
+            val porServicio = runCatching { svc?.listDir(dir) }.getOrNull().orEmpty()
+            return porServicio.split("\n").filter { it.isNotBlank() }.map { it.lowercase() }.toSet()
+        }
+        return mapOf("" to listar(base), "dc" to listar("$base/dc"))
+    }
 
     /**
      * Caché por sesión: escanear el árbol SAF es caro.
@@ -193,13 +268,24 @@ object SpeccyBiosManager {
         cache[id]?.let { if (!verifyHashes && romsTreeUri != null) return@withContext it }
 
         val index = indexBiosFolder(context, romsTreeUri)
+        val enRetroArch = indexarSystemDeRetroArch()
         val present = mutableListOf<String>()
         val missingRequired = mutableListOf<BiosFile>()
         val missingOptional = mutableListOf<BiosFile>()
         val corrupt = mutableListOf<String>()
 
         for (bios in required) {
-            val doc = index[bios.fileName.lowercase()]
+            // 1) En la carpeta `system` de RetroArch, que es donde el core mira
+            //    de verdad. Si esta aqui, no hay nada mas que comprobar.
+            val enSitio = enRetroArch[bios.subcarpeta]?.let { nombres ->
+                bios.nombres.any { it in nombres }
+            } ?: false
+            if (enSitio) { present += bios.fileName; continue }
+
+            // 2) Si no, en la carpeta de ROMs del usuario (con sus alternativas):
+            //    ahi no le sirve al core, pero sabemos que LA TIENE y podemos
+            //    ofrecer copiarla al sitio correcto.
+            val doc = bios.nombres.firstNotNullOfOrNull { index[it] }
             if (doc == null) {
                 if (bios.required) missingRequired += bios else missingOptional += bios
                 continue

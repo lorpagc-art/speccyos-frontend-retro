@@ -80,11 +80,42 @@ abstract class AppDatabase : RoomDatabase() {
             "CREATE TABLE IF NOT EXISTS `ai_cache` (`queryHash` TEXT NOT NULL, " +
             "`responseText` TEXT NOT NULL, `timestamp` INTEGER NOT NULL, PRIMARY KEY(`queryHash`))"
 
+        /**
+         * Añade una columna SOLO si la tabla no la tiene ya.
+         *
+         * Por qué hace falta: en un móvil con la app instalada desde abril de
+         * 2026 (realme RMX3867, Android 16) la actualización reventaba al abrir
+         * con `SQLiteException: duplicate column name: raGameId`, y la app se
+         * cerraba sola antes de pintar nada. La base de datos estaba marcada con
+         * una versión antigua pero YA tenía columnas de versiones posteriores,
+         * cosa que pasa en cuanto una compilación de desarrollo toca el esquema
+         * sin subir el número de versión. Room, en ese caso, vuelve a ejecutar
+         * un ALTER TABLE que ya se aplicó, y un ALTER fallido en una migración
+         * deja la app inarrancable: no hay pantalla de error ni forma de
+         * recuperarse salvo borrar los datos.
+         *
+         * Con esta comprobación las migraciones son idempotentes: se pueden
+         * ejecutar sobre una base de datos a medio migrar sin romper nada.
+         */
+        private fun añadirColumnaSiFalta(
+            db: SupportSQLiteDatabase,
+            tabla: String,
+            columna: String,
+            definicion: String
+        ) {
+            val existe = db.query("PRAGMA table_info(`$tabla`)").use { c ->
+                val indiceNombre = c.getColumnIndex("name")
+                generateSequence { if (c.moveToNext()) c.getString(indiceNombre) else null }
+                    .any { it.equals(columna, ignoreCase = true) }
+            }
+            if (!existe) db.execSQL("ALTER TABLE `$tabla` ADD COLUMN `$columna` $definicion")
+        }
+
         private val MIGRATION_1_2 = object : Migration(1, 2) {
             override fun migrate(db: SupportSQLiteDatabase) {
-                db.execSQL("ALTER TABLE games ADD COLUMN isFavorite INTEGER NOT NULL DEFAULT 0")
-                db.execSQL("ALTER TABLE games ADD COLUMN playCount INTEGER NOT NULL DEFAULT 0")
-                db.execSQL("ALTER TABLE games ADD COLUMN lastPlayed INTEGER NOT NULL DEFAULT 0")
+                añadirColumnaSiFalta(db, "games", "isFavorite", "INTEGER NOT NULL DEFAULT 0")
+                añadirColumnaSiFalta(db, "games", "playCount", "INTEGER NOT NULL DEFAULT 0")
+                añadirColumnaSiFalta(db, "games", "lastPlayed", "INTEGER NOT NULL DEFAULT 0")
                 // Las tres columnas van indexadas en la entidad: sin estas tres
                 // líneas la actualización deja la tabla sin índices y Room la
                 // rechaza al abrirla.
@@ -96,35 +127,35 @@ abstract class AppDatabase : RoomDatabase() {
 
         private val MIGRATION_2_3 = object : Migration(2, 3) {
             override fun migrate(db: SupportSQLiteDatabase) {
-                db.execSQL("ALTER TABLE games ADD COLUMN videoPreview TEXT")
-                db.execSQL("ALTER TABLE games ADD COLUMN wheel TEXT")
-                db.execSQL("ALTER TABLE games ADD COLUMN fanart TEXT")
-                db.execSQL("ALTER TABLE games ADD COLUMN cdArt TEXT")
-                db.execSQL("ALTER TABLE games ADD COLUMN screenshot TEXT")
+                añadirColumnaSiFalta(db, "games", "videoPreview", "TEXT")
+                añadirColumnaSiFalta(db, "games", "wheel", "TEXT")
+                añadirColumnaSiFalta(db, "games", "fanart", "TEXT")
+                añadirColumnaSiFalta(db, "games", "cdArt", "TEXT")
+                añadirColumnaSiFalta(db, "games", "screenshot", "TEXT")
             }
         }
 
         private val MIGRATION_3_4 = object : Migration(3, 4) {
             override fun migrate(db: SupportSQLiteDatabase) {
-                db.execSQL("ALTER TABLE games ADD COLUMN md5 TEXT")
-                db.execSQL("ALTER TABLE games ADD COLUMN crc32 TEXT")
-                db.execSQL("ALTER TABLE games ADD COLUMN sha1 TEXT")
+                añadirColumnaSiFalta(db, "games", "md5", "TEXT")
+                añadirColumnaSiFalta(db, "games", "crc32", "TEXT")
+                añadirColumnaSiFalta(db, "games", "sha1", "TEXT")
             }
         }
 
         private val MIGRATION_4_5 = object : Migration(4, 5) {
             override fun migrate(db: SupportSQLiteDatabase) {
-                db.execSQL("ALTER TABLE games ADD COLUMN raGameId INTEGER NOT NULL DEFAULT 0")
-                db.execSQL("ALTER TABLE games ADD COLUMN raAchievementsTotal INTEGER NOT NULL DEFAULT 0")
-                db.execSQL("ALTER TABLE games ADD COLUMN raAchievementsEarned INTEGER NOT NULL DEFAULT 0")
-                db.execSQL("ALTER TABLE games ADD COLUMN raLastSync INTEGER NOT NULL DEFAULT 0")
+                añadirColumnaSiFalta(db, "games", "raGameId", "INTEGER NOT NULL DEFAULT 0")
+                añadirColumnaSiFalta(db, "games", "raAchievementsTotal", "INTEGER NOT NULL DEFAULT 0")
+                añadirColumnaSiFalta(db, "games", "raAchievementsEarned", "INTEGER NOT NULL DEFAULT 0")
+                añadirColumnaSiFalta(db, "games", "raLastSync", "INTEGER NOT NULL DEFAULT 0")
                 db.execSQL("CREATE INDEX IF NOT EXISTS `index_games_raGameId` ON `games` (`raGameId`)")
             }
         }
 
         private val MIGRATION_5_6 = object : Migration(5, 6) {
             override fun migrate(db: SupportSQLiteDatabase) {
-                db.execSQL("ALTER TABLE games ADD COLUMN playTimeSeconds INTEGER NOT NULL DEFAULT 0")
+                añadirColumnaSiFalta(db, "games", "playTimeSeconds", "INTEGER NOT NULL DEFAULT 0")
                 db.execSQL("CREATE INDEX IF NOT EXISTS `index_games_playTimeSeconds` ON `games` (`playTimeSeconds`)")
             }
         }

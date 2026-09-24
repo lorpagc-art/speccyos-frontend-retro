@@ -475,5 +475,8 @@ run a business and need a website, an online shop or a custom app, get in touch.
 
 ## Licence
 
-To be decided. Until then, all rights reserved: the code is published so it can be
-read and so anyone can build their own copy, not for redistribution.
+Proprietary — see [LICENSE](LICENSE). All rights reserved.
+
+In short: you may read the code, study it and build a copy for your own devices.
+You may not redistribute it, publish it on any app store or make commercial use
+of it. For anything else, write to administracion@lv-webstudio.com.

@@ -480,6 +480,9 @@ escríbenos.
 
 ## Licencia
 
-Pendiente de definir. Mientras tanto, todos los derechos reservados: el código se
-publica para consulta y para que cualquiera pueda compilar su propia copia, no
-para su redistribución.
+Propietaria — ver [LICENSE](LICENSE). Todos los derechos reservados.
+
+En corto: puedes leer el código, estudiarlo y compilar una copia para tus propios
+dispositivos. No puedes redistribuirlo, publicarlo en ninguna tienda de
+aplicaciones ni hacer uso comercial de él. Para cualquier otra cosa, escribe a
+administracion@lv-webstudio.com.

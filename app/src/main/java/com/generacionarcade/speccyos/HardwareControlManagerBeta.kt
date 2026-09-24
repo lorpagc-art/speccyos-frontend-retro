@@ -39,6 +39,12 @@ object HardwareControlManagerBeta {
     var performanceService: IPerformanceService? = null
         private set
     private var shizukuServiceArgs: Shizuku.UserServiceArgs? = null
+
+    /** Codigo de la solicitud de permiso; lo recibe el listener de MainActivity. */
+    const val SOLICITUD_SHIZUKU = 0
+
+    /** Solo se pide una vez por proceso: si el usuario dice que no, no se insiste. */
+    private var permisoShizukuPedido = false
     
     // Callback para notificar a la UI cuando Shizuku termine de conectar
     var onShizukuConnected: (() -> Unit)? = null
@@ -182,14 +188,27 @@ object HardwareControlManagerBeta {
         Log.i(TAG, "Perfil recomendado: ${recommended.effectiveMode} via ${recommended.backend} " +
             "(${recommended.applied.size} ajustes aplicados, ${recommended.skipped.size} no disponibles)")
 
-        // Motor antiguo: se mantiene para no romper los perfiles JSON existentes.
-        applyHardwareMode("BALANCED")
+        // Nada de reaplicar BALANCED aqui: el tuner acaba de poner el modo
+        // recomendado del dispositivo y machacarlo era justo el bug de arriba.
     }
 
     fun bindShizukuService() {
         try {
             if (!isShizukuAvailable()) {
-                Log.w(TAG, "Intentando vincular Shizuku pero la API no está disponible o no hay permisos.")
+                // Distinguir "no hay Shizuku" de "hay Shizuku pero sin permiso":
+                // en el segundo caso se pide solo. Antes el permiso unicamente se
+                // pedia desde un boton escondido en Ajustes > Hardware, asi que
+                // quien instalaba Shizuku seguia sin motor de rendimiento y sin
+                // saber por que (verificado en una GameMT E5 Ultra el 24-sep-2026).
+                val vivo = runCatching { Shizuku.pingBinder() }.getOrDefault(false)
+                if (vivo && !permisoShizukuPedido) {
+                    permisoShizukuPedido = true
+                    Log.i(TAG, "Shizuku está corriendo pero sin permiso: solicitándolo.")
+                    runCatching { Shizuku.requestPermission(SOLICITUD_SHIZUKU) }
+                        .onFailure { Log.w(TAG, "No se pudo solicitar el permiso de Shizuku", it) }
+                } else {
+                    Log.w(TAG, "Intentando vincular Shizuku pero la API no está disponible o no hay permisos.")
+                }
                 return
             }
             
@@ -257,50 +276,24 @@ object HardwareControlManagerBeta {
         return "echo '$value' > '$path'"
     }
 
+    /**
+     * Perfil de potencia. Punto unico de entrada del resto de la app.
+     *
+     * ANTES: construia los comandos desde el JSON del perfil (`sysfs_mapping`),
+     * con rutas FIJAS que en la mayoria de equipos no existen —en una GameMT E5
+     * Ultra el `gpu_path` apuntaba a `/sys/class/kgsl/...`, que es de Adreno, y
+     * el `fan_path` a un nodo inexistente— y encima se llamaba DESPUES de
+     * `SpeccyPerformanceTuner.applyRecommended()`, asi que machacaba con
+     * BALANCED lo que el tuner acababa de aplicar. En el log se veia la pelea:
+     * `powersave` y acto seguido `schedutil` sobre el mismo clúster en cada
+     * lanzamiento (visto el 24-sep-2026 en la E5 Ultra).
+     *
+     * AHORA: manda el tuner, que sondea el hardware real. El JSON del perfil se
+     * conserva solo como documentacion/descripcion en la interfaz.
+     */
     fun applyHardwareMode(mode: String) {
-        if (!isInitialized || currentLoadedProfileJson == null) return
-        val config = currentLoadedProfileJson?.optJSONObject("modes")?.optJSONObject(mode) ?: return
-        val mapping = currentLoadedProfileJson?.optJSONObject("sysfs_mapping") ?: return
-
-        val commands = mutableListOf<String>()
-
-        // Estas lineas se interpolaban directamente desde el JSON del perfil y se
-        // mandaban tal cual a un `sh -c` privilegiado. Hoy el JSON es un asset
-        // empaquetado, pero es la misma superficie que el resto del codigo ya
-        // protege: cualquier origen menos controlado en el futuro -un perfil
-        // descargable, un fichero editable en un equipo rooteado- seria ejecucion
-        // de comandos como shell. Ahora pasan por la lista blanca de rutas y
-        // valores de SpeccySysfsProbe, igual que el camino moderno del tuner.
-        val cpuGov = if(mode == "ECO") "powersave" else config.optString("cpu_cluster0_gov", "schedutil")
-        mapping.keys().forEach { key ->
-            if (key.startsWith("cpu") && key.endsWith("_path")) {
-                escrituraSegura(mapping.optString(key), cpuGov)?.let { commands.add(it) }
-            }
-        }
-
-        val gpuGov = if(mode == "ECO") "powersave" else config.optString("gpu_governor")
-        if (gpuGov.isNotEmpty() && mapping.has("gpu_path")) {
-            escrituraSegura(mapping.optString("gpu_path"), gpuGov)?.let { commands.add(it) }
-        }
-
-        val fanLevel = if(mode == "ECO") 0 else config.optInt("fan_level", -1)
-        if (fanLevel != -1 && mapping.has("fan_path")) {
-            escrituraSegura(mapping.optString("fan_path"), fanLevel.toString())?.let { commands.add(it) }
-        }
-        
-        val ioSched = config.optString("io_scheduler")
-        if (ioSched.isNotEmpty() && mapping.has("io_sched_path")) {
-            escrituraSegura(mapping.optString("io_sched_path"), ioSched)?.let { commands.add(it) }
-        }
-
-        if (mode == "PERFORMANCE" || mode == "EXTREME") {
-            commands.add("setprop debug.hwui.renderer vulkan")
-            commands.add("setprop debug.vulkan.layers.none 1")
-            commands.add("setprop debug.renderengine.backend vulkan")
-            commands.add("setprop debug.egl.buffercount 2")
-        }
-
-        executeCommands(commands)
+        val r = SpeccyPerformanceTuner.applyMode(mode)
+        Log.i(TAG, "Modo $mode via ${r.backend}: ${r.applied.size} ajustes, ${r.skipped.size} descartados")
     }
 
     fun forceVulkanRenderer(enabled: Boolean) {
@@ -532,13 +525,17 @@ object HardwareControlManagerBeta {
         } catch (e: Exception) { "N/A" }
     }
 
-    fun setFanSpeed(level: Int) {
-        val mapping = currentLoadedProfileJson?.optJSONObject("sysfs_mapping") ?: return
-        if (mapping.has("fan_path")) {
-            val fanPath = mapping.optString("fan_path")
-            executeCommands(listOf("echo $level > $fanPath"))
-        }
-    }
+    /**
+     * Velocidad del ventilador, en la escala del catalogo (0..maxFanLevel).
+     *
+     * Antes se construia "echo N > <fan_path del JSON>": ruta fija que no existe
+     * en casi ningun dispositivo real Y sin las comillas que exige la validacion,
+     * asi que el comando se rechazaba SIEMPRE. Como el ViewModel llama a esto
+     * cada 2 segundos, el log se llenaba de "todos los comandos rechazados por
+     * validacion" y el ventilador nunca se tocaba. Ahora manda el tuner, que usa
+     * los nodos realmente sondeados y el rango de cada uno.
+     */
+    fun setFanSpeed(level: Int) = SpeccyPerformanceTuner.setFan(level)
 
     fun runSafetyCheck() {
         val temp = getCpuTemperature() ?: return

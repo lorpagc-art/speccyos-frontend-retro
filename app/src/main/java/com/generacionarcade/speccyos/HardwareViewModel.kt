@@ -154,10 +154,15 @@ class HardwareViewModel(application: Application) : AndroidViewModel(application
                     rootStatus = snapshot.root
                 )
                 
+                // Solo cuando cambia: reescribir el mismo nivel cada 2 segundos
+                // no aporta nada y, con Shizuku, es un binder por vuelta.
                 if (!isFanManualOverride) {
                     val level = (fanSpeedLevel * 3).toInt()
-                    withContext(Dispatchers.IO) {
-                        hardwareManager.setFanSpeed(level)
+                    if (level != ultimoNivelVentilador) {
+                        ultimoNivelVentilador = level
+                        withContext(Dispatchers.IO) {
+                            hardwareManager.setFanSpeed(level)
+                        }
                     }
                 }
                 
@@ -230,6 +235,9 @@ class HardwareViewModel(application: Application) : AndroidViewModel(application
         _uiState.value = _uiState.value.copy(isVulkanForced = enabled)
         hardwareManager.forceVulkanRenderer(enabled)
     }
+
+    /** Ultimo nivel de ventilador escrito; -1 = todavia ninguno. */
+    private var ultimoNivelVentilador: Int = -1
 
     fun requestShizukuPermission() {
         try {

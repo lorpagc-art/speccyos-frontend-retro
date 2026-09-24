@@ -65,18 +65,27 @@ object SpeccyPerformanceTuner {
         val ioScheduler: String,
         val fanRatio: Float,             // 0f..1f del maxFanLevel
         val vulkanHint: Boolean,
-        val description: String
+        val description: String,
+        /**
+         * Suelo de frecuencia como fraccion del maximo del cluster (0 = dejar
+         * el del kernel). Muchos kernels MediaTek/Unisoc ignoran el gobernador
+         * "performance" (lo pisa su PPM/EAS), pero SI respetan scaling_min_freq:
+         * es la unica forma de que no bajen reloj a mitad de partida.
+         */
+        val freqFloor: Float = 0f,
+        /** Game Mode de Android para el paquete del emulador (1 estandar, 2 rendimiento, 3 bateria). */
+        val gameMode: Int = 1
     )
 
     private val SPECS = mapOf(
         MODE_ECO to ModeSpec("powersave", "powersave", "noop", 0f, false,
-            "Ahorro máximo. 8/16 bits y navegación por la biblioteca."),
+            "Ahorro máximo. 8/16 bits y navegación por la biblioteca.", 0f, 3),
         MODE_BALANCED to ModeSpec("schedutil", "balanced", "cfq", 0.34f, false,
-            "Equilibrio. PS1, N64, PSP y Dreamcast sin castigar la batería."),
+            "Equilibrio. PS1, N64, PSP y Dreamcast sin castigar la batería.", 0f, 1),
         MODE_PERFORMANCE to ModeSpec("performance", "performance", "deadline", 0.67f, true,
-            "Frecuencias sostenidas. GameCube, PS2 y 3DS."),
+            "Frecuencias sostenidas. GameCube, PS2 y 3DS.", 0.6f, 2),
         MODE_EXTREME to ModeSpec("performance", "performance", "deadline", 1f, true,
-            "Sin límites. Switch y Windows. Requiere refrigeración activa.")
+            "Sin límites. Switch y Windows. Requiere refrigeración activa.", 1f, 2)
     )
 
     // ------------------------------------------------------------------ estado
@@ -140,9 +149,13 @@ object SpeccyPerformanceTuner {
         else -> "NONE"
     }
 
-    /** ¿Puede este dispositivo aguantar el modo pedido? */
+    /**
+     * ¿Puede este dispositivo aguantar el modo pedido? Manda el hardware real:
+     * si el sondeo encontro ventilador, da igual lo que diga el catalogo (y al
+     * reves, un catalogo optimista no habilita EXTREME en un equipo pasivo).
+     */
     fun isModeAdvisable(mode: String): Boolean = when (mode) {
-        MODE_EXTREME -> device.hasFan
+        MODE_EXTREME -> device.hasFan || SpeccySysfsProbe.map().fanNodes.isNotEmpty()
         else -> true
     }
 
@@ -194,12 +207,43 @@ object SpeccyPerformanceTuner {
             if (c != null) { cmds += c; applied += "gpu=$gov" } else skipped += node
         }
 
-        // --- Ventilador: proporcional al nivel máximo real del dispositivo
-        if (device.hasFan && device.maxFanLevel > 0) {
-            val level = Math.round(spec.fanRatio * device.maxFanLevel).coerceIn(0, device.maxFanLevel)
+        // --- Suelo de frecuencia (CPU por cluster y GPU por devfreq).
+        // PERFORMANCE fija el minimo al ~60 % del maximo del cluster; EXTREME lo
+        // clava al maximo. BALANCED/ECO devuelven el minimo de fabrica que se
+        // guardo en snapshotOriginals(), asi nunca se queda un suelo alto olvidado.
+        map.cpuGovernorNodes.forEach { govNode ->
+            val minNode = SpeccySysfsProbe.cpuMinFreqNode(govNode)
+            val target = floorFor(spec.freqFloor,
+                SpeccySysfsProbe.cpuAvailableFreqs(govNode),
+                SpeccySysfsProbe.cpuHardwareMaxFreq(govNode),
+                originalValues[minNode]?.toLongOrNull() ?: SpeccySysfsProbe.cpuHardwareMinFreq(govNode))
+            val c = target?.let { SpeccySysfsProbe.writeCmd(minNode, it.toString()) }
+            if (c != null) { cmds += c; applied += "cpu_min:${govNode.substringBeforeLast('/').substringAfterLast('/')}=$target" }
+        }
+        map.gpuGovernorNode?.let { govNode ->
+            val minNode = SpeccySysfsProbe.gpuMinFreqNode(govNode)
+            val avail = SpeccySysfsProbe.gpuAvailableFreqs(govNode)
+            // Solo EXTREME clava la GPU: en PERFORMANCE el gobernador ya sube sola
+            // y un suelo de GPU es lo que mas calienta un Mali sin ventilador.
+            val target = floorFor(if (spec.freqFloor >= 1f) 1f else 0f, avail, avail.maxOrNull(),
+                originalValues[minNode]?.toLongOrNull() ?: avail.minOrNull())
+            val c = target?.let { SpeccySysfsProbe.writeCmd(minNode, it.toString()) }
+            if (c != null) { cmds += c; applied += "gpu_min=$target" }
+        }
+
+        // --- Ventilador: proporcional al rango REAL de cada nodo (0-255 en el
+        // PWM de las GameMT, 0-max_state en un cooling_device). Si el perfil pide
+        // ventilador, primero se saca del control automatico (fsenable=1).
+        if (map.fanNodes.isNotEmpty()) {
+            if (spec.fanRatio > 0f) {
+                map.fanEnableNodes.forEach { n ->
+                    SpeccySysfsProbe.writeCmd(n, "1")?.let { cmds += it; applied += "fan_manual=1" }
+                }
+            }
             map.fanNodes.forEach { node ->
-                val c = SpeccySysfsProbe.writeCmd(node, level.toString())
-                if (c != null) { cmds += c; applied += "fan=$level" } else skipped += node
+                val value = Math.round(spec.fanRatio * node.maxValue).coerceIn(0, node.maxValue)
+                val c = SpeccySysfsProbe.writeCmd(node.path, value.toString())
+                if (c != null) { cmds += c; applied += "fan=$value/${node.maxValue}" } else skipped += node.path
             }
         }
 
@@ -273,9 +317,15 @@ object SpeccyPerformanceTuner {
         val p = platformId?.lowercase().orEmpty()
         val demand = when {
             p.isEmpty() -> 2
-            p in setOf("switch", "wiiu", "windows", "ps3", "psvita") -> 4
+            p in setOf("switch", "wiiu", "windows", "ps3", "psvita", "xbox", "xbox360") -> 4
             p in setOf("ps2", "gc", "wii", "n3ds", "naomi2", "stv", "model3") -> 3
-            p in setOf("dreamcast", "psp", "nds", "saturn", "naomi", "n64", "model2") -> 2
+            p in setOf(
+                "dreamcast", "dc", "psp", "nds", "saturn", "saturnjp", "n64", "model2",
+                // Naomi, Naomi 2, Naomi GD-ROM, Atomiswave y Sega ST-V son placas
+                // arcade con hardware de Dreamcast: caian en el `else` y la app les
+                // ponia ECO y Game Mode 3 (ahorro). Visto el 24-sep-2026.
+                "naomi", "naomi2", "naomigd", "atomiswave", "stv"
+            ) -> 2
             p in setOf("psx", "segacd", "pcenginecd", "3do", "atarijaguar", "amiga") -> 1
             else -> 0
         }
@@ -293,20 +343,31 @@ object SpeccyPerformanceTuner {
     fun canRun(platformId: String?): Boolean {
         val p = platformId?.lowercase().orEmpty()
         val needed = when {
-            p in setOf("switch", "wiiu", "windows", "ps3") -> 5
+            p in setOf("switch", "wiiu", "windows", "ps3", "xbox", "xbox360") -> 5
             p in setOf("ps2", "gc", "wii", "n3ds", "psvita") -> 4
-            p in setOf("dreamcast", "psp", "nds", "saturn", "naomi") -> 2
+            p in setOf(
+                "dreamcast", "dc", "psp", "nds", "saturn", "saturnjp",
+                "naomi", "naomi2", "naomigd", "atomiswave", "stv"
+            ) -> 2
             p in setOf("psx", "n64", "segacd", "3do") -> 1
             else -> 0
         }
         return device.tier.rank >= needed
     }
 
+    /** [level] va en la escala del catalogo (0..device.maxFanLevel); se traduce al rango de cada nodo. */
     fun setFan(level: Int) {
-        if (!device.hasFan) return
-        val lvl = level.coerceIn(0, maxOf(device.maxFanLevel, 1))
-        val cmds = SpeccySysfsProbe.map().fanNodes.mapNotNull {
-            SpeccySysfsProbe.writeCmd(it, lvl.toString())
+        val map = SpeccySysfsProbe.map()
+        if (map.fanNodes.isEmpty()) return
+        val escala = maxOf(device.maxFanLevel, 1)
+        val ratio = level.coerceIn(0, escala).toFloat() / escala
+        val cmds = mutableListOf<String>()
+        if (ratio > 0f) map.fanEnableNodes.forEach { n ->
+            SpeccySysfsProbe.writeCmd(n, "1")?.let { cmds += it }
+        }
+        map.fanNodes.forEach { node ->
+            val v = Math.round(ratio * node.maxValue).coerceIn(0, node.maxValue)
+            SpeccySysfsProbe.writeCmd(node.path, v.toString())?.let { cmds += it }
         }
         execute(cmds)
     }
@@ -327,7 +388,10 @@ object SpeccyPerformanceTuner {
     private suspend fun snapshotOriginals() = withContext(Dispatchers.IO) {
         if (originalValues.isNotEmpty()) return@withContext
         val m = SpeccySysfsProbe.map()
-        (m.cpuGovernorNodes + listOfNotNull(m.gpuGovernorNode) + m.fanNodes).forEach { p ->
+        val minNodes = m.cpuGovernorNodes.map { SpeccySysfsProbe.cpuMinFreqNode(it) } +
+            listOfNotNull(m.gpuGovernorNode?.let { SpeccySysfsProbe.gpuMinFreqNode(it) })
+        (m.cpuGovernorNodes + listOfNotNull(m.gpuGovernorNode) + m.fanNodes.map { it.path } +
+            m.fanEnableNodes + minNodes).forEach { p ->
             SpeccySysfsProbe.readText(File(p))?.let { v ->
                 if (SpeccySysfsProbe.isSafeWrite(p, v)) originalValues[p] = v
             }
@@ -368,6 +432,51 @@ object SpeccyPerformanceTuner {
                 delay(if (_throttled.value) 5_000L else 15_000L)
             }
         }
+    }
+
+    /**
+     * Frecuencia de suelo para una fraccion del maximo. Con lista de
+     * frecuencias disponibles se elige la mas cercana por debajo (los kernels
+     * rechazan valores que no esten en la tabla OPP); sin lista, se calcula
+     * sobre el maximo. Fraccion 0 = valor original de fabrica.
+     */
+    private fun floorFor(fraction: Float, available: List<Long>, max: Long?, original: Long?): Long? {
+        if (fraction <= 0f) return original
+        if (max == null || max <= 0) return null
+        if (fraction >= 1f) return available.maxOrNull() ?: max
+        val wanted = (max * fraction).toLong()
+        return available.filter { it <= wanted }.maxOrNull()
+            ?: available.minOrNull()
+            ?: wanted
+    }
+
+    /**
+     * Se llama justo despues de arrancar la actividad del emulador. Dos cosas
+     * que solo tienen sentido con el paquete ya conocido:
+     *   1. Game Mode de Android (13+) para ESE paquete: los fabricantes
+     *      (Samsung, Xiaomi, AYN, Retroid con Android 13/14) suben reloj, bajan
+     *      la agresividad termica o activan el ventilador para las apps en modo 2.
+     *   2. Liberar RAM en equipos de 6 GB o menos antes de un sistema pesado:
+     *      Dolphin/NetherSX2 en una EX8 o una RG556 con Chrome y Play en
+     *      segundo plano se quedan sin memoria y el kernel mata al emulador.
+     */
+    fun onEmulatorStarted(pkg: String?) {
+        if (pkg.isNullOrBlank() || backend() == "NONE") return
+        val spec = SPECS[_currentMode.value] ?: return
+        val cmds = mutableListOf<String>()
+        if (android.os.Build.VERSION.SDK_INT >= 33) {
+            cmds += if (spec.gameMode == 1) "cmd game reset $pkg" else "cmd game set --mode ${spec.gameMode} $pkg"
+        }
+        if (spec.freqFloor > 0f && totalRamGb() <= 6.5f) cmds += "am kill-all"
+        execute(cmds)
+    }
+
+    private fun totalRamGb(): Float {
+        val ctx = appContext ?: return 99f
+        val am = ctx.getSystemService(Context.ACTIVITY_SERVICE) as? android.app.ActivityManager ?: return 99f
+        val info = android.app.ActivityManager.MemoryInfo()
+        am.getMemoryInfo(info)
+        return info.totalMem / (1024f * 1024f * 1024f)
     }
 
     private fun execute(commands: List<String>) {

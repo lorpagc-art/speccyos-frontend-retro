@@ -185,7 +185,7 @@ object SpeccyHardwareRegistry {
             listOf("odin2_mini", "odin 2 mini"), "PERFORMANCE", 83, TUNE_FLAGSHIP),
         SpeccyDevice("ayn_odin2_portal", "AYN Odin 2 Portal", "AYN", "Snapdragon 8 Gen 2", "Adreno 740", "12 GB", 2025,
             FormFactor.HANDHELD_WIDE, Tier.T5_SWITCH, SocFamily.SNAPDRAGON, Cooling.ACTIVE_FAN_PWM, 3,
-            listOf("odin2_portal", "odin 2 portal", "portal"), "PERFORMANCE", 85, TUNE_FLAGSHIP,
+            listOf("odin2_portal", "odin 2 portal", "portal pro", "portal"), "PERFORMANCE", 85, TUNE_FLAGSHIP,
             notes = "Panel OLED 7\": subir brillo cuesta batería, no rendimiento."),
         SpeccyDevice("ayn_odin_pro", "AYN Odin Pro / Base", "AYN", "Snapdragon 845", "Adreno 630", "4/8 GB", 2021,
             FormFactor.HANDHELD_WIDE, Tier.T3_GC, SocFamily.SNAPDRAGON, Cooling.ACTIVE_FAN, 3,
@@ -193,9 +193,14 @@ object SpeccyHardwareRegistry {
         SpeccyDevice("ayn_odin_lite", "AYN Odin Lite", "AYN", "Dimensity 900", "Mali-G68", "4/6/8 GB", 2022,
             FormFactor.HANDHELD_WIDE, Tier.T3_GC, SocFamily.MEDIATEK, Cooling.ACTIVE_FAN, 3,
             listOf("odin_lite"), "PERFORMANCE", 80, TUNE_MID),
-        SpeccyDevice("ayn_thor", "AYN Thor", "AYN", "Snapdragon 8 Gen 3", "Adreno 750", "12/16 GB", 2025,
+        SpeccyDevice("ayn_thor", "AYN Thor (Base / Pro / Max)", "AYN", "Snapdragon 8 Gen 2", "Adreno 740", "8/12/16 GB", 2026,
+            FormFactor.FOLDABLE, Tier.T5_SWITCH, SocFamily.SNAPDRAGON, Cooling.ACTIVE_FAN_PWM, 3,
+            listOf("ayn_thor", "thor"), "PERFORMANCE", 85, TUNE_FLAGSHIP,
+            notes = "Concha con OLED 6\" 120 Hz. La variante Lite lleva Snapdragon 865 (gama RP5)."),
+        SpeccyDevice("ayn_odin3", "AYN Odin 3", "AYN", "Dragonwing Q8 (Snapdragon 8 Elite)", "Adreno 830", "12/16 GB", 2026,
             FormFactor.HANDHELD_WIDE, Tier.T5_SWITCH, SocFamily.SNAPDRAGON, Cooling.ACTIVE_FAN_PWM, 3,
-            listOf("ayn_thor", "thor"), "PERFORMANCE", 86, TUNE_FLAGSHIP),
+            listOf("odin3", "odin 3", "ayn_odin3"), "PERFORMANCE", 86, TUNE_FLAGSHIP,
+            notes = "Primer portátil con núcleos Oryon: Switch y Windows con margen."),
 
         // ============================ RETROID ============================
         SpeccyDevice("retroid_rp5", "Retroid Pocket 5", "Retroid", "Snapdragon 865", "Adreno 650", "8 GB", 2024,
@@ -204,9 +209,21 @@ object SpeccyHardwareRegistry {
         SpeccyDevice("retroid_rp_mini", "Retroid Pocket Mini / Mini V2", "Retroid", "Snapdragon 865", "Adreno 650", "6/8 GB", 2024,
             FormFactor.HANDHELD_VERTICAL, Tier.T4_PS2, SocFamily.SNAPDRAGON, Cooling.ACTIVE_FAN, 3,
             listOf("rp mini", "retroid pocket mini", "rpmini"), "PERFORMANCE", 80, TUNE_HIGH),
-        SpeccyDevice("retroid_rp_classic", "Retroid Pocket Classic", "Retroid", "Snapdragon 865", "Adreno 650", "8 GB", 2025,
-            FormFactor.HANDHELD_VERTICAL, Tier.T4_PS2, SocFamily.SNAPDRAGON, Cooling.ACTIVE_FAN, 3,
-            listOf("rp classic", "pocket classic"), "PERFORMANCE", 80, TUNE_HIGH),
+        SpeccyDevice("retroid_rp_classic", "Retroid Pocket Classic", "Retroid", "Snapdragon G1 Gen 2", "Adreno A12", "4/6 GB", 2025,
+            FormFactor.HANDHELD_VERTICAL, Tier.T3_GC, SocFamily.SNAPDRAGON, Cooling.PASSIVE, 0,
+            listOf("rp classic", "pocket classic", "rpclassic"), "PERFORMANCE", 78, TUNE_MID,
+            notes = "Chip G1 Gen 2 sin ventilador: GameCube ligero, PS2 no."),
+        SpeccyDevice("retroid_rp6", "Retroid Pocket 6", "Retroid", "Snapdragon 8 Gen 2", "Adreno 740", "8/12 GB", 2025,
+            FormFactor.HANDHELD_WIDE, Tier.T5_SWITCH, SocFamily.SNAPDRAGON, Cooling.ACTIVE_FAN_PWM, 3,
+            listOf("rp6", "retroid pocket 6", "pocket 6"), "PERFORMANCE", 85, TUNE_FLAGSHIP,
+            notes = "AMOLED 120 Hz: activar 'vsync' a 60 en RetroArch para 8/16 bits."),
+        SpeccyDevice("retroid_rp_g2", "Retroid Pocket G2", "Retroid", "Snapdragon G2 Gen 2", "Adreno A22", "8 GB", 2026,
+            FormFactor.HANDHELD_WIDE, Tier.T4_PS2, SocFamily.SNAPDRAGON, Cooling.ACTIVE_FAN, 3,
+            listOf("rp g2", "pocket g2", "rpg2"), "PERFORMANCE", 82, TUNE_HIGH),
+        SpeccyDevice("retroid_rp_nova", "Retroid Pocket Nova", "Retroid", "QCS8550 (Snapdragon 8 Gen 2)", "Adreno 740", "8/12 GB", 2026,
+            FormFactor.HANDHELD_WIDE, Tier.T5_SWITCH, SocFamily.SNAPDRAGON, Cooling.ACTIVE_FAN_PWM, 3,
+            listOf("rp nova", "pocket nova", "rpnova"), "PERFORMANCE", 85, TUNE_FLAGSHIP,
+            notes = "Pantalla 4:3 de 1280x960: usa el aspect ratio del core, no 'full'."),
         SpeccyDevice("retroid_rp_flip2", "Retroid Pocket Flip 2", "Retroid", "Snapdragon 865", "Adreno 650", "8 GB", 2025,
             FormFactor.FOLDABLE, Tier.T4_PS2, SocFamily.SNAPDRAGON, Cooling.ACTIVE_FAN, 3,
             listOf("rp flip", "pocket flip", "flip2"), "PERFORMANCE", 80, TUNE_HIGH,
@@ -238,9 +255,25 @@ object SpeccyHardwareRegistry {
         SpeccyDevice("anbernic_rg406", "Anbernic RG406V / RG406H", "Anbernic", "Unisoc T820", "Mali-G57", "8 GB", 2024,
             FormFactor.HANDHELD_VERTICAL, Tier.T3_GC, SocFamily.UNISOC, Cooling.ACTIVE_FAN, 3,
             listOf("rg406v", "rg406h", "rg406"), "PERFORMANCE", 80, TUNE_MID),
-        SpeccyDevice("anbernic_rg_vita", "Anbernic RG Vita / RG477M", "Anbernic", "Snapdragon 865", "Adreno 650", "8 GB", 2025,
+        SpeccyDevice("anbernic_rg_vita", "Anbernic RG Vita", "Anbernic", "Snapdragon 865", "Adreno 650", "8 GB", 2025,
             FormFactor.HANDHELD_WIDE, Tier.T4_PS2, SocFamily.SNAPDRAGON, Cooling.ACTIVE_FAN, 3,
-            listOf("rg vita", "rg-vita", "rgvita", "rg477"), "PERFORMANCE", 82, TUNE_HIGH),
+            listOf("rg vita", "rg-vita", "rgvita"), "PERFORMANCE", 82, TUNE_HIGH),
+        SpeccyDevice("anbernic_rg477m", "Anbernic RG477M", "Anbernic", "Dimensity 8300", "Mali-G615", "12 GB", 2026,
+            FormFactor.HANDHELD_WIDE, Tier.T5_SWITCH, SocFamily.MEDIATEK, Cooling.ACTIVE_FAN, 3,
+            listOf("rg477m", "rg-477m"), "PERFORMANCE", 82, TUNE_HIGH,
+            notes = "Cuerpo metálico 4:3 (1280x960): PS2 a 2x sin problema."),
+        SpeccyDevice("anbernic_rg477v", "Anbernic RG477V", "Anbernic", "Dimensity 8300", "Mali-G615", "8/12 GB", 2026,
+            FormFactor.HANDHELD_VERTICAL, Tier.T5_SWITCH, SocFamily.MEDIATEK, Cooling.ACTIVE_FAN, 3,
+            listOf("rg477v", "rg-477v", "rg477"), "PERFORMANCE", 82, TUNE_HIGH),
+        SpeccyDevice("anbernic_rg476h", "Anbernic RG476H", "Anbernic", "Unisoc T820", "Mali-G57", "8 GB", 2026,
+            FormFactor.HANDHELD_WIDE, Tier.T3_GC, SocFamily.UNISOC, Cooling.ACTIVE_FAN, 3,
+            listOf("rg476h", "rg-476h", "rg476"), "PERFORMANCE", 80, TUNE_MID,
+            notes = "Misma base que la RG556 con panel 4.7\" 120 Hz."),
+        SpeccyDevice("anbernic_rg_ds", "Anbernic RG DS / DS Plus (doble pantalla)", "Anbernic", "Rockchip RK3568", "Mali-G52 2EE", "3 GB", 2026,
+            FormFactor.HANDHELD_DUAL, Tier.T1_PSX, SocFamily.ROCKCHIP, Cooling.PASSIVE, 0,
+            listOf("rg ds", "rg-ds", "rgds"), "PERFORMANCE", 72, TUNE_LOW,
+            dualScreen = true,
+            notes = "Dos paneles 4\" 640x480: NDS nativo; potencia de RK3566, no pedirle GameCube."),
         SpeccyDevice("anbernic_rg_slide", "Anbernic RG Slide", "Anbernic", "Unisoc T820", "Mali-G57", "8 GB", 2025,
             FormFactor.HANDHELD_WIDE, Tier.T3_GC, SocFamily.UNISOC, Cooling.ACTIVE_FAN, 3,
             listOf("rg slide", "rgslide"), "PERFORMANCE", 80, TUNE_MID),
@@ -278,6 +311,24 @@ object SpeccyHardwareRegistry {
         SpeccyDevice("ayaneo_pocket_dmg", "AYANEO Pocket DMG", "AYANEO", "Snapdragon G3x Gen 2", "Adreno 735", "12 GB", 2025,
             FormFactor.HANDHELD_VERTICAL, Tier.T5_SWITCH, SocFamily.SNAPDRAGON, Cooling.ACTIVE_FAN_PWM, 3,
             listOf("pocket dmg", "ayaneo_dmg"), "PERFORMANCE", 84, TUNE_FLAGSHIP),
+        SpeccyDevice("ayaneo_pocket_ace", "AYANEO Pocket ACE", "AYANEO", "Snapdragon G3x Gen 2", "Adreno 735", "12/16 GB", 2025,
+            FormFactor.HANDHELD_WIDE, Tier.T5_SWITCH, SocFamily.SNAPDRAGON, Cooling.ACTIVE_FAN_PWM, 3,
+            listOf("pocket ace", "ayaneo_ace"), "PERFORMANCE", 85, TUNE_FLAGSHIP),
+        SpeccyDevice("ayaneo_pocket_s_mini", "AYANEO Pocket S Mini", "AYANEO", "Snapdragon G3x Gen 2", "Adreno 735", "8/12/16 GB", 2026,
+            FormFactor.HANDHELD_WIDE, Tier.T5_SWITCH, SocFamily.SNAPDRAGON, Cooling.ACTIVE_FAN_PWM, 3,
+            listOf("pocket s mini", "ayaneo_s_mini", "s mini"), "PERFORMANCE", 85, TUNE_FLAGSHIP,
+            notes = "Pantalla 4:3 de 4.2\" (1280x960): aspect ratio del core, no 'full'."),
+        SpeccyDevice("ayaneo_pocket_air_mini", "AYANEO Pocket AIR Mini", "AYANEO", "Helio G90T", "Mali-G76", "4/6/8 GB", 2026,
+            FormFactor.HANDHELD_WIDE, Tier.T2_DC, SocFamily.MEDIATEK, Cooling.PASSIVE, 0,
+            listOf("pocket air mini", "air mini", "ayaneo_air_mini"), "PERFORMANCE", 76, TUNE_LOW,
+            notes = "Gama de entrada 4:3: PSP y Dreamcast bien, GameCube solo lo ligero."),
+        SpeccyDevice("ayaneo_pocket_micro_classic", "AYANEO Pocket MICRO Classic", "AYANEO", "Helio G99", "Mali-G57", "6/8 GB", 2025,
+            FormFactor.HANDHELD_VERTICAL, Tier.T2_DC, SocFamily.MEDIATEK, Cooling.ACTIVE_FAN, 3,
+            listOf("micro classic", "ayaneo_micro_classic"), "PERFORMANCE", 78, TUNE_LOW,
+            notes = "Sin sticks: 2D y portátiles; el mapeo de N64/PSX pide mando externo."),
+        SpeccyDevice("ayaneo_konkr_pocket_fit", "AYANEO KONKR Pocket FIT", "AYANEO", "Snapdragon G3 Gen 3 / 8 Elite", "Adreno 830", "12/16 GB", 2026,
+            FormFactor.HANDHELD_WIDE, Tier.T5_SWITCH, SocFamily.SNAPDRAGON, Cooling.ACTIVE_FAN_PWM, 3,
+            listOf("konkr", "pocket fit"), "PERFORMANCE", 86, TUNE_FLAGSHIP),
 
         // ============================ ONEXSUGAR / GPD ====================
         SpeccyDevice("onexsugar_1", "ONEXSUGAR Sugar 1 (plegable doble pantalla)", "ONEXPLAYER", "Snapdragon G3x Gen 2", "Adreno 735", "12 GB", 2025,
@@ -292,7 +343,7 @@ object SpeccyHardwareRegistry {
         // ============================ GAMEMT ============================
         SpeccyDevice("gamemt_e5_ultra", "GameMT E5 Ultra", "GameMT", "Unisoc T620", "Mali-G57", "6 GB", 2026,
             FormFactor.HANDHELD_WIDE, Tier.T3_GC, SocFamily.UNISOC, Cooling.ACTIVE_FAN, 3,
-            listOf("e5_ultra", "e5 ultra", "gamemt_e5u"), "PERFORMANCE", 80, TUNE_MID,
+            listOf("e5_ultra", "e5 ultra", "gamemt_e5u", "_e5u_", "e5u_00", "e5uin"), "PERFORMANCE", 80, TUNE_MID,
             notes = "Sticks Hall Effect y ventilador: aguanta PERFORMANCE sostenido."),
         SpeccyDevice("gamemt_e5_plus_gamma", "GameMT E5 Plus (GammaOS)", "GameMT", "Rockchip RK3566", "Mali-G52 2EE", "4 GB", 2025,
             FormFactor.HANDHELD_WIDE, Tier.T2_DC, SocFamily.ROCKCHIP, Cooling.PASSIVE, 0,
@@ -301,15 +352,19 @@ object SpeccyHardwareRegistry {
         SpeccyDevice("gamemt_e5_plus", "GameMT E5 Plus (Stock)", "GameMT", "Rockchip RK3566", "Mali-G52 2EE", "4 GB", 2025,
             FormFactor.HANDHELD_WIDE, Tier.T2_DC, SocFamily.ROCKCHIP, Cooling.PASSIVE, 0,
             listOf("e5_plus", "e5 plus"), "BALANCED", 75, TUNE_LOW),
-        SpeccyDevice("gamemt_ex8", "GameMT EX8", "GameMT", "Helio G99", "Mali-G57", "6/8 GB", 2025,
+        SpeccyDevice("gamemt_ex8", "GameMT EX8", "GameMT", "Helio G99", "Mali-G57", "6/8 GB", 2026,
             FormFactor.HANDHELD_WIDE, Tier.T3_GC, SocFamily.MEDIATEK, Cooling.ACTIVE_FAN, 3,
-            listOf("ex8", "gamemt_ex8"), "PERFORMANCE", 80, TUNE_MID),
+            // "ex8in" es el prefijo del numero de serie: es lo unico que
+            // identifica a la EX8, que por lo demas se declara "A75" de "AQHH".
+            listOf("ex8", "gamemt_ex8", "_ex8_", "ex8in"), "PERFORMANCE", 80, TUNE_MID,
+            notes = "Helio G99 con ventilador en /proc/fan_ctr. Se identifica por el serial EX8IN…"),
         SpeccyDevice("gamemt_e6", "GameMT E6", "GameMT", "Unisoc T616", "Mali-G57", "4 GB", 2025,
             FormFactor.HANDHELD_WIDE, Tier.T2_DC, SocFamily.UNISOC, Cooling.ACTIVE_FAN, 3,
             listOf("e6", "gamemt_e6"), "PERFORMANCE", 78, TUNE_LOW),
-        SpeccyDevice("gamemt_psk5000", "GameMT PSK5000", "GameMT", "Helio G85", "Mali-G52", "4 GB", 2024,
+        SpeccyDevice("gamemt_psk5000", "GameMT EX5 (PSK5000)", "GameMT", "Helio G81", "Mali-G52 MP2", "4 GB", 2026,
             FormFactor.HANDHELD_WIDE, Tier.T2_DC, SocFamily.MEDIATEK, Cooling.PASSIVE, 0,
-            listOf("psk5000"), "PERFORMANCE", 75, TUNE_LOW),
+            listOf("psk5000", "ex5", "gamemt_ex5"), "BALANCED", 75, TUNE_LOW,
+            notes = "Lleva un selector físico de perfil (Performance/Balanced/Pwrsave): el tuner respeta el suyo."),
 
         // ======================= KT / MANGMI / POWKIDDY ==================
         SpeccyDevice("kt_r1", "KT-R1 / KT Pocket", "KT Pocket", "Helio G99", "Mali-G57", "4/6/8 GB", 2024,
@@ -504,9 +559,16 @@ object SpeccyHardwareRegistry {
      * "odin2_mini" gane a "odin2" y "rp5" no capture a "rp5x".
      */
     fun detect(): SpeccyDevice {
-        val haystack = listOf(
-            Build.MODEL, Build.DEVICE, Build.BOARD, Build.PRODUCT, Build.DISPLAY
-        ).joinToString(" ") { it.orEmpty() }.lowercase()
+        // MODEL/DEVICE/PRODUCT no valen en estas consolas: la GameMT E5 Ultra se
+        // declara "Pixel"/"blueline" con huella de Google (verificado el
+        // 24-sep-2026). Lo unico que la identifica es la cadena de firmware, que
+        // sale en Build.DISPLAY y Build.ID:
+        //   XNM_TF05_V41_E5U_00_IN_FL_ZX_42_6X128_720X1280_V1.0_20251029_1809
+        // Por eso el pajar incluye tambien ID, HARDWARE y FINGERPRINT.
+        val haystack = (listOf(
+            Build.MODEL, Build.DEVICE, Build.BOARD, Build.PRODUCT, Build.DISPLAY,
+            Build.ID, Build.HARDWARE, Build.FINGERPRINT
+        ).joinToString(" ") { it.orEmpty() } + " " + propsDelSistema()).lowercase()
 
         var best: SpeccyDevice? = null
         var bestLen = 0
@@ -523,6 +585,34 @@ object SpeccyHardwareRegistry {
         return inferFromSoc(haystack)
     }
 
+    /**
+     * Propiedades del sistema que Build no expone y que en estas consolas son la
+     * UNICA pista fiable. La EX8 se declara "A75" de marca "AQHH" y su
+     * `ro.build.display.id` es "V2.0.0.E": nada que la identifique. Pero el
+     * numero de serie SI lleva el modelo delante —`EX8IN100000001C2`,
+     * `E5UIN10000C8E`—, y `ro.boot.serialno` se lee con `getprop` sin ningun
+     * permiso (comprobado en la EX8 el 24-sep-2026; `Build.getSerial()` en
+     * cambio exige READ_PHONE_STATE, que no vamos a pedir por esto).
+     */
+    private fun propsDelSistema(): String {
+        propsCache?.let { return it }
+        val props = listOf(
+            "ro.boot.serialno", "ro.serialno",
+            "ro.product.odm.model", "ro.product.odm.device", "ro.product.odm.name",
+            "ro.odm.build.display.id", "ro.vendor.build.fingerprint"
+        )
+        val texto = runCatching {
+            val p = ProcessBuilder(listOf("getprop") + props).redirectErrorStream(true).start()
+            val salida = p.inputStream.bufferedReader().use { it.readText() }
+            p.waitFor()
+            salida
+        }.getOrDefault("")
+        propsCache = texto
+        return texto
+    }
+
+    @Volatile private var propsCache: String? = null
+
     /** Heurística por hardware cuando el modelo no está en el catálogo. */
     private fun inferFromSoc(haystack: String): SpeccyDevice {
         val hw = Build.HARDWARE.lowercase()
@@ -538,11 +628,88 @@ object SpeccyHardwareRegistry {
             else -> SocFamily.GENERIC
         }
         val generic = get("generic")
+        val socModel = if (Build.VERSION.SDK_INT >= 31) Build.SOC_MODEL.orEmpty() else ""
+        val known = SOC_TABLE.entries.firstOrNull { (k, _) ->
+            socModel.lowercase().contains(k) || hw.contains(k) || haystack.contains(k)
+        }?.value
         return generic.copy(
             name = "${Build.MANUFACTURER} ${Build.MODEL}".trim(),
             brand = Build.MANUFACTURER.orEmpty().replaceFirstChar { it.uppercase() },
-            soc = Build.HARDWARE.orEmpty(),
-            socFamily = family
+            soc = known?.first ?: socModel.ifBlank { Build.HARDWARE.orEmpty() },
+            socFamily = family,
+            tier = known?.second ?: generic.tier,
+            tuning = when (known?.second) {
+                Tier.T5_SWITCH -> TUNE_FLAGSHIP
+                Tier.T4_PS2 -> TUNE_HIGH
+                Tier.T3_GC -> TUNE_MID
+                else -> generic.tuning
+            },
+            thermalCeiling = when (known?.second) {
+                Tier.T5_SWITCH, Tier.T4_PS2 -> 84
+                Tier.T3_GC -> 80
+                else -> generic.thermalCeiling
+            }
         )
     }
+
+    /**
+     * Gama por número de SoC para dispositivos que no están en el catálogo.
+     * Clave en minúsculas tal como aparece en Build.SOC_MODEL / HARDWARE /
+     * BOARD (SMxxxx en Snapdragon, MTxxxx en MediaTek, umsxxxx en Unisoc).
+     * Orden: los más concretos primero, porque se toma la primera coincidencia.
+     */
+    private val SOC_TABLE: Map<String, Pair<String, Tier>> = linkedMapOf(
+        // Snapdragon gama alta
+        "sm8850" to ("Snapdragon 8 Elite Gen 5" to Tier.T5_SWITCH),
+        "sm8750" to ("Snapdragon 8 Elite" to Tier.T5_SWITCH),
+        "sm8735" to ("Snapdragon 8s Gen 4" to Tier.T5_SWITCH),
+        "sm8650" to ("Snapdragon 8 Gen 3" to Tier.T5_SWITCH),
+        "sm8635" to ("Snapdragon 8s Gen 3" to Tier.T5_SWITCH),
+        "sm8550" to ("Snapdragon 8 Gen 2" to Tier.T5_SWITCH),
+        "qcs8550" to ("QCS8550 (Snapdragon 8 Gen 2)" to Tier.T5_SWITCH),
+        "sm8475" to ("Snapdragon 8+ Gen 1" to Tier.T5_SWITCH),
+        "sm8450" to ("Snapdragon 8 Gen 1" to Tier.T5_SWITCH),
+        "sm8350" to ("Snapdragon 888" to Tier.T4_PS2),
+        "sm8250" to ("Snapdragon 865/870" to Tier.T4_PS2),
+        "sm8150" to ("Snapdragon 855" to Tier.T4_PS2),
+        "sm7675" to ("Snapdragon 7+ Gen 3" to Tier.T4_PS2),
+        "sm7550" to ("Snapdragon 7 Gen 3" to Tier.T4_PS2),
+        "sm7475" to ("Snapdragon 7+ Gen 2" to Tier.T4_PS2),
+        "sm7450" to ("Snapdragon 7 Gen 1" to Tier.T3_GC),
+        "sm7325" to ("Snapdragon 778G" to Tier.T3_GC),
+        "sm7250" to ("Snapdragon 765G" to Tier.T3_GC),
+        "sdm845" to ("Snapdragon 845" to Tier.T3_GC),
+        "sm6450" to ("Snapdragon 6 Gen 1" to Tier.T3_GC),
+        "sm6375" to ("Snapdragon 695" to Tier.T2_DC),
+        "sm6350" to ("Snapdragon 690" to Tier.T2_DC),
+        "sm4450" to ("Snapdragon 4 Gen 2" to Tier.T2_DC),
+        // MediaTek
+        "mt6991" to ("Dimensity 9400" to Tier.T5_SWITCH),
+        "mt6989" to ("Dimensity 9300" to Tier.T5_SWITCH),
+        "mt6985" to ("Dimensity 9200" to Tier.T5_SWITCH),
+        "mt6983" to ("Dimensity 9000" to Tier.T5_SWITCH),
+        "mt6899" to ("Dimensity 8400" to Tier.T5_SWITCH),
+        "mt6897" to ("Dimensity 8300" to Tier.T5_SWITCH),
+        "mt6896" to ("Dimensity 8200" to Tier.T4_PS2),
+        "mt6895" to ("Dimensity 8100" to Tier.T4_PS2),
+        "mt6893" to ("Dimensity 1200" to Tier.T4_PS2),
+        "mt6891" to ("Dimensity 1100" to Tier.T3_GC),
+        "mt6877" to ("Dimensity 900/920" to Tier.T3_GC),
+        "mt6855" to ("Dimensity 7050" to Tier.T3_GC),
+        "mt6789" to ("Helio G99" to Tier.T3_GC),
+        "mt6785" to ("Helio G90T/G95" to Tier.T2_DC),
+        "mt6769" to ("Helio G85/G88" to Tier.T2_DC),
+        "mt6765" to ("Helio G81" to Tier.T2_DC),
+        // Unisoc
+        "ums9620" to ("Unisoc T820" to Tier.T3_GC),
+        "ums9230" to ("Unisoc T606/T616/T618/T620" to Tier.T2_DC),
+        "ums512" to ("Unisoc T610/T618" to Tier.T2_DC),
+        // Rockchip / Amlogic
+        "rk3588" to ("Rockchip RK3588" to Tier.T3_GC),
+        "rk3568" to ("Rockchip RK3568" to Tier.T1_PSX),
+        "rk3566" to ("Rockchip RK3566" to Tier.T1_PSX),
+        "s922x" to ("Amlogic S922X" to Tier.T2_DC),
+        "s905x4" to ("Amlogic S905X4" to Tier.T1_PSX),
+        "s905x3" to ("Amlogic S905X3" to Tier.T1_PSX)
+    )
 }

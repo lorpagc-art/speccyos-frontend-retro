@@ -208,6 +208,25 @@
           capturan con dispatchKeyEvent en MainActivity.
         -->
 
+        <!--
+            SHIZUKU. Sin este provider, Shizuku no tiene por donde entregarle el
+            binder a la app: en la consola sale "provider is null
+            com.generacionarcade.speccyos.shizuku" y `Shizuku.pingBinder()`
+            devuelve false para siempre, asi que el motor de rendimiento se
+            quedaba sin backend aunque el usuario tuviera Shizuku corriendo.
+            Verificado en una GameMT E5 Ultra el 24-sep-2026.
+            El permiso INTERACT_ACROSS_USERS_FULL es el que pide la libreria:
+            no lo tenemos concedido, y precisamente por eso solo el propio
+            Shizuku (que si lo tiene) puede consultar este provider.
+        -->
+        <provider
+            android:name="rikka.shizuku.ShizukuProvider"
+            android:authorities="${applicationId}.shizuku"
+            android:multiprocess="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"

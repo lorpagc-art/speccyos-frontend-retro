@@ -26,6 +26,12 @@ class PerformanceService : IPerformanceService.Stub() {
             "/sys/devices/virtual/thermal/thermal_zone0/temp"
         )
 
+        /** Raices permitidas para copyFile: solo almacenamiento del usuario. */
+        private val ALMACENAMIENTO = listOf("/storage/emulated/0/", "/storage/", "/sdcard/")
+
+        /** Ninguna BIOS legitima pasa de esto (la mayor, naomi.zip, ronda 10 MB). */
+        private const val MAX_BIOS_BYTES = 64L * 1024 * 1024
+
         // Cpus a configurar (cores big — más impacto en emulación)
         private val CPU_CORES = (0..7).map { "/sys/devices/system/cpu/cpu$it" }
     }
@@ -57,6 +63,37 @@ class PerformanceService : IPerformanceService.Stub() {
         try { File(path).readText().trim() } catch (_: Exception) { "" }
 
     override fun exit() = exitProcess(0)
+
+    /** Ver el AIDL: listado de una carpeta, para la carpeta `system` de RetroArch. */
+    override fun listDir(dir: String): String = try {
+        File(dir).listFiles()?.joinToString("\n") { it.name }.orEmpty()
+    } catch (e: Exception) {
+        Log.w(TAG, "listDir($dir) falló: ${e.message}")
+        ""
+    }
+
+    /**
+     * Copia un fichero con privilegios. Solo dentro del almacenamiento del
+     * usuario y con un tamaño razonable para una BIOS: este servicio corre como
+     * root o shell, y no tiene por que servir de copiadora general.
+     */
+    override fun copyFile(src: String, dst: String): Boolean = try {
+        val origen = File(src)
+        val valido = ALMACENAMIENTO.any { src.startsWith(it) } &&
+            ALMACENAMIENTO.any { dst.startsWith(it) } &&
+            origen.isFile && origen.length() in 1..MAX_BIOS_BYTES
+        if (!valido) {
+            Log.w(TAG, "copyFile rechazado: $src -> $dst")
+            false
+        } else {
+            File(dst).parentFile?.mkdirs()
+            origen.copyTo(File(dst), overwrite = true)
+            File(dst).length() == origen.length()
+        }
+    } catch (e: Exception) {
+        Log.e(TAG, "copyFile($src -> $dst) falló", e)
+        false
+    }
 
     // ─────────────────────────────────────────────────────────────────────────
     // NUEVOS MÉTODOS v2

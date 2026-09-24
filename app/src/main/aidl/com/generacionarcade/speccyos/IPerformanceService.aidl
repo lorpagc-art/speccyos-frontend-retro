@@ -75,4 +75,19 @@ interface IPerformanceService {
      * Requiere privilegios Shizuku/ADB.
      */
     String getPackageGfxInfo(String packageName) = 9;
+
+    /**
+     * Nombres de los ficheros de un directorio, separados por "\n".
+     * Hace falta para mirar la carpeta `system` de RetroArch, que en Android 11+
+     * una app normal no puede listar aunque el usuario tenga las BIOS ahi.
+     * @return lista separada por saltos de linea, o "" si no se puede leer.
+     */
+    String listDir(String dir) = 10;
+
+    /**
+     * Copia un fichero. Se usa para llevar una BIOS que el usuario tiene en su
+     * carpeta de ROMs (o en Descargas) a la carpeta donde el core la busca.
+     * @return true si el destino quedo escrito con el mismo tamano.
+     */
+    boolean copyFile(String src, String dst) = 11;
 }

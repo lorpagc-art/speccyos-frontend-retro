@@ -792,7 +792,11 @@ fun InterfaceSettingsScreen(settingsManager: SettingsManager, mainViewModel: Mai
         val themes = listOf(
             SettingsManager.THEME_SPECCY_DESKTOP to "Speccy OS",
             SettingsManager.THEME_ULTRA to "Ultra HD",
-            SettingsManager.THEME_INMERSIVE to "Pure"
+            SettingsManager.THEME_INMERSIVE to "Pure",
+            // Studio: carril de sistemas con logotipos + rejilla de juegos.
+            // Dual Screen estaba implementado pero no habia forma de elegirlo.
+            SettingsManager.THEME_STUDIO to "Studio",
+            SettingsManager.THEME_DUAL_SCREEN to "Dos pantallas"
         )
 
         UltraCard(primaryColor) {

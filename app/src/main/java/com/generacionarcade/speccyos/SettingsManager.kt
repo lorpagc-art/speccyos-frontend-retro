@@ -18,6 +18,9 @@ class SettingsManager(context: Context) {
         const val THEME_SPECCY_DESKTOP = "SPECCY_OS"
         const val THEME_DUAL_SCREEN = "DUAL_SCREEN"
 
+        /** Tema Studio: carril de sistemas a la izquierda y rejilla de juegos. */
+        const val THEME_STUDIO = "STUDIO"
+
         const val ARTWORK_STYLE_CYBERPUNK = "CYBERPUNK"
         const val ARTWORK_STYLE_ICONIC = "ICONIC_CHARACTER"
         const val ARTWORK_STYLE_STUDIO = "STUDIO"
@@ -36,6 +39,26 @@ class SettingsManager(context: Context) {
 
         const val DUAL_STYLE_CYBER = "CYBER"
         const val DUAL_STYLE_CLASSIC = "CLASSIC"
+        /** Estilo Studio para el modo de dos pantallas. */
+        const val DUAL_STYLE_STUDIO = "STUDIO"
+
+        // ── Qué muestran las tarjetas del tema Studio ────────────────────────
+        /** Solo carátula. */
+        const val STUDIO_MEDIA_COVER = "COVER"
+        /** Solo captura de pantalla. */
+        const val STUDIO_MEDIA_SCREENSHOT = "SCREENSHOT"
+        /** Carátula en todas y vídeo en la tarjeta enfocada. */
+        const val STUDIO_MEDIA_COVER_VIDEO = "COVER_VIDEO"
+        /** Captura en todas y vídeo en la tarjeta enfocada. */
+        const val STUDIO_MEDIA_SCREENSHOT_VIDEO = "SCREENSHOT_VIDEO"
+
+        /** ¿Este modo reproduce vídeo en la tarjeta enfocada? */
+        fun studioMediaUsesVideo(media: String): Boolean =
+            media == STUDIO_MEDIA_COVER_VIDEO || media == STUDIO_MEDIA_SCREENSHOT_VIDEO
+
+        /** ¿La imagen fija es la captura (true) o la carátula (false)? */
+        fun studioMediaPrefersScreenshot(media: String): Boolean =
+            media == STUDIO_MEDIA_SCREENSHOT || media == STUDIO_MEDIA_SCREENSHOT_VIDEO
     }
 
     var isDebugFreeModeActive: Boolean
@@ -81,6 +104,15 @@ class SettingsManager(context: Context) {
         set(value) = prefs.edit().putFloat("ui_font_scale", value).apply()
 
     // --- Dual Screen Settings ---
+    /**
+     * Qué enseñan las tarjetas del tema Studio. El valor antiguo "VIDEO"
+     * (anterior a que hubiera cuatro modos) se traduce a carátula + vídeo.
+     */
+    var studioCardMedia: String
+        get() = (prefs.getString("studio_card_media", STUDIO_MEDIA_COVER) ?: STUDIO_MEDIA_COVER)
+            .let { if (it == "VIDEO") STUDIO_MEDIA_COVER_VIDEO else it }
+        set(value) = prefs.edit().putString("studio_card_media", value).apply()
+
     var dualScreenStyle: String
         get() = prefs.getString("dual_screen_style", DUAL_STYLE_CYBER) ?: DUAL_STYLE_CYBER
         set(value) = prefs.edit().putString("dual_screen_style", value).apply()
@@ -369,6 +401,37 @@ class SettingsManager(context: Context) {
     var raUsername: String
         get() = prefs.getString("ra_username", "") ?: ""
         set(value) = prefs.edit().putString("ra_username", value).apply()
+
+    /**
+     * Token de conexion de RetroAchievements (el que acepta RetroArch en
+     * `cheevos_token`). Es distinto de la contrasena: se obtiene una vez y se
+     * puede revocar. Solo se escribe en el override del core cuando el usuario
+     * activa [raPassToRetroArch].
+     */
+    var raConnectToken: String
+        get() = prefs.getString("ra_connect_token", "") ?: ""
+        set(value) = prefs.edit().putString("ra_connect_token", value).apply()
+
+    /** ¿Pasar las credenciales de RetroAchievements a RetroArch al lanzar? */
+    var raPassToRetroArch: Boolean
+        get() = prefs.getBoolean("ra_pass_to_retroarch", false)
+        set(value) = prefs.edit().putBoolean("ra_pass_to_retroarch", value).apply()
+
+    /**
+     * "Continuar donde lo dejaste": pide a RetroArch que guarde el estado
+     * automatico al salir (`savestate_auto_save`) para poder reanudar.
+     */
+    var continuarPartida: Boolean
+        get() = prefs.getBoolean("continuar_partida", true)
+        set(value) = prefs.edit().putBoolean("continuar_partida", value).apply()
+
+    /**
+     * Ruta del juego para el que el usuario ha descartado la tarjeta de
+     * "Continuar": mientras sea la misma, no se vuelve a ofrecer.
+     */
+    var continuarOcultoPara: String
+        get() = prefs.getString("continuar_oculto_para", "") ?: ""
+        set(value) = prefs.edit().putString("continuar_oculto_para", value).apply()
 
     var raToken: String
         get() = prefs.getString("ra_token", "") ?: ""

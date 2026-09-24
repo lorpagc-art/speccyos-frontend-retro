@@ -513,6 +513,23 @@ fun SpeccyDashboard(
                                 onLaunchGame = { game: Game -> launchGameFunction(game, null) },
                                 primaryColor = primaryColor
                             )
+                            SettingsManager.THEME_STUDIO -> StudioDashboardContent(
+                                mainViewModel = mainViewModel,
+                                platforms = displayPlatforms,
+                                initialIndex = mainCarouselIndex,
+                                lang = lang,
+                                hardwareState = hardwareState,
+                                soundManager = soundManager,
+                                gameCounts = gameCounts,
+                                customMediaMap = customMediaMap,
+                                onFocused = {
+                                    mainCarouselIndex = displayPlatforms.indexOf(it).coerceAtLeast(0)
+                                    lastInteractionTime = System.currentTimeMillis()
+                                },
+                                onSelect = onSystemSelected,
+                                onLaunchGame = { game: Game -> launchGameFunction(game, null) },
+                                primaryColor = primaryColor
+                            )
                             SettingsManager.THEME_SPECCY_DESKTOP -> SpeccyDesktopContent(
                                 mainViewModel = mainViewModel,
                                 platforms = displayPlatforms,

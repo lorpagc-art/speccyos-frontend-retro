@@ -643,11 +643,6 @@ class MainActivity : ComponentActivity() {
                 Spacer(Modifier.height(24.dp))
 
                 DisclosureItem(
-                    title = stringResource(R.string.perm_accessibility_title).uppercase(),
-                    desc = stringResource(R.string.perm_accessibility_msg)
-                )
-
-                DisclosureItem(
                     title = stringResource(R.string.perm_notifications_title).uppercase(),
                     desc = stringResource(R.string.perm_notifications_msg)
                 )
@@ -1096,7 +1091,6 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun MediaPermissionsScreen(onNext: () -> Unit, onBack: () -> Unit) {
         var showOverlayDialog by remember { mutableStateOf(false) }
-        var showAccessibilityDialog by remember { mutableStateOf(false) }
         var showNotificationDialog by remember { mutableStateOf(false) }
 
         BackHandler { onBack() }
@@ -1144,15 +1138,6 @@ class MainActivity : ComponentActivity() {
                     Spacer(Modifier.height(12.dp))
                 }
 
-                Button(
-                    onClick = { showAccessibilityDialog = true },
-                    modifier = Modifier.width(320.dp).height(55.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.1f)),
-                    shape = RoundedCornerShape(16.dp),
-                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.onSurface.copy(alpha = 0.3f))
-                ) {
-                    Text(text = "SERVICIO DE ACCESIBILIDAD", color = MaterialTheme.colorScheme.onSurface, fontSize = 13.sp, fontWeight = FontWeight.Bold)
-                }
             }
 
             Box(modifier = Modifier.fillMaxSize().padding(32.dp), contentAlignment = Alignment.BottomEnd) {
@@ -1197,20 +1182,5 @@ class MainActivity : ComponentActivity() {
             )
         }
 
-        if (showAccessibilityDialog) {
-            AlertDialog(
-                onDismissRequest = { showAccessibilityDialog = false },
-                title = { Text(stringResource(R.string.perm_accessibility_title)) },
-                text = { Text(stringResource(R.string.perm_accessibility_msg)) },
-                confirmButton = {
-                    TextButton(onClick = {
-                        showAccessibilityDialog = false
-                        val intent = Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)
-                        startActivity(intent)
-                    }) { Text("IR A AJUSTES") }
-                },
-                dismissButton = { TextButton(onClick = { showAccessibilityDialog = false }) { Text("CANCELAR") } }
-            )
-        }
     }
 }

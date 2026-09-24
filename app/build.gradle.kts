@@ -59,8 +59,8 @@ android {
         applicationId = "com.generacionarcade.speccyos"
         minSdk = 24
         targetSdk = 36
-        versionCode = 48
-        versionName = "1.2.0"
+        versionCode = 52
+        versionName = "1.2.3"
 
         // Credenciales ScreenScraper — leídas desde local.properties (no versionado).
         // OJO: buildConfigField compila el literal dentro de BuildConfig.class y R8 no

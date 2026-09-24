@@ -3,10 +3,7 @@
     <string name="default_web_client_id">61422845101-fb0js6t90hgam8ieo9sruq0k4v3o5br1.apps.googleusercontent.com</string>
 
     <!-- Prominent Disclosures for Google Play Compliance -->
-    <string name="accessibility_desc">Speccy OS utiliza la API de Accesibilidad para detectar el cierre de emuladores y permitir el uso de botones físicos (Menu/Select) para abrir el panel de control sobre los juegos. No recopilamos ni compartimos datos personales.</string>
 
-    <string name="perm_accessibility_title">Servicio de Accesibilidad</string>
-    <string name="perm_accessibility_msg">Speccy OS requiere activar el Servicio de Accesibilidad para interceptar los botones físicos de tu consola y permitirte volver al Dashboard automáticamente al salir de un juego. \n\nEsto es vital para la experiencia de consola pura. No se lee ni se almacena información de pantalla.</string>
 
     <string name="perm_storage_title">Acceso a Archivos</string>
     <string name="perm_storage_msg">Para poder indexar tu biblioteca de juegos y descargar las carátulas y vídeos de preview, Speccy OS necesita permiso para leer y escribir en tu almacenamiento.</string>
@@ -22,7 +19,6 @@
 
     <!-- ── AÑADIDO EN LA AUDITORÍA DE AGOSTO 2026 ────────────────────────── -->
 
-    <string name="accessibility_summary">Permite usar los botones físicos del mando para abrir el panel rápido de Speccy OS.</string>
 
     <!-- Borrado de cuenta (requisito de Google Play para apps con cuentas) -->
     <string name="account_delete_title">Eliminar mi cuenta y mis datos</string>

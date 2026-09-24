@@ -83,6 +83,11 @@ class AiManager(private val context: Context) {
             // Topes diarios por dispositivo. Se pueden subir o bajar desde la consola
             // de Firebase sin publicar una version nueva. Poner 0 o negativo usa el
             // valor de respaldo del codigo, nunca "sin limite".
+            // Interruptor general de la IA: se apaga desde la consola de Firebase
+            // sin publicar nada. Es lo que permitio cortar en caliente el abuso de
+            // Vertex AI de septiembre de 2026. Con la bandera a false, ninguna
+            // funcion de IA llama al modelo.
+            "ai_enabled" to true,
             "ai_chat_daily_limit" to 20L,
             "ai_ocr_daily_limit" to 30L,
             "architect_system_instruction" to """
@@ -98,6 +103,22 @@ class AiManager(private val context: Context) {
      */
     private fun dailyLimit(key: String, fallback: Int): Int =
         Firebase.remoteConfig.getLong(key).toInt().takeIf { it > 0 } ?: fallback
+
+    /**
+     * ¿Estan permitidas las funciones de IA? Si todavia no ha llegado ningun
+     * valor de Firebase (VALUE_SOURCE_STATIC) se responde true: el valor
+     * compilado por defecto ya es true y no tiene sentido dejar la app sin IA
+     * por no haber podido consultar.
+     */
+    fun aiEnabled(): Boolean {
+        val v = Firebase.remoteConfig.getValue("ai_enabled")
+        return if (v.source == com.google.firebase.remoteconfig.FirebaseRemoteConfig.VALUE_SOURCE_STATIC) true
+        else v.asBoolean()
+    }
+
+    /** Texto que ve el usuario cuando la IA esta apagada. */
+    fun aiDisabledMessage(): String =
+        "Las funciones de inteligencia artificial están desactivadas en esta versión."
 
     private fun limitReachedMessage(lang: String, isOcr: Boolean): String {
         val es = if (isOcr)
@@ -126,6 +147,7 @@ class AiManager(private val context: Context) {
         gameTitle: String,
         targetLang: String = "es"
     ): String = withContext(Dispatchers.IO) {
+        if (!aiEnabled()) return@withContext aiDisabledMessage()
         val prompt = """
             Actúa como el Traductor Imperial de Speccy OS. He capturado texto de un videojuego mediante OCR.
             JUEGO: $gameTitle
@@ -190,6 +212,7 @@ class AiManager(private val context: Context) {
         // Tope diario del chat, comprobado solo cuando hay que llamar al modelo.
         // Se sincroniza antes con el espejo de almacenamiento compartido, para
         // que borrar los datos de la app no reinicie la cuota.
+        if (!aiEnabled()) return@withContext aiDisabledMessage()
         SpeccyAiQuota.sincronizar(context.applicationContext, settingsManager)
         if (settingsManager.aiQueriesToday >= dailyLimit("ai_chat_daily_limit", 20)) {
             return@withContext limitReachedMessage(langCode, isOcr = false)
@@ -302,6 +325,7 @@ class AiManager(private val context: Context) {
     }
 
     suspend fun generateTriviaQuestions(langCode: String = "es"): String? = withContext(Dispatchers.IO) {
+        if (!aiEnabled()) return@withContext null
         // El trivial tambien es una llamada al modelo: comparte el tope del chat.
         SpeccyAiQuota.sincronizar(context.applicationContext, settings)
         val usedToday = settings.aiQueriesToday

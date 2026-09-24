@@ -6,11 +6,7 @@
   imposible pseudo-localizar para detectar desbordes de texto, e imposible RTL.
 -->
 <resources>
-    <string name="accessibility_desc">Speccy OS uses the Accessibility API to detect when an emulator closes and to let the physical Menu/Select buttons open the control panel over your games. We do not collect or share personal data.</string>
-    <string name="accessibility_summary">Lets the physical gamepad buttons open the Speccy OS quick panel.</string>
 
-    <string name="perm_accessibility_title">Accessibility Service</string>
-    <string name="perm_accessibility_msg">Speccy OS needs the Accessibility Service to intercept your handheld\'s physical buttons and bring you back to the dashboard when you leave a game.\n\nNo screen content is read or stored.</string>
     <string name="perm_storage_title">File Access</string>
     <string name="perm_storage_msg">To index your game library and download box art and preview videos, Speccy OS needs permission to read and write your storage.</string>
     <string name="perm_query_packages_title">App Visibility</string>

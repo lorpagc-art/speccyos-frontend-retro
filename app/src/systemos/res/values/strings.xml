@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessibility_desc">Speccy OS utiliza la API de Accesibilidad para detectar el cierre de emuladores y permitir el uso de botones físicos (Menu/Select) para abrir el panel de control sobre los juegos. No recopilamos ni compartimos datos personales.</string>
+
+    <string name="accessibility_summary">Permite usar los botones físicos del mando para abrir el panel rápido de Speccy OS.</string>
+</resources>

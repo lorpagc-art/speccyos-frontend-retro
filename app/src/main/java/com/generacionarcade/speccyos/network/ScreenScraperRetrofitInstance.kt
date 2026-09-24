@@ -24,8 +24,8 @@ import java.util.concurrent.TimeUnit
  *
  * En local.properties (NO subir a git):
  *   screenscraper.dev_id=Speccy81
- *   screenscraper.dev_password=CREDENCIAL_RETIRADA
- *   screenscraper.debug_password=CREDENCIAL_RETIRADA
+ *   screenscraper.dev_password=<tu contrasena de ScreenScraper>
+ *   screenscraper.debug_password=<tu contrasena de desarrollo>
  *
  * En app/build.gradle.kts, dentro de defaultConfig:
  *   buildConfigField("String", "SS_DEV_ID",       "\"${localProperties["screenscraper.dev_id"] ?: ""}\"")

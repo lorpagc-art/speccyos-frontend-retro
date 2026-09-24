@@ -36,3 +36,10 @@ GrazieStyle.xml
 .descriptions.xml
 dumped files/
 _backup_auditoria/
+
+# Binarios de compilacion: no van al repositorio (se generan con gradlew)
+*.apk
+*.aab
+*.idsig
+app/playstore/release/
+app/src/main.zip

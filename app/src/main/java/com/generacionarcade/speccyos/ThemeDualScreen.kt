@@ -39,6 +39,7 @@ import androidx.compose.ui.unit.sp
 import androidx.window.layout.FoldingFeature
 import androidx.window.layout.WindowInfoTracker
 import coil.compose.AsyncImage
+import coil.compose.SubcomposeAsyncImage
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.xmlpull.v1.XmlPullParser
@@ -60,7 +61,20 @@ import androidx.media3.exoplayer.ExoPlayer
 
 enum class DualScreenStyle {
     PURE_NDS,
-    CYBERPUNK_FLIP
+    CYBERPUNK_FLIP,
+    /** Mismo lenguaje visual que el tema Studio: fondo oscuro sobrio y esquinas suaves. */
+    STUDIO
+}
+
+/**
+ * Traduce la preferencia guardada a un estilo. Antes esta conversion estaba
+ * copiada en tres sitios con un `if` de dos ramas, asi que cualquier estilo
+ * nuevo aparecia solo en una parte de la pantalla.
+ */
+fun dualStyleFromPref(pref: String): DualScreenStyle = when (pref) {
+    SettingsManager.DUAL_STYLE_CYBER -> DualScreenStyle.CYBERPUNK_FLIP
+    SettingsManager.DUAL_STYLE_STUDIO -> DualScreenStyle.STUDIO
+    else -> DualScreenStyle.PURE_NDS
 }
 
 data class SystemMetadata(
@@ -112,7 +126,7 @@ fun ThemeDualScreen(
     val density = LocalDensity.current
 
     val currentStyle by remember {
-        derivedStateOf { if (settingsManager.dualScreenStyle == SettingsManager.DUAL_STYLE_CYBER) DualScreenStyle.CYBERPUNK_FLIP else DualScreenStyle.PURE_NDS }
+        derivedStateOf { dualStyleFromPref(settingsManager.dualScreenStyle) }
     }
     var selectedPlatformIndex by remember { mutableIntStateOf(initialIndex) }
     var foldingFeature by remember { mutableStateOf<FoldingFeature?>(null) }
@@ -240,7 +254,7 @@ fun NdsLibraryContent(
         else Color(settingsManager.ndsBodyColor)
     }
 
-    val currentStyle = if (settingsManager.dualScreenStyle == SettingsManager.DUAL_STYLE_CYBER) DualScreenStyle.CYBERPUNK_FLIP else DualScreenStyle.PURE_NDS
+    val currentStyle = dualStyleFromPref(settingsManager.dualScreenStyle)
     val surfaceColor = if(currentStyle == DualScreenStyle.PURE_NDS) Color(0xFFF0F4F8) else MaterialTheme.colorScheme.surface
     val isCyber = currentStyle == DualScreenStyle.CYBERPUNK_FLIP
 
@@ -568,6 +582,13 @@ fun GridSlot(
     val isCyber = style == DualScreenStyle.CYBERPUNK_FLIP
     val gridState = rememberLazyGridState(initialFirstVisibleItemIndex = selectedIndex.coerceAtLeast(0))
 
+    // "recientes" y "favoritos" se insertan en la posicion 0 despues de la
+    // primera composicion: sin observar tambien el tamano de la lista, la
+    // rejilla se quedaba en el sistema anterior.
+    LaunchedEffect(selectedIndex, platforms.size) {
+        if (selectedIndex in platforms.indices) gridState.animateScrollToItem(selectedIndex)
+    }
+
     Surface(
         modifier = Modifier.fillMaxSize(),
         color = surfaceColor,
@@ -665,15 +686,45 @@ fun PureNDSPlatformItem(id: String, isSelected: Boolean, accentColor: Color, cus
             shadowElevation = if (isSelected || isFocused) 12.dp else 4.dp,
             border = BorderStroke(if (isSelected || isFocused) 4.dp else 2.dp, if (isSelected || isFocused) accentColor else Color.LightGray)
         ) {
-            Box(contentAlignment = Alignment.Center) {
-                val iconName = remember(id) { ThemeManager.mapPlatformToTransparentIcon(id) }
-                val iconPath = remember(iconName, customMediaMap) { ThemeManager.getThemeImagePath("transparent-pack", "$iconName.webp", customMediaMap) }
-                AsyncImage(model = iconPath, contentDescription = null, modifier = Modifier.fillMaxSize(0.65f), contentScale = ContentScale.Fit)
+            Box(contentAlignment = Alignment.Center, modifier = Modifier.padding(6.dp)) {
+                LogotipoSistema(
+                    id = id,
+                    customMediaMap = customMediaMap,
+                    colorGlifo = if (isSelected || isFocused) accentColor else Color.Gray
+                )
             }
         }
         Spacer(Modifier.height(8.dp))
-        Text(text = id.uppercase(), color = if (isSelected || isFocused) accentColor else Color.DarkGray, fontSize = 12.sp, fontWeight = FontWeight.Bold, maxLines = 1, overflow = TextOverflow.Ellipsis)
+        Text(text = studioTitle(id, "es").uppercase(), color = if (isSelected || isFocused) accentColor else Color.DarkGray, fontSize = 12.sp, fontWeight = FontWeight.Bold, maxLines = 1, overflow = TextOverflow.Ellipsis)
     }
+}
+
+/**
+ * Logotipo de un sistema para los items del modo de dos pantallas.
+ *
+ * Los wordmarks de `assets/contentimg/logos/` son ~4:1, asi que se dibujan
+ * ajustados al ancho. Recientes, favoritos y las entradas SYS_ no tienen
+ * logotipo: para esas se usa la abreviatura del tema Studio.
+ */
+@Composable
+fun LogotipoSistema(id: String, customMediaMap: Map<String, String>, colorGlifo: Color) {
+    val esEspecial = id.startsWith("SYS_") || id == "recientes" || id == "favoritos"
+    if (esEspecial) {
+        Text(studioAbbrev(id), color = colorGlifo, fontSize = 16.sp, fontWeight = FontWeight.Black, maxLines = 1)
+        return
+    }
+    val ruta = remember(id, customMediaMap) {
+        ThemeManager.getThemeImagePath("logos", "${id.lowercase()}.webp", customMediaMap)
+    }
+    SubcomposeAsyncImage(
+        model = ruta,
+        contentDescription = null,
+        modifier = Modifier.fillMaxWidth(),
+        contentScale = ContentScale.Fit,
+        error = {
+            Text(studioAbbrev(id), color = colorGlifo, fontSize = 16.sp, fontWeight = FontWeight.Black, maxLines = 1)
+        }
+    )
 }
 
 @Composable
@@ -702,11 +753,12 @@ fun CyberpunkPlatformItem(id: String, isSelected: Boolean, accentColor: Color, c
         border = BorderStroke(if (isSelected || isFocused) 3.dp else 1.dp, if (isSelected || isFocused) accentColor else Color.DarkGray)
     ) {
         Column(modifier = Modifier.fillMaxSize().padding(12.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
-            val iconName = remember(id) { ThemeManager.mapPlatformToTransparentIcon(id) }
-            val iconPath = remember(iconName, customMediaMap) { ThemeManager.getThemeImagePath("transparent-pack", "$iconName.webp", customMediaMap) }
-            AsyncImage(model = iconPath, contentDescription = null, modifier = Modifier.size(50.dp), contentScale = ContentScale.Fit, colorFilter = if(isSelected || isFocused) ColorFilter.tint(accentColor) else ColorFilter.tint(Color.Gray))
+            // Sin tinte: un wordmark de color teñido se convierte en una silueta.
+            Box(modifier = Modifier.height(44.dp).fillMaxWidth(), contentAlignment = Alignment.Center) {
+                LogotipoSistema(id = id, customMediaMap = customMediaMap, colorGlifo = accentColor)
+            }
             Spacer(Modifier.height(12.dp))
-            Text(text = id.uppercase(), color = if (isSelected || isFocused) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp, fontWeight = FontWeight.Black, fontFamily = FontFamily.Monospace, maxLines = 1, overflow = TextOverflow.Ellipsis)
+            Text(text = studioTitle(id, "es").uppercase(), color = if (isSelected || isFocused) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp, fontWeight = FontWeight.Black, fontFamily = FontFamily.Monospace, maxLines = 1, overflow = TextOverflow.Ellipsis)
         }
     }
 }
@@ -787,18 +839,76 @@ fun CyberStat(label: String, value: String) {
 @Composable
 fun VideoSlot(platforms: List<String>, selectedIndex: Int, style: DualScreenStyle, shape: androidx.compose.ui.graphics.Shape, accentColor: Color, surfaceColor: Color, customMediaMap: Map<String, String>) {
     val isCyber = style == DualScreenStyle.CYBERPUNK_FLIP
+    val isStudio = style == DualScreenStyle.STUDIO
     val platformId = remember(platforms, selectedIndex) { if (platforms.isNotEmpty() && selectedIndex in platforms.indices) platforms[selectedIndex] else "" }
 
     Surface(
-        modifier = Modifier.fillMaxSize(), color = if (isCyber) MaterialTheme.colorScheme.background else surfaceColor, shape = if (isCyber) shape else RoundedCornerShape(24.dp),
-        border = if (isCyber) BorderStroke(1.dp, accentColor) else BorderStroke(4.dp, concaveBrush)
+        modifier = Modifier.fillMaxSize(),
+        color = when { isStudio -> Color(0xFF101114); isCyber -> MaterialTheme.colorScheme.background; else -> surfaceColor },
+        shape = when { isStudio -> RoundedCornerShape(14.dp); isCyber -> shape; else -> RoundedCornerShape(24.dp) },
+        border = when {
+            isStudio -> BorderStroke(1.dp, Color(0xFF23252B))
+            isCyber -> BorderStroke(1.dp, accentColor)
+            else -> BorderStroke(4.dp, concaveBrush)
+        }
     ) {
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            val snapPath = remember(platformId, customMediaMap) { ThemeManager.getThemeImagePath("snaps", "$platformId.webp", customMediaMap) }
-            AsyncImage(model = snapPath, contentDescription = null, modifier = Modifier.fillMaxSize(), contentScale = ContentScale.Crop, alpha = 0.8f)
+            // Recientes, favoritos y las entradas SYS_ no tienen captura en
+            // `snaps/`: sin este corte se cargaba un webp inexistente y el panel
+            // se quedaba en blanco.
+            val esEspecial = platformId.startsWith("SYS_") || platformId == "recientes" || platformId == "favoritos"
+            if (!esEspecial) {
+                val snapPath = remember(platformId, customMediaMap) { ThemeManager.getThemeImagePath("snaps", "$platformId.webp", customMediaMap) }
+                AsyncImage(model = snapPath, contentDescription = null, modifier = Modifier.fillMaxSize(), contentScale = ContentScale.Crop, alpha = 0.8f)
+            }
             if (isCyber) {
                 Box(modifier = Modifier.fillMaxSize().background(Brush.verticalGradient(listOf(Color.Transparent, Color.Black.copy(alpha = 0.5f)))))
                 Text(text = "SIGNAL ACQUIRED // $platformId", color = accentColor, fontSize = 12.sp, modifier = Modifier.align(Alignment.TopStart).padding(16.dp), fontFamily = FontFamily.Monospace)
+            }
+            if (esEspecial) {
+                // Ficha de respaldo, con el lenguaje visual de cada estilo.
+                Column(
+                    modifier = Modifier.fillMaxSize().padding(28.dp),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = if (isCyber || isStudio) Alignment.Start else Alignment.CenterHorizontally
+                ) {
+                    if (isCyber || isStudio) {
+                        Text(
+                            studioAbbrev(platformId), color = accentColor, fontSize = 44.sp, fontWeight = FontWeight.Black,
+                            fontFamily = if (isCyber) FontFamily.Monospace else FontFamily.Default
+                        )
+                    } else {
+                        Box(
+                            modifier = Modifier.size(84.dp).background(accentColor, RoundedCornerShape(20.dp)),
+                            contentAlignment = Alignment.Center
+                        ) { Text(studioAbbrev(platformId), color = Color.White, fontSize = 30.sp, fontWeight = FontWeight.Black) }
+                    }
+                    Spacer(Modifier.height(10.dp))
+                    Text(
+                        text = (if (isCyber) "> " else "") + studioTitle(platformId, "es").uppercase(),
+                        color = if (isCyber || isStudio) Color.White else Color.DarkGray,
+                        fontSize = 22.sp, fontWeight = FontWeight.Black,
+                        fontFamily = if (isCyber) FontFamily.Monospace else FontFamily.Default
+                    )
+                    val blurb = studioSystemBlurb(platformId, "es")
+                    if (blurb.isNotEmpty()) {
+                        Spacer(Modifier.height(6.dp))
+                        Text(
+                            blurb,
+                            color = if (isCyber) accentColor.copy(alpha = 0.75f) else if (isStudio) Color(0xFF9AA0A6) else Color.Gray,
+                            fontSize = 12.sp,
+                            fontFamily = if (isCyber) FontFamily.Monospace else FontFamily.Default
+                        )
+                    }
+                }
+            }
+            if (isStudio && !esEspecial) {
+                Box(modifier = Modifier.fillMaxSize().background(Brush.verticalGradient(listOf(Color.Transparent, Color(0xFF101114).copy(alpha = 0.85f)))))
+                Text(
+                    text = studioTitle(platformId, "es").uppercase(),
+                    color = Color.White, fontSize = 16.sp, fontWeight = FontWeight.Black,
+                    modifier = Modifier.align(Alignment.BottomStart).padding(16.dp)
+                )
             }
         }
     }

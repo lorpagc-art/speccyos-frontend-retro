@@ -302,8 +302,9 @@ fun InmersiveDashboardContent(
 
                 if (!isSystem || isCollection) {
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        val iconName = ThemeManager.mapPlatformToTransparentIcon(id)
-                        val iconPath = ThemeManager.getThemeImagePath("transparent-pack", "$iconName.webp", customMediaMap, context)
+                        // `transparent-pack` no existe en assets: el watermark salia
+                        // vacio. Se usan los wordmarks de `logos/`.
+                        val iconPath = ThemeManager.getThemeImagePath("logos", "${id.lowercase()}.webp", customMediaMap, context)
                         AsyncImage(
                             model = iconPath,
                             contentDescription = null,

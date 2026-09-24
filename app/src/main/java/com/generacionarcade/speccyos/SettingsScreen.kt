@@ -832,6 +832,98 @@ fun InterfaceSettingsScreen(settingsManager: SettingsManager, mainViewModel: Mai
             }
         }
 
+        // ── Tarjetas del tema Studio ─────────────────────────────────────
+        if (currentTheme == SettingsManager.THEME_STUDIO) {
+            Spacer(Modifier.height(24.dp))
+            UltraSectionHeader("TARJETAS DEL TEMA STUDIO", primaryColor)
+
+            var cardMedia by remember { mutableStateOf(settingsManager.studioCardMedia) }
+            val mediaOptions = listOf(
+                SettingsManager.STUDIO_MEDIA_COVER to "Carátula",
+                SettingsManager.STUDIO_MEDIA_SCREENSHOT to "Captura",
+                SettingsManager.STUDIO_MEDIA_COVER_VIDEO to "Carátula + vídeo",
+                SettingsManager.STUDIO_MEDIA_SCREENSHOT_VIDEO to "Captura + vídeo"
+            )
+            UltraCard(primaryColor) {
+                Column(Modifier.padding(16.dp)) {
+                    Text(
+                        "En las opciones con vídeo, solo el juego marcado lo reproduce.",
+                        color = Color.Gray, fontSize = 11.sp
+                    )
+                    Spacer(Modifier.height(10.dp))
+                    @OptIn(ExperimentalLayoutApi::class)
+                    FlowRow(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp),
+                        maxItemsInEachRow = 2
+                    ) {
+                        mediaOptions.forEach { (id, name) ->
+                            FocusableSurface(
+                                modifier = Modifier.weight(1f, fill = false).height(44.dp),
+                                isSelected = cardMedia == id,
+                                primaryColor = primaryColor,
+                                onClick = {
+                                    soundManager.playClick()
+                                    cardMedia = id
+                                    settingsManager.studioCardMedia = id
+                                }
+                            ) {
+                                Box(contentAlignment = Alignment.Center, modifier = Modifier.padding(horizontal = 12.dp)) {
+                                    Text(name.uppercase(), fontSize = 11.sp, fontWeight = FontWeight.Black, textAlign = TextAlign.Center)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // ── Dos pantallas / plegables ────────────────────────────────────
+        // Estas dos preferencias existian desde hacia meses pero no habia
+        // ninguna forma de cambiarlas desde la interfaz.
+        if (currentTheme == SettingsManager.THEME_DUAL_SCREEN) {
+            Spacer(Modifier.height(24.dp))
+            UltraSectionHeader("DOS PANTALLAS / PLEGABLES", primaryColor)
+
+            var dualStyle by remember { mutableStateOf(settingsManager.dualScreenStyle) }
+            val dualStyles = listOf(
+                SettingsManager.DUAL_STYLE_STUDIO to "Studio",
+                SettingsManager.DUAL_STYLE_CYBER to "Cyberpunk",
+                SettingsManager.DUAL_STYLE_CLASSIC to "NDS"
+            )
+            UltraCard(primaryColor) {
+                Column(Modifier.padding(16.dp)) {
+                    Text("ESTILO", color = primaryColor, fontSize = 12.sp, fontWeight = FontWeight.Black)
+                    Spacer(Modifier.height(10.dp))
+                    @OptIn(ExperimentalLayoutApi::class)
+                    FlowRow(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp),
+                        maxItemsInEachRow = 3
+                    ) {
+                        dualStyles.forEach { (id, name) ->
+                            FocusableSurface(
+                                modifier = Modifier.weight(1f, fill = false).height(44.dp),
+                                isSelected = dualStyle == id,
+                                primaryColor = primaryColor,
+                                onClick = {
+                                    soundManager.playClick()
+                                    dualStyle = id
+                                    settingsManager.dualScreenStyle = id
+                                }
+                            ) {
+                                Box(contentAlignment = Alignment.Center, modifier = Modifier.padding(horizontal = 12.dp)) {
+                                    Text(name.uppercase(), fontSize = 11.sp, fontWeight = FontWeight.Black, textAlign = TextAlign.Center)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         Spacer(Modifier.height(32.dp))
         UltraSectionHeader("AJUSTES DE PANTALLA Y ESCALADO", primaryColor)
 
